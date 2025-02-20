@@ -5,7 +5,7 @@ I'm going to start by writing the pseudocode that I think would need to be done 
 This first approach is going to be the naive way to approach this problem, but we all start somewhere :)
  
 ## best fit params:
-### define: N, sy, sxy, sx, sx2, sxx
+### define: N, sy, sxy, sx, sx2, sxx, a, and b
 ```C
 	int N = ?? // How many values? 1362?  
 	
