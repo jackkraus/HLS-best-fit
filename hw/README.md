@@ -7,7 +7,7 @@ This first approach is going to be the naive way to approach this problem, but w
 ## best fit params:
 ### define: N, sy, sxy, sx, sx2, sxx, a, and b
 ```C
-	int N = ?? // How many values? 1362?  
+SomeFunctionToCalculateParams(int tempN) { 
 	
 	// These are sums, so they need to be added up
 	sx = add_sx(int x); 
@@ -20,53 +20,25 @@ This first approach is going to be the naive way to approach this problem, but w
 	
 	a = ( sy * sxx - sxy * sx )/( N * sxx - sx2 ) 
 	b = ( N * sxy - sx * sy )/(N * sxx - sx2 ) 
+}
 ```
 
 Where the functions add_sq(int q) go something like: 
 
+TODO: One thing I need to make sure that the arrays are being accessed correctly by each function, and find out how we're actually going to access it? 
+- access: pass in `*tempqs` into the function, which reference the address of the array (?) 
+  
 ```C
-int add_sx(int x)   {
-	int sum = 0;  
+int add_up_all(int array)   {
+
+	int sum = 0; 
+ 
 	// access the array of all x_i 
 	for(int j = 0; j < array.size(); j++) { 
-		sum += array[i];	
+		sum += array[i];
 	}
 	
 	return sum; 
 } 
 ```
 
-
-```C
-int add_sy(int y)   {
-	int sum = 0;  
-	// access the array of all y_i 
-	for(int j = 0; j < array.size(); j++) { 
-		sum += array[i];	
-	}
-
-	return sum; 
-} 
-```
-
-```C
-int add_syx(int x, int y)   {
-	int sum = 0;  
-	// access the array of all x_i 
-	for(int j = 0; j < array.size(); j++) { 
-		sum += array[i];	
-	} 
-
-	return sum;
-} 
-```
-
-```C
-int add_sx(int x)   {
-	int sum = 0;  
-	// access the array of all x_i 
-	for(int j = 0; j < array.size(); j++) { 
-		sum += array[i];	
-	} 
-} 
-`
