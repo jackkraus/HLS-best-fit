@@ -30,8 +30,43 @@ int add_sx(int x)   {
 	// access the array of all x_i 
 	for(int j = 0; j < array.size(); j++) { 
 		sum += array[i];	
-	} 
+	}
+	
+	return sum; 
 } 
 ```
 
 
+```C
+int add_sy(int y)   {
+	int sum = 0;  
+	// access the array of all y_i 
+	for(int j = 0; j < array.size(); j++) { 
+		sum += array[i];	
+	}
+
+	return sum; 
+} 
+```
+
+```C
+int add_syx(int x, int y)   {
+	int sum = 0;  
+	// access the array of all x_i 
+	for(int j = 0; j < array.size(); j++) { 
+		sum += array[i];	
+	} 
+
+	return sum;
+} 
+```
+
+```C
+int add_sx(int x)   {
+	int sum = 0;  
+	// access the array of all x_i 
+	for(int j = 0; j < array.size(); j++) { 
+		sum += array[i];	
+	} 
+} 
+`
