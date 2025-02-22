@@ -42,3 +42,19 @@ int add_up_all(int array)   {
 } 
 ```
 
+
+Issue with Feb22nd push : 
+
+```
+[akraus@metis hw]$ ./main
+After INIT: sy=32766
+Before LOOP: sx=-1008385448, sy=-1008385452, sxy=-1008385456
+LOOP: sy=-1008385452
+LOOP: sy=-1008385452
+LOOP: sy=-1008385452
+LOOP: sy=-1008385452
+LOOP: sy=-1008385452
+Sum of x's: 6, Expected: 6
+Sum of y's: 32776, Expected: 10
+Sum of yx's: 12, Expected: 12
+```
