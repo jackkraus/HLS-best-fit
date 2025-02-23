@@ -17,9 +17,12 @@
  * This function is only called once so we can init the sums and immediately 
  * 	start adding them together. 
  */
-int add_nums(const int *tempxs, const int *tempys, int tempN, int* sx, int* sy, int* sxy){
+int add_nums(const int tempxs[], const int tempys[], int tempN, int* sx, int* sy, int* sxy){
 		
-	*sx, *sy, *sxy = 0;
+	*sx = 0;
+       	*sy = 0;
+       	*sxy = 0;
+	
 	printf("Before LOOP: sx=%d, sy=%d, sxy=%d\n", sx,sy,sxy);
 	for(int i = 0; i < tempN; i++){
 		*sx += tempxs[i];
@@ -36,7 +39,7 @@ int add_nums(const int *tempxs, const int *tempys, int tempN, int* sx, int* sy, 
  * Takes in all relevant values and creates a fit for the set of points 
  * 	sigmas and lasts
  */ 
-void fit( int *tempxs, int *tempys, int *tempsigmas, int *templasts, int tempN ) { 
+void fit( int tempxs[], int tempys[], int tempsigmas[], int templasts[], int tempN ) { 
 	
 	//init params
 	int sx, sy, sxy, sx2; // Sum x, y, xy, and the square of sx
@@ -54,11 +57,15 @@ void fit( int *tempxs, int *tempys, int *tempsigmas, int *templasts, int tempN )
 int main() {
 	// Before I call this, I want to make sure my code does what I want it to
 	//fit(tempxs, tempys, tempsigmas, templasts, tempN);
+	
+	// Test parameters
 	int N = 5;
 	int array1[] = {1,1,1,1,2};
 	int array2[] = {2,2,2,2,2};
 	int sigmas[] = {1,2,3,4,5};
        	int lasts[] = {0,0,0,1,0};	
-        fit(array1, array2, sigmas, lasts, N);	
+        
+	
+	fit(array1, array2, sigmas, lasts, N);	
 	return 0;
 }

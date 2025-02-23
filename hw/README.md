@@ -58,3 +58,25 @@ Sum of x's: 6, Expected: 6
 Sum of y's: 32776, Expected: 10
 Sum of yx's: 12, Expected: 12
 ```
+
+Solution with Feb 22nd push: 
+```
+[akraus@metis hw]$ ./main
+After INIT: sy=32767
+Before LOOP: sx=-1418001816, sy=-1418001820, sxy=-1418001824
+LOOP: sy=-1418001820
+LOOP: sy=-1418001820
+LOOP: sy=-1418001820
+LOOP: sy=-1418001820
+LOOP: sy=-1418001820
+Sum of x's: 6, Expected: 6
+Sum of y's: 10, Expected: 10
+Sum of yx's: 12, Expected: 12
+```
+When the variable isn't initialized with any value it's going to save the value with the previously saved one at that address.
+Another thing I learned is the definition 
+```
+	*sx, *sy, *sxy = 0;
+``` 
+is not allowed.
+
