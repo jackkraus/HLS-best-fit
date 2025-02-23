@@ -23,25 +23,29 @@ SomeFunctionToCalculateParams(int tempN) {
 }
 ```
 
-Where the functions add_sq(int q) go something like: 
 
-TODO: One thing I need to make sure that the arrays are being accessed correctly by each function, and find out how we're actually going to access it? 
-- access: pass in `*tempqs` into the function, which reference the address of the array (?) 
-  
+
+## Trial function: 
+
+Here I want to just try adding numbers from two arrays: 
+
 ```C
-int add_up_all(int array)   {
-
-	int sum = 0; 
- 
-	// access the array of all x_i 
-	for(int j = 0; j < array.size(); j++) { 
-		sum += array[i];
-	}
-	
-	return sum; 
-} 
+	// Test parameters
+	int N = 5;
+	int array1[] = {1,1,1,1,2};
+	int array2[] = {2,2,2,2,2};
+	add_nums(array1, array2, N);
 ```
 
+Where the `add_nums()` function uses the loop like: 
+```C
+
+for(int i = 0; i < N; i++){
+	*sum1 += array1[i];
+	*sum2 += array2[i];
+	*sum12 += array1[i]*array2[i];
+}
+``` 
 
 Issue with Feb22nd push : 
 
