@@ -101,3 +101,23 @@ Sum of x's: 6, Expected: 6
 Sum of y's: 10, Expected: 10
 Sum of yx's: 12, Expected: 12
 ```
+
+--- 
+
+## Moving onto the tempQs in the header
+
+Reminder that the parameters `a` and `b` need to be floats, which is fine and done by casing one of the operations as a float before the division operation, it should yield something like : 
+
+```
+[akraus@metis hw]$ ./main
+Sum of x's: 66169
+Sum of y's: 291102
+Sum of yx's: 18194876
+Sum of xx's: 4343909
+--> a1: 454305530
+--> a2: 1538067497
+--> b1: 1224525578
+--> b2: 1538067497
+Best fit param a: 0.295374
+Best fit param b: 0.796146
+```
