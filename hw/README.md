@@ -45,7 +45,7 @@ int add_up_all(int array)   {
 
 Issue with Feb22nd push : 
 
-```
+```bash
 [akraus@metis hw]$ ./main
 After INIT: sy=32766
 Before LOOP: sx=-1008385448, sy=-1008385452, sxy=-1008385456
@@ -60,7 +60,7 @@ Sum of yx's: 12, Expected: 12
 ```
 
 Solution with Feb 22nd push: 
-```
+```bash
 [akraus@metis hw]$ ./main
 After INIT: sy=32767
 Before LOOP: sx=-1418001816, sy=-1418001820, sxy=-1418001824
@@ -75,8 +75,25 @@ Sum of yx's: 12, Expected: 12
 ```
 When the variable isn't initialized with any value it's going to save the value with the previously saved one at that address.
 Another thing I learned is the definition 
-```
+```C
 	*sx, *sy, *sxy = 0;
 ``` 
-is not allowed.
-
+is not allowed, instead we need an explicit definition: 
+```C
+	*sx = 0;
+       	*sy = 0;
+       	*sxy = 0;
+```
+Then the output will yield: 
+```bash
+After INIT: sy=32767
+Before LOOP: sx=-1418001816, sy=-1418001820, sxy=-1418001824
+LOOP: sy=-1418001820
+LOOP: sy=-1418001820
+LOOP: sy=-1418001820
+LOOP: sy=-1418001820
+LOOP: sy=-1418001820
+Sum of x's: 6, Expected: 6
+Sum of y's: 10, Expected: 10
+Sum of yx's: 12, Expected: 12
+```
