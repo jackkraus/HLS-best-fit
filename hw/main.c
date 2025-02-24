@@ -93,27 +93,31 @@ void fit( int tempxs[], int tempys[], int tempsigmas[], int templasts[], int tem
 
 	double f = 0; 
 	double temp = 0;
-	double temp2 = 0;
 	double x, y;
 	for(int i = 0; i < tempN; i++) {
 		x = (double)tempxs[i];
 		y = (double)tempys[i];
 
 		temp = y - a - b*x;
-		temp2 = temp*temp;
 	
-		f += temp2;
-	
-		if(i<10) {
-			printf("i=%d ; temp=%.6f\n",i,temp);
-			printf("i=%d ; temp2=%.6f\n",i,temp2);
-			printf("i=%d ; f=%.6f\n",i,f);
-		}
-								
-
+		f += temp*temp;
+		
+		// For debugging precision of variables 
+		//if(i<10) {
+		//	printf("i=%d ; temp=%.6f\n",i,temp);
+		//	printf("i=%d ; f=%.6f\n",i,f);
+		//}
+		
+		temp = 0;		
 	}
 
 	printf("f(a,b) = %.9f\n",f);
+
+	printf("============================\n");	
+	printf("===========GoF Calc=========\n");	
+	printf("============================\n");	
+
+
 }
 
 int main() {

@@ -148,4 +148,8 @@ Using the `double` type worked though, lots more precision, with `f(a,b) = 14308
 > Question I have to answer: how is memory impacted? 
 > Is there a better way to do this?
 
-I'm not sure I'm on the right trail here. The goodness of fit ( chi^2/ndf ) though, should be around 1, so this might be a good check to see if my calculation for distance (`f(a,b)`) is on the right track.   
+I'm not sure I'm on the right trail here. The goodness of fit ( chi^2/ndf ) though, should be around 1, so this might be a good check to see if my calculation for distance (`f(a,b)`) is on the right track.
+
+One thing I'm unclear about is the degrees of freedom. 
+In physics, I know the degrees of freedom to be the smallest number `n` parameters whose values need to be known to determine every other parameter of the system. [[https://en.wikipedia.org/wiki/Degrees_of_freedom_(physics_and_chemistry)]]
+In statistics this is different;    
