@@ -106,7 +106,7 @@ Sum of yx's: 12, Expected: 12
 
 ## Moving onto the tempQs in the header
 
-Reminder that the parameters `a` and `b` need to be floats, which is fine and done by casing one of the operations as a float before the division operation, it should yield something like : 
+Reminder that the parameters `a` and `b` need to be floats, which is fine and done by casing one of the operations as a float before the division operation, it will yield something like : 
 
 ```
 [akraus@metis hw]$ ./main
@@ -121,3 +121,31 @@ Sum of xx's: 4343909
 Best fit param a: 0.295374
 Best fit param b: 0.796146
 ```
+---
+## Inputting `a` and `b` into `f(a,b)`
+
+At this point, we can input `a & b` into the function `f(a,b)` and loop over all `x` and `y`'s 
+
+The loop could be something like 
+
+```C
+float  f = 0;
+float temp = 0; 
+for(int i = 0; i < N; i++){ 
+	temp = (float)ty[i] - a - b * (float)tx[i]; 
+	f += temp*temp;
+}
+```
+Which in the case of the current mode of operation, I calculated: `f(a,b) = 143088368.00000`, but this is strange because when I print out the first ten `temp` and temp-squared (`temp2`) terms they're both floats with decimal values.
+After a couple dozen iterations, we start to see values with significantly less precision in the decimal spaces. 
+
+I think this is because the `(float)` type is not precise enough.
+So let's try using longs, then doubles if we need to... 
+The `long` data type didnt work out very well, when calculating the best fit parameters, it would zero them out for some reason, not sure why. 
+
+Using the `double` type worked though, lots more precision, with `f(a,b) = 143088469.544197172` which leads to a difference of `101.544197` (fun vim tool, in insert mode: `<ctrl-r> =` gives a calculator at the place of your cursor). 
+ 
+> Question I have to answer: how is memory impacted? 
+> Is there a better way to do this?
+
+  

@@ -45,7 +45,7 @@ void fit( int tempxs[], int tempys[], int tempsigmas[], int templasts[], int tem
 	//<-- initialize parameters --> 
 	int sx, sy, sxy, sxx, sx2; // Sum x, y, xy, xx, and the square of sx
 	int a1, b1, a2, b2; // best fit parameters	
-	float a, b;
+	double a, b;
 	a = 0.; 
 	a1 = 0; 
 	a2 = 0;
@@ -53,6 +53,11 @@ void fit( int tempxs[], int tempys[], int tempsigmas[], int templasts[], int tem
 	b = 0.;	
 	b1 = 0; 
 	b2 = 0; 
+
+	printf("============================\n");	
+	printf("===========ADDING===========\n");	
+	printf("============================\n");	
+
 
 	//<-- Call 'add_nums()' function -->
 	//printf("After INIT: sy=%d\n",sy);
@@ -70,18 +75,45 @@ void fit( int tempxs[], int tempys[], int tempsigmas[], int templasts[], int tem
 	a2 = tempN*sxx - sx2; 	
 	printf("--> a1: %d\n", a1);	
 	printf("--> a2: %d\n", a2);	
-	a = (float) a1/a2;
+	a = (double) a1/a2;
 
 	// <-- Parameter 'b' calc --> 	
 	b1 = tempN*sxy - sx*sy;
 	b2 = tempN*sxx - sx2; 	
 	printf("--> b1: %d\n", b1);	
 	printf("--> b2: %d\n", b2);	
-	b = (float) b1/b2;
+	b = (double) b1/b2;
 
 	printf("Best fit param a: %0.6f\n", a);	
 	printf("Best fit param b: %0.6f\n", b);	
+	
+	printf("============================\n");	
+	printf("===========FITTING==========\n");	
+	printf("============================\n");	
 
+	double f = 0; 
+	double temp = 0;
+	double temp2 = 0;
+	double x, y;
+	for(int i = 0; i < tempN; i++) {
+		x = (double)tempxs[i];
+		y = (double)tempys[i];
+
+		temp = y - a - b*x;
+		temp2 = temp*temp;
+	
+		f += temp2;
+	
+		if(i<10) {
+			printf("i=%d ; temp=%.6f\n",i,temp);
+			printf("i=%d ; temp2=%.6f\n",i,temp2);
+			printf("i=%d ; f=%.6f\n",i,f);
+		}
+								
+
+	}
+
+	printf("f(a,b) = %.9f\n",f);
 }
 
 int main() {
