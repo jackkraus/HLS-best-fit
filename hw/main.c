@@ -87,36 +87,57 @@ void fit( int tempxs[], int tempys[], int tempsigmas[], int templasts[], int tem
 	printf("Best fit param a: %0.6f\n", a);	
 	printf("Best fit param b: %0.6f\n", b);	
 	
-	printf("============================\n");	
-	printf("===========FITTING==========\n");	
-	printf("============================\n");	
+	printf("==================================\n");	
+	printf("===========Dist/GoF Calc==========\n");	
+	printf("============================\n");
 
-	double f = 0; 
+
+	double f = 0; // our distance
 	double temp = 0;
-	double x, y;
+	double tempSquared = 0;
+
+	double tempOverSig = 0;
+	double tempOverSigSquared = 0;
+	double gof = 0; // our goodness-of-fit
+	double term1 = 1/((double)tempN - 2); // invoked after loop
+	double term2 = 0; // adding tempOverSigSquared
+	
+	double x, y, sig;
 	for(int i = 0; i < tempN; i++) {
 		x = (double)tempxs[i];
 		y = (double)tempys[i];
+		sig = (double)tempsigmas[i];
 
 		temp = y - a - b*x;
-	
-		f += temp*temp;
+		tempSquared = temp*temp;
+		tempOverSig = temp/sig;
+		tempOverSigSquared = tempOverSig*tempOverSig; 
 		
+		f += tempSquared;
+	        term2 += tempOverSigSquared;
+
 		// For debugging precision of variables 
-		//if(i<10) {
-		//	printf("i=%d ; temp=%.6f\n",i,temp);
-		//	printf("i=%d ; f=%.6f\n",i,f);
-		//}
+		if(i<10) {
+			//printf("i=%d ; temp=%.6f\n",i,temp);
+			//printf("i=%d ; tempOverSig=%.6f\n",i,tempOverSig);
+			printf("i=%d ; tempOverSigSquared=%.6f\n",i,tempOverSigSquared);
+			printf("i=%d ; term2=%.6f\n",i,term2);
+			//printf("i=%d ; f=%.6f\n",i,f);
+		}
 		
-		temp = 0;		
+		// Clear out temp values, jic	
+		temp = 0;
+		tempSquared = 0;
+		tempOverSig = 0; 
+		tempOverSigSquared = 0;		
 	}
+		
+	printf("term1 = %.9f\n",term1);
+	printf("term2 = %.9f\n",term2);
+	gof = term1*term2; 
 
 	printf("f(a,b) = %.9f\n",f);
-
-	printf("============================\n");	
-	printf("===========GoF Calc=========\n");	
-	printf("============================\n");	
-
+	printf("goodness of fit = %.9f\n",gof);
 
 }
 
