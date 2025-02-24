@@ -152,5 +152,5 @@ I'm not sure I'm on the right trail here. The goodness of fit ( chi^2/ndf ) thou
 
 One thing I'm unclear about is the degrees of freedom. 
 In physics, I know the degrees of freedom to be the smallest number `n` parameters whose values need to be known to determine every other parameter of the system. 
-[ (Link) ](https://en.wikipedia.org/wiki/Degrees_of_freedom_(physics_and_chemistry))
-In statistics this is different;    
+[(Link)](https://en.wikipedia.org/wiki/Degrees_of_freedom_(physics_and_chemistry))
+In statistics this is different, it seems like it could mean a couple different things  [(Link)](https://en.wikipedia.org/wiki/Degrees_of_freedom_(statistics)#:~:text=The%20effective%20degrees%20of%20freedom,residual%20effective%20degrees%20of%20freedom.) but in a goodness-of-fit test the degrees of freedom are (num of categories - 1) where the number of categories could just be the range of data you see to fit.    
