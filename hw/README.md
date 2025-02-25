@@ -163,4 +163,37 @@ f(a,b) = 143088469.544197172
 goodness of fit = 3463.853194846
 ```
 This tells me there's something wrong with the way I'm going about this. 
- 
+And there is: I've been ignoring the last values--where I need to use those to identify when the last coordinate for the event is. Instead I've been looking though the values of ALL events and trying to fit to that. 
+
+It should be just a minor check to see if the last value is `1`, and if it is then I need to make sure it doesn't go on counting...
+
+I have to take a more naive approach first before I do any optimization, because I'm sure there's better ways (oneof which might be to just loop through the data first, log the positions of all the lasts into its own array and use that array to loop over and fit each of the set of data)
+
+I think what I'll do first is create a `very_temp_array_q` or `arr_q`whose job it is to hold onto every parameter q, do the fit with those `arr_q`s and then delete reset itself if the [templasts[i] == 1] otherwise keep going.
+Might look something like: 
+
+```C
+int arr_x[];
+int arr_y[];
+int arr_sig[];
+int arr_size;
+
+for(int i = 0; i < tempN; i++) { // Loops over all values
+	arr_x[i] = tempxs[i];
+	arr_y[i] = tempys[i];
+	arr_sig[i] = tempsigmas[i];
+	arr_size = arr_x.size(); 
+	
+	// If last == true, then fit that array.
+	if(templasts[i] == 1) {
+		fit(arr_x, arr_y, arr_sig, arr_size);
+		
+		// After fit has been printed off, reset the temp arrays
+		arr_x[] = {};
+		arr_y[] = {};
+		arr_sig[] = {};
+		arr_size = 0;
+	} 
+	
+} 
+``` 
