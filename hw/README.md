@@ -182,10 +182,10 @@ for(int i = 0; i < tempN; i++) { // Loops over all values
 	arr_x[i] = tempxs[i];
 	arr_y[i] = tempys[i];
 	arr_sig[i] = tempsigmas[i];
-	arr_size = arr_x.size(); 
 	
 	// If last == true, then fit that array.
 	if(templasts[i] == 1) {
+		arr_size = sizeof(arr_x)/sizeof(arr_x[0]); 
 		fit(arr_x, arr_y, arr_sig, arr_size);
 		
 		// After fit has been printed off, reset the temp arrays
@@ -196,4 +196,6 @@ for(int i = 0; i < tempN; i++) { // Loops over all values
 	} 
 	
 } 
-``` 
+```
+
+This actually caused some weird `-nan` and `inf` results when it comes to the fit and gof values. Not sure what's going on but I put the logs in `logs/mainlog` 
