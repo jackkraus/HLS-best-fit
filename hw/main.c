@@ -31,6 +31,7 @@ int add_nums(const long arr_x[], const long arr_y[], int size, long* sx, long* s
 	for(int i = 0; i < size; i++){
 		*sx += arr_x[i];
 		*sy += arr_y[i];
+		printf("addnums() --> i = %d, arr_y[i] = %d, sy == %d\n", i,arr_y[i], *sy); 
 		*sxy += arr_x[i]*arr_y[i];
 		*sxx += arr_x[i]*arr_x[i];
 	}
@@ -204,6 +205,7 @@ int main() {
 	int previous_i = 0; // good for accounting 
 	int event_count = 0; 
 
+	int j = 0;
 
 	arr_x = (long *)malloc(tempN * sizeof(long));
 	arr_y = (long *)malloc(tempN * sizeof(long));
@@ -211,11 +213,10 @@ int main() {
 
 
 	for(int i = 0; i < tempN; i++) {
-		arr_x[i] = (long)tempxs[i];
-		arr_y[i] = (long)tempys[i];
-		arr_sig[i] = (long)tempsigmas[i];
-
-
+		arr_x[j] = (long)tempxs[i];
+		arr_y[j] = (long)tempys[i];
+		arr_sig[j] = (long)tempsigmas[i];
+		j++;
 		//printf("main() --> arr_y[i] = %d\n",arr_y[i]); 	
 
 		if(templasts[i] == 1) {
@@ -238,9 +239,10 @@ int main() {
 			memset(arr_x, 0, arr_size * sizeof(long));
 			memset(arr_y, 0, arr_size * sizeof(long));
 			memset(arr_sig, 0, arr_size * sizeof(long));
-			
+			j = 0; // restart the index of the temp arr_qs
+
 			// This is to check whether arr_y has actually been reset	
-			// for(int j = 0;  j < arr_size; j++) {
+			// for(int k = 0;  k < arr_size; k++) {
 			// 	printf("main() --> reset arr_y[j] = %d\n",arr_y[j]); 	
 			// }
 			

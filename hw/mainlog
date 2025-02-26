@@ -1,6 +1,106 @@
 ============ EVENT 0 ============
 fit() --> After INIT: sy=124
 add_nums() --> Before LOOP: sx=0, sy=0, sxy=0, sxx0
+addnums() --> i = 0, arr_y[i] = -8, sy == -8
+addnums() --> i = 1, arr_y[i] = 38, sy == 30
+addnums() --> i = 2, arr_y[i] = 19, sy == 49
+addnums() --> i = 3, arr_y[i] = 33, sy == 82
+addnums() --> i = 4, arr_y[i] = 28, sy == 110
+addnums() --> i = 5, arr_y[i] = -32, sy == 78
+addnums() --> i = 6, arr_y[i] = 30, sy == 108
+addnums() --> i = 7, arr_y[i] = 39, sy == 147
+addnums() --> i = 8, arr_y[i] = 1, sy == 148
+addnums() --> i = 9, arr_y[i] = 49, sy == 197
+addnums() --> i = 10, arr_y[i] = 38, sy == 235
+addnums() --> i = 11, arr_y[i] = 7, sy == 242
+addnums() --> i = 12, arr_y[i] = 23, sy == 265
+addnums() --> i = 13, arr_y[i] = 53, sy == 318
+addnums() --> i = 14, arr_y[i] = 17, sy == 335
+addnums() --> i = 15, arr_y[i] = 12, sy == 347
+addnums() --> i = 16, arr_y[i] = 25, sy == 372
+addnums() --> i = 17, arr_y[i] = 3, sy == 375
+addnums() --> i = 18, arr_y[i] = 21, sy == 396
+addnums() --> i = 19, arr_y[i] = -9, sy == 387
+addnums() --> i = 20, arr_y[i] = -12, sy == 375
+addnums() --> i = 21, arr_y[i] = -5, sy == 370
+addnums() --> i = 22, arr_y[i] = -26, sy == 344
+addnums() --> i = 23, arr_y[i] = 6, sy == 350
+addnums() --> i = 24, arr_y[i] = -8, sy == 342
+addnums() --> i = 25, arr_y[i] = 23, sy == 365
+addnums() --> i = 26, arr_y[i] = 7, sy == 372
+addnums() --> i = 27, arr_y[i] = 1, sy == 373
+addnums() --> i = 28, arr_y[i] = -4, sy == 369
+addnums() --> i = 29, arr_y[i] = 3, sy == 372
+addnums() --> i = 30, arr_y[i] = -8, sy == 364
+addnums() --> i = 31, arr_y[i] = 28, sy == 392
+addnums() --> i = 32, arr_y[i] = 6, sy == 398
+addnums() --> i = 33, arr_y[i] = 4, sy == 402
+addnums() --> i = 34, arr_y[i] = 55, sy == 457
+addnums() --> i = 35, arr_y[i] = 9, sy == 466
+addnums() --> i = 36, arr_y[i] = -20, sy == 446
+addnums() --> i = 37, arr_y[i] = -1, sy == 445
+addnums() --> i = 38, arr_y[i] = 35, sy == 480
+addnums() --> i = 39, arr_y[i] = 30, sy == 510
+addnums() --> i = 40, arr_y[i] = 22, sy == 532
+addnums() --> i = 41, arr_y[i] = 14, sy == 546
+addnums() --> i = 42, arr_y[i] = 39, sy == 585
+addnums() --> i = 43, arr_y[i] = 13, sy == 598
+addnums() --> i = 44, arr_y[i] = 40, sy == 638
+addnums() --> i = 45, arr_y[i] = 1, sy == 639
+addnums() --> i = 46, arr_y[i] = 14, sy == 653
+addnums() --> i = 47, arr_y[i] = 23, sy == 676
+addnums() --> i = 48, arr_y[i] = 27, sy == 703
+addnums() --> i = 49, arr_y[i] = 34, sy == 737
+addnums() --> i = 50, arr_y[i] = -7, sy == 730
+addnums() --> i = 51, arr_y[i] = 23, sy == 753
+addnums() --> i = 52, arr_y[i] = 11, sy == 764
+addnums() --> i = 53, arr_y[i] = 12, sy == 776
+addnums() --> i = 54, arr_y[i] = 28, sy == 804
+addnums() --> i = 55, arr_y[i] = -5, sy == 799
+addnums() --> i = 56, arr_y[i] = -11, sy == 788
+addnums() --> i = 57, arr_y[i] = -15, sy == 773
+addnums() --> i = 58, arr_y[i] = -6, sy == 767
+addnums() --> i = 59, arr_y[i] = 40, sy == 807
+addnums() --> i = 60, arr_y[i] = 19, sy == 826
+addnums() --> i = 61, arr_y[i] = -10, sy == 816
+addnums() --> i = 62, arr_y[i] = 9, sy == 825
+addnums() --> i = 63, arr_y[i] = 25, sy == 850
+addnums() --> i = 64, arr_y[i] = 23, sy == 873
+addnums() --> i = 65, arr_y[i] = -4, sy == 869
+addnums() --> i = 66, arr_y[i] = 4, sy == 873
+addnums() --> i = 67, arr_y[i] = 30, sy == 903
+addnums() --> i = 68, arr_y[i] = 25, sy == 928
+addnums() --> i = 69, arr_y[i] = 41, sy == 969
+addnums() --> i = 70, arr_y[i] = 35, sy == 1004
+addnums() --> i = 71, arr_y[i] = 29, sy == 1033
+addnums() --> i = 72, arr_y[i] = 32, sy == 1065
+addnums() --> i = 73, arr_y[i] = -10, sy == 1055
+addnums() --> i = 74, arr_y[i] = 33, sy == 1088
+addnums() --> i = 75, arr_y[i] = -3, sy == 1085
+addnums() --> i = 76, arr_y[i] = 26, sy == 1111
+addnums() --> i = 77, arr_y[i] = 36, sy == 1147
+addnums() --> i = 78, arr_y[i] = 26, sy == 1173
+addnums() --> i = 79, arr_y[i] = -3, sy == 1170
+addnums() --> i = 80, arr_y[i] = 2, sy == 1172
+addnums() --> i = 81, arr_y[i] = 34, sy == 1206
+addnums() --> i = 82, arr_y[i] = 29, sy == 1235
+addnums() --> i = 83, arr_y[i] = 11, sy == 1246
+addnums() --> i = 84, arr_y[i] = 3, sy == 1249
+addnums() --> i = 85, arr_y[i] = 32, sy == 1281
+addnums() --> i = 86, arr_y[i] = -8, sy == 1273
+addnums() --> i = 87, arr_y[i] = -3, sy == 1270
+addnums() --> i = 88, arr_y[i] = 21, sy == 1291
+addnums() --> i = 89, arr_y[i] = -11, sy == 1280
+addnums() --> i = 90, arr_y[i] = -1, sy == 1279
+addnums() --> i = 91, arr_y[i] = -6, sy == 1273
+addnums() --> i = 92, arr_y[i] = 35, sy == 1308
+addnums() --> i = 93, arr_y[i] = 23, sy == 1331
+addnums() --> i = 94, arr_y[i] = 34, sy == 1365
+addnums() --> i = 95, arr_y[i] = -9, sy == 1356
+addnums() --> i = 96, arr_y[i] = 7, sy == 1363
+addnums() --> i = 97, arr_y[i] = 13, sy == 1376
+addnums() --> i = 98, arr_y[i] = -5, sy == 1371
+addnums() --> i = 99, arr_y[i] = -6, sy == 1365
 fit() --> Sum of x's: 5107
 fit() --> Sum of y's: 1365
 fit() --> Sum of yx's: 15943
@@ -41,200 +141,1467 @@ main() --> Current index 99 of 1362
 ============ EVENT 1 ============
 fit() --> After INIT: sy=1365
 add_nums() --> Before LOOP: sx=0, sy=0, sxy=0, sxx0
-fit() --> Sum of x's: 0
-fit() --> Sum of y's: 0
-fit() --> Sum of yx's: 0
-fit() --> Sum of xx's: 0
-fit() --> After add_nums: sx2=0
-fit() --> Sum of x's: 0
-fit() --> Sum of y's: 0
-fit() --> Sum of yx's: 0
-fit() --> Sum of xx's: 0
-fit() --> a1: 0
-fit() --> a2: 0
-fit() --> b1: 0
-fit() --> b2: 0
-fit() --> Best fit param a: -nan
-fit() --> Best fit param b: -nan
-calc_distance() --> i=0 ; temp=-nan
-calc_distance() --> i=0 ; tempSquared=-nan
-calc_distance() --> i=0 ; f=-nan
-calc_distance() --> i=1 ; temp=-nan
-calc_distance() --> i=1 ; tempSquared=-nan
-calc_distance() --> i=1 ; f=-nan
-calc_distance() --> i=2 ; temp=-nan
-calc_distance() --> i=2 ; tempSquared=-nan
-calc_distance() --> i=2 ; f=-nan
-calc_distance() -->  f(a,b) = -nan
-calc_chi_squared() --> i = 0 ; tempOverSigSquared=-nan
-calc_chi_squared() --> i = 0 ; term2=-nan
-calc_chi_squared() --> i = 1 ; tempOverSigSquared=-nan
-calc_chi_squared() --> i = 1 ; term2=-nan
-calc_chi_squared() --> i = 2 ; tempOverSigSquared=-nan
-calc_chi_squared() --> i = 2 ; term2=-nan
+addnums() --> i = 0, arr_y[i] = -247, sy == -247
+addnums() --> i = 1, arr_y[i] = -218, sy == -465
+addnums() --> i = 2, arr_y[i] = 88, sy == -377
+addnums() --> i = 3, arr_y[i] = 30, sy == -347
+addnums() --> i = 4, arr_y[i] = -101, sy == -448
+addnums() --> i = 5, arr_y[i] = 13, sy == -435
+addnums() --> i = 6, arr_y[i] = -42, sy == -477
+addnums() --> i = 7, arr_y[i] = -87, sy == -564
+addnums() --> i = 8, arr_y[i] = -76, sy == -640
+addnums() --> i = 9, arr_y[i] = -126, sy == -766
+addnums() --> i = 10, arr_y[i] = -42, sy == -808
+addnums() --> i = 11, arr_y[i] = -146, sy == -954
+addnums() --> i = 12, arr_y[i] = -69, sy == -1023
+addnums() --> i = 13, arr_y[i] = -173, sy == -1196
+addnums() --> i = 14, arr_y[i] = 61, sy == -1135
+addnums() --> i = 15, arr_y[i] = 50, sy == -1085
+addnums() --> i = 16, arr_y[i] = -200, sy == -1285
+addnums() --> i = 17, arr_y[i] = -188, sy == -1473
+addnums() --> i = 18, arr_y[i] = -54, sy == -1527
+addnums() --> i = 19, arr_y[i] = 76, sy == -1451
+addnums() --> i = 20, arr_y[i] = -192, sy == -1643
+addnums() --> i = 21, arr_y[i] = 8, sy == -1635
+addnums() --> i = 22, arr_y[i] = -76, sy == -1711
+addnums() --> i = 23, arr_y[i] = -136, sy == -1847
+addnums() --> i = 24, arr_y[i] = -146, sy == -1993
+addnums() --> i = 25, arr_y[i] = 40, sy == -1953
+addnums() --> i = 26, arr_y[i] = -212, sy == -2165
+addnums() --> i = 27, arr_y[i] = 74, sy == -2091
+addnums() --> i = 28, arr_y[i] = 87, sy == -2004
+addnums() --> i = 29, arr_y[i] = 30, sy == -1974
+addnums() --> i = 30, arr_y[i] = 13, sy == -1961
+addnums() --> i = 31, arr_y[i] = -92, sy == -2053
+addnums() --> i = 32, arr_y[i] = 43, sy == -2010
+addnums() --> i = 33, arr_y[i] = -31, sy == -2041
+addnums() --> i = 34, arr_y[i] = -140, sy == -2181
+addnums() --> i = 35, arr_y[i] = -106, sy == -2287
+addnums() --> i = 36, arr_y[i] = 12, sy == -2275
+addnums() --> i = 37, arr_y[i] = 22, sy == -2253
+addnums() --> i = 38, arr_y[i] = -220, sy == -2473
+addnums() --> i = 39, arr_y[i] = 92, sy == -2381
+addnums() --> i = 40, arr_y[i] = -16, sy == -2397
+addnums() --> i = 41, arr_y[i] = -118, sy == -2515
+addnums() --> i = 42, arr_y[i] = 68, sy == -2447
+addnums() --> i = 43, arr_y[i] = -44, sy == -2491
+addnums() --> i = 44, arr_y[i] = -131, sy == -2622
+addnums() --> i = 45, arr_y[i] = -23, sy == -2645
+addnums() --> i = 46, arr_y[i] = -47, sy == -2692
+addnums() --> i = 47, arr_y[i] = -202, sy == -2894
+addnums() --> i = 48, arr_y[i] = -153, sy == -3047
+addnums() --> i = 49, arr_y[i] = -20, sy == -3067
+addnums() --> i = 50, arr_y[i] = 30, sy == -3037
+addnums() --> i = 51, arr_y[i] = -55, sy == -3092
+addnums() --> i = 52, arr_y[i] = -116, sy == -3208
+addnums() --> i = 53, arr_y[i] = 49, sy == -3159
+addnums() --> i = 54, arr_y[i] = -143, sy == -3302
+addnums() --> i = 55, arr_y[i] = -54, sy == -3356
+addnums() --> i = 56, arr_y[i] = -50, sy == -3406
+addnums() --> i = 57, arr_y[i] = 78, sy == -3328
+addnums() --> i = 58, arr_y[i] = -15, sy == -3343
+addnums() --> i = 59, arr_y[i] = -161, sy == -3504
+addnums() --> i = 60, arr_y[i] = -95, sy == -3599
+addnums() --> i = 61, arr_y[i] = 4, sy == -3595
+addnums() --> i = 62, arr_y[i] = -107, sy == -3702
+addnums() --> i = 63, arr_y[i] = 75, sy == -3627
+addnums() --> i = 64, arr_y[i] = -94, sy == -3721
+addnums() --> i = 65, arr_y[i] = -179, sy == -3900
+addnums() --> i = 66, arr_y[i] = 78, sy == -3822
+addnums() --> i = 67, arr_y[i] = -170, sy == -3992
+addnums() --> i = 68, arr_y[i] = -4, sy == -3996
+addnums() --> i = 69, arr_y[i] = -186, sy == -4182
+addnums() --> i = 70, arr_y[i] = -99, sy == -4281
+addnums() --> i = 71, arr_y[i] = -139, sy == -4420
+addnums() --> i = 72, arr_y[i] = -43, sy == -4463
+addnums() --> i = 73, arr_y[i] = -29, sy == -4492
+addnums() --> i = 74, arr_y[i] = -62, sy == -4554
+addnums() --> i = 75, arr_y[i] = -14, sy == -4568
+addnums() --> i = 76, arr_y[i] = -13, sy == -4581
+addnums() --> i = 77, arr_y[i] = -10, sy == -4591
+addnums() --> i = 78, arr_y[i] = 43, sy == -4548
+addnums() --> i = 79, arr_y[i] = 68, sy == -4480
+addnums() --> i = 80, arr_y[i] = -198, sy == -4678
+addnums() --> i = 81, arr_y[i] = -92, sy == -4770
+addnums() --> i = 82, arr_y[i] = -131, sy == -4901
+addnums() --> i = 83, arr_y[i] = -182, sy == -5083
+addnums() --> i = 84, arr_y[i] = 43, sy == -5040
+addnums() --> i = 85, arr_y[i] = -88, sy == -5128
+addnums() --> i = 86, arr_y[i] = -164, sy == -5292
+addnums() --> i = 87, arr_y[i] = 93, sy == -5199
+addnums() --> i = 88, arr_y[i] = -111, sy == -5310
+addnums() --> i = 89, arr_y[i] = 51, sy == -5259
+addnums() --> i = 90, arr_y[i] = -168, sy == -5427
+addnums() --> i = 91, arr_y[i] = -22, sy == -5449
+addnums() --> i = 92, arr_y[i] = -73, sy == -5522
+addnums() --> i = 93, arr_y[i] = 85, sy == -5437
+addnums() --> i = 94, arr_y[i] = 0, sy == -5437
+fit() --> Sum of x's: 4991
+fit() --> Sum of y's: -5437
+fit() --> Sum of yx's: -519568
+fit() --> Sum of xx's: 333007
+fit() --> After add_nums: sx2=24910081
+fit() --> Sum of x's: 4991
+fit() --> Sum of y's: -5437
+fit() --> Sum of yx's: -519568
+fit() --> Sum of xx's: 333007
+fit() --> a1: 782604829
+fit() --> a2: 6725584
+fit() --> b1: -22222893
+fit() --> b2: 6725584
+fit() --> Best fit param a: 116.362360
+fit() --> Best fit param b: -3.304232
+calc_distance() --> i=0 ; temp=-36.243346
+calc_distance() --> i=0 ; tempSquared=1313.580151
+calc_distance() --> i=0 ; f=1313.580151
+calc_distance() --> i=1 ; temp=-20.460276
+calc_distance() --> i=1 ; tempSquared=418.622901
+calc_distance() --> i=1 ; f=1732.203052
+calc_distance() --> i=2 ; temp=1.375732
+calc_distance() --> i=2 ; tempSquared=1.892638
+calc_distance() --> i=2 ; f=1734.095690
+calc_distance() -->  f(a,b) = 17182241.715187974
+calc_chi_squared() --> i = 0 ; tempOverSigSquared=20.524690
+calc_chi_squared() --> i = 0 ; term2=20.524690
+calc_chi_squared() --> i = 1 ; tempOverSigSquared=16.744916
+calc_chi_squared() --> i = 1 ; term2=37.269606
+calc_chi_squared() --> i = 2 ; tempOverSigSquared=0.118290
+calc_chi_squared() --> i = 2 ; term2=37.387896
  calc_chi_squared() -->  term1 = 0.010752688
- calc_chi_squared() -->  term2 = -nan
-calc_chi_squared() --> gof = -nan
-fit() --> f(a,b) = -nan
-fit() --> goodness of fit = -nan
+ calc_chi_squared() -->  term2 = inf
+calc_chi_squared() --> gof = inf
+fit() --> f(a,b) = 17182241.715187974
+fit() --> goodness of fit = inf
 main() --> Current index 193 of 1362 
 ============ EVENT 2 ============
-fit() --> After INIT: sy=0
+fit() --> After INIT: sy=-5437
 add_nums() --> Before LOOP: sx=0, sy=0, sxy=0, sxx0
-fit() --> Sum of x's: 7255
-fit() --> Sum of y's: -123
-fit() --> Sum of yx's: -224771
-fit() --> Sum of xx's: 480181
-fit() --> After add_nums: sx2=52635025
-fit() --> Sum of x's: 7255
-fit() --> Sum of y's: -123
-fit() --> Sum of yx's: -224771
-fit() --> Sum of xx's: 480181
-fit() --> a1: 1571651342
-fit() --> a2: 64048958
-fit() --> b1: -53726988
-fit() --> b2: 64048958
-fit() --> Best fit param a: 24.538281
-fit() --> Best fit param b: -0.838842
-calc_distance() --> i=0 ; temp=-24.538281
-calc_distance() --> i=0 ; tempSquared=602.127244
-calc_distance() --> i=0 ; f=602.127244
-calc_distance() --> i=1 ; temp=-24.538281
-calc_distance() --> i=1 ; tempSquared=602.127244
-calc_distance() --> i=1 ; f=1204.254489
-calc_distance() --> i=2 ; temp=-24.538281
-calc_distance() --> i=2 ; tempSquared=602.127244
-calc_distance() --> i=2 ; f=1806.381733
-calc_distance() -->  f(a,b) = 6194960.859403757
-calc_chi_squared() --> i = 0 ; tempOverSigSquared=inf
-calc_chi_squared() --> i = 0 ; term2=inf
-calc_chi_squared() --> i = 1 ; tempOverSigSquared=inf
-calc_chi_squared() --> i = 1 ; term2=inf
-calc_chi_squared() --> i = 2 ; tempOverSigSquared=inf
-calc_chi_squared() --> i = 2 ; term2=inf
+addnums() --> i = 0, arr_y[i] = 112, sy == 112
+addnums() --> i = 1, arr_y[i] = 99, sy == 211
+addnums() --> i = 2, arr_y[i] = 93, sy == 304
+addnums() --> i = 3, arr_y[i] = 78, sy == 382
+addnums() --> i = 4, arr_y[i] = 168, sy == 550
+addnums() --> i = 5, arr_y[i] = 79, sy == 629
+addnums() --> i = 6, arr_y[i] = 74, sy == 703
+addnums() --> i = 7, arr_y[i] = 145, sy == 848
+addnums() --> i = 8, arr_y[i] = 106, sy == 954
+addnums() --> i = 9, arr_y[i] = 69, sy == 1023
+addnums() --> i = 10, arr_y[i] = 108, sy == 1131
+addnums() --> i = 11, arr_y[i] = 72, sy == 1203
+addnums() --> i = 12, arr_y[i] = 127, sy == 1330
+addnums() --> i = 13, arr_y[i] = 85, sy == 1415
+addnums() --> i = 14, arr_y[i] = 91, sy == 1506
+addnums() --> i = 15, arr_y[i] = 153, sy == 1659
+addnums() --> i = 16, arr_y[i] = 123, sy == 1782
+addnums() --> i = 17, arr_y[i] = 20, sy == 1802
+addnums() --> i = 18, arr_y[i] = 89, sy == 1891
+addnums() --> i = 19, arr_y[i] = 160, sy == 2051
+addnums() --> i = 20, arr_y[i] = 58, sy == 2109
+addnums() --> i = 21, arr_y[i] = 74, sy == 2183
+addnums() --> i = 22, arr_y[i] = 67, sy == 2250
+addnums() --> i = 23, arr_y[i] = 133, sy == 2383
+addnums() --> i = 24, arr_y[i] = 149, sy == 2532
+addnums() --> i = 25, arr_y[i] = 56, sy == 2588
+addnums() --> i = 26, arr_y[i] = 119, sy == 2707
+addnums() --> i = 27, arr_y[i] = 110, sy == 2817
+addnums() --> i = 28, arr_y[i] = 59, sy == 2876
+addnums() --> i = 29, arr_y[i] = 56, sy == 2932
+addnums() --> i = 30, arr_y[i] = 148, sy == 3080
+addnums() --> i = 31, arr_y[i] = 133, sy == 3213
+addnums() --> i = 32, arr_y[i] = 140, sy == 3353
+addnums() --> i = 33, arr_y[i] = 99, sy == 3452
+addnums() --> i = 34, arr_y[i] = 106, sy == 3558
+addnums() --> i = 35, arr_y[i] = 113, sy == 3671
+addnums() --> i = 36, arr_y[i] = 159, sy == 3830
+addnums() --> i = 37, arr_y[i] = 133, sy == 3963
+addnums() --> i = 38, arr_y[i] = 161, sy == 4124
+addnums() --> i = 39, arr_y[i] = 87, sy == 4211
+addnums() --> i = 40, arr_y[i] = 167, sy == 4378
+addnums() --> i = 41, arr_y[i] = 136, sy == 4514
+addnums() --> i = 42, arr_y[i] = 141, sy == 4655
+addnums() --> i = 43, arr_y[i] = 51, sy == 4706
+addnums() --> i = 44, arr_y[i] = 133, sy == 4839
+addnums() --> i = 45, arr_y[i] = 157, sy == 4996
+addnums() --> i = 46, arr_y[i] = 79, sy == 5075
+addnums() --> i = 47, arr_y[i] = 121, sy == 5196
+addnums() --> i = 48, arr_y[i] = 118, sy == 5314
+addnums() --> i = 49, arr_y[i] = 66, sy == 5380
+addnums() --> i = 50, arr_y[i] = 141, sy == 5521
+addnums() --> i = 51, arr_y[i] = 162, sy == 5683
+addnums() --> i = 52, arr_y[i] = 138, sy == 5821
+addnums() --> i = 53, arr_y[i] = 164, sy == 5985
+addnums() --> i = 54, arr_y[i] = 70, sy == 6055
+addnums() --> i = 55, arr_y[i] = 171, sy == 6226
+addnums() --> i = 56, arr_y[i] = 120, sy == 6346
+addnums() --> i = 57, arr_y[i] = 147, sy == 6493
+addnums() --> i = 58, arr_y[i] = 156, sy == 6649
+addnums() --> i = 59, arr_y[i] = 132, sy == 6781
+addnums() --> i = 60, arr_y[i] = 144, sy == 6925
+addnums() --> i = 61, arr_y[i] = 112, sy == 7037
+addnums() --> i = 62, arr_y[i] = 145, sy == 7182
+addnums() --> i = 63, arr_y[i] = 142, sy == 7324
+addnums() --> i = 64, arr_y[i] = 170, sy == 7494
+addnums() --> i = 65, arr_y[i] = 122, sy == 7616
+addnums() --> i = 66, arr_y[i] = 147, sy == 7763
+addnums() --> i = 67, arr_y[i] = 109, sy == 7872
+addnums() --> i = 68, arr_y[i] = 131, sy == 8003
+addnums() --> i = 69, arr_y[i] = 73, sy == 8076
+addnums() --> i = 70, arr_y[i] = 113, sy == 8189
+addnums() --> i = 71, arr_y[i] = 78, sy == 8267
+addnums() --> i = 72, arr_y[i] = 143, sy == 8410
+addnums() --> i = 73, arr_y[i] = 129, sy == 8539
+addnums() --> i = 74, arr_y[i] = 95, sy == 8634
+addnums() --> i = 75, arr_y[i] = 77, sy == 8711
+addnums() --> i = 76, arr_y[i] = 58, sy == 8769
+addnums() --> i = 77, arr_y[i] = 94, sy == 8863
+addnums() --> i = 78, arr_y[i] = 105, sy == 8968
+addnums() --> i = 79, arr_y[i] = 118, sy == 9086
+addnums() --> i = 80, arr_y[i] = 151, sy == 9237
+addnums() --> i = 81, arr_y[i] = 111, sy == 9348
+addnums() --> i = 82, arr_y[i] = 107, sy == 9455
+addnums() --> i = 83, arr_y[i] = 124, sy == 9579
+addnums() --> i = 84, arr_y[i] = 115, sy == 9694
+addnums() --> i = 85, arr_y[i] = 157, sy == 9851
+addnums() --> i = 86, arr_y[i] = 109, sy == 9960
+addnums() --> i = 87, arr_y[i] = 90, sy == 10050
+addnums() --> i = 88, arr_y[i] = 91, sy == 10141
+addnums() --> i = 89, arr_y[i] = 119, sy == 10260
+addnums() --> i = 90, arr_y[i] = 158, sy == 10418
+addnums() --> i = 91, arr_y[i] = 125, sy == 10543
+addnums() --> i = 92, arr_y[i] = 89, sy == 10632
+addnums() --> i = 93, arr_y[i] = 110, sy == 10742
+addnums() --> i = 94, arr_y[i] = 117, sy == 10859
+addnums() --> i = 95, arr_y[i] = 114, sy == 10973
+addnums() --> i = 96, arr_y[i] = 174, sy == 11147
+addnums() --> i = 97, arr_y[i] = 93, sy == 11240
+addnums() --> i = 98, arr_y[i] = 72, sy == 11312
+addnums() --> i = 99, arr_y[i] = 88, sy == 11400
+addnums() --> i = 100, arr_y[i] = 127, sy == 11527
+addnums() --> i = 101, arr_y[i] = 110, sy == 11637
+addnums() --> i = 102, arr_y[i] = 65, sy == 11702
+addnums() --> i = 103, arr_y[i] = 67, sy == 11769
+addnums() --> i = 104, arr_y[i] = 102, sy == 11871
+addnums() --> i = 105, arr_y[i] = 143, sy == 12014
+addnums() --> i = 106, arr_y[i] = 84, sy == 12098
+addnums() --> i = 107, arr_y[i] = 114, sy == 12212
+addnums() --> i = 108, arr_y[i] = 128, sy == 12340
+addnums() --> i = 109, arr_y[i] = 66, sy == 12406
+addnums() --> i = 110, arr_y[i] = 85, sy == 12491
+addnums() --> i = 111, arr_y[i] = 144, sy == 12635
+addnums() --> i = 112, arr_y[i] = 160, sy == 12795
+addnums() --> i = 113, arr_y[i] = 96, sy == 12891
+addnums() --> i = 114, arr_y[i] = 90, sy == 12981
+addnums() --> i = 115, arr_y[i] = 88, sy == 13069
+addnums() --> i = 116, arr_y[i] = 95, sy == 13164
+addnums() --> i = 117, arr_y[i] = 138, sy == 13302
+addnums() --> i = 118, arr_y[i] = 72, sy == 13374
+addnums() --> i = 119, arr_y[i] = 94, sy == 13468
+addnums() --> i = 120, arr_y[i] = 183, sy == 13651
+addnums() --> i = 121, arr_y[i] = 169, sy == 13820
+addnums() --> i = 122, arr_y[i] = 111, sy == 13931
+addnums() --> i = 123, arr_y[i] = 191, sy == 14122
+addnums() --> i = 124, arr_y[i] = 118, sy == 14240
+addnums() --> i = 125, arr_y[i] = 83, sy == 14323
+addnums() --> i = 126, arr_y[i] = 127, sy == 14450
+addnums() --> i = 127, arr_y[i] = 128, sy == 14578
+addnums() --> i = 128, arr_y[i] = 56, sy == 14634
+addnums() --> i = 129, arr_y[i] = 138, sy == 14772
+addnums() --> i = 130, arr_y[i] = 70, sy == 14842
+addnums() --> i = 131, arr_y[i] = 88, sy == 14930
+addnums() --> i = 132, arr_y[i] = 109, sy == 15039
+addnums() --> i = 133, arr_y[i] = 90, sy == 15129
+addnums() --> i = 134, arr_y[i] = 118, sy == 15247
+addnums() --> i = 135, arr_y[i] = 134, sy == 15381
+addnums() --> i = 136, arr_y[i] = 143, sy == 15524
+addnums() --> i = 137, arr_y[i] = 158, sy == 15682
+addnums() --> i = 138, arr_y[i] = 59, sy == 15741
+addnums() --> i = 139, arr_y[i] = 138, sy == 15879
+addnums() --> i = 140, arr_y[i] = 139, sy == 16018
+addnums() --> i = 141, arr_y[i] = 61, sy == 16079
+addnums() --> i = 142, arr_y[i] = 67, sy == 16146
+addnums() --> i = 143, arr_y[i] = 154, sy == 16300
+addnums() --> i = 144, arr_y[i] = 140, sy == 16440
+addnums() --> i = 145, arr_y[i] = 122, sy == 16562
+addnums() --> i = 146, arr_y[i] = 142, sy == 16704
+addnums() --> i = 147, arr_y[i] = 112, sy == 16816
+addnums() --> i = 148, arr_y[i] = 99, sy == 16915
+addnums() --> i = 149, arr_y[i] = 113, sy == 17028
+addnums() --> i = 150, arr_y[i] = 52, sy == 17080
+addnums() --> i = 151, arr_y[i] = 63, sy == 17143
+addnums() --> i = 152, arr_y[i] = 55, sy == 17198
+addnums() --> i = 153, arr_y[i] = 123, sy == 17321
+addnums() --> i = 154, arr_y[i] = 113, sy == 17434
+addnums() --> i = 155, arr_y[i] = 124, sy == 17558
+addnums() --> i = 156, arr_y[i] = 169, sy == 17727
+addnums() --> i = 157, arr_y[i] = 123, sy == 17850
+addnums() --> i = 158, arr_y[i] = 108, sy == 17958
+addnums() --> i = 159, arr_y[i] = 107, sy == 18065
+addnums() --> i = 160, arr_y[i] = 179, sy == 18244
+addnums() --> i = 161, arr_y[i] = 69, sy == 18313
+addnums() --> i = 162, arr_y[i] = 159, sy == 18472
+addnums() --> i = 163, arr_y[i] = 65, sy == 18537
+addnums() --> i = 164, arr_y[i] = 166, sy == 18703
+addnums() --> i = 165, arr_y[i] = 109, sy == 18812
+addnums() --> i = 166, arr_y[i] = 107, sy == 18919
+addnums() --> i = 167, arr_y[i] = 132, sy == 19051
+addnums() --> i = 168, arr_y[i] = 99, sy == 19150
+addnums() --> i = 169, arr_y[i] = 94, sy == 19244
+addnums() --> i = 170, arr_y[i] = 119, sy == 19363
+addnums() --> i = 171, arr_y[i] = 145, sy == 19508
+addnums() --> i = 172, arr_y[i] = 126, sy == 19634
+addnums() --> i = 173, arr_y[i] = 113, sy == 19747
+addnums() --> i = 174, arr_y[i] = 91, sy == 19838
+addnums() --> i = 175, arr_y[i] = 94, sy == 19932
+addnums() --> i = 176, arr_y[i] = 108, sy == 20040
+addnums() --> i = 177, arr_y[i] = 152, sy == 20192
+addnums() --> i = 178, arr_y[i] = 77, sy == 20269
+addnums() --> i = 179, arr_y[i] = 160, sy == 20429
+addnums() --> i = 180, arr_y[i] = 94, sy == 20523
+addnums() --> i = 181, arr_y[i] = 183, sy == 20706
+addnums() --> i = 182, arr_y[i] = 114, sy == 20820
+addnums() --> i = 183, arr_y[i] = 117, sy == 20937
+addnums() --> i = 184, arr_y[i] = 79, sy == 21016
+addnums() --> i = 185, arr_y[i] = 160, sy == 21176
+addnums() --> i = 186, arr_y[i] = 85, sy == 21261
+addnums() --> i = 187, arr_y[i] = 160, sy == 21421
+addnums() --> i = 188, arr_y[i] = 157, sy == 21578
+addnums() --> i = 189, arr_y[i] = 71, sy == 21649
+addnums() --> i = 190, arr_y[i] = 85, sy == 21734
+addnums() --> i = 191, arr_y[i] = 100, sy == 21834
+addnums() --> i = 192, arr_y[i] = 153, sy == 21987
+addnums() --> i = 193, arr_y[i] = 102, sy == 22089
+addnums() --> i = 194, arr_y[i] = 145, sy == 22234
+addnums() --> i = 195, arr_y[i] = 120, sy == 22354
+addnums() --> i = 196, arr_y[i] = 95, sy == 22449
+addnums() --> i = 197, arr_y[i] = 82, sy == 22531
+addnums() --> i = 198, arr_y[i] = 158, sy == 22689
+addnums() --> i = 199, arr_y[i] = 78, sy == 22767
+addnums() --> i = 200, arr_y[i] = 81, sy == 22848
+addnums() --> i = 201, arr_y[i] = 150, sy == 22998
+addnums() --> i = 202, arr_y[i] = 156, sy == 23154
+addnums() --> i = 203, arr_y[i] = 143, sy == 23297
+addnums() --> i = 204, arr_y[i] = 64, sy == 23361
+addnums() --> i = 205, arr_y[i] = 98, sy == 23459
+addnums() --> i = 206, arr_y[i] = 126, sy == 23585
+addnums() --> i = 207, arr_y[i] = 140, sy == 23725
+addnums() --> i = 208, arr_y[i] = 157, sy == 23882
+addnums() --> i = 209, arr_y[i] = 111, sy == 23993
+addnums() --> i = 210, arr_y[i] = 79, sy == 24072
+addnums() --> i = 211, arr_y[i] = 67, sy == 24139
+addnums() --> i = 212, arr_y[i] = 102, sy == 24241
+addnums() --> i = 213, arr_y[i] = 124, sy == 24365
+addnums() --> i = 214, arr_y[i] = 100, sy == 24465
+addnums() --> i = 215, arr_y[i] = 88, sy == 24553
+addnums() --> i = 216, arr_y[i] = 87, sy == 24640
+addnums() --> i = 217, arr_y[i] = 133, sy == 24773
+addnums() --> i = 218, arr_y[i] = 161, sy == 24934
+addnums() --> i = 219, arr_y[i] = 157, sy == 25091
+addnums() --> i = 220, arr_y[i] = 169, sy == 25260
+addnums() --> i = 221, arr_y[i] = 64, sy == 25324
+addnums() --> i = 222, arr_y[i] = 114, sy == 25438
+addnums() --> i = 223, arr_y[i] = 105, sy == 25543
+addnums() --> i = 224, arr_y[i] = 136, sy == 25679
+addnums() --> i = 225, arr_y[i] = 129, sy == 25808
+addnums() --> i = 226, arr_y[i] = 175, sy == 25983
+addnums() --> i = 227, arr_y[i] = 106, sy == 26089
+addnums() --> i = 228, arr_y[i] = 114, sy == 26203
+addnums() --> i = 229, arr_y[i] = 162, sy == 26365
+addnums() --> i = 230, arr_y[i] = 103, sy == 26468
+addnums() --> i = 231, arr_y[i] = 177, sy == 26645
+addnums() --> i = 232, arr_y[i] = 68, sy == 26713
+addnums() --> i = 233, arr_y[i] = 136, sy == 26849
+addnums() --> i = 234, arr_y[i] = 115, sy == 26964
+addnums() --> i = 235, arr_y[i] = 114, sy == 27078
+addnums() --> i = 236, arr_y[i] = 125, sy == 27203
+addnums() --> i = 237, arr_y[i] = 110, sy == 27313
+addnums() --> i = 238, arr_y[i] = 110, sy == 27423
+addnums() --> i = 239, arr_y[i] = 169, sy == 27592
+addnums() --> i = 240, arr_y[i] = 151, sy == 27743
+addnums() --> i = 241, arr_y[i] = 97, sy == 27840
+addnums() --> i = 242, arr_y[i] = 0, sy == 27840
+fit() --> Sum of x's: 11934
+fit() --> Sum of y's: 27840
+fit() --> Sum of yx's: 1592196
+fit() --> Sum of xx's: 786958
+fit() --> After add_nums: sx2=142420356
+fit() --> Sum of x's: 11934
+fit() --> Sum of y's: 27840
+fit() --> Sum of yx's: 1592196
+fit() --> Sum of xx's: 786958
+fit() --> a1: -1387323640
+fit() --> a2: 48810438
+fit() --> b1: 54661068
+fit() --> b2: 48810438
+fit() --> Best fit param a: 59.570120
+fit() --> Best fit param b: 1.119864
+calc_distance() --> i=0 ; temp=-8.042793
+calc_distance() --> i=0 ; tempSquared=64.686527
+calc_distance() --> i=0 ; f=64.686527
+calc_distance() --> i=1 ; temp=10.313408
+calc_distance() --> i=1 ; tempSquared=106.366375
+calc_distance() --> i=1 ; f=171.052901
+calc_distance() --> i=2 ; temp=6.553136
+calc_distance() --> i=2 ; tempSquared=42.943593
+calc_distance() --> i=2 ; f=213.996495
+calc_distance() -->  f(a,b) = 4001968.883592037
+calc_chi_squared() --> i = 0 ; tempOverSigSquared=2.587461
+calc_chi_squared() --> i = 0 ; term2=2.587461
+calc_chi_squared() --> i = 1 ; tempOverSigSquared=0.415494
+calc_chi_squared() --> i = 1 ; term2=3.002955
+calc_chi_squared() --> i = 2 ; tempOverSigSquared=1.717744
+calc_chi_squared() --> i = 2 ; term2=4.720698
  calc_chi_squared() -->  term1 = 0.004149378
  calc_chi_squared() -->  term2 = inf
 calc_chi_squared() --> gof = inf
-fit() --> f(a,b) = 6194960.859403757
+fit() --> f(a,b) = 4001968.883592037
 fit() --> goodness of fit = inf
 main() --> Current index 435 of 1362 
 ============ EVENT 3 ============
-fit() --> After INIT: sy=-123
+fit() --> After INIT: sy=27840
 add_nums() --> Before LOOP: sx=0, sy=0, sxy=0, sxx0
-fit() --> Sum of x's: 0
-fit() --> Sum of y's: 0
-fit() --> Sum of yx's: 0
-fit() --> Sum of xx's: 0
-fit() --> After add_nums: sx2=0
-fit() --> Sum of x's: 0
-fit() --> Sum of y's: 0
-fit() --> Sum of yx's: 0
-fit() --> Sum of xx's: 0
-fit() --> a1: 0
-fit() --> a2: 0
-fit() --> b1: 0
-fit() --> b2: 0
-fit() --> Best fit param a: -nan
-fit() --> Best fit param b: -nan
-calc_distance() --> i=0 ; temp=-nan
-calc_distance() --> i=0 ; tempSquared=-nan
-calc_distance() --> i=0 ; f=-nan
-calc_distance() --> i=1 ; temp=-nan
-calc_distance() --> i=1 ; tempSquared=-nan
-calc_distance() --> i=1 ; f=-nan
-calc_distance() --> i=2 ; temp=-nan
-calc_distance() --> i=2 ; tempSquared=-nan
-calc_distance() --> i=2 ; f=-nan
-calc_distance() -->  f(a,b) = -nan
-calc_chi_squared() --> i = 0 ; tempOverSigSquared=-nan
-calc_chi_squared() --> i = 0 ; term2=-nan
-calc_chi_squared() --> i = 1 ; tempOverSigSquared=-nan
-calc_chi_squared() --> i = 1 ; term2=-nan
-calc_chi_squared() --> i = 2 ; tempOverSigSquared=-nan
-calc_chi_squared() --> i = 2 ; term2=-nan
+addnums() --> i = 0, arr_y[i] = -30, sy == -30
+addnums() --> i = 1, arr_y[i] = -52, sy == -82
+addnums() --> i = 2, arr_y[i] = -26, sy == -108
+addnums() --> i = 3, arr_y[i] = -120, sy == -228
+addnums() --> i = 4, arr_y[i] = -1, sy == -229
+addnums() --> i = 5, arr_y[i] = -35, sy == -264
+addnums() --> i = 6, arr_y[i] = -91, sy == -355
+addnums() --> i = 7, arr_y[i] = -24, sy == -379
+addnums() --> i = 8, arr_y[i] = -53, sy == -432
+addnums() --> i = 9, arr_y[i] = -35, sy == -467
+addnums() --> i = 10, arr_y[i] = -85, sy == -552
+addnums() --> i = 11, arr_y[i] = -35, sy == -587
+addnums() --> i = 12, arr_y[i] = -78, sy == -665
+addnums() --> i = 13, arr_y[i] = -126, sy == -791
+addnums() --> i = 14, arr_y[i] = -29, sy == -820
+addnums() --> i = 15, arr_y[i] = -102, sy == -922
+addnums() --> i = 16, arr_y[i] = -113, sy == -1035
+addnums() --> i = 17, arr_y[i] = -35, sy == -1070
+addnums() --> i = 18, arr_y[i] = -97, sy == -1167
+addnums() --> i = 19, arr_y[i] = -100, sy == -1267
+addnums() --> i = 20, arr_y[i] = 1, sy == -1266
+addnums() --> i = 21, arr_y[i] = -11, sy == -1277
+addnums() --> i = 22, arr_y[i] = -110, sy == -1387
+addnums() --> i = 23, arr_y[i] = -34, sy == -1421
+addnums() --> i = 24, arr_y[i] = -5, sy == -1426
+addnums() --> i = 25, arr_y[i] = -109, sy == -1535
+addnums() --> i = 26, arr_y[i] = -77, sy == -1612
+addnums() --> i = 27, arr_y[i] = -60, sy == -1672
+addnums() --> i = 28, arr_y[i] = -62, sy == -1734
+addnums() --> i = 29, arr_y[i] = -108, sy == -1842
+addnums() --> i = 30, arr_y[i] = -17, sy == -1859
+addnums() --> i = 31, arr_y[i] = -84, sy == -1943
+addnums() --> i = 32, arr_y[i] = -9, sy == -1952
+addnums() --> i = 33, arr_y[i] = -42, sy == -1994
+addnums() --> i = 34, arr_y[i] = -33, sy == -2027
+addnums() --> i = 35, arr_y[i] = -86, sy == -2113
+addnums() --> i = 36, arr_y[i] = -6, sy == -2119
+addnums() --> i = 37, arr_y[i] = -56, sy == -2175
+addnums() --> i = 38, arr_y[i] = 0, sy == -2175
+addnums() --> i = 39, arr_y[i] = -29, sy == -2204
+addnums() --> i = 40, arr_y[i] = -7, sy == -2211
+addnums() --> i = 41, arr_y[i] = -57, sy == -2268
+addnums() --> i = 42, arr_y[i] = -116, sy == -2384
+addnums() --> i = 43, arr_y[i] = -18, sy == -2402
+addnums() --> i = 44, arr_y[i] = -70, sy == -2472
+addnums() --> i = 45, arr_y[i] = -43, sy == -2515
+addnums() --> i = 46, arr_y[i] = -4, sy == -2519
+addnums() --> i = 47, arr_y[i] = -96, sy == -2615
+addnums() --> i = 48, arr_y[i] = -92, sy == -2707
+addnums() --> i = 49, arr_y[i] = -45, sy == -2752
+addnums() --> i = 50, arr_y[i] = -9, sy == -2761
+addnums() --> i = 51, arr_y[i] = -42, sy == -2803
+addnums() --> i = 52, arr_y[i] = -77, sy == -2880
+addnums() --> i = 53, arr_y[i] = -117, sy == -2997
+addnums() --> i = 54, arr_y[i] = -89, sy == -3086
+addnums() --> i = 55, arr_y[i] = -105, sy == -3191
+addnums() --> i = 56, arr_y[i] = -50, sy == -3241
+addnums() --> i = 57, arr_y[i] = -15, sy == -3256
+addnums() --> i = 58, arr_y[i] = -110, sy == -3366
+addnums() --> i = 59, arr_y[i] = -14, sy == -3380
+addnums() --> i = 60, arr_y[i] = 0, sy == -3380
+addnums() --> i = 61, arr_y[i] = -109, sy == -3489
+addnums() --> i = 62, arr_y[i] = -92, sy == -3581
+addnums() --> i = 63, arr_y[i] = -73, sy == -3654
+addnums() --> i = 64, arr_y[i] = -38, sy == -3692
+addnums() --> i = 65, arr_y[i] = -32, sy == -3724
+addnums() --> i = 66, arr_y[i] = -64, sy == -3788
+addnums() --> i = 67, arr_y[i] = -26, sy == -3814
+addnums() --> i = 68, arr_y[i] = -27, sy == -3841
+addnums() --> i = 69, arr_y[i] = -45, sy == -3886
+addnums() --> i = 70, arr_y[i] = -94, sy == -3980
+addnums() --> i = 71, arr_y[i] = -98, sy == -4078
+addnums() --> i = 72, arr_y[i] = -78, sy == -4156
+addnums() --> i = 73, arr_y[i] = -2, sy == -4158
+addnums() --> i = 74, arr_y[i] = -107, sy == -4265
+addnums() --> i = 75, arr_y[i] = -126, sy == -4391
+addnums() --> i = 76, arr_y[i] = -98, sy == -4489
+addnums() --> i = 77, arr_y[i] = -22, sy == -4511
+addnums() --> i = 78, arr_y[i] = -114, sy == -4625
+addnums() --> i = 79, arr_y[i] = -44, sy == -4669
+addnums() --> i = 80, arr_y[i] = -98, sy == -4767
+addnums() --> i = 81, arr_y[i] = -76, sy == -4843
+addnums() --> i = 82, arr_y[i] = -4, sy == -4847
+addnums() --> i = 83, arr_y[i] = -78, sy == -4925
+addnums() --> i = 84, arr_y[i] = -72, sy == -4997
+addnums() --> i = 85, arr_y[i] = -24, sy == -5021
+addnums() --> i = 86, arr_y[i] = -53, sy == -5074
+addnums() --> i = 87, arr_y[i] = -46, sy == -5120
+addnums() --> i = 88, arr_y[i] = -107, sy == -5227
+addnums() --> i = 89, arr_y[i] = -66, sy == -5293
+addnums() --> i = 90, arr_y[i] = -36, sy == -5329
+addnums() --> i = 91, arr_y[i] = -110, sy == -5439
+addnums() --> i = 92, arr_y[i] = -25, sy == -5464
+addnums() --> i = 93, arr_y[i] = -20, sy == -5484
+addnums() --> i = 94, arr_y[i] = -98, sy == -5582
+addnums() --> i = 95, arr_y[i] = -9, sy == -5591
+addnums() --> i = 96, arr_y[i] = -121, sy == -5712
+addnums() --> i = 97, arr_y[i] = -118, sy == -5830
+addnums() --> i = 98, arr_y[i] = -27, sy == -5857
+addnums() --> i = 99, arr_y[i] = -34, sy == -5891
+addnums() --> i = 100, arr_y[i] = -21, sy == -5912
+addnums() --> i = 101, arr_y[i] = -112, sy == -6024
+addnums() --> i = 102, arr_y[i] = -85, sy == -6109
+addnums() --> i = 103, arr_y[i] = -30, sy == -6139
+addnums() --> i = 104, arr_y[i] = -51, sy == -6190
+addnums() --> i = 105, arr_y[i] = -60, sy == -6250
+addnums() --> i = 106, arr_y[i] = -89, sy == -6339
+addnums() --> i = 107, arr_y[i] = -69, sy == -6408
+addnums() --> i = 108, arr_y[i] = -46, sy == -6454
+addnums() --> i = 109, arr_y[i] = -98, sy == -6552
+addnums() --> i = 110, arr_y[i] = -108, sy == -6660
+addnums() --> i = 111, arr_y[i] = -112, sy == -6772
+addnums() --> i = 112, arr_y[i] = -79, sy == -6851
+addnums() --> i = 113, arr_y[i] = -85, sy == -6936
+addnums() --> i = 114, arr_y[i] = -94, sy == -7030
+addnums() --> i = 115, arr_y[i] = -37, sy == -7067
+addnums() --> i = 116, arr_y[i] = -12, sy == -7079
+addnums() --> i = 117, arr_y[i] = -5, sy == -7084
+addnums() --> i = 118, arr_y[i] = -35, sy == -7119
+addnums() --> i = 119, arr_y[i] = -19, sy == -7138
+addnums() --> i = 120, arr_y[i] = -120, sy == -7258
+addnums() --> i = 121, arr_y[i] = -127, sy == -7385
+addnums() --> i = 122, arr_y[i] = -7, sy == -7392
+addnums() --> i = 123, arr_y[i] = -30, sy == -7422
+addnums() --> i = 124, arr_y[i] = -88, sy == -7510
+addnums() --> i = 125, arr_y[i] = -102, sy == -7612
+addnums() --> i = 126, arr_y[i] = -23, sy == -7635
+addnums() --> i = 127, arr_y[i] = 1, sy == -7634
+addnums() --> i = 128, arr_y[i] = -104, sy == -7738
+addnums() --> i = 129, arr_y[i] = -1, sy == -7739
+addnums() --> i = 130, arr_y[i] = -81, sy == -7820
+addnums() --> i = 131, arr_y[i] = -31, sy == -7851
+addnums() --> i = 132, arr_y[i] = -98, sy == -7949
+addnums() --> i = 133, arr_y[i] = -28, sy == -7977
+addnums() --> i = 134, arr_y[i] = -3, sy == -7980
+addnums() --> i = 135, arr_y[i] = -16, sy == -7996
+addnums() --> i = 136, arr_y[i] = -71, sy == -8067
+addnums() --> i = 137, arr_y[i] = -74, sy == -8141
+addnums() --> i = 138, arr_y[i] = -66, sy == -8207
+addnums() --> i = 139, arr_y[i] = -59, sy == -8266
+addnums() --> i = 140, arr_y[i] = -116, sy == -8382
+addnums() --> i = 141, arr_y[i] = -68, sy == -8450
+addnums() --> i = 142, arr_y[i] = -108, sy == -8558
+addnums() --> i = 143, arr_y[i] = -81, sy == -8639
+addnums() --> i = 144, arr_y[i] = -59, sy == -8698
+addnums() --> i = 145, arr_y[i] = -48, sy == -8746
+addnums() --> i = 146, arr_y[i] = -44, sy == -8790
+addnums() --> i = 147, arr_y[i] = -39, sy == -8829
+addnums() --> i = 148, arr_y[i] = -95, sy == -8924
+addnums() --> i = 149, arr_y[i] = -2, sy == -8926
+addnums() --> i = 150, arr_y[i] = -79, sy == -9005
+addnums() --> i = 151, arr_y[i] = -35, sy == -9040
+addnums() --> i = 152, arr_y[i] = -37, sy == -9077
+addnums() --> i = 153, arr_y[i] = -5, sy == -9082
+addnums() --> i = 154, arr_y[i] = -40, sy == -9122
+addnums() --> i = 155, arr_y[i] = -11, sy == -9133
+addnums() --> i = 156, arr_y[i] = -117, sy == -9250
+addnums() --> i = 157, arr_y[i] = -3, sy == -9253
+addnums() --> i = 158, arr_y[i] = -79, sy == -9332
+addnums() --> i = 159, arr_y[i] = -10, sy == -9342
+addnums() --> i = 160, arr_y[i] = -121, sy == -9463
+addnums() --> i = 161, arr_y[i] = -48, sy == -9511
+addnums() --> i = 162, arr_y[i] = -87, sy == -9598
+addnums() --> i = 163, arr_y[i] = -100, sy == -9698
+addnums() --> i = 164, arr_y[i] = -95, sy == -9793
+addnums() --> i = 165, arr_y[i] = 5, sy == -9788
+addnums() --> i = 166, arr_y[i] = -22, sy == -9810
+addnums() --> i = 167, arr_y[i] = -110, sy == -9920
+addnums() --> i = 168, arr_y[i] = -102, sy == -10022
+addnums() --> i = 169, arr_y[i] = -128, sy == -10150
+addnums() --> i = 170, arr_y[i] = -60, sy == -10210
+addnums() --> i = 171, arr_y[i] = -60, sy == -10270
+addnums() --> i = 172, arr_y[i] = -25, sy == -10295
+addnums() --> i = 173, arr_y[i] = -86, sy == -10381
+addnums() --> i = 174, arr_y[i] = -19, sy == -10400
+addnums() --> i = 175, arr_y[i] = -105, sy == -10505
+addnums() --> i = 176, arr_y[i] = -95, sy == -10600
+addnums() --> i = 177, arr_y[i] = -123, sy == -10723
+addnums() --> i = 178, arr_y[i] = -84, sy == -10807
+addnums() --> i = 179, arr_y[i] = -25, sy == -10832
+addnums() --> i = 180, arr_y[i] = 1, sy == -10831
+addnums() --> i = 181, arr_y[i] = 0, sy == -10831
+addnums() --> i = 182, arr_y[i] = -84, sy == -10915
+addnums() --> i = 183, arr_y[i] = -79, sy == -10994
+addnums() --> i = 184, arr_y[i] = -1, sy == -10995
+addnums() --> i = 185, arr_y[i] = -120, sy == -11115
+addnums() --> i = 186, arr_y[i] = -38, sy == -11153
+addnums() --> i = 187, arr_y[i] = -45, sy == -11198
+addnums() --> i = 188, arr_y[i] = -41, sy == -11239
+addnums() --> i = 189, arr_y[i] = -38, sy == -11277
+addnums() --> i = 190, arr_y[i] = -104, sy == -11381
+addnums() --> i = 191, arr_y[i] = -75, sy == -11456
+addnums() --> i = 192, arr_y[i] = -13, sy == -11469
+addnums() --> i = 193, arr_y[i] = -63, sy == -11532
+addnums() --> i = 194, arr_y[i] = -36, sy == -11568
+addnums() --> i = 195, arr_y[i] = -2, sy == -11570
+addnums() --> i = 196, arr_y[i] = -2, sy == -11572
+addnums() --> i = 197, arr_y[i] = -92, sy == -11664
+addnums() --> i = 198, arr_y[i] = -71, sy == -11735
+addnums() --> i = 199, arr_y[i] = -36, sy == -11771
+addnums() --> i = 200, arr_y[i] = -118, sy == -11889
+addnums() --> i = 201, arr_y[i] = -85, sy == -11974
+addnums() --> i = 202, arr_y[i] = -3, sy == -11977
+addnums() --> i = 203, arr_y[i] = -49, sy == -12026
+addnums() --> i = 204, arr_y[i] = -19, sy == -12045
+addnums() --> i = 205, arr_y[i] = -12, sy == -12057
+addnums() --> i = 206, arr_y[i] = -113, sy == -12170
+addnums() --> i = 207, arr_y[i] = -45, sy == -12215
+addnums() --> i = 208, arr_y[i] = -120, sy == -12335
+addnums() --> i = 209, arr_y[i] = -103, sy == -12438
+addnums() --> i = 210, arr_y[i] = -8, sy == -12446
+addnums() --> i = 211, arr_y[i] = -96, sy == -12542
+addnums() --> i = 212, arr_y[i] = -100, sy == -12642
+addnums() --> i = 213, arr_y[i] = -62, sy == -12704
+addnums() --> i = 214, arr_y[i] = -89, sy == -12793
+addnums() --> i = 215, arr_y[i] = -83, sy == -12876
+addnums() --> i = 216, arr_y[i] = -30, sy == -12906
+addnums() --> i = 217, arr_y[i] = 0, sy == -12906
+addnums() --> i = 218, arr_y[i] = -15, sy == -12921
+addnums() --> i = 219, arr_y[i] = -17, sy == -12938
+addnums() --> i = 220, arr_y[i] = -58, sy == -12996
+addnums() --> i = 221, arr_y[i] = -101, sy == -13097
+addnums() --> i = 222, arr_y[i] = -80, sy == -13177
+addnums() --> i = 223, arr_y[i] = -66, sy == -13243
+addnums() --> i = 224, arr_y[i] = -5, sy == -13248
+addnums() --> i = 225, arr_y[i] = -51, sy == -13299
+addnums() --> i = 226, arr_y[i] = -111, sy == -13410
+addnums() --> i = 227, arr_y[i] = -31, sy == -13441
+addnums() --> i = 228, arr_y[i] = -66, sy == -13507
+addnums() --> i = 229, arr_y[i] = -120, sy == -13627
+addnums() --> i = 230, arr_y[i] = -57, sy == -13684
+addnums() --> i = 231, arr_y[i] = -74, sy == -13758
+addnums() --> i = 232, arr_y[i] = -127, sy == -13885
+addnums() --> i = 233, arr_y[i] = -108, sy == -13993
+addnums() --> i = 234, arr_y[i] = -23, sy == -14016
+addnums() --> i = 235, arr_y[i] = -70, sy == -14086
+addnums() --> i = 236, arr_y[i] = -104, sy == -14190
+addnums() --> i = 237, arr_y[i] = -118, sy == -14308
+addnums() --> i = 238, arr_y[i] = -5, sy == -14313
+addnums() --> i = 239, arr_y[i] = -16, sy == -14329
+addnums() --> i = 240, arr_y[i] = -42, sy == -14371
+addnums() --> i = 241, arr_y[i] = -122, sy == -14493
+addnums() --> i = 242, arr_y[i] = 0, sy == -14493
+fit() --> Sum of x's: 11436
+fit() --> Sum of y's: -14493
+fit() --> Sum of yx's: -969369
+fit() --> Sum of xx's: 761226
+fit() --> After add_nums: sx2=130782096
+fit() --> Sum of x's: 11436
+fit() --> Sum of y's: -14493
+fit() --> Sum of yx's: -969369
+fit() --> Sum of xx's: 761226
+fit() --> a1: 53255466
+fit() --> a2: 54195822
+fit() --> b1: -69814719
+fit() --> b2: 54195822
+fit() --> Best fit param a: 0.982649
+fit() --> Best fit param b: -1.288194
+calc_distance() --> i=0 ; temp=-0.065999
+calc_distance() --> i=0 ; tempSquared=0.004356
+calc_distance() --> i=0 ; f=0.004356
+calc_distance() --> i=1 ; temp=-6.607674
+calc_distance() --> i=1 ; tempSquared=43.661356
+calc_distance() --> i=1 ; f=43.665712
+calc_distance() --> i=2 ; temp=0.069420
+calc_distance() --> i=2 ; tempSquared=0.004819
+calc_distance() --> i=2 ; f=43.670531
+calc_distance() -->  f(a,b) = 2711.951893362
+calc_chi_squared() --> i = 0 ; tempOverSigSquared=0.001089
+calc_chi_squared() --> i = 0 ; term2=0.001089
+calc_chi_squared() --> i = 1 ; tempOverSigSquared=4.851262
+calc_chi_squared() --> i = 1 ; term2=4.852351
+calc_chi_squared() --> i = 2 ; tempOverSigSquared=0.001205
+calc_chi_squared() --> i = 2 ; term2=4.853556
  calc_chi_squared() -->  term1 = 0.004149378
- calc_chi_squared() -->  term2 = -nan
-calc_chi_squared() --> gof = -nan
-fit() --> f(a,b) = -nan
-fit() --> goodness of fit = -nan
+ calc_chi_squared() -->  term2 = inf
+calc_chi_squared() --> gof = inf
+fit() --> f(a,b) = 2711.951893362
+fit() --> goodness of fit = inf
 main() --> Current index 677 of 1362 
 ============ EVENT 4 ============
-fit() --> After INIT: sy=0
+fit() --> After INIT: sy=-14493
 add_nums() --> Before LOOP: sx=0, sy=0, sxy=0, sxx0
-fit() --> Sum of x's: 0
-fit() --> Sum of y's: 0
-fit() --> Sum of yx's: 0
-fit() --> Sum of xx's: 0
-fit() --> After add_nums: sx2=0
-fit() --> Sum of x's: 0
-fit() --> Sum of y's: 0
-fit() --> Sum of yx's: 0
-fit() --> Sum of xx's: 0
-fit() --> a1: 0
-fit() --> a2: 0
-fit() --> b1: 0
-fit() --> b2: 0
-fit() --> Best fit param a: -nan
-fit() --> Best fit param b: -nan
-calc_distance() --> i=0 ; temp=-nan
-calc_distance() --> i=0 ; tempSquared=-nan
-calc_distance() --> i=0 ; f=-nan
-calc_distance() --> i=1 ; temp=-nan
-calc_distance() --> i=1 ; tempSquared=-nan
-calc_distance() --> i=1 ; f=-nan
-calc_distance() --> i=2 ; temp=-nan
-calc_distance() --> i=2 ; tempSquared=-nan
-calc_distance() --> i=2 ; f=-nan
-calc_distance() -->  f(a,b) = -nan
-calc_chi_squared() --> i = 0 ; tempOverSigSquared=-nan
-calc_chi_squared() --> i = 0 ; term2=-nan
-calc_chi_squared() --> i = 1 ; tempOverSigSquared=-nan
-calc_chi_squared() --> i = 1 ; term2=-nan
-calc_chi_squared() --> i = 2 ; tempOverSigSquared=-nan
-calc_chi_squared() --> i = 2 ; term2=-nan
+addnums() --> i = 0, arr_y[i] = 197, sy == 197
+addnums() --> i = 1, arr_y[i] = 456, sy == 653
+addnums() --> i = 2, arr_y[i] = 142, sy == 795
+addnums() --> i = 3, arr_y[i] = 597, sy == 1392
+addnums() --> i = 4, arr_y[i] = 197, sy == 1589
+addnums() --> i = 5, arr_y[i] = 1028, sy == 2617
+addnums() --> i = 6, arr_y[i] = 159, sy == 2776
+addnums() --> i = 7, arr_y[i] = 355, sy == 3131
+addnums() --> i = 8, arr_y[i] = 959, sy == 4090
+addnums() --> i = 9, arr_y[i] = 87, sy == 4177
+addnums() --> i = 10, arr_y[i] = 22, sy == 4199
+addnums() --> i = 11, arr_y[i] = 1036, sy == 5235
+addnums() --> i = 12, arr_y[i] = 266, sy == 5501
+addnums() --> i = 13, arr_y[i] = 578, sy == 6079
+addnums() --> i = 14, arr_y[i] = 610, sy == 6689
+addnums() --> i = 15, arr_y[i] = 310, sy == 6999
+addnums() --> i = 16, arr_y[i] = 404, sy == 7403
+addnums() --> i = 17, arr_y[i] = 803, sy == 8206
+addnums() --> i = 18, arr_y[i] = 77, sy == 8283
+addnums() --> i = 19, arr_y[i] = 1007, sy == 9290
+addnums() --> i = 20, arr_y[i] = 656, sy == 9946
+addnums() --> i = 21, arr_y[i] = 775, sy == 10721
+addnums() --> i = 22, arr_y[i] = 449, sy == 11170
+addnums() --> i = 23, arr_y[i] = 967, sy == 12137
+addnums() --> i = 24, arr_y[i] = 534, sy == 12671
+addnums() --> i = 25, arr_y[i] = 431, sy == 13102
+addnums() --> i = 26, arr_y[i] = 1012, sy == 14114
+addnums() --> i = 27, arr_y[i] = 592, sy == 14706
+addnums() --> i = 28, arr_y[i] = 274, sy == 14980
+addnums() --> i = 29, arr_y[i] = 659, sy == 15639
+addnums() --> i = 30, arr_y[i] = 936, sy == 16575
+addnums() --> i = 31, arr_y[i] = 807, sy == 17382
+addnums() --> i = 32, arr_y[i] = 811, sy == 18193
+addnums() --> i = 33, arr_y[i] = 1046, sy == 19239
+addnums() --> i = 34, arr_y[i] = 725, sy == 19964
+addnums() --> i = 35, arr_y[i] = 465, sy == 20429
+addnums() --> i = 36, arr_y[i] = 679, sy == 21108
+addnums() --> i = 37, arr_y[i] = 444, sy == 21552
+addnums() --> i = 38, arr_y[i] = 616, sy == 22168
+addnums() --> i = 39, arr_y[i] = 920, sy == 23088
+addnums() --> i = 40, arr_y[i] = 233, sy == 23321
+addnums() --> i = 41, arr_y[i] = 414, sy == 23735
+addnums() --> i = 42, arr_y[i] = 607, sy == 24342
+addnums() --> i = 43, arr_y[i] = 204, sy == 24546
+addnums() --> i = 44, arr_y[i] = 191, sy == 24737
+addnums() --> i = 45, arr_y[i] = 236, sy == 24973
+addnums() --> i = 46, arr_y[i] = 758, sy == 25731
+addnums() --> i = 47, arr_y[i] = 509, sy == 26240
+addnums() --> i = 48, arr_y[i] = 1005, sy == 27245
+addnums() --> i = 49, arr_y[i] = 869, sy == 28114
+addnums() --> i = 50, arr_y[i] = 184, sy == 28298
+addnums() --> i = 51, arr_y[i] = 458, sy == 28756
+addnums() --> i = 52, arr_y[i] = 1039, sy == 29795
+addnums() --> i = 53, arr_y[i] = 452, sy == 30247
+addnums() --> i = 54, arr_y[i] = 854, sy == 31101
+addnums() --> i = 55, arr_y[i] = 833, sy == 31934
+addnums() --> i = 56, arr_y[i] = 597, sy == 32531
+addnums() --> i = 57, arr_y[i] = 1032, sy == 33563
+addnums() --> i = 58, arr_y[i] = 24, sy == 33587
+addnums() --> i = 59, arr_y[i] = 382, sy == 33969
+addnums() --> i = 60, arr_y[i] = 758, sy == 34727
+addnums() --> i = 61, arr_y[i] = 171, sy == 34898
+addnums() --> i = 62, arr_y[i] = 335, sy == 35233
+addnums() --> i = 63, arr_y[i] = 924, sy == 36157
+addnums() --> i = 64, arr_y[i] = 666, sy == 36823
+addnums() --> i = 65, arr_y[i] = 659, sy == 37482
+addnums() --> i = 66, arr_y[i] = 342, sy == 37824
+addnums() --> i = 67, arr_y[i] = 1088, sy == 38912
+addnums() --> i = 68, arr_y[i] = 259, sy == 39171
+addnums() --> i = 69, arr_y[i] = 824, sy == 39995
+addnums() --> i = 70, arr_y[i] = 491, sy == 40486
+addnums() --> i = 71, arr_y[i] = 847, sy == 41333
+addnums() --> i = 72, arr_y[i] = 662, sy == 41995
+addnums() --> i = 73, arr_y[i] = 992, sy == 42987
+addnums() --> i = 74, arr_y[i] = 758, sy == 43745
+addnums() --> i = 75, arr_y[i] = 851, sy == 44596
+addnums() --> i = 76, arr_y[i] = 674, sy == 45270
+addnums() --> i = 77, arr_y[i] = 626, sy == 45896
+addnums() --> i = 78, arr_y[i] = 1059, sy == 46955
+addnums() --> i = 79, arr_y[i] = 39, sy == 46994
+addnums() --> i = 80, arr_y[i] = 949, sy == 47943
+addnums() --> i = 81, arr_y[i] = 1076, sy == 49019
+addnums() --> i = 82, arr_y[i] = 635, sy == 49654
+addnums() --> i = 83, arr_y[i] = 477, sy == 50131
+addnums() --> i = 84, arr_y[i] = 220, sy == 50351
+addnums() --> i = 85, arr_y[i] = 247, sy == 50598
+addnums() --> i = 86, arr_y[i] = 738, sy == 51336
+addnums() --> i = 87, arr_y[i] = 93, sy == 51429
+addnums() --> i = 88, arr_y[i] = 806, sy == 52235
+addnums() --> i = 89, arr_y[i] = -37, sy == 52198
+addnums() --> i = 90, arr_y[i] = 231, sy == 52429
+addnums() --> i = 91, arr_y[i] = 1008, sy == 53437
+addnums() --> i = 92, arr_y[i] = 110, sy == 53547
+addnums() --> i = 93, arr_y[i] = 367, sy == 53914
+addnums() --> i = 94, arr_y[i] = 769, sy == 54683
+addnums() --> i = 95, arr_y[i] = 890, sy == 55573
+addnums() --> i = 96, arr_y[i] = 873, sy == 56446
+addnums() --> i = 97, arr_y[i] = 962, sy == 57408
+addnums() --> i = 98, arr_y[i] = 482, sy == 57890
+addnums() --> i = 99, arr_y[i] = 538, sy == 58428
+addnums() --> i = 100, arr_y[i] = 884, sy == 59312
+addnums() --> i = 101, arr_y[i] = 328, sy == 59640
+addnums() --> i = 102, arr_y[i] = 561, sy == 60201
+addnums() --> i = 103, arr_y[i] = 721, sy == 60922
+addnums() --> i = 104, arr_y[i] = 104, sy == 61026
+addnums() --> i = 105, arr_y[i] = 69, sy == 61095
+addnums() --> i = 106, arr_y[i] = 498, sy == 61593
+addnums() --> i = 107, arr_y[i] = 447, sy == 62040
+addnums() --> i = 108, arr_y[i] = 684, sy == 62724
+addnums() --> i = 109, arr_y[i] = 560, sy == 63284
+addnums() --> i = 110, arr_y[i] = 815, sy == 64099
+addnums() --> i = 111, arr_y[i] = 134, sy == 64233
+addnums() --> i = 112, arr_y[i] = 661, sy == 64894
+addnums() --> i = 113, arr_y[i] = 420, sy == 65314
+addnums() --> i = 114, arr_y[i] = 206, sy == 65520
+addnums() --> i = 115, arr_y[i] = 288, sy == 65808
+addnums() --> i = 116, arr_y[i] = 212, sy == 66020
+addnums() --> i = 117, arr_y[i] = 69, sy == 66089
+addnums() --> i = 118, arr_y[i] = 561, sy == 66650
+addnums() --> i = 119, arr_y[i] = 428, sy == 67078
+addnums() --> i = 120, arr_y[i] = 616, sy == 67694
+addnums() --> i = 121, arr_y[i] = 434, sy == 68128
+addnums() --> i = 122, arr_y[i] = 378, sy == 68506
+addnums() --> i = 123, arr_y[i] = 91, sy == 68597
+addnums() --> i = 124, arr_y[i] = 646, sy == 69243
+addnums() --> i = 125, arr_y[i] = 851, sy == 70094
+addnums() --> i = 126, arr_y[i] = 134, sy == 70228
+addnums() --> i = 127, arr_y[i] = 941, sy == 71169
+addnums() --> i = 128, arr_y[i] = 927, sy == 72096
+addnums() --> i = 129, arr_y[i] = 1019, sy == 73115
+addnums() --> i = 130, arr_y[i] = 300, sy == 73415
+addnums() --> i = 131, arr_y[i] = 217, sy == 73632
+addnums() --> i = 132, arr_y[i] = 33, sy == 73665
+addnums() --> i = 133, arr_y[i] = 141, sy == 73806
+addnums() --> i = 134, arr_y[i] = 653, sy == 74459
+addnums() --> i = 135, arr_y[i] = 766, sy == 75225
+addnums() --> i = 136, arr_y[i] = 655, sy == 75880
+addnums() --> i = 137, arr_y[i] = 98, sy == 75978
+addnums() --> i = 138, arr_y[i] = 827, sy == 76805
+addnums() --> i = 139, arr_y[i] = 167, sy == 76972
+addnums() --> i = 140, arr_y[i] = 535, sy == 77507
+addnums() --> i = 141, arr_y[i] = 87, sy == 77594
+addnums() --> i = 142, arr_y[i] = 702, sy == 78296
+addnums() --> i = 143, arr_y[i] = 1101, sy == 79397
+addnums() --> i = 144, arr_y[i] = 691, sy == 80088
+addnums() --> i = 145, arr_y[i] = 762, sy == 80850
+addnums() --> i = 146, arr_y[i] = 534, sy == 81384
+addnums() --> i = 147, arr_y[i] = 371, sy == 81755
+addnums() --> i = 148, arr_y[i] = 630, sy == 82385
+addnums() --> i = 149, arr_y[i] = 282, sy == 82667
+addnums() --> i = 150, arr_y[i] = 582, sy == 83249
+addnums() --> i = 151, arr_y[i] = 153, sy == 83402
+addnums() --> i = 152, arr_y[i] = 224, sy == 83626
+addnums() --> i = 153, arr_y[i] = 323, sy == 83949
+addnums() --> i = 154, arr_y[i] = 874, sy == 84823
+addnums() --> i = 155, arr_y[i] = 948, sy == 85771
+addnums() --> i = 156, arr_y[i] = 445, sy == 86216
+addnums() --> i = 157, arr_y[i] = 502, sy == 86718
+addnums() --> i = 158, arr_y[i] = 461, sy == 87179
+addnums() --> i = 159, arr_y[i] = 944, sy == 88123
+addnums() --> i = 160, arr_y[i] = 311, sy == 88434
+addnums() --> i = 161, arr_y[i] = 1041, sy == 89475
+addnums() --> i = 162, arr_y[i] = 91, sy == 89566
+addnums() --> i = 163, arr_y[i] = 392, sy == 89958
+addnums() --> i = 164, arr_y[i] = 60, sy == 90018
+addnums() --> i = 165, arr_y[i] = 547, sy == 90565
+addnums() --> i = 166, arr_y[i] = 102, sy == 90667
+addnums() --> i = 167, arr_y[i] = 611, sy == 91278
+addnums() --> i = 168, arr_y[i] = 1018, sy == 92296
+addnums() --> i = 169, arr_y[i] = 716, sy == 93012
+addnums() --> i = 170, arr_y[i] = 486, sy == 93498
+addnums() --> i = 171, arr_y[i] = 387, sy == 93885
+addnums() --> i = 172, arr_y[i] = 228, sy == 94113
+addnums() --> i = 173, arr_y[i] = 305, sy == 94418
+addnums() --> i = 174, arr_y[i] = 274, sy == 94692
+addnums() --> i = 175, arr_y[i] = 574, sy == 95266
+addnums() --> i = 176, arr_y[i] = 822, sy == 96088
+addnums() --> i = 177, arr_y[i] = 1008, sy == 97096
+addnums() --> i = 178, arr_y[i] = 590, sy == 97686
+addnums() --> i = 179, arr_y[i] = 190, sy == 97876
+addnums() --> i = 180, arr_y[i] = 435, sy == 98311
+addnums() --> i = 181, arr_y[i] = 1100, sy == 99411
+addnums() --> i = 182, arr_y[i] = 145, sy == 99556
+addnums() --> i = 183, arr_y[i] = 945, sy == 100501
+addnums() --> i = 184, arr_y[i] = 406, sy == 100907
+addnums() --> i = 185, arr_y[i] = 809, sy == 101716
+addnums() --> i = 186, arr_y[i] = 180, sy == 101896
+addnums() --> i = 187, arr_y[i] = 81, sy == 101977
+addnums() --> i = 188, arr_y[i] = 910, sy == 102887
+addnums() --> i = 189, arr_y[i] = 74, sy == 102961
+addnums() --> i = 190, arr_y[i] = 383, sy == 103344
+addnums() --> i = 191, arr_y[i] = 266, sy == 103610
+addnums() --> i = 192, arr_y[i] = 1021, sy == 104631
+addnums() --> i = 193, arr_y[i] = 44, sy == 104675
+addnums() --> i = 194, arr_y[i] = 1074, sy == 105749
+addnums() --> i = 195, arr_y[i] = 1073, sy == 106822
+addnums() --> i = 196, arr_y[i] = 432, sy == 107254
+addnums() --> i = 197, arr_y[i] = 991, sy == 108245
+addnums() --> i = 198, arr_y[i] = 1101, sy == 109346
+addnums() --> i = 199, arr_y[i] = 952, sy == 110298
+addnums() --> i = 200, arr_y[i] = 353, sy == 110651
+addnums() --> i = 201, arr_y[i] = 406, sy == 111057
+addnums() --> i = 202, arr_y[i] = 349, sy == 111406
+addnums() --> i = 203, arr_y[i] = 1001, sy == 112407
+addnums() --> i = 204, arr_y[i] = 867, sy == 113274
+addnums() --> i = 205, arr_y[i] = 643, sy == 113917
+addnums() --> i = 206, arr_y[i] = 174, sy == 114091
+addnums() --> i = 207, arr_y[i] = 368, sy == 114459
+addnums() --> i = 208, arr_y[i] = 796, sy == 115255
+addnums() --> i = 209, arr_y[i] = 311, sy == 115566
+addnums() --> i = 210, arr_y[i] = 1154, sy == 116720
+addnums() --> i = 211, arr_y[i] = 48, sy == 116768
+addnums() --> i = 212, arr_y[i] = 568, sy == 117336
+addnums() --> i = 213, arr_y[i] = 74, sy == 117410
+addnums() --> i = 214, arr_y[i] = 765, sy == 118175
+addnums() --> i = 215, arr_y[i] = 567, sy == 118742
+addnums() --> i = 216, arr_y[i] = 179, sy == 118921
+addnums() --> i = 217, arr_y[i] = 57, sy == 118978
+addnums() --> i = 218, arr_y[i] = 821, sy == 119799
+addnums() --> i = 219, arr_y[i] = 51, sy == 119850
+addnums() --> i = 220, arr_y[i] = 629, sy == 120479
+addnums() --> i = 221, arr_y[i] = 234, sy == 120713
+addnums() --> i = 222, arr_y[i] = 863, sy == 121576
+addnums() --> i = 223, arr_y[i] = 848, sy == 122424
+addnums() --> i = 224, arr_y[i] = 478, sy == 122902
+addnums() --> i = 225, arr_y[i] = 380, sy == 123282
+addnums() --> i = 226, arr_y[i] = 234, sy == 123516
+addnums() --> i = 227, arr_y[i] = 1057, sy == 124573
+addnums() --> i = 228, arr_y[i] = 587, sy == 125160
+addnums() --> i = 229, arr_y[i] = 281, sy == 125441
+addnums() --> i = 230, arr_y[i] = 440, sy == 125881
+addnums() --> i = 231, arr_y[i] = 550, sy == 126431
+addnums() --> i = 232, arr_y[i] = 541, sy == 126972
+addnums() --> i = 233, arr_y[i] = 1000, sy == 127972
+addnums() --> i = 234, arr_y[i] = 251, sy == 128223
+addnums() --> i = 235, arr_y[i] = 531, sy == 128754
+addnums() --> i = 236, arr_y[i] = 564, sy == 129318
+addnums() --> i = 237, arr_y[i] = 539, sy == 129857
+addnums() --> i = 238, arr_y[i] = 94, sy == 129951
+addnums() --> i = 239, arr_y[i] = 446, sy == 130397
+addnums() --> i = 240, arr_y[i] = 149, sy == 130546
+addnums() --> i = 241, arr_y[i] = 247, sy == 130793
+addnums() --> i = 242, arr_y[i] = 0, sy == 130793
+fit() --> Sum of x's: 11625
+fit() --> Sum of y's: 130793
+fit() --> Sum of yx's: 8432619
+fit() --> Sum of xx's: 754183
+fit() --> After add_nums: sx2=135140625
+fit() --> Sum of x's: 11625
+fit() --> Sum of y's: 130793
+fit() --> Sum of yx's: 8432619
+fit() --> Sum of xx's: 754183
+fit() --> a1: 612661244
+fit() --> a2: 48125844
+fit() --> b1: 528657792
+fit() --> b2: 48125844
+fit() --> Best fit param a: 12.730400
+fit() --> Best fit param b: 10.984904
+calc_distance() --> i=0 ; temp=-2.473774
+calc_distance() --> i=0 ; tempSquared=6.119556
+calc_distance() --> i=0 ; f=6.119556
+calc_distance() --> i=1 ; temp=-7.111477
+calc_distance() --> i=1 ; tempSquared=50.573111
+calc_distance() --> i=1 ; f=56.692666
+calc_distance() --> i=2 ; temp=-46.488869
+calc_distance() --> i=2 ; tempSquared=2161.214962
+calc_distance() --> i=2 ; f=2217.907628
+calc_distance() -->  f(a,b) = 413777.443226716
+calc_chi_squared() --> i = 0 ; tempOverSigSquared=0.016952
+calc_chi_squared() --> i = 0 ; term2=0.016952
+calc_chi_squared() --> i = 1 ; tempOverSigSquared=0.036942
+calc_chi_squared() --> i = 1 ; term2=0.053893
+calc_chi_squared() --> i = 2 ; tempOverSigSquared=1.764257
+calc_chi_squared() --> i = 2 ; term2=1.818150
  calc_chi_squared() -->  term1 = 0.004149378
- calc_chi_squared() -->  term2 = -nan
-calc_chi_squared() --> gof = -nan
-fit() --> f(a,b) = -nan
-fit() --> goodness of fit = -nan
+ calc_chi_squared() -->  term2 = inf
+calc_chi_squared() --> gof = inf
+fit() --> f(a,b) = 413777.443226716
+fit() --> goodness of fit = inf
 main() --> Current index 919 of 1362 
 ============ EVENT 5 ============
-fit() --> After INIT: sy=0
+fit() --> After INIT: sy=130793
 add_nums() --> Before LOOP: sx=0, sy=0, sxy=0, sxx0
-fit() --> Sum of x's: 9953
-fit() --> Sum of y's: 22171
-fit() --> Sum of yx's: 1274875
-fit() --> Sum of xx's: 657823
-fit() --> After add_nums: sx2=99062209
-fit() --> Sum of x's: 9953
-fit() --> Sum of y's: 22171
-fit() --> Sum of yx's: 1274875
-fit() --> Sum of xx's: 657823
-fit() --> a1: 1895762858
-fit() --> a2: 192353380
-fit() --> b1: 344101662
-fit() --> b2: 192353380
-fit() --> Best fit param a: 9.855625
-fit() --> Best fit param b: 1.788904
-calc_distance() --> i=0 ; temp=-9.855625
-calc_distance() --> i=0 ; tempSquared=97.133352
-calc_distance() --> i=0 ; f=97.133352
-calc_distance() --> i=1 ; temp=-9.855625
-calc_distance() --> i=1 ; tempSquared=97.133352
-calc_distance() --> i=1 ; f=194.266704
-calc_distance() --> i=2 ; temp=-9.855625
-calc_distance() --> i=2 ; tempSquared=97.133352
-calc_distance() --> i=2 ; f=291.400056
-calc_distance() -->  f(a,b) = 109339738.291411549
-calc_chi_squared() --> i = 0 ; tempOverSigSquared=inf
-calc_chi_squared() --> i = 0 ; term2=inf
-calc_chi_squared() --> i = 1 ; tempOverSigSquared=inf
-calc_chi_squared() --> i = 1 ; term2=inf
-calc_chi_squared() --> i = 2 ; tempOverSigSquared=inf
-calc_chi_squared() --> i = 2 ; term2=inf
+addnums() --> i = 0, arr_y[i] = 387, sy == 387
+addnums() --> i = 1, arr_y[i] = 463, sy == 850
+addnums() --> i = 2, arr_y[i] = 249, sy == 1099
+addnums() --> i = 3, arr_y[i] = 620, sy == 1719
+addnums() --> i = 4, arr_y[i] = 160, sy == 1879
+addnums() --> i = 5, arr_y[i] = 195, sy == 2074
+addnums() --> i = 6, arr_y[i] = 642, sy == 2716
+addnums() --> i = 7, arr_y[i] = 622, sy == 3338
+addnums() --> i = 8, arr_y[i] = 355, sy == 3693
+addnums() --> i = 9, arr_y[i] = 246, sy == 3939
+addnums() --> i = 10, arr_y[i] = 392, sy == 4331
+addnums() --> i = 11, arr_y[i] = 533, sy == 4864
+addnums() --> i = 12, arr_y[i] = 8, sy == 4872
+addnums() --> i = 13, arr_y[i] = 493, sy == 5365
+addnums() --> i = 14, arr_y[i] = 197, sy == 5562
+addnums() --> i = 15, arr_y[i] = 379, sy == 5941
+addnums() --> i = 16, arr_y[i] = 61, sy == 6002
+addnums() --> i = 17, arr_y[i] = 146, sy == 6148
+addnums() --> i = 18, arr_y[i] = 372, sy == 6520
+addnums() --> i = 19, arr_y[i] = -9, sy == 6511
+addnums() --> i = 20, arr_y[i] = 2, sy == 6513
+addnums() --> i = 21, arr_y[i] = 578, sy == 7091
+addnums() --> i = 22, arr_y[i] = 374, sy == 7465
+addnums() --> i = 23, arr_y[i] = 425, sy == 7890
+addnums() --> i = 24, arr_y[i] = 676, sy == 8566
+addnums() --> i = 25, arr_y[i] = 668, sy == 9234
+addnums() --> i = 26, arr_y[i] = 10, sy == 9244
+addnums() --> i = 27, arr_y[i] = 477, sy == 9721
+addnums() --> i = 28, arr_y[i] = 342, sy == 10063
+addnums() --> i = 29, arr_y[i] = 376, sy == 10439
+addnums() --> i = 30, arr_y[i] = 431, sy == 10870
+addnums() --> i = 31, arr_y[i] = 490, sy == 11360
+addnums() --> i = 32, arr_y[i] = 63, sy == 11423
+addnums() --> i = 33, arr_y[i] = 296, sy == 11719
+addnums() --> i = 34, arr_y[i] = 538, sy == 12257
+addnums() --> i = 35, arr_y[i] = 254, sy == 12511
+addnums() --> i = 36, arr_y[i] = 457, sy == 12968
+addnums() --> i = 37, arr_y[i] = 423, sy == 13391
+addnums() --> i = 38, arr_y[i] = 457, sy == 13848
+addnums() --> i = 39, arr_y[i] = 220, sy == 14068
+addnums() --> i = 40, arr_y[i] = 395, sy == 14463
+addnums() --> i = 41, arr_y[i] = 541, sy == 15004
+addnums() --> i = 42, arr_y[i] = 125, sy == 15129
+addnums() --> i = 43, arr_y[i] = 350, sy == 15479
+addnums() --> i = 44, arr_y[i] = 199, sy == 15678
+addnums() --> i = 45, arr_y[i] = 185, sy == 15863
+addnums() --> i = 46, arr_y[i] = 201, sy == 16064
+addnums() --> i = 47, arr_y[i] = 352, sy == 16416
+addnums() --> i = 48, arr_y[i] = 618, sy == 17034
+addnums() --> i = 49, arr_y[i] = 405, sy == 17439
+addnums() --> i = 50, arr_y[i] = 177, sy == 17616
+addnums() --> i = 51, arr_y[i] = 116, sy == 17732
+addnums() --> i = 52, arr_y[i] = 92, sy == 17824
+addnums() --> i = 53, arr_y[i] = 26, sy == 17850
+addnums() --> i = 54, arr_y[i] = 544, sy == 18394
+addnums() --> i = 55, arr_y[i] = 368, sy == 18762
+addnums() --> i = 56, arr_y[i] = 85, sy == 18847
+addnums() --> i = 57, arr_y[i] = 559, sy == 19406
+addnums() --> i = 58, arr_y[i] = 191, sy == 19597
+addnums() --> i = 59, arr_y[i] = 553, sy == 20150
+addnums() --> i = 60, arr_y[i] = 379, sy == 20529
+addnums() --> i = 61, arr_y[i] = 295, sy == 20824
+addnums() --> i = 62, arr_y[i] = 455, sy == 21279
+addnums() --> i = 63, arr_y[i] = 169, sy == 21448
+addnums() --> i = 64, arr_y[i] = 409, sy == 21857
+addnums() --> i = 65, arr_y[i] = 288, sy == 22145
+addnums() --> i = 66, arr_y[i] = 395, sy == 22540
+addnums() --> i = 67, arr_y[i] = 579, sy == 23119
+addnums() --> i = 68, arr_y[i] = 181, sy == 23300
+addnums() --> i = 69, arr_y[i] = 186, sy == 23486
+addnums() --> i = 70, arr_y[i] = 223, sy == 23709
+addnums() --> i = 71, arr_y[i] = 36, sy == 23745
+addnums() --> i = 72, arr_y[i] = 261, sy == 24006
+addnums() --> i = 73, arr_y[i] = 137, sy == 24143
+addnums() --> i = 74, arr_y[i] = 158, sy == 24301
+addnums() --> i = 75, arr_y[i] = 252, sy == 24553
+addnums() --> i = 76, arr_y[i] = 233, sy == 24786
+addnums() --> i = 77, arr_y[i] = 563, sy == 25349
+addnums() --> i = 78, arr_y[i] = 666, sy == 26015
+addnums() --> i = 79, arr_y[i] = 34, sy == 26049
+addnums() --> i = 80, arr_y[i] = 534, sy == 26583
+addnums() --> i = 81, arr_y[i] = 542, sy == 27125
+addnums() --> i = 82, arr_y[i] = 441, sy == 27566
+addnums() --> i = 83, arr_y[i] = 581, sy == 28147
+addnums() --> i = 84, arr_y[i] = 482, sy == 28629
+addnums() --> i = 85, arr_y[i] = 465, sy == 29094
+addnums() --> i = 86, arr_y[i] = 474, sy == 29568
+addnums() --> i = 87, arr_y[i] = 235, sy == 29803
+addnums() --> i = 88, arr_y[i] = 561, sy == 30364
+addnums() --> i = 89, arr_y[i] = 537, sy == 30901
+addnums() --> i = 90, arr_y[i] = 639, sy == 31540
+addnums() --> i = 91, arr_y[i] = 259, sy == 31799
+addnums() --> i = 92, arr_y[i] = 685, sy == 32484
+addnums() --> i = 93, arr_y[i] = 233, sy == 32717
+addnums() --> i = 94, arr_y[i] = 15, sy == 32732
+addnums() --> i = 95, arr_y[i] = 429, sy == 33161
+addnums() --> i = 96, arr_y[i] = 67, sy == 33228
+addnums() --> i = 97, arr_y[i] = 629, sy == 33857
+addnums() --> i = 98, arr_y[i] = 688, sy == 34545
+addnums() --> i = 99, arr_y[i] = 316, sy == 34861
+addnums() --> i = 100, arr_y[i] = 535, sy == 35396
+addnums() --> i = 101, arr_y[i] = 673, sy == 36069
+addnums() --> i = 102, arr_y[i] = 204, sy == 36273
+addnums() --> i = 103, arr_y[i] = 119, sy == 36392
+addnums() --> i = 104, arr_y[i] = 678, sy == 37070
+addnums() --> i = 105, arr_y[i] = 82, sy == 37152
+addnums() --> i = 106, arr_y[i] = 80, sy == 37232
+addnums() --> i = 107, arr_y[i] = 571, sy == 37803
+addnums() --> i = 108, arr_y[i] = 52, sy == 37855
+addnums() --> i = 109, arr_y[i] = 449, sy == 38304
+addnums() --> i = 110, arr_y[i] = 586, sy == 38890
+addnums() --> i = 111, arr_y[i] = 511, sy == 39401
+addnums() --> i = 112, arr_y[i] = 348, sy == 39749
+addnums() --> i = 113, arr_y[i] = 565, sy == 40314
+addnums() --> i = 114, arr_y[i] = 606, sy == 40920
+addnums() --> i = 115, arr_y[i] = 432, sy == 41352
+addnums() --> i = 116, arr_y[i] = 258, sy == 41610
+addnums() --> i = 117, arr_y[i] = 119, sy == 41729
+addnums() --> i = 118, arr_y[i] = -4, sy == 41725
+addnums() --> i = 119, arr_y[i] = 656, sy == 42381
+addnums() --> i = 120, arr_y[i] = 151, sy == 42532
+addnums() --> i = 121, arr_y[i] = 368, sy == 42900
+addnums() --> i = 122, arr_y[i] = 423, sy == 43323
+addnums() --> i = 123, arr_y[i] = 272, sy == 43595
+addnums() --> i = 124, arr_y[i] = 621, sy == 44216
+addnums() --> i = 125, arr_y[i] = 417, sy == 44633
+addnums() --> i = 126, arr_y[i] = 113, sy == 44746
+addnums() --> i = 127, arr_y[i] = 348, sy == 45094
+addnums() --> i = 128, arr_y[i] = 90, sy == 45184
+addnums() --> i = 129, arr_y[i] = 416, sy == 45600
+addnums() --> i = 130, arr_y[i] = 527, sy == 46127
+addnums() --> i = 131, arr_y[i] = 383, sy == 46510
+addnums() --> i = 132, arr_y[i] = 591, sy == 47101
+addnums() --> i = 133, arr_y[i] = 352, sy == 47453
+addnums() --> i = 134, arr_y[i] = 454, sy == 47907
+addnums() --> i = 135, arr_y[i] = 94, sy == 48001
+addnums() --> i = 136, arr_y[i] = 504, sy == 48505
+addnums() --> i = 137, arr_y[i] = 571, sy == 49076
+addnums() --> i = 138, arr_y[i] = 249, sy == 49325
+addnums() --> i = 139, arr_y[i] = 431, sy == 49756
+addnums() --> i = 140, arr_y[i] = 288, sy == 50044
+addnums() --> i = 141, arr_y[i] = 465, sy == 50509
+addnums() --> i = 142, arr_y[i] = 110, sy == 50619
+addnums() --> i = 143, arr_y[i] = 19, sy == 50638
+addnums() --> i = 144, arr_y[i] = 69, sy == 50707
+addnums() --> i = 145, arr_y[i] = 403, sy == 51110
+addnums() --> i = 146, arr_y[i] = 209, sy == 51319
+addnums() --> i = 147, arr_y[i] = 348, sy == 51667
+addnums() --> i = 148, arr_y[i] = 299, sy == 51966
+addnums() --> i = 149, arr_y[i] = 407, sy == 52373
+addnums() --> i = 150, arr_y[i] = 106, sy == 52479
+addnums() --> i = 151, arr_y[i] = 80, sy == 52559
+addnums() --> i = 152, arr_y[i] = 108, sy == 52667
+addnums() --> i = 153, arr_y[i] = 70, sy == 52737
+addnums() --> i = 154, arr_y[i] = -32, sy == 52705
+addnums() --> i = 155, arr_y[i] = 337, sy == 53042
+addnums() --> i = 156, arr_y[i] = 160, sy == 53202
+addnums() --> i = 157, arr_y[i] = 592, sy == 53794
+addnums() --> i = 158, arr_y[i] = 334, sy == 54128
+addnums() --> i = 159, arr_y[i] = 96, sy == 54224
+addnums() --> i = 160, arr_y[i] = 555, sy == 54779
+addnums() --> i = 161, arr_y[i] = 536, sy == 55315
+addnums() --> i = 162, arr_y[i] = 450, sy == 55765
+addnums() --> i = 163, arr_y[i] = 539, sy == 56304
+addnums() --> i = 164, arr_y[i] = 679, sy == 56983
+addnums() --> i = 165, arr_y[i] = 306, sy == 57289
+addnums() --> i = 166, arr_y[i] = 108, sy == 57397
+addnums() --> i = 167, arr_y[i] = 581, sy == 57978
+addnums() --> i = 168, arr_y[i] = 125, sy == 58103
+addnums() --> i = 169, arr_y[i] = 96, sy == 58199
+addnums() --> i = 170, arr_y[i] = 128, sy == 58327
+addnums() --> i = 171, arr_y[i] = 538, sy == 58865
+addnums() --> i = 172, arr_y[i] = 183, sy == 59048
+addnums() --> i = 173, arr_y[i] = 551, sy == 59599
+addnums() --> i = 174, arr_y[i] = 293, sy == 59892
+addnums() --> i = 175, arr_y[i] = 630, sy == 60522
+addnums() --> i = 176, arr_y[i] = 242, sy == 60764
+addnums() --> i = 177, arr_y[i] = 69, sy == 60833
+addnums() --> i = 178, arr_y[i] = 675, sy == 61508
+addnums() --> i = 179, arr_y[i] = 31, sy == 61539
+addnums() --> i = 180, arr_y[i] = 76, sy == 61615
+addnums() --> i = 181, arr_y[i] = 339, sy == 61954
+addnums() --> i = 182, arr_y[i] = 474, sy == 62428
+addnums() --> i = 183, arr_y[i] = 57, sy == 62485
+addnums() --> i = 184, arr_y[i] = 426, sy == 62911
+addnums() --> i = 185, arr_y[i] = 692, sy == 63603
+addnums() --> i = 186, arr_y[i] = 487, sy == 64090
+addnums() --> i = 187, arr_y[i] = 1, sy == 64091
+addnums() --> i = 188, arr_y[i] = 597, sy == 64688
+addnums() --> i = 189, arr_y[i] = 408, sy == 65096
+addnums() --> i = 190, arr_y[i] = 292, sy == 65388
+addnums() --> i = 191, arr_y[i] = 500, sy == 65888
+addnums() --> i = 192, arr_y[i] = 525, sy == 66413
+addnums() --> i = 193, arr_y[i] = 472, sy == 66885
+addnums() --> i = 194, arr_y[i] = 518, sy == 67403
+addnums() --> i = 195, arr_y[i] = 120, sy == 67523
+addnums() --> i = 196, arr_y[i] = 566, sy == 68089
+addnums() --> i = 197, arr_y[i] = 355, sy == 68444
+addnums() --> i = 198, arr_y[i] = 443, sy == 68887
+addnums() --> i = 199, arr_y[i] = 257, sy == 69144
+addnums() --> i = 200, arr_y[i] = 534, sy == 69678
+addnums() --> i = 201, arr_y[i] = 521, sy == 70199
+addnums() --> i = 202, arr_y[i] = 486, sy == 70685
+addnums() --> i = 203, arr_y[i] = 187, sy == 70872
+addnums() --> i = 204, arr_y[i] = 346, sy == 71218
+addnums() --> i = 205, arr_y[i] = 648, sy == 71866
+addnums() --> i = 206, arr_y[i] = 185, sy == 72051
+addnums() --> i = 207, arr_y[i] = 357, sy == 72408
+addnums() --> i = 208, arr_y[i] = 155, sy == 72563
+addnums() --> i = 209, arr_y[i] = 298, sy == 72861
+addnums() --> i = 210, arr_y[i] = 185, sy == 73046
+addnums() --> i = 211, arr_y[i] = 693, sy == 73739
+addnums() --> i = 212, arr_y[i] = 701, sy == 74440
+addnums() --> i = 213, arr_y[i] = 288, sy == 74728
+addnums() --> i = 214, arr_y[i] = 299, sy == 75027
+addnums() --> i = 215, arr_y[i] = 643, sy == 75670
+addnums() --> i = 216, arr_y[i] = 606, sy == 76276
+addnums() --> i = 217, arr_y[i] = -3, sy == 76273
+addnums() --> i = 218, arr_y[i] = 577, sy == 76850
+addnums() --> i = 219, arr_y[i] = 202, sy == 77052
+addnums() --> i = 220, arr_y[i] = 279, sy == 77331
+addnums() --> i = 221, arr_y[i] = 19, sy == 77350
+addnums() --> i = 222, arr_y[i] = 288, sy == 77638
+addnums() --> i = 223, arr_y[i] = 412, sy == 78050
+addnums() --> i = 224, arr_y[i] = 153, sy == 78203
+addnums() --> i = 225, arr_y[i] = 420, sy == 78623
+addnums() --> i = 226, arr_y[i] = 184, sy == 78807
+addnums() --> i = 227, arr_y[i] = 387, sy == 79194
+addnums() --> i = 228, arr_y[i] = 169, sy == 79363
+addnums() --> i = 229, arr_y[i] = 530, sy == 79893
+addnums() --> i = 230, arr_y[i] = 648, sy == 80541
+addnums() --> i = 231, arr_y[i] = 232, sy == 80773
+addnums() --> i = 232, arr_y[i] = 61, sy == 80834
+addnums() --> i = 233, arr_y[i] = 149, sy == 80983
+addnums() --> i = 234, arr_y[i] = 637, sy == 81620
+addnums() --> i = 235, arr_y[i] = 364, sy == 81984
+addnums() --> i = 236, arr_y[i] = 173, sy == 82157
+addnums() --> i = 237, arr_y[i] = 387, sy == 82544
+addnums() --> i = 238, arr_y[i] = 592, sy == 83136
+addnums() --> i = 239, arr_y[i] = 460, sy == 83596
+addnums() --> i = 240, arr_y[i] = 42, sy == 83638
+addnums() --> i = 241, arr_y[i] = 606, sy == 84244
+addnums() --> i = 242, arr_y[i] = 626, sy == 84870
+addnums() --> i = 243, arr_y[i] = 435, sy == 85305
+addnums() --> i = 244, arr_y[i] = 448, sy == 85753
+addnums() --> i = 245, arr_y[i] = 588, sy == 86341
+addnums() --> i = 246, arr_y[i] = 463, sy == 86804
+addnums() --> i = 247, arr_y[i] = 632, sy == 87436
+addnums() --> i = 248, arr_y[i] = 381, sy == 87817
+addnums() --> i = 249, arr_y[i] = 443, sy == 88260
+addnums() --> i = 250, arr_y[i] = 701, sy == 88961
+addnums() --> i = 251, arr_y[i] = 126, sy == 89087
+addnums() --> i = 252, arr_y[i] = 652, sy == 89739
+addnums() --> i = 253, arr_y[i] = 588, sy == 90327
+addnums() --> i = 254, arr_y[i] = 352, sy == 90679
+addnums() --> i = 255, arr_y[i] = 227, sy == 90906
+addnums() --> i = 256, arr_y[i] = 334, sy == 91240
+addnums() --> i = 257, arr_y[i] = 631, sy == 91871
+addnums() --> i = 258, arr_y[i] = 326, sy == 92197
+addnums() --> i = 259, arr_y[i] = 182, sy == 92379
+addnums() --> i = 260, arr_y[i] = 134, sy == 92513
+addnums() --> i = 261, arr_y[i] = 581, sy == 93094
+addnums() --> i = 262, arr_y[i] = 43, sy == 93137
+addnums() --> i = 263, arr_y[i] = 95, sy == 93232
+addnums() --> i = 264, arr_y[i] = 575, sy == 93807
+addnums() --> i = 265, arr_y[i] = -6, sy == 93801
+addnums() --> i = 266, arr_y[i] = 482, sy == 94283
+addnums() --> i = 267, arr_y[i] = 369, sy == 94652
+addnums() --> i = 268, arr_y[i] = 332, sy == 94984
+addnums() --> i = 269, arr_y[i] = 453, sy == 95437
+addnums() --> i = 270, arr_y[i] = 608, sy == 96045
+addnums() --> i = 271, arr_y[i] = 192, sy == 96237
+addnums() --> i = 272, arr_y[i] = 296, sy == 96533
+addnums() --> i = 273, arr_y[i] = 133, sy == 96666
+addnums() --> i = 274, arr_y[i] = 660, sy == 97326
+addnums() --> i = 275, arr_y[i] = 376, sy == 97702
+addnums() --> i = 276, arr_y[i] = 458, sy == 98160
+addnums() --> i = 277, arr_y[i] = 302, sy == 98462
+addnums() --> i = 278, arr_y[i] = 258, sy == 98720
+addnums() --> i = 279, arr_y[i] = 214, sy == 98934
+addnums() --> i = 280, arr_y[i] = -12, sy == 98922
+addnums() --> i = 281, arr_y[i] = 168, sy == 99090
+addnums() --> i = 282, arr_y[i] = 697, sy == 99787
+addnums() --> i = 283, arr_y[i] = 378, sy == 100165
+addnums() --> i = 284, arr_y[i] = 290, sy == 100455
+addnums() --> i = 285, arr_y[i] = 409, sy == 100864
+addnums() --> i = 286, arr_y[i] = 516, sy == 101380
+addnums() --> i = 287, arr_y[i] = 4, sy == 101384
+addnums() --> i = 288, arr_y[i] = 38, sy == 101422
+addnums() --> i = 289, arr_y[i] = 495, sy == 101917
+addnums() --> i = 290, arr_y[i] = 442, sy == 102359
+addnums() --> i = 291, arr_y[i] = 260, sy == 102619
+addnums() --> i = 292, arr_y[i] = 382, sy == 103001
+addnums() --> i = 293, arr_y[i] = 215, sy == 103216
+addnums() --> i = 294, arr_y[i] = 315, sy == 103531
+addnums() --> i = 295, arr_y[i] = 194, sy == 103725
+addnums() --> i = 296, arr_y[i] = 177, sy == 103902
+addnums() --> i = 297, arr_y[i] = 461, sy == 104363
+addnums() --> i = 298, arr_y[i] = 665, sy == 105028
+addnums() --> i = 299, arr_y[i] = 689, sy == 105717
+addnums() --> i = 300, arr_y[i] = 475, sy == 106192
+addnums() --> i = 301, arr_y[i] = 542, sy == 106734
+addnums() --> i = 302, arr_y[i] = 402, sy == 107136
+addnums() --> i = 303, arr_y[i] = 402, sy == 107538
+addnums() --> i = 304, arr_y[i] = 683, sy == 108221
+addnums() --> i = 305, arr_y[i] = 282, sy == 108503
+addnums() --> i = 306, arr_y[i] = 235, sy == 108738
+addnums() --> i = 307, arr_y[i] = 305, sy == 109043
+addnums() --> i = 308, arr_y[i] = 459, sy == 109502
+addnums() --> i = 309, arr_y[i] = 403, sy == 109905
+addnums() --> i = 310, arr_y[i] = 481, sy == 110386
+addnums() --> i = 311, arr_y[i] = 108, sy == 110494
+addnums() --> i = 312, arr_y[i] = 158, sy == 110652
+addnums() --> i = 313, arr_y[i] = 179, sy == 110831
+addnums() --> i = 314, arr_y[i] = 291, sy == 111122
+addnums() --> i = 315, arr_y[i] = 379, sy == 111501
+addnums() --> i = 316, arr_y[i] = 6, sy == 111507
+addnums() --> i = 317, arr_y[i] = 239, sy == 111746
+addnums() --> i = 318, arr_y[i] = -9, sy == 111737
+addnums() --> i = 319, arr_y[i] = 63, sy == 111800
+addnums() --> i = 320, arr_y[i] = 647, sy == 112447
+addnums() --> i = 321, arr_y[i] = 574, sy == 113021
+addnums() --> i = 322, arr_y[i] = 519, sy == 113540
+addnums() --> i = 323, arr_y[i] = 244, sy == 113784
+addnums() --> i = 324, arr_y[i] = 371, sy == 114155
+addnums() --> i = 325, arr_y[i] = 467, sy == 114622
+addnums() --> i = 326, arr_y[i] = 593, sy == 115215
+addnums() --> i = 327, arr_y[i] = 331, sy == 115546
+addnums() --> i = 328, arr_y[i] = 181, sy == 115727
+addnums() --> i = 329, arr_y[i] = 565, sy == 116292
+addnums() --> i = 330, arr_y[i] = -41, sy == 116251
+addnums() --> i = 331, arr_y[i] = 200, sy == 116451
+addnums() --> i = 332, arr_y[i] = 274, sy == 116725
+addnums() --> i = 333, arr_y[i] = 340, sy == 117065
+addnums() --> i = 334, arr_y[i] = 98, sy == 117163
+addnums() --> i = 335, arr_y[i] = 257, sy == 117420
+addnums() --> i = 336, arr_y[i] = 11, sy == 117431
+addnums() --> i = 337, arr_y[i] = 330, sy == 117761
+addnums() --> i = 338, arr_y[i] = 339, sy == 118100
+addnums() --> i = 339, arr_y[i] = 3, sy == 118103
+addnums() --> i = 340, arr_y[i] = 206, sy == 118309
+addnums() --> i = 341, arr_y[i] = 467, sy == 118776
+addnums() --> i = 342, arr_y[i] = 479, sy == 119255
+addnums() --> i = 343, arr_y[i] = 382, sy == 119637
+addnums() --> i = 344, arr_y[i] = 232, sy == 119869
+addnums() --> i = 345, arr_y[i] = 59, sy == 119928
+addnums() --> i = 346, arr_y[i] = 242, sy == 120170
+addnums() --> i = 347, arr_y[i] = 141, sy == 120311
+addnums() --> i = 348, arr_y[i] = 396, sy == 120707
+addnums() --> i = 349, arr_y[i] = 467, sy == 121174
+addnums() --> i = 350, arr_y[i] = -20, sy == 121154
+addnums() --> i = 351, arr_y[i] = 46, sy == 121200
+addnums() --> i = 352, arr_y[i] = 164, sy == 121364
+addnums() --> i = 353, arr_y[i] = 541, sy == 121905
+addnums() --> i = 354, arr_y[i] = 284, sy == 122189
+addnums() --> i = 355, arr_y[i] = 301, sy == 122490
+addnums() --> i = 356, arr_y[i] = 323, sy == 122813
+addnums() --> i = 357, arr_y[i] = 176, sy == 122989
+addnums() --> i = 358, arr_y[i] = 263, sy == 123252
+addnums() --> i = 359, arr_y[i] = 582, sy == 123834
+addnums() --> i = 360, arr_y[i] = 242, sy == 124076
+addnums() --> i = 361, arr_y[i] = 111, sy == 124187
+addnums() --> i = 362, arr_y[i] = 451, sy == 124638
+addnums() --> i = 363, arr_y[i] = -4, sy == 124634
+addnums() --> i = 364, arr_y[i] = 180, sy == 124814
+addnums() --> i = 365, arr_y[i] = 60, sy == 124874
+addnums() --> i = 366, arr_y[i] = 678, sy == 125552
+addnums() --> i = 367, arr_y[i] = 100, sy == 125652
+addnums() --> i = 368, arr_y[i] = 426, sy == 126078
+addnums() --> i = 369, arr_y[i] = 212, sy == 126290
+addnums() --> i = 370, arr_y[i] = 607, sy == 126897
+addnums() --> i = 371, arr_y[i] = 182, sy == 127079
+addnums() --> i = 372, arr_y[i] = 29, sy == 127108
+addnums() --> i = 373, arr_y[i] = 521, sy == 127629
+addnums() --> i = 374, arr_y[i] = 23, sy == 127652
+addnums() --> i = 375, arr_y[i] = 426, sy == 128078
+addnums() --> i = 376, arr_y[i] = 212, sy == 128290
+addnums() --> i = 377, arr_y[i] = 521, sy == 128811
+addnums() --> i = 378, arr_y[i] = 583, sy == 129394
+addnums() --> i = 379, arr_y[i] = 468, sy == 129862
+addnums() --> i = 380, arr_y[i] = 132, sy == 129994
+addnums() --> i = 381, arr_y[i] = 291, sy == 130285
+addnums() --> i = 382, arr_y[i] = 452, sy == 130737
+addnums() --> i = 383, arr_y[i] = 699, sy == 131436
+addnums() --> i = 384, arr_y[i] = 273, sy == 131709
+addnums() --> i = 385, arr_y[i] = 566, sy == 132275
+addnums() --> i = 386, arr_y[i] = 154, sy == 132429
+addnums() --> i = 387, arr_y[i] = 405, sy == 132834
+addnums() --> i = 388, arr_y[i] = 242, sy == 133076
+addnums() --> i = 389, arr_y[i] = 426, sy == 133502
+addnums() --> i = 390, arr_y[i] = 596, sy == 134098
+addnums() --> i = 391, arr_y[i] = 40, sy == 134138
+addnums() --> i = 392, arr_y[i] = 221, sy == 134359
+addnums() --> i = 393, arr_y[i] = 309, sy == 134668
+addnums() --> i = 394, arr_y[i] = 131, sy == 134799
+addnums() --> i = 395, arr_y[i] = 61, sy == 134860
+addnums() --> i = 396, arr_y[i] = 523, sy == 135383
+addnums() --> i = 397, arr_y[i] = 488, sy == 135871
+addnums() --> i = 398, arr_y[i] = 21, sy == 135892
+addnums() --> i = 399, arr_y[i] = 20, sy == 135912
+addnums() --> i = 400, arr_y[i] = 388, sy == 136300
+addnums() --> i = 401, arr_y[i] = 551, sy == 136851
+addnums() --> i = 402, arr_y[i] = 564, sy == 137415
+addnums() --> i = 403, arr_y[i] = 582, sy == 137997
+addnums() --> i = 404, arr_y[i] = 218, sy == 138215
+addnums() --> i = 405, arr_y[i] = 74, sy == 138289
+addnums() --> i = 406, arr_y[i] = 124, sy == 138413
+addnums() --> i = 407, arr_y[i] = 576, sy == 138989
+addnums() --> i = 408, arr_y[i] = 185, sy == 139174
+addnums() --> i = 409, arr_y[i] = 656, sy == 139830
+addnums() --> i = 410, arr_y[i] = 357, sy == 140187
+addnums() --> i = 411, arr_y[i] = 506, sy == 140693
+addnums() --> i = 412, arr_y[i] = 58, sy == 140751
+addnums() --> i = 413, arr_y[i] = 272, sy == 141023
+addnums() --> i = 414, arr_y[i] = 661, sy == 141684
+addnums() --> i = 415, arr_y[i] = 89, sy == 141773
+addnums() --> i = 416, arr_y[i] = 311, sy == 142084
+addnums() --> i = 417, arr_y[i] = 332, sy == 142416
+addnums() --> i = 418, arr_y[i] = 334, sy == 142750
+addnums() --> i = 419, arr_y[i] = 243, sy == 142993
+addnums() --> i = 420, arr_y[i] = 562, sy == 143555
+addnums() --> i = 421, arr_y[i] = 123, sy == 143678
+addnums() --> i = 422, arr_y[i] = 197, sy == 143875
+addnums() --> i = 423, arr_y[i] = 291, sy == 144166
+addnums() --> i = 424, arr_y[i] = 461, sy == 144627
+addnums() --> i = 425, arr_y[i] = 135, sy == 144762
+addnums() --> i = 426, arr_y[i] = 178, sy == 144940
+addnums() --> i = 427, arr_y[i] = 521, sy == 145461
+addnums() --> i = 428, arr_y[i] = 490, sy == 145951
+addnums() --> i = 429, arr_y[i] = 377, sy == 146328
+addnums() --> i = 430, arr_y[i] = 28, sy == 146356
+addnums() --> i = 431, arr_y[i] = 285, sy == 146641
+addnums() --> i = 432, arr_y[i] = 481, sy == 147122
+addnums() --> i = 433, arr_y[i] = 151, sy == 147273
+addnums() --> i = 434, arr_y[i] = 681, sy == 147954
+addnums() --> i = 435, arr_y[i] = 660, sy == 148614
+addnums() --> i = 436, arr_y[i] = 415, sy == 149029
+addnums() --> i = 437, arr_y[i] = 402, sy == 149431
+addnums() --> i = 438, arr_y[i] = 228, sy == 149659
+addnums() --> i = 439, arr_y[i] = 190, sy == 149849
+addnums() --> i = 440, arr_y[i] = 606, sy == 150455
+addnums() --> i = 441, arr_y[i] = 579, sy == 151034
+addnums() --> i = 442, arr_y[i] = 0, sy == 151034
+fit() --> Sum of x's: 21076
+fit() --> Sum of y's: 151034
+fit() --> Sum of yx's: 9643055
+fit() --> Sum of xx's: 1352446
+fit() --> After add_nums: sx2=444197776
+fit() --> Sum of x's: 21076
+fit() --> Sum of y's: 151034
+fit() --> Sum of yx's: 9643055
+fit() --> Sum of xx's: 1352446
+fit() --> a1: 1028301984
+fit() --> a2: 154935802
+fit() --> b1: 1088680781
+fit() --> b2: 154935802
+fit() --> Best fit param a: 6.636955
+fit() --> Best fit param b: 7.026657
+calc_distance() --> i=0 ; temp=14.976866
+calc_distance() --> i=0 ; tempSquared=224.306522
+calc_distance() --> i=0 ; f=224.306522
+calc_distance() --> i=1 ; temp=6.656979
+calc_distance() --> i=1 ; tempSquared=44.315367
+calc_distance() --> i=1 ; f=268.621889
+calc_distance() --> i=2 ; temp=-31.676589
+calc_distance() --> i=2 ; tempSquared=1003.406300
+calc_distance() --> i=2 ; f=1272.028189
+calc_distance() -->  f(a,b) = 325114.679324181
+calc_chi_squared() --> i = 0 ; tempOverSigSquared=8.972261
+calc_chi_squared() --> i = 0 ; term2=8.972261
+calc_chi_squared() --> i = 1 ; tempOverSigSquared=11.078842
+calc_chi_squared() --> i = 1 ; term2=20.051103
+calc_chi_squared() --> i = 2 ; tempOverSigSquared=27.872397
+calc_chi_squared() --> i = 2 ; term2=47.923500
  calc_chi_squared() -->  term1 = 0.002267574
  calc_chi_squared() -->  term2 = inf
 calc_chi_squared() --> gof = inf
-fit() --> f(a,b) = 109339738.291411549
+fit() --> f(a,b) = 325114.679324181
 fit() --> goodness of fit = inf
 main() --> Current index 1361 of 1362 
