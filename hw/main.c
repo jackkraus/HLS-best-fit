@@ -9,7 +9,6 @@
 //#include <fstream>
 //#include <iomanip>
 //#include <cstring>
-//#include <string>
 //#include "fit.h"
 
 //using namespace std;
@@ -19,22 +18,28 @@
  * This function is only called once so we can init the sums and immediately 
  * 	start adding them together. 
  */
-int add_nums(const int tempxs[], const int tempys[], int size, int* sx, int* sy, int* sxy, int* sxx){
+int add_nums(const long arr_x[], const long arr_y[], int size, long* sx, long* sy, long* sxy, long* sxx){
 		
 	*sx = 0;
        	*sy = 0;
        	*sxy = 0;
 	*sxx = 0;
 	
-	printf("add_nums() --> Before LOOP: sx=%d, sy=%d, sxy=%d, sxx%d\n", sx,sy,sxy, sxx);
+	printf("add_nums() --> Before LOOP: sx=%d, sy=%d, sxy=%d, sxx%d\n", *sx, *sy, *sxy, *sxx);
 	
 	//printf("<== Starting add_nums LOOP ==>\n");
 	for(int i = 0; i < size; i++){
-		*sx += tempxs[i];
-		*sy += tempys[i];
-		*sxy += tempxs[i]*tempys[i];
-		*sxx += tempxs[i]*tempxs[i];
+		*sx += arr_x[i];
+		*sy += arr_y[i];
+		*sxy += arr_x[i]*arr_y[i];
+		*sxx += arr_x[i]*arr_x[i];
 	}
+	
+	printf("fit() --> Sum of x's: %d\n", *sx);
+	printf("fit() --> Sum of y's: %d\n", *sy);
+	printf("fit() --> Sum of yx's: %d\n", *sxy);
+	printf("fit() --> Sum of xx's: %d\n", *sxx);
+
 
 }
 
@@ -42,12 +47,12 @@ int add_nums(const int tempxs[], const int tempys[], int size, int* sx, int* sy,
  *
  * This function calculates the goodness of fit from each of the parameters: 
  */
-double calc_chi_squared(const double a, const double b, const int tempxs[], const int tempys[], const int tempsigmas[], int size) {
+double calc_chi_squared(const double a, const double b, const long arr_x[], const long arr_y[], const long arr_sig[], int size) {
 	double temp = 0;
 	double tempOverSig = 0;
 	double tempOverSigSquared = 0;
 	double gof = 0; // our goodness-of-fit
-	double term1 = 1/((double) size- 2); // invoked after loop
+	double term1 = 1/((double) size - 2); // invoked after loop
 	double term2 = 0; // adding tempOverSigSquared
 	
 	double x, y, sig;
@@ -55,9 +60,9 @@ double calc_chi_squared(const double a, const double b, const int tempxs[], cons
 
 	//printf("<== Starting calc_chi_squared LOOP ==>\n");
 	for(int i = 0; i < size; i++) {
-		x = (double)tempxs[i];
-		y = (double)tempys[i];
-		sig = (double)tempsigmas[i];
+		x = (double)arr_x[i];
+		y = (double)arr_y[i];
+		sig = (double)arr_sig[i];
 
 		temp = y - a - b*x;
 		tempOverSig = temp/sig;
@@ -89,7 +94,7 @@ double calc_chi_squared(const double a, const double b, const int tempxs[], cons
  *
  * This function calculates the distance `f(a,b)`
  */
-double calc_distance(const double a, const double b, const int tempxs[], const int tempys[]) {
+double calc_distance(const double a, const double b, const long arr_x[], const long arr_y[]) {
 	double f = 0; 	
 	double temp = 0;
 	double tempSquared = 0;
@@ -98,8 +103,8 @@ double calc_distance(const double a, const double b, const int tempxs[], const i
 
 	//printf("<== Starting calc_distance LOOP ==>\n");
 	for(int i = 0; i < tempN; i++) {
-		x = (double)tempxs[i];
-		y = (double)tempys[i];
+		x = (double) arr_x[i];
+		y = (double) arr_y[i];
 
 		temp = y - a - b*x;
 		tempSquared = temp*temp;
@@ -127,11 +132,11 @@ double calc_distance(const double a, const double b, const int tempxs[], const i
  * Takes in all relevant values and creates a fit for the set of points 
  * 	sigmas and lasts
  */ 
-void fit( int tempxs[], int tempys[], int tempsigmas[], int size) { 
+void fit(long arr_x[], long arr_y[], long arr_sig[], int size) { 
 	
 	//<-- initialize parameters --> 
-	int sx, sy, sxy, sxx, sx2; // Sum x, y, xy, xx, and the square of sx
-	int a1, b1, a2, b2; // best fit parameters	
+	long sx, sy, sxy, sxx, sx2; // Sum x, y, xy, xx, and the square of sx
+	long a1, b1, a2, b2; // best fit parameters	
 	double a, b;
 	a = 0.; 
 	a1 = 0; 
@@ -143,10 +148,9 @@ void fit( int tempxs[], int tempys[], int tempsigmas[], int size) {
 
 	//<-- Call 'add_nums()' function -->
 	printf("fit() --> After INIT: sy=%d\n",sy);
-	add_nums(tempxs, tempys, size, &sx, &sy, &sxy, &sxx); 
+	add_nums(arr_x, arr_y, size, &sx, &sy, &sxy, &sxx); 
 	sx2 = sx*sx; 		
-	printf("fit() --> After add_nums: sx2=%d\n",sx2);
-	
+	printf("fit() --> After add_nums: sx2=%d\n",sx2);	
 	printf("fit() --> Sum of x's: %d\n", sx);
 	printf("fit() --> Sum of y's: %d\n", sy);
 	printf("fit() --> Sum of yx's: %d\n", sxy);
@@ -172,11 +176,11 @@ void fit( int tempxs[], int tempys[], int tempsigmas[], int size) {
 
 	// <-- Call `calc_distance()` function --> 	
 	double f = 0; // our distance
-	f = calc_distance(a,b, tempxs, tempys);
+	f = calc_distance(a,b, arr_x, arr_y);
 	
 	// <-- Call `calc_chi_squared()` function --> 	
 	double gof = 0; // our goodness of fit
-	gof = calc_chi_squared(a,b, tempxs, tempys, tempsigmas, size);
+	gof = calc_chi_squared(a,b, arr_x, arr_y, arr_sig, size);
 	
 
 	printf("fit() --> f(a,b) = %.9f\n",f);
@@ -193,49 +197,60 @@ int main() {
 	//	- I have to create new arrays that take in the temp arguments and create new arrays 
 	//		by which it can then send in for the fit function
 	
-	int *arr_x = NULL;
-	int *arr_y = NULL;
-	int *arr_sig = NULL;
+	long *arr_x = NULL;
+	long *arr_y = NULL;
+	long *arr_sig = NULL;
 	int arr_size = 0;
 	int previous_i = 0; // good for accounting 
 	int event_count = 0; 
 
 
-	arr_x = (int *)malloc(tempN * sizeof(int));
-	arr_y = (int *)malloc(tempN * sizeof(int));
-	arr_sig = (int *)malloc(tempN * sizeof(int));
+	arr_x = (long *)malloc(tempN * sizeof(long));
+	arr_y = (long *)malloc(tempN * sizeof(long));
+	arr_sig = (long *)malloc(tempN * sizeof(long));
 
 
 	for(int i = 0; i < tempN; i++) {
-		arr_x[i] = tempxs[i];
-		arr_y[i] = tempys[i];
-		arr_sig[i] = tempsigmas[i];
+		arr_x[i] = (long)tempxs[i];
+		arr_y[i] = (long)tempys[i];
+		arr_sig[i] = (long)tempsigmas[i];
+
+
+		//printf("main() --> arr_y[i] = %d\n",arr_y[i]); 	
 
 		if(templasts[i] == 1) {
 			printf("============ EVENT %d ============\n", event_count);
-			event_count+=1;
 
 			// since arr_q changes over the course of the loop, 
 			// 	we cant use iterator to obtain the size  
 			arr_size = i - previous_i + 1; // i will go up to tempN but the size will stay low 
 			previous_i = i;
 			
-			printf("main() --> i == %d\n", i);
-			printf("main() --> arr_size == %d\n", arr_size);
-			printf("main() --> arr_x[i-2] == %d\n", arr_x[i-2]);
-			printf("main() --> arr_y[i-2] == %d\n", arr_y[i-2]); // these have data in them
+			// printf("main() --> i == %d\n", i); 
+			// printf("main() --> arr_size == %d\n", arr_size); 
+			// printf("main() --> arr_x[i-2] == %d\n", arr_x[i-2]);
+			// printf("main() --> arr_y[i-2] == %d\n", arr_y[i-2]); // these have data in them
 			
 			fit(arr_x, arr_y, arr_sig, arr_size);
-			
-			// this will set all data in the arrays to 0	
-			memset(arr_x, 0, arr_size * sizeof(int));
-			memset(arr_y, 0, arr_size * sizeof(int));
-			memset(arr_sig, 0, arr_size * sizeof(int));
+		//	printf("main() --> fit for EVT %d complete\n", event_count);
 
+			// this will set all data in the arrays to 0	
+			memset(arr_x, 0, arr_size * sizeof(long));
+			memset(arr_y, 0, arr_size * sizeof(long));
+			memset(arr_sig, 0, arr_size * sizeof(long));
+			
+			// This is to check whether arr_y has actually been reset	
+			// for(int j = 0;  j < arr_size; j++) {
+			// 	printf("main() --> reset arr_y[j] = %d\n",arr_y[j]); 	
+			// }
+			
+			printf("main() --> Current index %d of %d \n",i,tempN); 
+
+			event_count+=1;
 			arr_size = 0;
 		}
 	}
-	
+
 	// this frees up the allocated memory
 	free(arr_x);
 	free(arr_y);

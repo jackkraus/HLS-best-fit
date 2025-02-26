@@ -1,0 +1,240 @@
+============ EVENT 0 ============
+fit() --> After INIT: sy=124
+add_nums() --> Before LOOP: sx=0, sy=0, sxy=0, sxx0
+fit() --> Sum of x's: 5107
+fit() --> Sum of y's: 1365
+fit() --> Sum of yx's: 15943
+fit() --> Sum of xx's: 356089
+fit() --> After add_nums: sx2=26081449
+fit() --> Sum of x's: 5107
+fit() --> Sum of y's: 1365
+fit() --> Sum of yx's: 15943
+fit() --> Sum of xx's: 356089
+fit() --> a1: 404640584
+fit() --> a2: 9527451
+fit() --> b1: -5376755
+fit() --> b2: 9527451
+fit() --> Best fit param a: 42.471022
+fit() --> Best fit param b: -0.564343
+calc_distance() --> i=0 ; temp=-3.066169
+calc_distance() --> i=0 ; tempSquared=9.401390
+calc_distance() --> i=0 ; f=9.401390
+calc_distance() --> i=1 ; temp=1.736756
+calc_distance() --> i=1 ; tempSquared=3.016322
+calc_distance() --> i=1 ; f=12.417712
+calc_distance() --> i=2 ; temp=-2.590313
+calc_distance() --> i=2 ; tempSquared=6.709721
+calc_distance() --> i=2 ; f=19.127434
+calc_distance() -->  f(a,b) = 2280685.506037655
+calc_chi_squared() --> i = 0 ; tempOverSigSquared=0.146897
+calc_chi_squared() --> i = 0 ; term2=0.146897
+calc_chi_squared() --> i = 1 ; tempOverSigSquared=0.188520
+calc_chi_squared() --> i = 1 ; term2=0.335417
+calc_chi_squared() --> i = 2 ; tempOverSigSquared=0.419358
+calc_chi_squared() --> i = 2 ; term2=0.754774
+ calc_chi_squared() -->  term1 = 0.010204082
+ calc_chi_squared() -->  term2 = 216.071036838
+calc_chi_squared() --> gof = 2.204806498
+fit() --> f(a,b) = 2280685.506037655
+fit() --> goodness of fit = 2.204806498
+main() --> Current index 99 of 1362 
+============ EVENT 1 ============
+fit() --> After INIT: sy=1365
+add_nums() --> Before LOOP: sx=0, sy=0, sxy=0, sxx0
+fit() --> Sum of x's: 0
+fit() --> Sum of y's: 0
+fit() --> Sum of yx's: 0
+fit() --> Sum of xx's: 0
+fit() --> After add_nums: sx2=0
+fit() --> Sum of x's: 0
+fit() --> Sum of y's: 0
+fit() --> Sum of yx's: 0
+fit() --> Sum of xx's: 0
+fit() --> a1: 0
+fit() --> a2: 0
+fit() --> b1: 0
+fit() --> b2: 0
+fit() --> Best fit param a: -nan
+fit() --> Best fit param b: -nan
+calc_distance() --> i=0 ; temp=-nan
+calc_distance() --> i=0 ; tempSquared=-nan
+calc_distance() --> i=0 ; f=-nan
+calc_distance() --> i=1 ; temp=-nan
+calc_distance() --> i=1 ; tempSquared=-nan
+calc_distance() --> i=1 ; f=-nan
+calc_distance() --> i=2 ; temp=-nan
+calc_distance() --> i=2 ; tempSquared=-nan
+calc_distance() --> i=2 ; f=-nan
+calc_distance() -->  f(a,b) = -nan
+calc_chi_squared() --> i = 0 ; tempOverSigSquared=-nan
+calc_chi_squared() --> i = 0 ; term2=-nan
+calc_chi_squared() --> i = 1 ; tempOverSigSquared=-nan
+calc_chi_squared() --> i = 1 ; term2=-nan
+calc_chi_squared() --> i = 2 ; tempOverSigSquared=-nan
+calc_chi_squared() --> i = 2 ; term2=-nan
+ calc_chi_squared() -->  term1 = 0.010752688
+ calc_chi_squared() -->  term2 = -nan
+calc_chi_squared() --> gof = -nan
+fit() --> f(a,b) = -nan
+fit() --> goodness of fit = -nan
+main() --> Current index 193 of 1362 
+============ EVENT 2 ============
+fit() --> After INIT: sy=0
+add_nums() --> Before LOOP: sx=0, sy=0, sxy=0, sxx0
+fit() --> Sum of x's: 7255
+fit() --> Sum of y's: -123
+fit() --> Sum of yx's: -224771
+fit() --> Sum of xx's: 480181
+fit() --> After add_nums: sx2=52635025
+fit() --> Sum of x's: 7255
+fit() --> Sum of y's: -123
+fit() --> Sum of yx's: -224771
+fit() --> Sum of xx's: 480181
+fit() --> a1: 1571651342
+fit() --> a2: 64048958
+fit() --> b1: -53726988
+fit() --> b2: 64048958
+fit() --> Best fit param a: 24.538281
+fit() --> Best fit param b: -0.838842
+calc_distance() --> i=0 ; temp=-24.538281
+calc_distance() --> i=0 ; tempSquared=602.127244
+calc_distance() --> i=0 ; f=602.127244
+calc_distance() --> i=1 ; temp=-24.538281
+calc_distance() --> i=1 ; tempSquared=602.127244
+calc_distance() --> i=1 ; f=1204.254489
+calc_distance() --> i=2 ; temp=-24.538281
+calc_distance() --> i=2 ; tempSquared=602.127244
+calc_distance() --> i=2 ; f=1806.381733
+calc_distance() -->  f(a,b) = 6194960.859403757
+calc_chi_squared() --> i = 0 ; tempOverSigSquared=inf
+calc_chi_squared() --> i = 0 ; term2=inf
+calc_chi_squared() --> i = 1 ; tempOverSigSquared=inf
+calc_chi_squared() --> i = 1 ; term2=inf
+calc_chi_squared() --> i = 2 ; tempOverSigSquared=inf
+calc_chi_squared() --> i = 2 ; term2=inf
+ calc_chi_squared() -->  term1 = 0.004149378
+ calc_chi_squared() -->  term2 = inf
+calc_chi_squared() --> gof = inf
+fit() --> f(a,b) = 6194960.859403757
+fit() --> goodness of fit = inf
+main() --> Current index 435 of 1362 
+============ EVENT 3 ============
+fit() --> After INIT: sy=-123
+add_nums() --> Before LOOP: sx=0, sy=0, sxy=0, sxx0
+fit() --> Sum of x's: 0
+fit() --> Sum of y's: 0
+fit() --> Sum of yx's: 0
+fit() --> Sum of xx's: 0
+fit() --> After add_nums: sx2=0
+fit() --> Sum of x's: 0
+fit() --> Sum of y's: 0
+fit() --> Sum of yx's: 0
+fit() --> Sum of xx's: 0
+fit() --> a1: 0
+fit() --> a2: 0
+fit() --> b1: 0
+fit() --> b2: 0
+fit() --> Best fit param a: -nan
+fit() --> Best fit param b: -nan
+calc_distance() --> i=0 ; temp=-nan
+calc_distance() --> i=0 ; tempSquared=-nan
+calc_distance() --> i=0 ; f=-nan
+calc_distance() --> i=1 ; temp=-nan
+calc_distance() --> i=1 ; tempSquared=-nan
+calc_distance() --> i=1 ; f=-nan
+calc_distance() --> i=2 ; temp=-nan
+calc_distance() --> i=2 ; tempSquared=-nan
+calc_distance() --> i=2 ; f=-nan
+calc_distance() -->  f(a,b) = -nan
+calc_chi_squared() --> i = 0 ; tempOverSigSquared=-nan
+calc_chi_squared() --> i = 0 ; term2=-nan
+calc_chi_squared() --> i = 1 ; tempOverSigSquared=-nan
+calc_chi_squared() --> i = 1 ; term2=-nan
+calc_chi_squared() --> i = 2 ; tempOverSigSquared=-nan
+calc_chi_squared() --> i = 2 ; term2=-nan
+ calc_chi_squared() -->  term1 = 0.004149378
+ calc_chi_squared() -->  term2 = -nan
+calc_chi_squared() --> gof = -nan
+fit() --> f(a,b) = -nan
+fit() --> goodness of fit = -nan
+main() --> Current index 677 of 1362 
+============ EVENT 4 ============
+fit() --> After INIT: sy=0
+add_nums() --> Before LOOP: sx=0, sy=0, sxy=0, sxx0
+fit() --> Sum of x's: 0
+fit() --> Sum of y's: 0
+fit() --> Sum of yx's: 0
+fit() --> Sum of xx's: 0
+fit() --> After add_nums: sx2=0
+fit() --> Sum of x's: 0
+fit() --> Sum of y's: 0
+fit() --> Sum of yx's: 0
+fit() --> Sum of xx's: 0
+fit() --> a1: 0
+fit() --> a2: 0
+fit() --> b1: 0
+fit() --> b2: 0
+fit() --> Best fit param a: -nan
+fit() --> Best fit param b: -nan
+calc_distance() --> i=0 ; temp=-nan
+calc_distance() --> i=0 ; tempSquared=-nan
+calc_distance() --> i=0 ; f=-nan
+calc_distance() --> i=1 ; temp=-nan
+calc_distance() --> i=1 ; tempSquared=-nan
+calc_distance() --> i=1 ; f=-nan
+calc_distance() --> i=2 ; temp=-nan
+calc_distance() --> i=2 ; tempSquared=-nan
+calc_distance() --> i=2 ; f=-nan
+calc_distance() -->  f(a,b) = -nan
+calc_chi_squared() --> i = 0 ; tempOverSigSquared=-nan
+calc_chi_squared() --> i = 0 ; term2=-nan
+calc_chi_squared() --> i = 1 ; tempOverSigSquared=-nan
+calc_chi_squared() --> i = 1 ; term2=-nan
+calc_chi_squared() --> i = 2 ; tempOverSigSquared=-nan
+calc_chi_squared() --> i = 2 ; term2=-nan
+ calc_chi_squared() -->  term1 = 0.004149378
+ calc_chi_squared() -->  term2 = -nan
+calc_chi_squared() --> gof = -nan
+fit() --> f(a,b) = -nan
+fit() --> goodness of fit = -nan
+main() --> Current index 919 of 1362 
+============ EVENT 5 ============
+fit() --> After INIT: sy=0
+add_nums() --> Before LOOP: sx=0, sy=0, sxy=0, sxx0
+fit() --> Sum of x's: 9953
+fit() --> Sum of y's: 22171
+fit() --> Sum of yx's: 1274875
+fit() --> Sum of xx's: 657823
+fit() --> After add_nums: sx2=99062209
+fit() --> Sum of x's: 9953
+fit() --> Sum of y's: 22171
+fit() --> Sum of yx's: 1274875
+fit() --> Sum of xx's: 657823
+fit() --> a1: 1895762858
+fit() --> a2: 192353380
+fit() --> b1: 344101662
+fit() --> b2: 192353380
+fit() --> Best fit param a: 9.855625
+fit() --> Best fit param b: 1.788904
+calc_distance() --> i=0 ; temp=-9.855625
+calc_distance() --> i=0 ; tempSquared=97.133352
+calc_distance() --> i=0 ; f=97.133352
+calc_distance() --> i=1 ; temp=-9.855625
+calc_distance() --> i=1 ; tempSquared=97.133352
+calc_distance() --> i=1 ; f=194.266704
+calc_distance() --> i=2 ; temp=-9.855625
+calc_distance() --> i=2 ; tempSquared=97.133352
+calc_distance() --> i=2 ; f=291.400056
+calc_distance() -->  f(a,b) = 109339738.291411549
+calc_chi_squared() --> i = 0 ; tempOverSigSquared=inf
+calc_chi_squared() --> i = 0 ; term2=inf
+calc_chi_squared() --> i = 1 ; tempOverSigSquared=inf
+calc_chi_squared() --> i = 1 ; term2=inf
+calc_chi_squared() --> i = 2 ; tempOverSigSquared=inf
+calc_chi_squared() --> i = 2 ; term2=inf
+ calc_chi_squared() -->  term1 = 0.002267574
+ calc_chi_squared() -->  term2 = inf
+calc_chi_squared() --> gof = inf
+fit() --> f(a,b) = 109339738.291411549
+fit() --> goodness of fit = inf
+main() --> Current index 1361 of 1362 
