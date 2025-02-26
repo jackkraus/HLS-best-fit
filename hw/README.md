@@ -199,3 +199,72 @@ for(int i = 0; i < tempN; i++) { // Loops over all values
 ```
 
 This actually caused some weird `-nan` and `inf` results when it comes to the fit and gof values. Not sure what's going on but I put the logs in `logs/mainlog` 
+
+
+> Wed Feb 26 12:23:16 CST 2025
+
+Okay, so I was able to actually implement something that creates a new array per event, the results look like 
+
+```
+============ EVENT 0 ============
+fit() --> f(a,b) = 2280685.506037655
+fit() --> goodness of fit = 2.204806498
+main() --> Current index 99 of 1362
+============ EVENT 1 ============
+fit() --> f(a,b) = 17182241.715187974
+fit() --> goodness of fit = inf
+main() --> Current index 193 of 1362
+...
+```
+and the rest of the goodness of fit calculations are infinite. 
+
+That's not good so I need to fix it.
+
+> Wed Feb 26 12:37:44 CST 2025
+
+So after the first loop is complete, for some reason, the sig value at the end of the array is set to 0. it's not getting the proper value.
+
+> Wed Feb 26 13:47:20 CST 2025
+
+Okay I had some weird errors, but I got it, here are the results: 
+
+```
+============ EVENT 0 ============
+fit() --> Best fit param a: 42.458060
+fit() --> Best fit param b: -0.562644
+fit() --> f(a,b) = 2279297.070794334
+fit() --> goodness of fit = 2.160768368
+main() --> Current index 99 of 1362 
+============ EVENT 1 ============
+fit() --> Best fit param a: 122.423997
+fit() --> Best fit param b: -3.395082
+fit() --> f(a,b) = 19016158.248631567
+fit() --> goodness of fit = 22.238202857
+main() --> Current index 193 of 1362 
+============ EVENT 2 ============
+fit() --> Best fit param a: 60.546292
+fit() --> Best fit param b: 1.105061
+fit() --> f(a,b) = 4133235.541930413
+fit() --> goodness of fit = 1.022818726
+main() --> Current index 435 of 1362 
+============ EVENT 3 ============
+fit() --> Best fit param a: 0.996648
+fit() --> Best fit param b: -1.288404
+fit() --> f(a,b) = 2742.970751940
+fit() --> goodness of fit = 0.995003847
+main() --> Current index 677 of 1362 
+============ EVENT 4 ============
+fit() --> Best fit param a: 12.933075
+fit() --> Best fit param b: 10.981780
+fit() --> f(a,b) = 419600.369175848
+fit() --> goodness of fit = 0.949532678
+main() --> Current index 919 of 1362 
+============ EVENT 5 ============
+fit() --> Best fit param a: 6.695400
+fit() --> Best fit param b: 7.025747
+fit() --> f(a,b) = 325831.159720024
+fit() --> goodness of fit = 26.927211145
+main() --> Current index 1361 of 1362 
+```
+
+I now have to clean up the code a little bit and include the uncertainty on the parameters.  

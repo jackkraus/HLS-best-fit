@@ -25,21 +25,21 @@ int add_nums(const long arr_x[], const long arr_y[], int size, long* sx, long* s
        	*sxy = 0;
 	*sxx = 0;
 	
-	printf("add_nums() --> Before LOOP: sx=%d, sy=%d, sxy=%d, sxx%d\n", *sx, *sy, *sxy, *sxx);
+	//printf("add_nums() --> Before LOOP: sx=%d, sy=%d, sxy=%d, sxx%d\n", *sx, *sy, *sxy, *sxx);
 	
 	//printf("<== Starting add_nums LOOP ==>\n");
 	for(int i = 0; i < size; i++){
 		*sx += arr_x[i];
 		*sy += arr_y[i];
-		printf("addnums() --> i = %d, arr_y[i] = %d, sy == %d\n", i,arr_y[i], *sy); 
+	//	printf("addnums() --> i = %d, arr_y[i] = %d, sy == %d\n", i,arr_y[i], *sy); 
 		*sxy += arr_x[i]*arr_y[i];
 		*sxx += arr_x[i]*arr_x[i];
 	}
 	
-	printf("fit() --> Sum of x's: %d\n", *sx);
-	printf("fit() --> Sum of y's: %d\n", *sy);
-	printf("fit() --> Sum of yx's: %d\n", *sxy);
-	printf("fit() --> Sum of xx's: %d\n", *sxx);
+	//printf("fit() --> Sum of x's: %d\n", *sx);
+	//printf("fit() --> Sum of y's: %d\n", *sy);
+	//printf("fit() --> Sum of yx's: %d\n", *sxy);
+	//printf("fit() --> Sum of xx's: %d\n", *sxx);
 
 
 }
@@ -70,12 +70,18 @@ double calc_chi_squared(const double a, const double b, const long arr_x[], cons
 		tempOverSigSquared = tempOverSig*tempOverSig; 
 		
 	        term2 += tempOverSigSquared;
-
+		// printf("calc_chi_squared() --> i = %d ; x=%.2f\n",i,x);
+		// printf("calc_chi_squared() --> i = %d ; y=%.2f\n",i,y);
+		// printf("calc_chi_squared() --> i = %d ; sig=%.2f\n",i,sig);
+		// printf("calc_chi_squared() --> i = %d ; temp=%.6f\n",i,temp);
+		// printf("calc_chi_squared() --> i = %d ; tempOverSig=%.6f\n",i,tempOverSig);
+		// printf("calc_chi_squared() --> i = %d ; tempOverSigSquared=%.6f\n",i,tempOverSigSquared);
+		// printf("calc_chi_squared() --> i = %d ; term2 = %.9f\n",i,term2);
 		 // For debugging precision of variables 
-		 if(i<3) {
-		 	printf("calc_chi_squared() --> i = %d ; tempOverSigSquared=%.6f\n",i,tempOverSigSquared);
-		 	printf("calc_chi_squared() --> i = %d ; term2=%.6f\n",i,term2);
-		 }
+		 // if(i<3) {
+		 // 	printf("calc_chi_squared() --> i = %d ; tempOverSigSquared=%.6f\n",i,tempOverSigSquared);
+		 // 	printf("calc_chi_squared() --> i = %d ; term2=%.6f\n",i,term2);
+		 // }
 		
 		// Clear out temp values, jic	
 		temp = 0;
@@ -83,11 +89,11 @@ double calc_chi_squared(const double a, const double b, const long arr_x[], cons
 		tempOverSigSquared = 0;		
 	}
 		
-	printf(" calc_chi_squared() -->  term1 = %.9f\n",term1);
-	printf(" calc_chi_squared() -->  term2 = %.9f\n",term2);
+	//printf("calc_chi_squared() -->  term1 = %.9f\n",term1);
+	//printf("calc_chi_squared() -->  term2 = %.9f\n",term2);
 	gof = term1*term2; 
 	
-	printf("calc_chi_squared() --> gof = %.9f\n",gof);
+	// printf("calc_chi_squared() --> gof = %.9f\n",gof);
 	return gof; 
 }
 
@@ -113,18 +119,18 @@ double calc_distance(const double a, const double b, const long arr_x[], const l
 		f += tempSquared;
 
 		// For debugging precision of variables 
-		if(i<3) {
-		 	printf("calc_distance() --> i=%d ; temp=%.6f\n",i,temp);
-		 	printf("calc_distance() --> i=%d ; tempSquared=%.6f\n",i,tempSquared);
-		 	printf("calc_distance() --> i=%d ; f=%.6f\n",i,f);
-		 }	
+		//if(i<3) {
+		 	//printf("calc_distance() --> i=%d ; temp=%.6f\n",i,temp);
+		 	//printf("calc_distance() --> i=%d ; tempSquared=%.6f\n",i,tempSquared);
+		 	//printf("calc_distance() --> i=%d ; f=%.6f\n",i,f);
+		//}	
 		
 		// Clear out temp values, jic	
 		temp = 0;
 		tempSquared = 0;
 	}
 
-	printf("calc_distance() -->  f(a,b) = %.9f\n",f);
+	//printf("calc_distance() -->  f(a,b) = %.9f\n",f);
 	return f;
 }
 
@@ -148,27 +154,27 @@ void fit(long arr_x[], long arr_y[], long arr_sig[], int size) {
 	b2 = 0; 
 
 	//<-- Call 'add_nums()' function -->
-	printf("fit() --> After INIT: sy=%d\n",sy);
+	//printf("fit() --> After INIT: sy=%d\n",sy);
 	add_nums(arr_x, arr_y, size, &sx, &sy, &sxy, &sxx); 
 	sx2 = sx*sx; 		
-	printf("fit() --> After add_nums: sx2=%d\n",sx2);	
-	printf("fit() --> Sum of x's: %d\n", sx);
-	printf("fit() --> Sum of y's: %d\n", sy);
-	printf("fit() --> Sum of yx's: %d\n", sxy);
-	printf("fit() --> Sum of xx's: %d\n", sxx);
+	//printf("fit() --> After add_nums: sx2=%d\n",sx2);	
+	//printf("fit() --> Sum of x's: %d\n", sx);
+	//printf("fit() --> Sum of y's: %d\n", sy);
+	//printf("fit() --> Sum of yx's: %d\n", sxy);
+	//printf("fit() --> Sum of xx's: %d\n", sxx);
 
 	// <-- Parameter 'a' calc --> 	
 	a1 = sy*sxx - sxy*sx;
 	a2 = size*sxx - sx2; 	
-	printf("fit() --> a1: %d\n", a1);
-	printf("fit() --> a2: %d\n", a2);
+	//printf("fit() --> a1: %d\n", a1);
+	//printf("fit() --> a2: %d\n", a2);
 	a = (double) a1/a2;
 
 	// <-- Parameter 'b' calc --> 	
 	b1 = size*sxy - sx*sy;
 	b2 = size*sxx - sx2; 	
-	printf("fit() --> b1: %d\n", b1);	
-	printf("fit() --> b2: %d\n", b2);	
+	//printf("fit() --> b1: %d\n", b1);	
+	//printf("fit() --> b2: %d\n", b2);	
 	b = (double) b1/b2;
 
 	printf("fit() --> Best fit param a: %0.6f\n", a);	
@@ -224,28 +230,27 @@ int main() {
 
 			// since arr_q changes over the course of the loop, 
 			// 	we cant use iterator to obtain the size  
-			arr_size = i - previous_i + 1; // i will go up to tempN but the size will stay low 
+			arr_size = i - previous_i; // i will go up to tempN but the size will stay low 
 			previous_i = i;
 			
 			// printf("main() --> i == %d\n", i); 
-			// printf("main() --> arr_size == %d\n", arr_size); 
+			//printf("main() --> arr_size == %d\n", arr_size); 
 			// printf("main() --> arr_x[i-2] == %d\n", arr_x[i-2]);
 			// printf("main() --> arr_y[i-2] == %d\n", arr_y[i-2]); // these have data in them
 			
 			fit(arr_x, arr_y, arr_sig, arr_size);
 		//	printf("main() --> fit for EVT %d complete\n", event_count);
 
-			// this will set all data in the arrays to 0	
-			memset(arr_x, 0, arr_size * sizeof(long));
-			memset(arr_y, 0, arr_size * sizeof(long));
-			memset(arr_sig, 0, arr_size * sizeof(long));
-			j = 0; // restart the index of the temp arr_qs
-
 			// This is to check whether arr_y has actually been reset	
 			// for(int k = 0;  k < arr_size; k++) {
 			// 	printf("main() --> reset arr_y[j] = %d\n",arr_y[j]); 	
 			// }
 			
+			// this will set all data in the arrays to 0	
+			memset(arr_x, 0, arr_size * sizeof(long));
+			memset(arr_y, 0, arr_size * sizeof(long));
+			memset(arr_sig, 0, arr_size * sizeof(long));
+			j = 0; // restart the index of the temp arr_qs
 			printf("main() --> Current index %d of %d \n",i,tempN); 
 
 			event_count+=1;
