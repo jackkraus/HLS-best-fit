@@ -1,0 +1,50 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'fit'" level="0">
+<item name = "Date">Thu Feb 27 15:25:27 2025
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">hls_fit</item>
+<item name = "Solution">solution1 (Vitis Kernel Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu11p-flga2577-1-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.535 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">5087, 8219, 50.870 us, 82.190 us, 5087, 8219, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_fit_Pipeline_VITIS_LOOP_28_1_fu_82">fit_Pipeline_VITIS_LOOP_28_1, 96, 444, 0.960 us, 4.440 us, 96, 444, no</column>
+<column name="grp_fit_Pipeline_VITIS_LOOP_100_1_fu_96">fit_Pipeline_VITIS_LOOP_100_1, 304, 1348, 3.040 us, 13.480 us, 304, 1348, no</column>
+<column name="grp_fit_Pipeline_VITIS_LOOP_204_1_fu_105">fit_Pipeline_VITIS_LOOP_204_1, 4106, 4106, 41.060 us, 41.060 us, 4106, 4106, no</column>
+<column name="grp_fit_Pipeline_VITIS_LOOP_53_1_fu_116">fit_Pipeline_VITIS_LOOP_53_1, 308, 1352, 3.080 us, 13.520 us, 308, 1352, no</column>
+<column name="grp_fit_Pipeline_VITIS_LOOP_148_1_fu_126">fit_Pipeline_VITIS_LOOP_148_1, 309, 1353, 3.090 us, 13.530 us, 309, 1353, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

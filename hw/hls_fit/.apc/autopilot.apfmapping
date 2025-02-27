@@ -3,5 +3,7 @@
   <source>
     <originFiles name="main.cpp" path="/nfs/ihfs/home_metis/akraus/HW3-dir/hw/main.cpp"/>
   </source>
-  <testbench/>
+  <testbench>
+    <originFiles name="main.cpp" path="/nfs/ihfs/home_metis/akraus/HW3-dir/hw/main.cpp"/>
+  </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

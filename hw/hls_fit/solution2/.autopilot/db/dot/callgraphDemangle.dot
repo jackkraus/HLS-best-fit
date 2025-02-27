@@ -1,0 +1,22 @@
+digraph "Call graph demangled" {
+	label="Call graph demangled";
+
+	Node0x53ddcd0 [shape=record,label="{fit}" fid="1" demanglename="fit" manglename="fit" filename="../../../../main.cpp" linenumber="235"];
+	Node0x53ddcd0 -> Node0x53dd940;
+	Node0x53ddcd0 -> Node0x53ddb60;
+	Node0x53ddcd0 -> Node0x53ddb60;
+	Node0x53ddcd0 -> Node0x53ddc20;
+	Node0x53ddcd0 -> Node0x53ddb30;
+	Node0x53ddcd0 -> Node0x53ddb60;
+	Node0x53ddcd0 -> Node0x53ddb60;
+	Node0x53dd940 [shape=record,label="{add_nums}" fid="2" demanglename="add_nums" manglename="add_nums" filename="../../../../main.cpp" linenumber="20"];
+	Node0x53dd940 -> Node0x53dd6b0;
+	Node0x53ddc20 [shape=record,label="{calc_distance}" fid="3" demanglename="calc_distance" manglename="calc_distance" filename="../../../../main.cpp" linenumber="196"];
+	Node0x53ddb30 [shape=record,label="{calc_chi_squared}" fid="4" demanglename="calc_chi_squared" manglename="calc_chi_squared" filename="../../../../main.cpp" linenumber="122"];
+	Node0x53ddb30 -> Node0x53ddac0;
+	Node0x53ddb30 -> Node0x53dd9e0;
+	Node0x53ddb30 -> Node0x53ddb60;
+	Node0x53ddb30 -> Node0x53ddb60;
+	Node0x53ddac0 [shape=record,label="{calc_ovr_sig_sqrd}" fid="5" demanglename="calc_ovr_sig_sqrd" manglename="calc_ovr_sig_sqrd" filename="../../../../main.cpp" linenumber="96"];
+	Node0x53dd9e0 [shape=record,label="{calc_ovr_sig_sqrd_x}" fid="6" demanglename="calc_ovr_sig_sqrd_x" manglename="calc_ovr_sig_sqrd_x" filename="../../../../main.cpp" linenumber="49"];
+}

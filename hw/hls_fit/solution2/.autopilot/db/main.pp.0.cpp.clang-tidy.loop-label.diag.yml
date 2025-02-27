@@ -1,0 +1,76 @@
+---
+MainSourceFile:  /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_28_1:  '
+    FileOffset:      28
+    FilePath:        main.cpp
+    Replacements:    
+      - FilePath:        /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp
+        Offset:          94124
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_28_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_53_1:  '
+    FileOffset:      53
+    FilePath:        main.cpp
+    Replacements:    
+      - FilePath:        /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp
+        Offset:          94391
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_53_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_76_1:  '
+    FileOffset:      76
+    FilePath:        main.cpp
+    Replacements:    
+      - FilePath:        /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp
+        Offset:          94667
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_76_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_100_1:  '
+    FileOffset:      100
+    FilePath:        main.cpp
+    Replacements:    
+      - FilePath:        /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp
+        Offset:          94927
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_100_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_148_1:  '
+    FileOffset:      148
+    FilePath:        main.cpp
+    Replacements:    
+      - FilePath:        /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp
+        Offset:          95564
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_148_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_204_1:  '
+    FileOffset:      204
+    FilePath:        main.cpp
+    Replacements:    
+      - FilePath:        /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp
+        Offset:          96335
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_204_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_306_1:  '
+    FileOffset:      306
+    FilePath:        main.cpp
+    Replacements:    
+      - FilePath:        /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp
+        Offset:          97682
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_306_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_320_2:  '
+    FileOffset:      320
+    FilePath:        main.cpp
+    Replacements:    
+      - FilePath:        /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp
+        Offset:          98001
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_320_2: '
+...

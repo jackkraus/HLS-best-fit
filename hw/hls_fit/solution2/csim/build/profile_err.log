@@ -1,0 +1,50 @@
+In file included from ../../../../main.cpp:1:
+In file included from ../../../../main.h:4:
+/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/include/hls_print.h:41:12: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+    printf(fmt); 
+           ^~~
+/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/include/hls_print.h:41:12: note: treat the string as an argument to avoid this
+    printf(fmt); 
+           ^
+           "%s", 
+1 warning generated.
+Function:fit ---> FID:1
+Function:add_nums ---> FID:2
+Function:calc_distance ---> FID:3
+Function:calc_chi_squared ---> FID:4
+Function:calc_ovr_sig_sqrd ---> FID:5
+Function:calc_ovr_sig_sqrd_x ---> FID:6
+CFGHierUserfilelist:[/nfs/ihfs/home_metis/akraus/HW3-dir/hw/main.cpp /nfs/ihfs/home_metis/akraus/HW3-dir/hw/main.cpp]
+TopFunctionName:fit
+Writing 'callgraphDemangle.dot'...Function:fit ---> FID:1
+Function:add_nums ---> FID:2
+Function:calc_distance ---> FID:3
+Function:calc_chi_squared ---> FID:4
+Function:calc_ovr_sig_sqrd ---> FID:5
+Function:calc_ovr_sig_sqrd_x ---> FID:6
+
+Writing 'cfg__GLOBAL__sub_I_main.cpp_csim.dot'...
+Writing 'cfg___cxx_global_var_init_csim.dot'...
+Writing 'cfg__ZN3hls5printEPKc_csim.dot'...
+Function:add_nums ---> FID:2
+Writing 'cfg_2_csim.dot'...
+Function:calc_ovr_sig_sqrd_x ---> FID:6
+Writing 'cfg_6_csim.dot'...
+Writing 'cfg_calc_ovr_sig_sqrd_y_csim.dot'...
+Function:calc_ovr_sig_sqrd ---> FID:5
+Writing 'cfg_5_csim.dot'...
+Function:calc_chi_squared ---> FID:4
+Writing 'cfg_4_csim.dot'...Function:calc_ovr_sig_sqrd ---> FID:5
+Function:calc_ovr_sig_sqrd_x ---> FID:6
+
+Writing 'cfg__ZN3hls5printIdEEvPKcT__csim.dot'...
+Function:calc_distance ---> FID:3
+Writing 'cfg_3_csim.dot'...
+Function:fit ---> FID:1
+Writing 'cfg_1_csim.dot'...Function:add_nums ---> FID:2
+Function:calc_distance ---> FID:3
+Function:calc_chi_squared ---> FID:4
+
+Writing 'cfg_main_csim.dot'...Function:fit ---> FID:1
+
+Writing 'cfg__ZN3hls5printIiEEvPKcT__csim.dot'...

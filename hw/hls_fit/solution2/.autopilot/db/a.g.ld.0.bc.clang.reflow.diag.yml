@@ -1,0 +1,1065 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: main.cpp, Line: 20, Column: 0 }
+Function:        add_nums
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::print(char const*)'
+    DebugLoc:        { File: /opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h, 
+                       Line: 17, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          add_nums
+    DebugLoc:        { File: main.cpp, Line: 20, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: main.cpp, Line: 122, Column: 0 }
+Function:        calc_chi_squared
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          calc_ovr_sig_sqrd
+    DebugLoc:        { File: main.cpp, Line: 96, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          calc_chi_squared
+    DebugLoc:        { File: main.cpp, Line: 122, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: main.cpp, Line: 122, Column: 0 }
+Function:        calc_chi_squared
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          calc_ovr_sig_sqrd_x
+    DebugLoc:        { File: main.cpp, Line: 49, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          calc_chi_squared
+    DebugLoc:        { File: main.cpp, Line: 122, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: main.cpp, Line: 122, Column: 0 }
+Function:        calc_chi_squared
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::print(char const*, double)'
+    DebugLoc:        { File: /opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h, 
+                       Line: 26, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          calc_chi_squared
+    DebugLoc:        { File: main.cpp, Line: 122, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+Function:        fit
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          add_nums
+    DebugLoc:        { File: main.cpp, Line: 20, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+Function:        fit
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::print(char const*, double)'
+    DebugLoc:        { File: /opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h, 
+                       Line: 26, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+Function:        fit
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          calc_distance
+    DebugLoc:        { File: main.cpp, Line: 196, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+Function:        fit
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          calc_chi_squared
+    DebugLoc:        { File: main.cpp, Line: 122, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: main.cpp, Line: 28, Column: 19 }
+Function:        fit
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrxseq
+  - ArrayName:       arrx
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_28_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:28:19'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: main.cpp, Line: 29, Column: 10 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i.load.8
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: main.cpp, Line: 28, Column: 19 }
+Function:        fit
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arryseq
+  - ArrayName:       arry
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_28_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:28:19'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: main.cpp, Line: 30, Column: 10 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i.load.12
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: main.cpp, Line: 204, Column: 20 }
+Function:        fit
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '1362'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrxseq41
+  - ArrayName:       arrx
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_204_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:204:20'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: main.cpp, Line: 206, Column: 16 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i9.load.6
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: main.cpp, Line: 204, Column: 20 }
+Function:        fit
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '1362'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arryseq42
+  - ArrayName:       arry
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_204_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:204:20'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: main.cpp, Line: 207, Column: 16 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i9.load.11
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: main.cpp, Line: 100, Column: 20 }
+Function:        fit
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrsigsseq
+  - ArrayName:       arrsigs
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_100_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:100:20'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: main.cpp, Line: 101, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i.i.load.6
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: main.cpp, Line: 53, Column: 19 }
+Function:        fit
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrsigsseq43
+  - ArrayName:       arrsigs
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_53_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:53:19'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: main.cpp, Line: 54, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i17.i.load.6
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: main.cpp, Line: 53, Column: 19 }
+Function:        fit
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrxseq44
+  - ArrayName:       arrx
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_53_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:53:19'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: main.cpp, Line: 56, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i17.i.load.13
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+Function:        fit
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrxseq45
+  - ArrayName:       arrx
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_148_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:148:20'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: main.cpp, Line: 150, Column: 15 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i21.load.8
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+Function:        fit
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arryseq46
+  - ArrayName:       arry
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_148_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:148:20'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: main.cpp, Line: 151, Column: 15 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i21.load.13
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+Function:        fit
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrsigsseq47
+  - ArrayName:       arrsigs
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_148_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:148:20'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: main.cpp, Line: 152, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i21.load.18
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+Function:        fit
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          arrxseq45
+  - ArrayName:       arrx
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_148_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:148:20'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+Function:        fit
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          arryseq46
+  - ArrayName:       arry
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_148_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:148:20'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+Function:        fit
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          arrsigsseq47
+  - ArrayName:       arrsigs
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_148_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:148:20'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: main.cpp, Line: 53, Column: 19 }
+Function:        fit
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 53, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          arrsigsseq43
+  - ArrayName:       arrsigs
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_53_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:53:19'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: main.cpp, Line: 53, Column: 19 }
+Function:        fit
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 53, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          arrxseq44
+  - ArrayName:       arrx
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_53_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:53:19'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: main.cpp, Line: 100, Column: 20 }
+Function:        fit
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 100, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          arrsigsseq
+  - ArrayName:       arrsigs
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_100_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:100:20'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-widen
+Name:            BurstWidened
+DebugLoc:        { File: main.cpp, Line: 204, Column: 20 }
+Function:        fit
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - OrigLength:      '1362'
+  - String:          ' x '
+  - OrigWords:       '64'
+  - String:          'bit words has been widened by '
+  - Factor:          '2'
+  - String:          ': '
+  - Length:          '681'
+  - String:          ' x '
+  - Words:           '128'
+  - String:          bit words
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 204, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          arrxseq41
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        wseq
+  - ArrayName:       arrx
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_204_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:204:20'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-widen
+Name:            BurstWidened
+DebugLoc:        { File: main.cpp, Line: 204, Column: 20 }
+Function:        fit
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - OrigLength:      '1362'
+  - String:          ' x '
+  - OrigWords:       '64'
+  - String:          'bit words has been widened by '
+  - Factor:          '2'
+  - String:          ': '
+  - Length:          '681'
+  - String:          ' x '
+  - Words:           '128'
+  - String:          bit words
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 204, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          arryseq42
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        wseq48
+  - ArrayName:       arry
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_204_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:204:20'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: main.cpp, Line: 28, Column: 19 }
+Function:        fit
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 28, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          arrxseq
+  - ArrayName:       arrx
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_28_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:28:19'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: main.cpp, Line: 28, Column: 19 }
+Function:        fit
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 28, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          arryseq
+  - ArrayName:       arry
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_28_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:28:19'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+Function:        fit
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          arrxseq45
+  - ArrayName:       arrx
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_148_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:148:20'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+Function:        fit
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          arryseq46
+  - ArrayName:       arry
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_148_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:148:20'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+Function:        fit
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          arrsigsseq47
+  - ArrayName:       arrsigs
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_148_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:148:20'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: main.cpp, Line: 53, Column: 19 }
+Function:        fit
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 53, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          arrsigsseq43
+  - ArrayName:       arrsigs
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_53_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:53:19'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: main.cpp, Line: 53, Column: 19 }
+Function:        fit
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 53, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          arrxseq44
+  - ArrayName:       arrx
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_53_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:53:19'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: main.cpp, Line: 100, Column: 20 }
+Function:        fit
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 100, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          arrsigsseq
+  - ArrayName:       arrsigs
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_100_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:100:20'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: main.cpp, Line: 28, Column: 19 }
+Function:        fit
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 28, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          arrxseq
+  - ArrayName:       arrx
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_28_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:28:19'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: main.cpp, Line: 28, Column: 19 }
+Function:        fit
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 28, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          arryseq
+  - ArrayName:       arry
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_28_1
+  - String:          ' '
+  - LoopLoc:         'main.cpp:28:19'
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-supported-subset
+Name:            MismatchPortAndBurstAccessWidth
+DebugLoc:        { File: main.cpp, Line: 28, Column: 19 }
+Function:        fit
+Args:            
+  - String:          Inferred burst reverted due to burst accesses data width is different from m_axi port width
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 28, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          arrxseq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      arrx
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-supported-subset
+Name:            MismatchPortAndBurstAccessWidth
+DebugLoc:        { File: main.cpp, Line: 28, Column: 19 }
+Function:        fit
+Args:            
+  - String:          Inferred burst reverted due to burst accesses data width is different from m_axi port width
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 28, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          arryseq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      arry
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-supported-subset
+Name:            MismatchPortAndBurstAccessWidth
+DebugLoc:        { File: main.cpp, Line: 100, Column: 20 }
+Function:        fit
+Args:            
+  - String:          Inferred burst reverted due to burst accesses data width is different from m_axi port width
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 100, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          arrsigsseq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      arrsigs
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-supported-subset
+Name:            MismatchPortAndBurstAccessWidth
+DebugLoc:        { File: main.cpp, Line: 53, Column: 19 }
+Function:        fit
+Args:            
+  - String:          Inferred burst reverted due to burst accesses data width is different from m_axi port width
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 53, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          arrsigsseq43
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      arrsigs
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-supported-subset
+Name:            MismatchPortAndBurstAccessWidth
+DebugLoc:        { File: main.cpp, Line: 53, Column: 19 }
+Function:        fit
+Args:            
+  - String:          Inferred burst reverted due to burst accesses data width is different from m_axi port width
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 53, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          arrxseq44
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      arrx
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-supported-subset
+Name:            MismatchPortAndBurstAccessWidth
+DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+Function:        fit
+Args:            
+  - String:          Inferred burst reverted due to burst accesses data width is different from m_axi port width
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          arrxseq45
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      arrx
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-supported-subset
+Name:            MismatchPortAndBurstAccessWidth
+DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+Function:        fit
+Args:            
+  - String:          Inferred burst reverted due to burst accesses data width is different from m_axi port width
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          arryseq46
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      arry
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-supported-subset
+Name:            MismatchPortAndBurstAccessWidth
+DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+Function:        fit
+Args:            
+  - String:          Inferred burst reverted due to burst accesses data width is different from m_axi port width
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 148, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          arrsigsseq47
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      arrsigs
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            BurstConflict
+DebugLoc:        { File: main.cpp, Line: 204, Column: 20 }
+Function:        fit
+Args:            
+  - String:          'Could not burst due to multiple potential '
+  - Direction:       reads
+  - String:          ' to the same bundle in the same region.'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: main.cpp, Line: 204, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        fit
+    DebugLoc:        { File: main.cpp, Line: 235, Column: 0 }
+  - String:          ' '
+...

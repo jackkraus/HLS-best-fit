@@ -700,3 +700,1250 @@ INFO: [VHDL 208-304] Generating VHDL RTL for main.
 INFO: [VLOG 209-307] Generating Verilog RTL for main.
 INFO: [HLS 200-789] **** Estimated Fmax: 0.00 MHz
 INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3.21 seconds. CPU system time: 0.7 seconds. Elapsed time: 8.95 seconds; current allocated memory: 31.152 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 2.288 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.07 seconds. CPU system time: 0.38 seconds. Elapsed time: 1.48 seconds; current allocated memory: 2.289 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 200-1995] There were 298 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 298 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 15 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd' into 'calc_chi_squared' (main.cpp:122:0)
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd_x' into 'calc_chi_squared' (main.cpp:122:0)
+INFO: [HLS 214-178] Inlining function 'add_nums' into 'fit' (main.cpp:233:0)
+INFO: [HLS 214-178] Inlining function 'calc_distance' into 'fit' (main.cpp:233:0)
+INFO: [HLS 214-178] Inlining function 'calc_chi_squared' into 'fit' (main.cpp:233:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.52 seconds. CPU system time: 0.33 seconds. Elapsed time: 6.76 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 2.292 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.313 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 2.313 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'main' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.06 seconds; current allocated memory: 2.313 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 2.313 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on function 'main' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'main'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.313 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 2.313 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.22 seconds; current allocated memory: 2.318 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for main.
+INFO: [VLOG 209-307] Generating Verilog RTL for main.
+INFO: [HLS 200-789] **** Estimated Fmax: 0.00 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3.06 seconds. CPU system time: 0.78 seconds. Elapsed time: 8.94 seconds; current allocated memory: 31.180 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 2.288 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.07 seconds. CPU system time: 0.32 seconds. Elapsed time: 1.45 seconds; current allocated memory: 2.289 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 200-1995] There were 299 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 299 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 17 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 21 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'hls::print(char const*)' into 'add_nums' (main.cpp:22:0)
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd' into 'calc_chi_squared' (main.cpp:124:0)
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd_x' into 'calc_chi_squared' (main.cpp:124:0)
+INFO: [HLS 214-178] Inlining function 'add_nums' into 'fit' (main.cpp:235:0)
+INFO: [HLS 214-178] Inlining function 'calc_distance' into 'fit' (main.cpp:235:0)
+INFO: [HLS 214-178] Inlining function 'calc_chi_squared' into 'fit' (main.cpp:235:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.61 seconds. CPU system time: 0.28 seconds. Elapsed time: 6.76 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fit' into 'main' (main.cpp:321) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 2.292 GB.
+INFO: [XFORM 203-602] Inlining function 'fit' into 'main' (main.cpp:321) automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 2.314 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 2.314 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'main' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_307_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 2, loop 'VITIS_LOOP_307_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.08 seconds; current allocated memory: 2.314 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 2.314 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on function 'main' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'printnone': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'main'.
+INFO: [RTMG 210-279] Implementing memory 'main_templasts_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 2.314 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 2.314 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.2 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.24 seconds; current allocated memory: 2.320 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for main.
+INFO: [VLOG 209-307] Generating Verilog RTL for main.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 771.01 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3.24 seconds. CPU system time: 0.66 seconds. Elapsed time: 9.04 seconds; current allocated memory: 32.969 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 2.313 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.07 seconds. CPU system time: 0.35 seconds. Elapsed time: 1.47 seconds; current allocated memory: 2.314 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 200-1995] There were 299 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 299 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 17 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 21 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'hls::print(char const*)' into 'add_nums' (main.cpp:22:0)
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd' into 'calc_chi_squared' (main.cpp:124:0)
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd_x' into 'calc_chi_squared' (main.cpp:124:0)
+INFO: [HLS 214-178] Inlining function 'add_nums' into 'fit' (main.cpp:235:0)
+INFO: [HLS 214-178] Inlining function 'calc_distance' into 'fit' (main.cpp:235:0)
+INFO: [HLS 214-178] Inlining function 'calc_chi_squared' into 'fit' (main.cpp:235:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.51 seconds. CPU system time: 0.34 seconds. Elapsed time: 6.74 seconds; current allocated memory: 2.316 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 2.316 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.317 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fit' into 'main' (main.cpp:321) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 2.317 GB.
+INFO: [XFORM 203-602] Inlining function 'fit' into 'main' (main.cpp:321) automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.339 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.339 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'main' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_307_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 2, loop 'VITIS_LOOP_307_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.07 seconds; current allocated memory: 2.339 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 2.339 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on function 'main' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'printnone': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'main'.
+INFO: [RTMG 210-279] Implementing memory 'main_templasts_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 2.339 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.23 seconds; current allocated memory: 2.339 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.23 seconds; current allocated memory: 2.345 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for main.
+INFO: [VLOG 209-307] Generating Verilog RTL for main.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 771.01 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3.11 seconds. CPU system time: 0.77 seconds. Elapsed time: 8.95 seconds; current allocated memory: 32.973 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 2.313 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+ERROR: [HLS 207-3339] no matching function for call to 'print' (main.cpp:331:4)
+INFO: [HLS 207-4373] candidate function template not viable: requires 2 arguments, but 3 were provided (/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:22:6)
+INFO: [HLS 207-4373] candidate function not viable: requires 2 arguments, but 3 were provided (/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:26:6)
+INFO: [HLS 207-4373] candidate function not viable: requires 2 arguments, but 3 were provided (/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:32:6)
+INFO: [HLS 207-4374] candidate function not viable: requires single argument 'fmt', but 3 arguments were provided (/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:17:6)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.26 seconds. CPU system time: 0.13 seconds. Elapsed time: 0.44 seconds; current allocated memory: 0.348 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 2.288 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.24 seconds. CPU system time: 0.29 seconds. Elapsed time: 0.59 seconds; current allocated memory: 2.289 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 200-1995] There were 369 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 321 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 212 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 207 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'hls::print(char const*)' into 'add_nums' (main.cpp:20:0)
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd' into 'calc_chi_squared' (main.cpp:123:0)
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd_x' into 'calc_chi_squared' (main.cpp:123:0)
+INFO: [HLS 214-178] Inlining function 'hls::print(char const*, double)' into 'calc_chi_squared' (main.cpp:123:0)
+INFO: [HLS 214-178] Inlining function 'add_nums' into 'fit' (main.cpp:235:0)
+INFO: [HLS 214-178] Inlining function 'hls::print(char const*, double)' into 'fit' (main.cpp:235:0)
+INFO: [HLS 214-178] Inlining function 'calc_distance' into 'fit' (main.cpp:235:0)
+INFO: [HLS 214-178] Inlining function 'calc_chi_squared' into 'fit' (main.cpp:235:0)
+INFO: [HLS 214-178] Inlining function 'void hls::print<int>(char const*, int)' into 'main' (main.cpp:288:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (main.cpp:206:15)
+WARNING: [HLS 214-167] The program may have out of bound array access (main.cpp:207:16)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.57 seconds. CPU system time: 0.33 seconds. Elapsed time: 6.75 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 2.292 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_28_1' (main.cpp:28) in function 'fit' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_101_1' (main.cpp:101) in function 'fit' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_54_1' (main.cpp:54) in function 'fit' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_149_1' (main.cpp:149) in function 'fit' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_322_2' (main.cpp:322) in function 'main' automatically.
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'arrx' in function 'fit' (main.cpp:206:15).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'arry' in function 'fit' (main.cpp:207:16).
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 2.313 GB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_306_1' (main.cpp:306:20) in function 'main' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 2.371 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'main' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_28_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln33) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_28_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.12 seconds; current allocated memory: 2.373 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 2.373 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_204_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_204_1'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_204_1' (loop 'VITIS_LOOP_204_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('f_1_write_ln204', main.cpp:204->main.cpp:268) of variable 'f', main.cpp:212->main.cpp:268 on local variable 'f' and 'load' operation ('f_1_load', main.cpp:212->main.cpp:268) on local variable 'f'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 3, Depth = 22, loop 'VITIS_LOOP_204_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.47 seconds. CPU system time: 0 seconds. Elapsed time: 0.48 seconds; current allocated memory: 2.373 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 2.373 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_101_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_101_1'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_101_1' (loop 'VITIS_LOOP_101_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('S_write_ln101', main.cpp:101->main.cpp:134->main.cpp:272) of variable 'S', main.cpp:106->main.cpp:134->main.cpp:272 on local variable 'S' and 'load' operation ('S_load', main.cpp:106->main.cpp:134->main.cpp:272) on local variable 'S'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_101_1' (loop 'VITIS_LOOP_101_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('S_write_ln101', main.cpp:101->main.cpp:134->main.cpp:272) of variable 'S', main.cpp:106->main.cpp:134->main.cpp:272 on local variable 'S' and 'load' operation ('S_load', main.cpp:106->main.cpp:134->main.cpp:272) on local variable 'S'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 24, loop 'VITIS_LOOP_101_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.4 seconds. CPU system time: 0 seconds. Elapsed time: 0.42 seconds; current allocated memory: 2.374 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 2.374 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_54_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_54_1'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_54_1' (loop 'VITIS_LOOP_54_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('Sx_write_ln54', main.cpp:54->main.cpp:139->main.cpp:272) of variable 'Sx', main.cpp:57->main.cpp:139->main.cpp:272 on local variable 'Sx' and 'load' operation ('Sx_load', main.cpp:57->main.cpp:139->main.cpp:272) on local variable 'Sx'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_54_1' (loop 'VITIS_LOOP_54_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('Sx_write_ln54', main.cpp:54->main.cpp:139->main.cpp:272) of variable 'Sx', main.cpp:57->main.cpp:139->main.cpp:272 on local variable 'Sx' and 'load' operation ('Sx_load', main.cpp:57->main.cpp:139->main.cpp:272) on local variable 'Sx'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 28, loop 'VITIS_LOOP_54_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.41 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.43 seconds; current allocated memory: 2.374 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 2.374 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_149_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_149_1'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_149_1' (loop 'VITIS_LOOP_149_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('term2_write_ln149', main.cpp:149->main.cpp:272) of variable 'term2', main.cpp:165->main.cpp:272 on local variable 'term2' and 'load' operation ('term2_load', main.cpp:165->main.cpp:272) on local variable 'term2'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_149_1' (loop 'VITIS_LOOP_149_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('term2_write_ln149', main.cpp:149->main.cpp:272) of variable 'term2', main.cpp:165->main.cpp:272 on local variable 'term2' and 'load' operation ('term2_load', main.cpp:165->main.cpp:272) on local variable 'term2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 29, loop 'VITIS_LOOP_149_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.49 seconds. CPU system time: 0 seconds. Elapsed time: 0.51 seconds; current allocated memory: 2.375 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 2.375 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.61 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.62 seconds; current allocated memory: 2.376 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.52 seconds. CPU system time: 0 seconds. Elapsed time: 0.53 seconds; current allocated memory: 2.376 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'main_Pipeline_VITIS_LOOP_322_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_322_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_322_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 2.377 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.377 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 2.377 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 2.377 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_28_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_28_1' pipeline 'VITIS_LOOP_28_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_7ns_7ns_45ns_45_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_12s_7ns_19_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_28_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 2.377 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_204_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_204_1' pipeline 'VITIS_LOOP_204_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_204_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 2.379 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_101_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_101_1' pipeline 'VITIS_LOOP_101_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_13_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_101_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 2.381 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_54_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_54_1' pipeline 'VITIS_LOOP_54_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_13_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_54_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 2.382 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_149_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_149_1' pipeline 'VITIS_LOOP_149_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_13_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_149_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 2.384 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] RTL name 'ap_sig_allocacmp_sx_loc_load' is changed to 'ap_sig_allocacmp_sx_loc_load_x' due to conflict.
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_13_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_38ns_38ns_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_43s_38ns_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_45ns_32s_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_45ns_43s_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_50s_32s_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_50s_38ns_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'printdouble': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'printnone': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 2.388 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'main_Pipeline_VITIS_LOOP_322_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'main_Pipeline_VITIS_LOOP_322_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 2.390 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on function 'main' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'printint': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'main'.
+INFO: [RTMG 210-279] Implementing memory 'main_tempxs_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'main_tempys_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'main_tempsigmas_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'main_templasts_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'main_vla3_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'main_vla14_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'main_vla25_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 2.391 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.37 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.59 seconds; current allocated memory: 2.395 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.29 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.34 seconds; current allocated memory: 2.407 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for main.
+INFO: [VLOG 209-307] Generating Verilog RTL for main.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 132.71 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 7.71 seconds. CPU system time: 0.79 seconds. Elapsed time: 14.11 seconds; current allocated memory: 122.801 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 2.288 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+WARNING: [HLS 207-5564] Only for/while/do loop or function body support the pipeline pragma (main.cpp:320:9)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.3 seconds. CPU system time: 0.26 seconds. Elapsed time: 0.6 seconds; current allocated memory: 2.289 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 200-1995] There were 369 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 200-1995] There were 1,936,044 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 10,318 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 10,396 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_306_1' (main.cpp:306:20) in function 'main' completely with a factor of 1362 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 442 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 441 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 440 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 439 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 438 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 437 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 436 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 435 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 434 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 433 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 432 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 431 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 430 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 429 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 428 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 427 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 426 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 425 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 424 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 423 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 422 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 421 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 420 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 419 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 418 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 417 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 416 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 415 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 414 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 413 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 412 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 411 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 410 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 409 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 408 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 407 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 406 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 405 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 404 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 403 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 402 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 401 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 400 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 399 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 398 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 397 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 396 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 395 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 394 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 393 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 392 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 391 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 390 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 389 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 388 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 387 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 386 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 385 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 384 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 383 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 382 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 381 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 380 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 379 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 378 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 377 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 376 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 375 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 374 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 373 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 372 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 371 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 370 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 369 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 368 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 367 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 366 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 365 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 364 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 363 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 362 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 361 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 360 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 359 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 358 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 357 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 356 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 355 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 354 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 353 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 352 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 351 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 350 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 349 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 348 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 347 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 346 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 345 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 344 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 343 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 342 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 341 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 340 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 339 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 338 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 337 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 336 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 335 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 334 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 333 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 332 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 331 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 330 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 329 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 328 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 327 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 326 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 325 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 324 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 323 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 322 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 321 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 320 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 319 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 318 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 317 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 316 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 315 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 314 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 313 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 312 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 311 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 310 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 309 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 308 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 307 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 306 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 305 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 304 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 303 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 302 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 301 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 300 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 299 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 298 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 297 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 296 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 295 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 294 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 293 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 292 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 291 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 290 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 289 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 288 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 287 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 286 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 285 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 284 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 283 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 282 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 281 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 280 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 279 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 278 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 277 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 276 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 275 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 274 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 273 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 272 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 271 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 270 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 269 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 268 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 267 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 266 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 265 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 264 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 263 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 262 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 261 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 260 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 259 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 258 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 257 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 256 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 255 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 254 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 253 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 252 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 251 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 250 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 249 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 248 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 247 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 246 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 245 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 244 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 243 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 242 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 241 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 240 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 239 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 238 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 237 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 236 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 235 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 234 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 233 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 232 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 231 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 230 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 229 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 228 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 227 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 226 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 225 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 224 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 223 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 222 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 221 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 220 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 219 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 218 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 217 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 216 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 215 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 214 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 213 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 212 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 211 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 210 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 209 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 208 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 207 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 206 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 205 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 204 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 203 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 202 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 201 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 200 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 199 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 198 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 197 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 196 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 195 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 194 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 193 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 192 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 191 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 190 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 189 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 188 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 187 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 186 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 185 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 184 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 183 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 182 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 181 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 180 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 179 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 178 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 177 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 176 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 175 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 174 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 173 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 172 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 171 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 170 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 169 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 168 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 167 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 166 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 165 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 164 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 163 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 162 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 161 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 160 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 159 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 158 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 157 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 156 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 155 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 154 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 153 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 152 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 151 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 150 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 149 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 148 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 147 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 146 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 145 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 144 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 143 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 142 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 141 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 140 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 139 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 138 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 137 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 136 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 135 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 134 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 133 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 132 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 131 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 130 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 129 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 128 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 127 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 126 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 125 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 124 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 123 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 122 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 121 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 120 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 119 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 118 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 117 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 116 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 115 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 114 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 113 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 112 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 111 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 110 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 109 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 108 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 107 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 106 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 105 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 104 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 103 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 102 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 101 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 100 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 99 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 98 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 97 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 96 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 95 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 94 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 93 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 92 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 91 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 90 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 89 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 88 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 87 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 86 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 85 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 84 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 83 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 82 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 81 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 80 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 79 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 78 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 77 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 76 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 75 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 74 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 73 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 72 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 71 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 70 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 69 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 68 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 67 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 66 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 65 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 64 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 63 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 62 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 61 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 60 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 59 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 58 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 57 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 56 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 55 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 54 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 53 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 52 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 51 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 50 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 49 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 48 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 47 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 46 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 45 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 44 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 43 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 42 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 41 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 40 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 39 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 38 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 37 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 36 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 35 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 34 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 33 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 32 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 31 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 30 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 29 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 28 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 27 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 26 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 25 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 24 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 23 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 22 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 21 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 20 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 19 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 18 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 17 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 16 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 15 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 14 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 13 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 12 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 11 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 10 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 9 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 8 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 7 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 6 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 5 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 4 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 3 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 2 (main.cpp:288:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_324_2' (main.cpp:324:22) in function 'main' completely with a factor of 1 (main.cpp:288:0)
+INFO: [HLS 214-178] Inlining function 'hls::print(char const*)' into 'add_nums' (main.cpp:20:0)
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd' into 'calc_chi_squared' (main.cpp:122:0)
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd_x' into 'calc_chi_squared' (main.cpp:122:0)
+INFO: [HLS 214-178] Inlining function 'hls::print(char const*, double)' into 'calc_chi_squared' (main.cpp:122:0)
+INFO: [HLS 214-178] Inlining function 'add_nums' into 'fit' (main.cpp:235:0)
+INFO: [HLS 214-178] Inlining function 'hls::print(char const*, double)' into 'fit' (main.cpp:235:0)
+INFO: [HLS 214-178] Inlining function 'calc_distance' into 'fit' (main.cpp:235:0)
+INFO: [HLS 214-178] Inlining function 'calc_chi_squared' into 'fit' (main.cpp:235:0)
+INFO: [HLS 214-178] Inlining function 'void hls::print<int>(char const*, int)' into 'main' (main.cpp:288:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (main.cpp:206:16)
+WARNING: [HLS 214-167] The program may have out of bound array access (main.cpp:207:16)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 39.2 seconds. CPU system time: 0.58 seconds. Elapsed time: 43.23 seconds; current allocated memory: 2.306 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 2.306 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1.07 seconds. CPU system time: 0 seconds. Elapsed time: 1.08 seconds; current allocated memory: 2.312 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1.49 seconds. CPU system time: 0 seconds. Elapsed time: 1.5 seconds; current allocated memory: 2.317 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_28_1' (main.cpp:28) in function 'fit' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_204_1' (main.cpp:204) in function 'fit' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_100_1' (main.cpp:100) in function 'fit' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_53_1' (main.cpp:53) in function 'fit' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_148_1' (main.cpp:148) in function 'fit' automatically.
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'arrx' in function 'fit' (main.cpp:206:16).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'arry' in function 'fit' (main.cpp:207:16).
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2.78 seconds. CPU system time: 0 seconds. Elapsed time: 2.81 seconds; current allocated memory: 2.338 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 16.07 seconds. CPU system time: 0.33 seconds. Elapsed time: 16.44 seconds; current allocated memory: 3.552 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'main' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_28_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_28_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.48 seconds. CPU system time: 0.05 seconds. Elapsed time: 1.55 seconds; current allocated memory: 3.552 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 3.552 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_204_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_204_1'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_204_1' (loop 'VITIS_LOOP_204_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('f_write_ln204', main.cpp:204->main.cpp:268) of variable 'f', main.cpp:212->main.cpp:268 on local variable 'f' and 'load' operation ('f_load', main.cpp:212->main.cpp:268) on local variable 'f'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_204_1' (loop 'VITIS_LOOP_204_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('f_write_ln204', main.cpp:204->main.cpp:268) of variable 'f', main.cpp:212->main.cpp:268 on local variable 'f' and 'load' operation ('f_load', main.cpp:212->main.cpp:268) on local variable 'f'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 22, loop 'VITIS_LOOP_204_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.44 seconds. CPU system time: 0 seconds. Elapsed time: 0.46 seconds; current allocated memory: 3.552 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 3.552 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_100_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_100_1'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_100_1' (loop 'VITIS_LOOP_100_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('S_write_ln100', main.cpp:100->main.cpp:133->main.cpp:272) of variable 'S', main.cpp:105->main.cpp:133->main.cpp:272 on local variable 'S' and 'load' operation ('S_load', main.cpp:105->main.cpp:133->main.cpp:272) on local variable 'S'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_100_1' (loop 'VITIS_LOOP_100_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('S_write_ln100', main.cpp:100->main.cpp:133->main.cpp:272) of variable 'S', main.cpp:105->main.cpp:133->main.cpp:272 on local variable 'S' and 'load' operation ('S_load', main.cpp:105->main.cpp:133->main.cpp:272) on local variable 'S'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 24, loop 'VITIS_LOOP_100_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.43 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.45 seconds; current allocated memory: 3.552 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 3.552 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_53_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_53_1'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_53_1' (loop 'VITIS_LOOP_53_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('Sx_1_write_ln53', main.cpp:53->main.cpp:138->main.cpp:272) of variable 'Sx', main.cpp:56->main.cpp:138->main.cpp:272 on local variable 'Sx' and 'load' operation ('Sx_1_load', main.cpp:56->main.cpp:138->main.cpp:272) on local variable 'Sx'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_53_1' (loop 'VITIS_LOOP_53_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('Sx_1_write_ln53', main.cpp:53->main.cpp:138->main.cpp:272) of variable 'Sx', main.cpp:56->main.cpp:138->main.cpp:272 on local variable 'Sx' and 'load' operation ('Sx_1_load', main.cpp:56->main.cpp:138->main.cpp:272) on local variable 'Sx'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 28, loop 'VITIS_LOOP_53_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.44 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.47 seconds; current allocated memory: 3.552 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 3.552 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_148_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_148_1'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_148_1' (loop 'VITIS_LOOP_148_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('term2_write_ln148', main.cpp:148->main.cpp:272) of variable 'term2', main.cpp:165->main.cpp:272 on local variable 'term2' and 'load' operation ('term2_load', main.cpp:165->main.cpp:272) on local variable 'term2'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_148_1' (loop 'VITIS_LOOP_148_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('term2_write_ln148', main.cpp:148->main.cpp:272) of variable 'term2', main.cpp:165->main.cpp:272 on local variable 'term2' and 'load' operation ('term2_load', main.cpp:165->main.cpp:272) on local variable 'term2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 29, loop 'VITIS_LOOP_148_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.51 seconds. CPU system time: 0 seconds. Elapsed time: 0.53 seconds; current allocated memory: 3.552 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.28 seconds. CPU system time: 0 seconds. Elapsed time: 0.29 seconds; current allocated memory: 3.552 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.64 seconds. CPU system time: 0 seconds. Elapsed time: 0.65 seconds; current allocated memory: 3.552 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.55 seconds. CPU system time: 0 seconds. Elapsed time: 0.56 seconds; current allocated memory: 3.552 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 8.28 seconds. CPU system time: 0 seconds. Elapsed time: 8.32 seconds; current allocated memory: 3.552 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 7.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 7.12 seconds; current allocated memory: 3.552 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_28_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_28_1' pipeline 'VITIS_LOOP_28_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_12s_7ns_19_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_7ns_14_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_28_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.19 seconds; current allocated memory: 3.552 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_204_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_204_1' pipeline 'VITIS_LOOP_204_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_204_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 3.552 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_100_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_100_1' pipeline 'VITIS_LOOP_100_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_13_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_100_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 3.552 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_53_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_53_1' pipeline 'VITIS_LOOP_53_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_13_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_53_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 3.552 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_148_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_148_1' pipeline 'VITIS_LOOP_148_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_13_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_148_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 3.552 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_13_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_64s_64_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_9ns_64_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'printdouble': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'printnone': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 3.552 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on function 'main' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'printint': 12 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'main'.
+INFO: [RTMG 210-278] Implementing memory 'main_vla3_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'main_vla14_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'main_vla25_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 4.76 seconds. CPU system time: 0.01 seconds. Elapsed time: 4.82 seconds; current allocated memory: 3.552 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2.04 seconds. CPU system time: 0.16 seconds. Elapsed time: 2.38 seconds; current allocated memory: 3.552 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.4 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.44 seconds; current allocated memory: 3.552 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for main.
+INFO: [VLOG 209-307] Generating Verilog RTL for main.
+INFO: [HLS 200-789] **** Estimated Fmax: 132.71 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 90.93 seconds. CPU system time: 1.5 seconds. Elapsed time: 96.71 seconds; current allocated memory: 1.264 GB.

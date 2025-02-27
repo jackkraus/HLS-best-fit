@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'main'
 ================================================================
 + General Information: 
-    * Date:           Thu Feb 27 14:15:37 2025
+    * Date:           Thu Feb 27 15:25:50 2025
     * Version:        2023.1 (Build 3854077 on May  4 2023)
     * Project:        hls_fit
     * Solution:       solution1 (Vitis Kernel Flow Target)
@@ -15,12 +15,23 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +--------+------+------+---------+--------+----------+---------+------+----------+------+----+----------+-----------+-----+
-    | Modules| Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |          |           |     |
-    | & Loops| Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|    FF    |    LUT    | URAM|
-    +--------+------+------+---------+--------+----------+---------+------+----------+------+----+----------+-----------+-----+
-    |+ main  |     -|  7.30|        0|   0.000|         -|        1|     -|        no|     -|   -|  73 (~0%)|  115 (~0%)|    -|
-    +--------+------+------+---------+--------+----------+---------+------+----------+------+----+----------+-----------+-----+
+    +-----------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+----------+------------+------------+-----+
+    |              Modules              |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |         |          |            |            |     |
+    |              & Loops              |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |    DSP   |     FF     |     LUT    | URAM|
+    +-----------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+----------+------------+------------+-----+
+    |+ main                             |  Timing|  -0.24|    50009|  5.001e+05|         -|    50010|     -|        no|  3 (~0%)|  79 (~0%)|  6413 (~0%)|  24822 (1%)|    -|
+    | + fit                             |  Timing|  -0.24|     8219|  8.219e+04|         -|     8219|     -|        no|        -|  79 (~0%)|  5644 (~0%)|  4759 (~0%)|    -|
+    |  + fit_Pipeline_VITIS_LOOP_28_1   |       -|   1.79|      444|  4.440e+03|         -|      444|     -|        no|        -|   1 (~0%)|   268 (~0%)|   427 (~0%)|    -|
+    |   o VITIS_LOOP_28_1               |       -|   7.30|      442|  4.420e+03|         2|        1|   442|       yes|        -|         -|           -|           -|    -|
+    |  + fit_Pipeline_VITIS_LOOP_100_1  |       -|   0.14|     1348|  1.348e+04|         -|     1348|     -|        no|        -|         -|   348 (~0%)|   149 (~0%)|    -|
+    |   o VITIS_LOOP_100_1              |      II|   7.30|     1346|  1.346e+04|        24|        3|   442|       yes|        -|         -|           -|           -|    -|
+    |  + fit_Pipeline_VITIS_LOOP_204_1  |       -|   0.35|     4106|  4.106e+04|         -|     4106|     -|        no|        -|         -|   554 (~0%)|   312 (~0%)|    -|
+    |   o VITIS_LOOP_204_1              |      II|   7.30|     4104|  4.104e+04|        22|        3|  1362|       yes|        -|         -|           -|           -|    -|
+    |  + fit_Pipeline_VITIS_LOOP_53_1   |       -|   0.14|     1352|  1.352e+04|         -|     1352|     -|        no|        -|         -|   624 (~0%)|   336 (~0%)|    -|
+    |   o VITIS_LOOP_53_1               |      II|   7.30|     1350|  1.350e+04|        28|        3|   442|       yes|        -|         -|           -|           -|    -|
+    |  + fit_Pipeline_VITIS_LOOP_148_1  |       -|   0.14|     1353|  1.353e+04|         -|     1353|     -|        no|        -|   3 (~0%)|  1569 (~0%)|  1178 (~0%)|    -|
+    |   o VITIS_LOOP_148_1              |      II|   7.30|     1351|  1.351e+04|        29|        3|   442|       yes|        -|         -|           -|           -|    -|
+    +-----------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+----------+------------+------------+-----+
 
 
 ================================================================
@@ -76,15 +87,83 @@
 ================================================================
 == Bind Op Report
 ================================================================
-  No bind op info in design
++-------------------------------------------+-----+--------+-------------+------+---------+---------+
+| Name                                      | DSP | Pragma | Variable    | Op   | Impl    | Latency |
++-------------------------------------------+-----+--------+-------------+------+---------+---------+
+| + main                                    | 79  |        |             |      |         |         |
+|  + fit                                    | 79  |        |             |      |         |         |
+|    mul_64s_64s_64_1_1_U62                 | 10  |        | sx2         | mul  | auto    | 0       |
+|    mul_64s_64s_64_1_1_U63                 | 10  |        | mul_ln253   | mul  | auto    | 0       |
+|    mul_64s_64s_64_1_1_U64                 | 10  |        | mul_ln253_1 | mul  | auto    | 0       |
+|    ddiv_64ns_64ns_64_13_no_dsp_1_U56      | -   |        | a1          | sub  | fabric  | 0       |
+|    sitodp_64ns_64_2_no_dsp_1_U73          | 4   |        | mul_ln254   | mul  | auto    | 0       |
+|    grp_fu_173_p0                          | -   |        | a2          | sub  | fabric  | 0       |
+|    sitodp_64ns_64_2_no_dsp_1_U73          | -   |        | tmp         | ddiv | fabric  | 12      |
+|    mul_64s_9ns_64_1_1_U61                 | 4   |        | mul_ln258   | mul  | auto    | 0       |
+|    mul_64s_64s_64_1_1_U65                 | 10  |        | mul_ln258_1 | mul  | auto    | 0       |
+|    dadddsub_64ns_64ns_64_4_full_dsp_1_U51 | -   |        | b1          | sub  | fabric  | 0       |
+|    sitodp_64ns_64_2_no_dsp_1_U73          | -   |        | tmp_1       | ddiv | fabric  | 12      |
+|    ddiv_64ns_64ns_64_13_no_dsp_1_U55      | -   |        | SxoS        | ddiv | fabric  | 12      |
+|    dmul_64ns_64ns_64_4_max_dsp_1_U52      | -   |        | add_ln127   | add  | fabric  | 0       |
+|    ddiv_64ns_64ns_64_13_no_dsp_1_U55      | -   |        | term1       | ddiv | fabric  | 12      |
+|    ddiv_64ns_64ns_64_13_no_dsp_1_U55      | -   |        | oneOverS    | ddiv | fabric  | 12      |
+|    dmul_64ns_64ns_64_4_max_dsp_1_U52      | 8   |        | Sx2         | dmul | maxdsp  | 3       |
+|    dmul_64ns_64ns_64_4_max_dsp_1_U53      | 8   |        | mul21_i     | dmul | maxdsp  | 3       |
+|    ddiv_64ns_64ns_64_13_no_dsp_1_U55      | -   |        | div22_i     | ddiv | fabric  | 12      |
+|    dadddsub_64ns_64ns_64_4_full_dsp_1_U51 | 3   |        | add23_i     | dadd | fulldsp | 3       |
+|    dmul_64ns_64ns_64_4_max_dsp_1_U52      | 8   |        | oa2         | dmul | maxdsp  | 3       |
+|    ddiv_64ns_64ns_64_13_no_dsp_1_U55      | -   |        | ob2         | ddiv | fabric  | 12      |
+|    dmul_64ns_64ns_64_4_max_dsp_1_U54      | 8   |        | gof         | dmul | maxdsp  | 3       |
+|   + fit_Pipeline_VITIS_LOOP_28_1          | 1   |        |             |      |         |         |
+|     add_ln28_fu_158_p2                    | -   |        | add_ln28    | add  | fabric  | 0       |
+|     add_ln29_fu_199_p2                    | -   |        | add_ln29    | add  | fabric  | 0       |
+|     add_ln30_fu_213_p2                    | -   |        | add_ln30    | add  | fabric  | 0       |
+|     mul_12s_7ns_19_1_1_U1                 | 1   |        | mul_ln31    | mul  | auto    | 0       |
+|     add_ln31_fu_229_p2                    | -   |        | add_ln31    | add  | fabric  | 0       |
+|     mul_7ns_7ns_14_1_1_U2                 | -   |        | mul_ln32    | mul  | auto    | 0       |
+|     add_ln32_fu_245_p2                    | -   |        | add_ln32    | add  | fabric  | 0       |
+|   + fit_Pipeline_VITIS_LOOP_100_1         | 0   |        |             |      |         |         |
+|     add_ln100_fu_109_p2                   | -   |        | add_ln100   | add  | fabric  | 0       |
+|   + fit_Pipeline_VITIS_LOOP_204_1         | 0   |        |             |      |         |         |
+|     add_ln204_fu_125_p2                   | -   |        | add_ln204   | add  | fabric  | 0       |
+|   + fit_Pipeline_VITIS_LOOP_53_1          | 0   |        |             |      |         |         |
+|     add_ln53_fu_124_p2                    | -   |        | add_ln53    | add  | fabric  | 0       |
+|   + fit_Pipeline_VITIS_LOOP_148_1         | 3   |        |             |      |         |         |
+|     add_ln148_fu_191_p2                   | -   |        | add_ln148   | add  | fabric  | 0       |
+|     dadd_64ns_64ns_64_4_full_dsp_1_U36    | 3   |        | Stt_1       | dadd | fulldsp | 3       |
+|     dadd_64ns_64ns_64_4_full_dsp_1_U36    | 3   |        | term2_1     | dadd | fulldsp | 3       |
++-------------------------------------------+-----+--------+-------------+------+---------+---------+
+
 
 ================================================================
 == Bind Storage Report
 ================================================================
-  No bind storage info in design
++-----------+------+------+--------+----------+---------+------+---------+
+| Name      | BRAM | URAM | Pragma | Variable | Storage | Impl | Latency |
++-----------+------+------+--------+----------+---------+------+---------+
+| + main    | 3    | 0    |        |          |         |      |         |
+|   vla3_U  | 1    | -    |        | vla3     | ram_t2p | auto | 1       |
+|   vla14_U | 1    | -    |        | vla14    | ram_t2p | auto | 1       |
+|   vla25_U | 1    | -    |        | vla25    | ram_t2p | auto | 1       |
++-----------+------+------+--------+----------+---------+------+---------+
+
 
 ================================================================
 == Pragma Report
 ================================================================
-  No pragmas found
+* Pragmas with Warnings
++----------+---------+----------------------+---------------------------------------------------------------------+
+| Type     | Options | Location             | Messages                                                            |
++----------+---------+----------------------+---------------------------------------------------------------------+
+| pipeline |         | main.cpp:320 in main | Only for/while/do loop or function body support the pipeline pragma |
++----------+---------+----------------------+---------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++--------+---------+----------------------+
+| Type   | Options | Location             |
++--------+---------+----------------------+
+| unroll |         | main.cpp:307 in main |
+| unroll |         | main.cpp:325 in main |
++--------+---------+----------------------+
+
 

@@ -3,17 +3,22 @@
 ================================================================
 
 * Instructions per Function for each Compilation Phase
-+--------------------------+--------------+--------------+---------------+----------------------+---------------+
-| Function                 | Location     | Compile/Link | Unroll/Inline | Performance/Pipeline | Optimizations |
-+--------------------------+--------------+--------------+---------------+----------------------+---------------+
-| + main                   | main.cpp:287 | 298          | 298           | 16                   | 14            |
-|  + fit                   | main.cpp:233 | 223          | 226           |  1                   |               |
-|     add_nums             | main.cpp:21  |  48          |  51           |                      |               |
-|     calc_distance        | main.cpp:195 |  24          |  23           |                      |               |
-|   + calc_chi_squared     | main.cpp:122 |  92          | 109           |                      |               |
-|      calc_ovr_sig_sqrd   | main.cpp:96  |  18          |  23           |                      |               |
-|      calc_ovr_sig_sqrd_x | main.cpp:49  |  23          |  28           |                      |               |
-+--------------------------+--------------+--------------+---------------+----------------------+---------------+
++--------------------------+----------------+---------------+------------------------+----------------------+------------------+
+| Function                 | Location       | Compile/Link  | Unroll/Inline          | Performance/Pipeline | Optimizations    |
++--------------------------+----------------+---------------+------------------------+----------------------+------------------+
+| + main                   | main.cpp:288   | 369           | 1,936,044 *            | 10,318               | 10,396           |
+|    print<int>            | hls_print.h:22 |   4 (2 calls) |     5,448 (2724 calls) |                      |                  |
+|  + fit                   | main.cpp:235   | 290           |   333,690 (1362 calls) |    798 (6 calls)     |    876 (6 calls) |
+|   + add_nums             | main.cpp:20    |  49           |    70,824 (1362 calls) |                      |                  |
+|      print               | hls_print.h:17 |   2           |     2,724 (1362 calls) |                      |                  |
+|     print                | hls_print.h:26 |  44 (4 calls) |    16,344 (5448 calls) |                      |                  |
+|     calc_distance        | main.cpp:196   |  24           |    31,326 (1362 calls) |                      |                  |
+|   + calc_chi_squared     | main.cpp:122   | 114           |   156,630 (1362 calls) |                      |                  |
+|      calc_ovr_sig_sqrd   | main.cpp:96    |  18           |    31,326 (1362 calls) |                      |                  |
+|      calc_ovr_sig_sqrd_x | main.cpp:49    |  23           |    38,136 (1362 calls) |                      |                  |
+|      print               | hls_print.h:26 |  22 (2 calls) |     8,172 (2724 calls) |                      |                  |
++--------------------------+----------------+---------------+------------------------+----------------------+------------------+
+    * - Exceeded design size warning message threshold
 
 * Description of Compilation Phases
 +----------------------+------------------------------------------------------------+

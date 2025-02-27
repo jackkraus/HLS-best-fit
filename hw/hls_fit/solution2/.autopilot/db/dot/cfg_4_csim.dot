@@ -1,0 +1,18 @@
+digraph "CFG for 'calc_chi_squared' function" {
+	label="CFG for 'calc_chi_squared' function";
+
+	Node0x40068b0 [shape=record,filename="",linenumber="",label="{entry.predFake}"];
+	Node0x40068b0 -> Node0x3ff4a10[ callList="5:133; 6:138" memoryops="" filename="../../../../main.cpp" execusionnum="6"];
+	Node0x3f818e0 [shape=record,filename="../../../../main.cpp",linenumber="181",label="{for.end.succFake}"];
+subgraph cluster_0 {
+	label="entry";
+	tripcount="1361";
+	invocationtime="6";
+
+	Node0x3ff4a10 [shape=record,filename="../../../../main.cpp",linenumber="148",label="{for.cond.predFake}"];
+	Node0x3ff4a10 -> Node0x4017fd0[ callList="" memoryops="" filename="../../../../main.cpp" execusionnum="1367"];
+	Node0x4017fd0 [shape=record,filename="../../../../main.cpp",linenumber="148",label="{for.cond.succFake|{<s0>T|<s1>F}}"];
+	Node0x4017fd0:s0 -> Node0x3ff4a10[label="W:1362" callList="" memoryops="" filename="../../../../main.cpp" execusionnum="1361"];
+	Node0x4017fd0:s1 -> Node0x3f818e0[label="W:7" callList="" memoryops="" filename="../../../../main.cpp" execusionnum="6"];
+}
+}

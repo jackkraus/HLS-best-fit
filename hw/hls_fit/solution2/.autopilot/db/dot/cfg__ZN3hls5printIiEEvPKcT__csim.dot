@@ -1,0 +1,7 @@
+digraph "CFG for 'void hls::print\<int\>' function" {
+	label="CFG for 'void hls::print\<int\>' function";
+
+	Node0x4026320 [shape=record,filename="",linenumber="",label="{entry.predFake}"];
+	Node0x4026320 -> Node0x3f7fd50[ callList="" memoryops="" filename="/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/include/hls_print.h" execusionnum="12"];
+	Node0x3f7fd50 [shape=record,filename="/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/include/hls_print.h",linenumber="47",label="{entry.succFake}"];
+}

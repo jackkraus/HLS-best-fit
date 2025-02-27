@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'main'" level="0">
-<item name = "Date">Thu Feb 27 14:15:37 2025
+<item name = "Date">Thu Feb 27 15:25:42 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">hls_fit</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 0 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.535 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,13 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">0, 0, 0 ns, 0 ns, 1, 1, no</column>
+<column name="">31217, 50009, 0.312 ms, 0.500 ms, 31218, 50010, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_fit_fu_14454">fit, 5087, 8219, 50.870 us, 82.190 us, 5087, 8219, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

@@ -2,7 +2,6 @@
 #include <stdio.h>  // For debug prints, originally iostream
 #include <stdlib.h>
 #include <string.h>
-#include <iostream>
 
 //#include <ap_int.h>
 //#include <ap_fixed.h> // Using fixed-point arithmetic for resource optimization
@@ -20,11 +19,12 @@ extern "C" {
 #endif
 void add_nums(const long arrx[], const long arry[], int size, long* sx, long* sy, long* sxy, long* sxx){
 	*sx = 0;
-       	*sy = 0;
-       	*sxy = 0;
+    	*sy = 0;
+    	*sxy = 0;
 	*sxx = 0;
 	
-	cout << "<== Starting add_nums LOOP ==>" << '\n';
+	//cout << "<== Starting add_nums LOOP ==>" << '\n';
+	hls::print("<== Starting add_nums LOOP ==>\n");	
 	for(int i = 0; i < size; i++){
 		*sx += arrx[i];
 		*sy += arry[i];
@@ -146,6 +146,7 @@ double calc_chi_squared(double a, double b, long arrx[], long arry[], long arrsi
 
 	//printf("<== Starting calc_chi_squared LOOP ==>\n");
 	for(int i = 0; i < size; i++) {
+ 	//	#pragma HLS UNROLL factor=2 
 		x = (double)arrx[i]; // x_i
 		y = (double)arry[i]; // y_i
 		sig = (double)arrsig[i]; // sig_i 
@@ -172,8 +173,8 @@ double calc_chi_squared(double a, double b, long arrx[], long arry[], long arrsi
 	oa2 = oneOverS*(1 + Sx2/(S*Stt));
         ob2 = 1/Stt;	
 
-	printf("	uncertainty on a:  %.6f\n", oa2);
-	printf("	uncertainty on b:  %.6f\n", ob2);
+	hls::print("	uncertainty on a:  %.6f\n", oa2);	
+	hls::print("	uncertainty on b:  %.6f\n", ob2);	
 	
 	gof = term1*term2; 
 	
@@ -201,6 +202,7 @@ double calc_distance(const double a, const double b, const long arrx[], const lo
 
 	//printf("<== Starting calc_distance LOOP ==>\n");
 	for(int i = 0; i < tempN; i++) {
+		//#pragma HLS PIPELINE
 		x = (double) arrx[i];
 		y = (double) arry[i];
 
@@ -257,9 +259,9 @@ void fit(long *arrx, long *arry, long *arrsigs, int size) {
 	b2 = size*sxx - sx2; 	
 	b = (double) b1/b2;
 
-	printf("fit() --> Best fit param a: %0.6f\n", a);	
-	printf("fit() --> Best fit param b: %0.6f\n", b);	
 	
+	hls::print("fit() --> Best fit param a: %0.6f\n", a);	
+	hls::print("fit() --> Best fit param b: %0.6f\n", b);	
 
 	// <-- Call `calc_distance()` function --> 	
 	double f = 0; // our distance
@@ -270,9 +272,8 @@ void fit(long *arrx, long *arry, long *arrsigs, int size) {
 	gof = calc_chi_squared(a,b, arrx, arry, arrsigs, size);
 	
 
-	printf("fit() --> f(a,b) = %.9f\n",f);
-	printf("fit() --> goodness of fit = %.9f\n",gof);
-
+	hls::print("fit() --> f(a,b) = %.9f\n",f);	
+	hls::print("fit() --> goodness of fit = %.9f\n",gof);	
 }
 
 #ifdef __cplusplus
@@ -303,16 +304,13 @@ int main() {
 
 
 	for(int i = 0; i < tempN; i++) {
-		#pragma HLS PIPELINE II=2
 		arrx[j] = (long)tempxs[i];
 		arry[j] = (long)tempys[i];
 		arrsig[j] = (long)tempsigmas[i];
 		j++;
 
 		if(templasts[i] == 1) {
-			printf("============ EVENT %d ============\n", event_count);
-			// since arrq changes over the course of the loop, 
-			// 	we cant use iterator to obtain the size  
+			hls::print("============ EVENT %d ============\n", event_count);	
 			arrsize = i - previous_i; // i will go up to tempN but the size will stay low 
 			previous_i = i;
 		
@@ -320,23 +318,19 @@ int main() {
 
 			// this will set all data in the arrays to 0	
 			for (int k = 0; k < arrsize; k++) {
+				#pragma HLS unroll
 				arrx[k] = 0;
 				arry[k] = 0;
 				arrsig[k] = 0;
 			}
 			
 			j = 0; // restart the index of the temp arrqs
-			printf("main() --> Current index %d of %d \n",i,tempN); 
 
+			hls::print("main() --> Current index %d \n",i);
 			event_count+=1;
 			arrsize = 0;
 		}
 	}
-
-	//free(arrx);
-	//free(arry);
-	//free(arrsig);
-
 	return 0;
 }
 

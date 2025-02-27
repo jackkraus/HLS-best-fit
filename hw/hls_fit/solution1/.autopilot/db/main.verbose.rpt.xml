@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'main'" level="0">
-<item name = "Date">Thu Feb 27 14:15:37 2025
+<item name = "Date">Thu Feb 27 15:25:49 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">hls_fit</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 0 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.535 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,13 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">0, 0, 0 ns, 0 ns, 1, 1, no</column>
+<column name="">31217, 50009, 0.312 ms, 0.500 ms, 31218, 50010, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_fit_fu_14454">fit, 5087, 8219, 50.870 us, 82.190 us, 5087, 8219, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -49,14 +50,14 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 2, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">0, -, 68, 104, 0</column>
-<column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 9, -</column>
-<column name="Register">-, -, 5, -, -</column>
+<column name="Instance">0, 79, 5712, 4863, 0</column>
+<column name="Memory">3, -, 0, 0, 0</column>
+<column name="Multiplexer">-, -, -, 19957, -</column>
+<column name="Register">-, -, 701, -, -</column>
 <specialColumn name="Available SLR">1344, 3072, 864000, 432000, 320</specialColumn>
-<specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Utilization SLR (%)">~0, 2, ~0, 5, 0</specialColumn>
 <specialColumn name="Available">4032, 9216, 2592000, 1296000, 960</specialColumn>
-<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Utilization (%)">~0, ~0, ~0, 1, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -64,6 +65,19 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="control_s_axi_U">control_s_axi, 0, 0, 68, 104, 0</column>
+<column name="grp_fit_fu_14454">fit, 0, 79, 5644, 4759, 0</column>
+<column name="printint_U86">printint, 0, 0, 0, 0, 0</column>
+<column name="printint_U87">printint, 0, 0, 0, 0, 0</column>
+<column name="printint_U88">printint, 0, 0, 0, 0, 0</column>
+<column name="printint_U89">printint, 0, 0, 0, 0, 0</column>
+<column name="printint_U90">printint, 0, 0, 0, 0, 0</column>
+<column name="printint_U91">printint, 0, 0, 0, 0, 0</column>
+<column name="printint_U92">printint, 0, 0, 0, 0, 0</column>
+<column name="printint_U93">printint, 0, 0, 0, 0, 0</column>
+<column name="printint_U94">printint, 0, 0, 0, 0, 0</column>
+<column name="printint_U95">printint, 0, 0, 0, 0, 0</column>
+<column name="printint_U96">printint, 0, 0, 0, 0, 0</column>
+<column name="printint_U97">printint, 0, 0, 0, 0, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -72,6 +86,9 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="vla14_U">vla14_RAM_AUTO_1R1W, 1, 0, 0, 0, 1024, 12, 1, 12288</column>
+<column name="vla25_U">vla25_RAM_AUTO_1R1W, 1, 0, 0, 0, 1024, 6, 1, 6144</column>
+<column name="vla3_U">vla3_RAM_AUTO_1R1W, 1, 0, 0, 0, 1024, 7, 1, 7168</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
@@ -85,16 +102,34 @@
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">2693, 697, 1, 697</column>
 <column name="ap_done">9, 2, 1, 2</column>
+<column name="grp_fit_fu_14454_size">26, 5, 9, 45</column>
+<column name="vla14_address0">1835, 347, 10, 3470</column>
+<column name="vla14_address1">1829, 346, 10, 3460</column>
+<column name="vla14_ce0">14, 3, 1, 3</column>
+<column name="vla14_d0">2365, 449, 12, 5388</column>
+<column name="vla14_d1">2422, 460, 12, 5520</column>
+<column name="vla25_address0">1835, 347, 10, 3470</column>
+<column name="vla25_address1">1829, 346, 10, 3460</column>
+<column name="vla25_ce0">14, 3, 1, 3</column>
+<column name="vla25_d0">201, 46, 6, 276</column>
+<column name="vla25_d1">201, 46, 6, 276</column>
+<column name="vla3_address0">1835, 347, 10, 3470</column>
+<column name="vla3_address1">1829, 346, 10, 3460</column>
+<column name="vla3_ce0">14, 3, 1, 3</column>
+<column name="vla3_d0">503, 101, 7, 707</column>
+<column name="vla3_d1">503, 101, 7, 707</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_CS_fsm">696, 0, 696, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_rst_n_inv">1, 0, 1, 0</column>
 <column name="ap_rst_reg_1">1, 0, 1, 0</column>
 <column name="ap_rst_reg_2">1, 0, 1, 0</column>
+<column name="grp_fit_fu_14454_ap_start_reg">1, 0, 1, 0</column>
 </table>
 </item>
 </section>

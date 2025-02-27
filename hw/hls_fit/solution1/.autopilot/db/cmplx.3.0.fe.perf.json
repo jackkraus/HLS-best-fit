@@ -1,23 +1,26 @@
 {
   "0": {
-    "basicblocks": 5,
-    "calls": "1",
+    "basicblocks": 1,
+    "calls": "1 1 1 1 1 1",
     "file": "main.cpp",
-    "fileloc": 287,
-    "instructions": 15,
-    "loads": {
-      "G": 1
-    },
+    "fileloc": 288,
+    "instructions": 9520,
     "name": "main",
-    "total_instructions": 16
+    "stores": {
+      "L": 8169
+    },
+    "total_instructions": 10318
   },
   "1": {
-    "basicblocks": 1,
+    "basicblocks": 11,
     "calls": "",
     "file": "main.cpp",
-    "fileloc": 233,
-    "instructions": 1,
+    "fileloc": 235,
+    "instructions": 133,
+    "loads": {
+      "L": 10
+    },
     "name": "fit",
-    "total_instructions": 1
+    "total_instructions": 133
   }
 }

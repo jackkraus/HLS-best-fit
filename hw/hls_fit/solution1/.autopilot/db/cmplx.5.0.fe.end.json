@@ -1,11 +1,116 @@
 {
+    "1": {
+        "name": "fit_Pipeline_VITIS_LOOP_53_1",
+        "file": "main.cpp",
+        "fileloc": "0",
+        "instructions": "33",
+        "total_instructions": "33",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "fit_Pipeline_VITIS_LOOP_204_1",
+        "file": "main.cpp",
+        "fileloc": "0",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "fit_Pipeline_VITIS_LOOP_100_1",
+        "file": "main.cpp",
+        "fileloc": "0",
+        "instructions": "28",
+        "total_instructions": "28",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "fit_Pipeline_VITIS_LOOP_28_1",
+        "file": "main.cpp",
+        "fileloc": "0",
+        "instructions": "56",
+        "total_instructions": "56",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "11"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "fit",
+        "file": "main.cpp",
+        "fileloc": "235",
+        "instructions": "67",
+        "total_instructions": "272",
+        "calls": "4 2 3 1 6",
+        "basicblocks": "1",
+        "loads": {
+            "L": "9"
+        }
+    },
     "0": {
         "name": "main",
         "file": "main.cpp",
-        "fileloc": "287",
-        "instructions": "5",
-        "total_instructions": "5",
+        "fileloc": "288",
+        "instructions": "5453",
+        "total_instructions": "7085",
+        "calls": "5 5 5 5 5 5",
+        "basicblocks": "1",
+        "stores": {
+            "L": "4101"
+        }
+    },
+    "6": {
+        "name": "fit_Pipeline_VITIS_LOOP_148_1",
+        "file": "main.cpp",
+        "fileloc": "0",
+        "instructions": "53",
+        "total_instructions": "53",
         "calls": "",
-        "basicblocks": "1"
+        "basicblocks": "4",
+        "loads": {
+            "L": "8"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
     }
 }

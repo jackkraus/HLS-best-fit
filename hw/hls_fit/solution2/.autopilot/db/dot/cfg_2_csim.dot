@@ -1,0 +1,18 @@
+digraph "CFG for 'add_nums' function" {
+	label="CFG for 'add_nums' function";
+
+	Node0x3fbf6f0 [shape=record,filename="",linenumber="",label="{entry.predFake}"];
+	Node0x3fbf6f0 -> Node0x3fbf930[ callList="" memoryops="" filename="../../../../main.cpp" execusionnum="6"];
+	Node0x4017430 [shape=record,filename="../../../../main.cpp",linenumber="34",label="{for.end.succFake}"];
+subgraph cluster_0 {
+	label="entry";
+	tripcount="1361";
+	invocationtime="6";
+
+	Node0x3fbf930 [shape=record,filename="../../../../main.cpp",linenumber="28",label="{for.cond.predFake}"];
+	Node0x3fbf930 -> Node0x4017380[ callList="" memoryops="" filename="../../../../main.cpp" execusionnum="1367"];
+	Node0x4017380 [shape=record,filename="../../../../main.cpp",linenumber="28",label="{for.cond.succFake|{<s0>T|<s1>F}}"];
+	Node0x4017380:s0 -> Node0x3fbf930[label="W:1362" callList="" memoryops="" filename="../../../../main.cpp" execusionnum="1361"];
+	Node0x4017380:s1 -> Node0x4017430[label="W:7" callList="" memoryops="" filename="../../../../main.cpp" execusionnum="6"];
+}
+}

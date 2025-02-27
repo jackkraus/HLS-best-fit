@@ -1,0 +1,40 @@
+/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp:3175:2: warning: Added loop label VITIS_LOOP_28_1:   [xilinx-label-all-loops]
+ for(int i = 0; i < size; i++){
+ ^~~
+ VITIS_LOOP_28_1: 
+/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp:3175:2: note: FIX-IT applied suggested code changes
+/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp:3192:2: warning: Added loop label VITIS_LOOP_53_1:   [xilinx-label-all-loops]
+ for(int i = 0; i < size; i++) {
+ ^~~
+ VITIS_LOOP_53_1: 
+/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp:3192:2: note: FIX-IT applied suggested code changes
+/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp:3208:2: warning: Added loop label VITIS_LOOP_76_1:   [xilinx-label-all-loops]
+ for(int i = 0; i < size; i++) {
+ ^~~
+ VITIS_LOOP_76_1: 
+/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp:3208:2: note: FIX-IT applied suggested code changes
+/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp:3224:2: warning: Added loop label VITIS_LOOP_100_1:   [xilinx-label-all-loops]
+ for(int i = 0; i < size; i++) {
+ ^~~
+ VITIS_LOOP_100_1: 
+/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp:3224:2: note: FIX-IT applied suggested code changes
+/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp:3265:2: warning: Added loop label VITIS_LOOP_148_1:   [xilinx-label-all-loops]
+ for(int i = 0; i < size; i++) {
+ ^~~
+ VITIS_LOOP_148_1: 
+/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp:3265:2: note: FIX-IT applied suggested code changes
+/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp:3314:2: warning: Added loop label VITIS_LOOP_204_1:   [xilinx-label-all-loops]
+ for(int i = 0; i < tempN; i++) {
+ ^~~
+ VITIS_LOOP_204_1: 
+/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp:3314:2: note: FIX-IT applied suggested code changes
+/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp:3413:2: warning: Added loop label VITIS_LOOP_306_1:   [xilinx-label-all-loops]
+ for(int i = 0; i < tempN; i++) {
+ ^~~
+ VITIS_LOOP_306_1: 
+/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp:3413:2: note: FIX-IT applied suggested code changes
+/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp:3427:4: warning: Added loop label VITIS_LOOP_320_2:   [xilinx-label-all-loops]
+   for (int k = 0; k < arrsize; k++) {
+   ^~~
+   VITIS_LOOP_320_2: 
+/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp:3427:4: note: FIX-IT applied suggested code changes

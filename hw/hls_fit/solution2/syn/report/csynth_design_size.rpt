@@ -1,0 +1,37 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Instructions per Function for each Compilation Phase
++-------------------------+----------------+---------------+---------------+----------------------+---------------+
+| Function                | Location       | Compile/Link  | Unroll/Inline | Performance/Pipeline | Optimizations |
++-------------------------+----------------+---------------+---------------+----------------------+---------------+
+| + fit                   | main.cpp:235   | 290           | 245           | 191                  | 234           |
+|  + add_nums             | main.cpp:20    |  49           |  52           |                      |               |
+|     print               | hls_print.h:17 |   2           |   2           |                      |               |
+|    print                | hls_print.h:26 |  44 (4 calls) |  12 (4 calls) |                      |               |
+|    calc_distance        | main.cpp:196   |  24           |  23           |                      |               |
+|  + calc_chi_squared     | main.cpp:122   | 114           | 115           |                      |               |
+|     calc_ovr_sig_sqrd   | main.cpp:96    |  18           |  23           |                      |               |
+|     calc_ovr_sig_sqrd_x | main.cpp:49    |  23           |  28           |                      |               |
+|     print               | hls_print.h:26 |  22 (2 calls) |   6 (2 calls) |                      |               |
++-------------------------+----------------+---------------+---------------+----------------------+---------------+
+
+* Description of Compilation Phases
++----------------------+------------------------------------------------------------+
+| Compilation Phase    | Description                                                |
++----------------------+------------------------------------------------------------+
+| Compile/Link         | All functions are compiled and linked into a single design |
+| Unroll/Inline        | After user unroll and inline pragmas are applied           |
+| Performance/Pipeline | After performance and pipeline pragmas are applied         |
+| Optimizations        | After high level synthesis optimizations                   |
++----------------------+------------------------------------------------------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

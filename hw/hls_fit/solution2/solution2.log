@@ -1,0 +1,492 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+WARNING: [HLS 207-5564] Only for/while/do loop or function body support the pipeline pragma (main.cpp:320:9)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.28 seconds. CPU system time: 0.26 seconds. Elapsed time: 0.58 seconds; current allocated memory: 2.292 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 200-1995] There were 290 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 245 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 191 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 234 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'hls::print(char const*)' into 'add_nums' (main.cpp:20:0)
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd' into 'calc_chi_squared' (main.cpp:122:0)
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd_x' into 'calc_chi_squared' (main.cpp:122:0)
+INFO: [HLS 214-178] Inlining function 'hls::print(char const*, double)' into 'calc_chi_squared' (main.cpp:122:0)
+INFO: [HLS 214-178] Inlining function 'add_nums' into 'fit' (main.cpp:235:0)
+INFO: [HLS 214-178] Inlining function 'hls::print(char const*, double)' into 'fit' (main.cpp:235:0)
+INFO: [HLS 214-178] Inlining function 'calc_distance' into 'fit' (main.cpp:235:0)
+INFO: [HLS 214-178] Inlining function 'calc_chi_squared' into 'fit' (main.cpp:235:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.87 seconds. CPU system time: 0.27 seconds. Elapsed time: 7 seconds; current allocated memory: 2.294 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 2.294 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 2.295 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-77] The top function 'fit' (main.cpp:235) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 2.295 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_28_1' (main.cpp:28) in function 'fit' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_204_1' (main.cpp:204) in function 'fit' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_100_1' (main.cpp:100) in function 'fit' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_53_1' (main.cpp:53) in function 'fit' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_148_1' (main.cpp:148) in function 'fit' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 2.317 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 2.356 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fit' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_28_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
+WARNING: [HLS 200-885] The II Violation in module 'fit_Pipeline_VITIS_LOOP_28_1' (loop 'VITIS_LOOP_28_1'): Unable to schedule bus request operation ('gmem_load_1_req', main.cpp:30->main.cpp:250) on port 'gmem' (main.cpp:30->main.cpp:250) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 76, loop 'VITIS_LOOP_28_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.42 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.46 seconds; current allocated memory: 2.358 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.65 seconds. CPU system time: 0 seconds. Elapsed time: 0.66 seconds; current allocated memory: 2.358 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_204_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_204_1'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_204_1' (loop 'VITIS_LOOP_204_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('f_1_write_ln204', main.cpp:204->main.cpp:268) of variable 'f', main.cpp:212->main.cpp:268 on local variable 'f' and 'load' operation ('f_1_load', main.cpp:212->main.cpp:268) on local variable 'f'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_204_1' (loop 'VITIS_LOOP_204_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('f_1_write_ln204', main.cpp:204->main.cpp:268) of variable 'f', main.cpp:212->main.cpp:268 on local variable 'f' and 'load' operation ('f_1_load', main.cpp:212->main.cpp:268) on local variable 'f'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 95, loop 'VITIS_LOOP_204_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.76 seconds. CPU system time: 0 seconds. Elapsed time: 0.78 seconds; current allocated memory: 2.359 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.81 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.82 seconds; current allocated memory: 2.359 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_100_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_100_1'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_100_1' (loop 'VITIS_LOOP_100_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('S_write_ln100', main.cpp:100->main.cpp:133->main.cpp:272) of variable 'S', main.cpp:105->main.cpp:133->main.cpp:272 on local variable 'S' and 'load' operation ('S_load', main.cpp:105->main.cpp:133->main.cpp:272) on local variable 'S'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_100_1' (loop 'VITIS_LOOP_100_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('S_write_ln100', main.cpp:100->main.cpp:133->main.cpp:272) of variable 'S', main.cpp:105->main.cpp:133->main.cpp:272 on local variable 'S' and 'load' operation ('S_load', main.cpp:105->main.cpp:133->main.cpp:272) on local variable 'S'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 96, loop 'VITIS_LOOP_100_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.76 seconds. CPU system time: 0 seconds. Elapsed time: 0.78 seconds; current allocated memory: 2.360 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.81 seconds. CPU system time: 0 seconds. Elapsed time: 0.82 seconds; current allocated memory: 2.360 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_53_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_53_1'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_53_1' (loop 'VITIS_LOOP_53_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('Sx_write_ln53', main.cpp:53->main.cpp:138->main.cpp:272) of variable 'Sx', main.cpp:56->main.cpp:138->main.cpp:272 on local variable 'Sx' and 'load' operation ('Sx_load', main.cpp:56->main.cpp:138->main.cpp:272) on local variable 'Sx'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_53_1' (loop 'VITIS_LOOP_53_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('Sx_write_ln53', main.cpp:53->main.cpp:138->main.cpp:272) of variable 'Sx', main.cpp:56->main.cpp:138->main.cpp:272 on local variable 'Sx' and 'load' operation ('Sx_load', main.cpp:56->main.cpp:138->main.cpp:272) on local variable 'Sx'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 100, loop 'VITIS_LOOP_53_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.78 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.8 seconds; current allocated memory: 2.361 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.85 seconds. CPU system time: 0 seconds. Elapsed time: 0.86 seconds; current allocated memory: 2.361 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_148_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_148_1'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_148_1' (loop 'VITIS_LOOP_148_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('term2_write_ln148', main.cpp:148->main.cpp:272) of variable 'term2', main.cpp:165->main.cpp:272 on local variable 'term2' and 'load' operation ('term2_load', main.cpp:165->main.cpp:272) on local variable 'term2'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_148_1' (loop 'VITIS_LOOP_148_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('term2_write_ln148', main.cpp:148->main.cpp:272) of variable 'term2', main.cpp:165->main.cpp:272 on local variable 'term2' and 'load' operation ('term2_load', main.cpp:165->main.cpp:272) on local variable 'term2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 103, loop 'VITIS_LOOP_148_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.84 seconds. CPU system time: 0 seconds. Elapsed time: 0.86 seconds; current allocated memory: 2.362 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.88 seconds. CPU system time: 0 seconds. Elapsed time: 0.88 seconds; current allocated memory: 2.362 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.71 seconds. CPU system time: 0 seconds. Elapsed time: 0.73 seconds; current allocated memory: 2.364 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.55 seconds. CPU system time: 0 seconds. Elapsed time: 0.56 seconds; current allocated memory: 2.364 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_28_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_28_1' pipeline 'VITIS_LOOP_28_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_64s_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_28_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_204_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_204_1' pipeline 'VITIS_LOOP_204_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_204_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 2.369 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_100_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_100_1' pipeline 'VITIS_LOOP_100_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_13_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_100_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0 seconds. Elapsed time: 0.42 seconds; current allocated memory: 2.373 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_53_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_53_1' pipeline 'VITIS_LOOP_53_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_13_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_53_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.41 seconds; current allocated memory: 2.376 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_148_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_148_1' pipeline 'VITIS_LOOP_148_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_13_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_148_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.49 seconds; current allocated memory: 2.380 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fit/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fit/arrx' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fit/arry' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fit/arrsigs' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fit/size' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fit' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'arrx', 'arry', 'arrsigs', 'size' and 'return' to AXI-Lite port control.
+WARNING: [RTGEN 206-101] RTL name 'ap_sig_allocacmp_sx_loc_load' is changed to 'ap_sig_allocacmp_sx_loc_load_x' due to conflict.
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_13_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_32s_64_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_64s_64_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'printdouble': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'printnone': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.35 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.41 seconds; current allocated memory: 2.386 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.59 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.72 seconds; current allocated memory: 2.390 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.45 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.52 seconds; current allocated memory: 2.403 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fit.
+INFO: [VLOG 209-307] Generating Verilog RTL for fit.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 132.71 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 14.23 seconds. CPU system time: 0.68 seconds. Elapsed time: 20.27 seconds; current allocated memory: 114.875 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: csim_design -setup -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [HLS 200-2035] Skipping execution of C Simulation due to 'setup' option
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.46 seconds. CPU system time: 0.22 seconds. Elapsed time: 0.7 seconds; current allocated memory: 0.000 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 2.313 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.27 seconds. CPU system time: 0.22 seconds. Elapsed time: 0.52 seconds; current allocated memory: 2.314 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 200-1995] There were 290 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 245 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 191 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 234 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'hls::print(char const*)' into 'add_nums' (main.cpp:20:0)
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd' into 'calc_chi_squared' (main.cpp:122:0)
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd_x' into 'calc_chi_squared' (main.cpp:122:0)
+INFO: [HLS 214-178] Inlining function 'hls::print(char const*, double)' into 'calc_chi_squared' (main.cpp:122:0)
+INFO: [HLS 214-178] Inlining function 'add_nums' into 'fit' (main.cpp:235:0)
+INFO: [HLS 214-178] Inlining function 'hls::print(char const*, double)' into 'fit' (main.cpp:235:0)
+INFO: [HLS 214-178] Inlining function 'calc_distance' into 'fit' (main.cpp:235:0)
+INFO: [HLS 214-178] Inlining function 'calc_chi_squared' into 'fit' (main.cpp:235:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.81 seconds. CPU system time: 0.23 seconds. Elapsed time: 6.92 seconds; current allocated memory: 2.317 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 2.317 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 2.317 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-77] The top function 'fit' (main.cpp:235) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.317 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_28_1' (main.cpp:28) in function 'fit' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_204_1' (main.cpp:204) in function 'fit' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_100_1' (main.cpp:100) in function 'fit' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_53_1' (main.cpp:53) in function 'fit' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_148_1' (main.cpp:148) in function 'fit' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 2.340 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 2.378 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fit' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_28_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
+WARNING: [HLS 200-885] The II Violation in module 'fit_Pipeline_VITIS_LOOP_28_1' (loop 'VITIS_LOOP_28_1'): Unable to schedule bus request operation ('gmem_load_1_req', main.cpp:30->main.cpp:250) on port 'gmem' (main.cpp:30->main.cpp:250) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 76, loop 'VITIS_LOOP_28_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.38 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.42 seconds; current allocated memory: 2.380 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.65 seconds. CPU system time: 0 seconds. Elapsed time: 0.65 seconds; current allocated memory: 2.380 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_204_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_204_1'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_204_1' (loop 'VITIS_LOOP_204_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('f_1_write_ln204', main.cpp:204->main.cpp:268) of variable 'f', main.cpp:212->main.cpp:268 on local variable 'f' and 'load' operation ('f_1_load', main.cpp:212->main.cpp:268) on local variable 'f'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_204_1' (loop 'VITIS_LOOP_204_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('f_1_write_ln204', main.cpp:204->main.cpp:268) of variable 'f', main.cpp:212->main.cpp:268 on local variable 'f' and 'load' operation ('f_1_load', main.cpp:212->main.cpp:268) on local variable 'f'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 95, loop 'VITIS_LOOP_204_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.74 seconds. CPU system time: 0 seconds. Elapsed time: 0.76 seconds; current allocated memory: 2.381 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.8 seconds. CPU system time: 0 seconds. Elapsed time: 0.81 seconds; current allocated memory: 2.381 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_100_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_100_1'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_100_1' (loop 'VITIS_LOOP_100_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('S_write_ln100', main.cpp:100->main.cpp:133->main.cpp:272) of variable 'S', main.cpp:105->main.cpp:133->main.cpp:272 on local variable 'S' and 'load' operation ('S_load', main.cpp:105->main.cpp:133->main.cpp:272) on local variable 'S'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_100_1' (loop 'VITIS_LOOP_100_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('S_write_ln100', main.cpp:100->main.cpp:133->main.cpp:272) of variable 'S', main.cpp:105->main.cpp:133->main.cpp:272 on local variable 'S' and 'load' operation ('S_load', main.cpp:105->main.cpp:133->main.cpp:272) on local variable 'S'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 96, loop 'VITIS_LOOP_100_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.72 seconds. CPU system time: 0 seconds. Elapsed time: 0.74 seconds; current allocated memory: 2.382 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.8 seconds. CPU system time: 0 seconds. Elapsed time: 0.81 seconds; current allocated memory: 2.382 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_53_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_53_1'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_53_1' (loop 'VITIS_LOOP_53_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('Sx_write_ln53', main.cpp:53->main.cpp:138->main.cpp:272) of variable 'Sx', main.cpp:56->main.cpp:138->main.cpp:272 on local variable 'Sx' and 'load' operation ('Sx_load', main.cpp:56->main.cpp:138->main.cpp:272) on local variable 'Sx'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_53_1' (loop 'VITIS_LOOP_53_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('Sx_write_ln53', main.cpp:53->main.cpp:138->main.cpp:272) of variable 'Sx', main.cpp:56->main.cpp:138->main.cpp:272 on local variable 'Sx' and 'load' operation ('Sx_load', main.cpp:56->main.cpp:138->main.cpp:272) on local variable 'Sx'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 100, loop 'VITIS_LOOP_53_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.75 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.77 seconds; current allocated memory: 2.383 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.84 seconds. CPU system time: 0 seconds. Elapsed time: 0.85 seconds; current allocated memory: 2.383 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit_Pipeline_VITIS_LOOP_148_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_148_1'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_148_1' (loop 'VITIS_LOOP_148_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('term2_write_ln148', main.cpp:148->main.cpp:272) of variable 'term2', main.cpp:165->main.cpp:272 on local variable 'term2' and 'load' operation ('term2_load', main.cpp:165->main.cpp:272) on local variable 'term2'.
+WARNING: [HLS 200-880] The II Violation in module 'fit_Pipeline_VITIS_LOOP_148_1' (loop 'VITIS_LOOP_148_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('term2_write_ln148', main.cpp:148->main.cpp:272) of variable 'term2', main.cpp:165->main.cpp:272 on local variable 'term2' and 'load' operation ('term2_load', main.cpp:165->main.cpp:272) on local variable 'term2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 103, loop 'VITIS_LOOP_148_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.83 seconds. CPU system time: 0 seconds. Elapsed time: 0.85 seconds; current allocated memory: 2.384 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.87 seconds. CPU system time: 0 seconds. Elapsed time: 0.88 seconds; current allocated memory: 2.385 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fit' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.71 seconds. CPU system time: 0 seconds. Elapsed time: 0.72 seconds; current allocated memory: 2.386 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.54 seconds. CPU system time: 0 seconds. Elapsed time: 0.55 seconds; current allocated memory: 2.386 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_28_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_28_1' pipeline 'VITIS_LOOP_28_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_64s_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_28_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 2.388 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_204_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_204_1' pipeline 'VITIS_LOOP_204_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_204_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 2.391 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_100_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_100_1' pipeline 'VITIS_LOOP_100_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_13_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_100_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.4 seconds. CPU system time: 0 seconds. Elapsed time: 0.42 seconds; current allocated memory: 2.395 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_53_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_53_1' pipeline 'VITIS_LOOP_53_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_13_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_53_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.38 seconds. CPU system time: 0 seconds. Elapsed time: 0.41 seconds; current allocated memory: 2.398 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit_Pipeline_VITIS_LOOP_148_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fit_Pipeline_VITIS_LOOP_148_1' pipeline 'VITIS_LOOP_148_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_13_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit_Pipeline_VITIS_LOOP_148_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.46 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.49 seconds; current allocated memory: 2.402 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fit' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fit/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fit/arrx' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fit/arry' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fit/arrsigs' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fit/size' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fit' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'arrx', 'arry', 'arrsigs', 'size' and 'return' to AXI-Lite port control.
+WARNING: [RTGEN 206-101] RTL name 'ap_sig_allocacmp_sx_loc_load' is changed to 'ap_sig_allocacmp_sx_loc_load_x' due to conflict.
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_4_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_13_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_32s_64_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_64s_64_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'printdouble': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'printnone': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_64ns_64_2_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fit'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.36 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.4 seconds; current allocated memory: 2.408 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.58 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.7 seconds; current allocated memory: 2.413 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.46 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.51 seconds; current allocated memory: 2.425 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fit.
+INFO: [VLOG 209-307] Generating Verilog RTL for fit.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 132.71 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 13.96 seconds. CPU system time: 0.59 seconds. Elapsed time: 19.85 seconds; current allocated memory: 115.258 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: csim_design -profile -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.72 seconds. CPU system time: 0.38 seconds. Elapsed time: 1.74 seconds; current allocated memory: 0.000 MB.

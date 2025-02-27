@@ -1,0 +1,101 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "2 4 4 7 1 4 4",
+    "file": "main.cpp",
+    "fileloc": 235,
+    "instructions": 59,
+    "loads": {
+      "L": 11
+    },
+    "name": "fit",
+    "total_instructions": 290
+  },
+  "1": {
+    "basicblocks": 7,
+    "calls": "3 6 4 4",
+    "file": "main.cpp",
+    "fileloc": 122,
+    "instructions": 51,
+    "loads": {
+      "L": 3
+    },
+    "name": "calc_chi_squared",
+    "total_instructions": 114
+  },
+  "2": {
+    "basicblocks": 7,
+    "calls": "5",
+    "file": "main.cpp",
+    "fileloc": 20,
+    "instructions": 47,
+    "loads": {
+      "L": 10
+    },
+    "name": "add_nums",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 49
+  },
+  "3": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "main.cpp",
+    "fileloc": 96,
+    "instructions": 18,
+    "loads": {
+      "L": 1
+    },
+    "name": "calc_ovr_sig_sqrd",
+    "total_instructions": 18
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_print.h",
+    "fileloc": 26,
+    "instructions": 11,
+    "loads": {
+      "L": 1
+    },
+    "name": "print",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 11
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_print.h",
+    "fileloc": 17,
+    "instructions": 2,
+    "name": "print",
+    "total_instructions": 2
+  },
+  "6": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "main.cpp",
+    "fileloc": 49,
+    "instructions": 23,
+    "loads": {
+      "L": 2
+    },
+    "name": "calc_ovr_sig_sqrd_x",
+    "total_instructions": 23
+  },
+  "7": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "main.cpp",
+    "fileloc": 196,
+    "instructions": 24,
+    "loads": {
+      "L": 2
+    },
+    "name": "calc_distance",
+    "total_instructions": 24
+  }
+}

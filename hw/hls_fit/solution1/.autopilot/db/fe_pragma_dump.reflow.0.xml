@@ -1,2 +1,4 @@
 <pragmas>
+<pragma file="main.cpp" line="307" pragmaType="unroll" parentfunction="main" factor="-1" skip_exit_check="0"/>
+<pragma file="main.cpp" line="325" pragmaType="unroll" parentfunction="main" factor="-1" skip_exit_check="0"/>
 </pragmas>

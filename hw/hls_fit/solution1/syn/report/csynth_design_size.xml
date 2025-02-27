@@ -3,18 +3,25 @@
         <hiertable>
             <header size="6" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Performance/Pipeline" col5="Optimizations"/>
             <rows>
-                <row id="0" col0="main" col1="main.cpp:287" col2="298" col3="298" col4="16" col5="14">
-                    <row id="2" col0="fit" col1="main.cpp:233" col2="223" col3="226" col4="1" col5="">
-                        <row id="4" col0="add_nums" col1="main.cpp:21" col2="48" col3="51" col4="" col5=""/>
-                        <row id="6" col0="calc_distance" col1="main.cpp:195" col2="24" col3="23" col4="" col5=""/>
-                        <row id="3" col0="calc_chi_squared" col1="main.cpp:122" col2="92" col3="109" col4="" col5="">
-                            <row id="1" col0="calc_ovr_sig_sqrd" col1="main.cpp:96" col2="18" col3="23" col4="" col5=""/>
-                            <row id="5" col0="calc_ovr_sig_sqrd_x" col1="main.cpp:49" col2="23" col3="28" col4="" col5=""/>
+                <row id="0" col0="main" col1="main.cpp:288" col2="369" col3="1936044" col3_note="*" col4="10318" col5="10396">
+                    <row id="6" col0="print&lt;int&gt;" col1="hls_print.h:22" col2="4" col2_disp="  4 (2 calls)" col3="5448" col3_disp="    5,448 (2724 calls)" col4="" col5=""/>
+                    <row id="7" col0="fit" col1="main.cpp:235" col2="290" col3="333690" col3_disp="  333,690 (1362 calls)" col4="798" col4_disp="   798 (6 calls)" col5="876" col5_disp="   876 (6 calls)">
+                        <row id="5" col0="add_nums" col1="main.cpp:20" col2="49" col3="70824" col3_disp="   70,824 (1362 calls)" col4="" col5="">
+                            <row id="9" col0="print" col1="hls_print.h:17" col2="2" col3="2724" col3_disp="    2,724 (1362 calls)" col4="" col5=""/>
+                        </row>
+                        <row id="3" col0="print" col1="hls_print.h:26" col2="44" col2_disp=" 44 (4 calls)" col3="16344" col3_disp="   16,344 (5448 calls)" col4="" col5=""/>
+                        <row id="4" col0="calc_distance" col1="main.cpp:196" col2="24" col3="31326" col3_disp="   31,326 (1362 calls)" col4="" col5=""/>
+                        <row id="8" col0="calc_chi_squared" col1="main.cpp:122" col2="114" col3="156630" col3_disp="  156,630 (1362 calls)" col4="" col5="">
+                            <row id="1" col0="calc_ovr_sig_sqrd" col1="main.cpp:96" col2="18" col3="31326" col3_disp="   31,326 (1362 calls)" col4="" col5=""/>
+                            <row id="2" col0="calc_ovr_sig_sqrd_x" col1="main.cpp:49" col2="23" col3="38136" col3_disp="   38,136 (1362 calls)" col4="" col5=""/>
+                            <row id="3" col0="print" col1="hls_print.h:26" col2="22" col2_disp=" 22 (2 calls)" col3="8172" col3_disp="    8,172 (2724 calls)" col4="" col5=""/>
                         </row>
                     </row>
                 </row>
             </rows>
-            <notes/>
+            <notes>
+                <note name="*" desc="Exceeded design size warning message threshold"/>
+            </notes>
         </hiertable>
     </item>
     <item name="Description of Compilation Phases">

@@ -1,79 +1,103 @@
 INFO: [HLS 200-10] Running '/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'akraus' on host 'vm01.head.cm.local' (Linux_x86_64 version 4.18.0-372.9.1.el8.x86_64) on Thu Feb 27 14:15:26 CST 2025
+INFO: [HLS 200-10] For user 'akraus' on host 'vm01.head.cm.local' (Linux_x86_64 version 4.18.0-372.9.1.el8.x86_64) on Thu Feb 27 15:46:24 CST 2025
 INFO: [HLS 200-10] On os "Red Hat Enterprise Linux release 8.6 (Ootpa)"
 INFO: [HLS 200-10] In directory '/nfs/ihfs/home_metis/akraus/HW3-dir/hw'
-Sourcing Tcl script '/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/csynth.tcl'
-INFO: [HLS 200-1510] Running: source /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/csynth.tcl
+Sourcing Tcl script '/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/csim.tcl'
+INFO: [HLS 200-1510] Running: source /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/csim.tcl
 INFO: [HLS 200-1510] Running: open_project hls_fit 
 INFO: [HLS 200-10] Opening project '/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit'.
-INFO: [HLS 200-1510] Running: set_top main 
+INFO: [HLS 200-1510] Running: set_top fit 
 INFO: [HLS 200-1510] Running: add_files main.cpp 
 INFO: [HLS 200-10] Adding design file 'main.cpp' to the project
-INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vitis 
-INFO: [HLS 200-10] Opening solution '/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1'.
+INFO: [HLS 200-1510] Running: add_files -tb main.cpp 
+INFO: [HLS 200-10] Adding test bench file 'main.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution2 -flow_target vitis 
+INFO: [HLS 200-10] Opening solution '/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
 INFO: [HLS 200-1505] Using flow_target 'vitis'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
-INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
-INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
 INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
 INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
 INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
 INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
 INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
-INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
-INFO: [HLS 200-1510] Running: set_directive_top -name main main 
-INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 2.291 GB.
-INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.08 seconds. CPU system time: 0.34 seconds. Elapsed time: 1.48 seconds; current allocated memory: 2.292 GB.
-INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
-INFO: [HLS 200-1995] There were 298 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 298 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 14 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
-INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd' into 'calc_chi_squared' (main.cpp:122:0)
-INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd_x' into 'calc_chi_squared' (main.cpp:122:0)
-INFO: [HLS 214-178] Inlining function 'add_nums' into 'fit' (main.cpp:233:0)
-INFO: [HLS 214-178] Inlining function 'calc_distance' into 'fit' (main.cpp:233:0)
-INFO: [HLS 214-178] Inlining function 'calc_chi_squared' into 'fit' (main.cpp:233:0)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.63 seconds. CPU system time: 0.29 seconds. Elapsed time: 6.8 seconds; current allocated memory: 2.294 GB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 2.294 GB.
-INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 2.294 GB.
-INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 2.295 GB.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.316 GB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 2.316 GB.
-INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'main' ...
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'main' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.06 seconds; current allocated memory: 2.316 GB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.316 GB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'main' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
-INFO: [RTGEN 206-500] Setting interface mode on function 'main' to 's_axilite & ap_ctrl_chain'.
-INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
-INFO: [RTGEN 206-100] Finished creating RTL model for 'main'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.316 GB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 2.316 GB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.22 seconds; current allocated memory: 2.321 GB.
-INFO: [VHDL 208-304] Generating VHDL RTL for main.
-INFO: [VLOG 209-307] Generating Verilog RTL for main.
-INFO: [HLS 200-789] **** Estimated Fmax: 0.00 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3.21 seconds. CPU system time: 0.7 seconds. Elapsed time: 8.95 seconds; current allocated memory: 31.152 MB.
-INFO: [HLS 200-112] Total CPU user time: 5.99 seconds. Total CPU system time: 1.14 seconds. Total elapsed time: 12.09 seconds; peak allocated memory: 2.321 GB.
+INFO: [HLS 200-1510] Running: csim_design -profile -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../main.cpp in debug mode
+   Generating csim.exe
+In file included from ../../../../main.cpp:1:
+In file included from ../../../../main.h:4:
+/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/include/hls_print.h:41:12: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+    printf(fmt); 
+           ^~~
+/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/include/hls_print.h:41:12: note: treat the string as an argument to avoid this
+    printf(fmt); 
+           ^
+           "%s", 
+1 warning generated.
+HLS_PRINT: ============ EVENT 0 ============
+HLS_PRINT: <== Starting add_nums LOOP ==>
+HLS_PRINT: fit() --> Best fit param a: 42.458060
+HLS_PRINT: fit() --> Best fit param b: -0.562644
+HLS_PRINT: 	uncertainty on a:  0.195520
+HLS_PRINT: 	uncertainty on b:  0.000052
+HLS_PRINT: fit() --> f(a,b) = 347106955756837552457169052270178861056.000000000
+HLS_PRINT: fit() --> goodness of fit = 2.160768368
+HLS_PRINT: main() --> Current index 99 
+HLS_PRINT: ============ EVENT 1 ============
+HLS_PRINT: <== Starting add_nums LOOP ==>
+HLS_PRINT: fit() --> Best fit param a: 122.423997
+HLS_PRINT: fit() --> Best fit param b: -3.395082
+HLS_PRINT: 	uncertainty on a:  0.237399
+HLS_PRINT: 	uncertainty on b:  0.000077
+HLS_PRINT: fit() --> f(a,b) = 12638546483566442711110148338571599151104.000000000
+HLS_PRINT: fit() --> goodness of fit = 22.238202857
+HLS_PRINT: main() --> Current index 193 
+HLS_PRINT: ============ EVENT 2 ============
+HLS_PRINT: <== Starting add_nums LOOP ==>
+HLS_PRINT: fit() --> Best fit param a: 60.546292
+HLS_PRINT: fit() --> Best fit param b: 1.105061
+HLS_PRINT: 	uncertainty on a:  0.399651
+HLS_PRINT: 	uncertainty on b:  0.000107
+HLS_PRINT: fit() --> f(a,b) = 1338964231936102969343284593521986633728.000000000
+HLS_PRINT: fit() --> goodness of fit = 1.022818726
+HLS_PRINT: main() --> Current index 435 
+HLS_PRINT: ============ EVENT 3 ============
+HLS_PRINT: <== Starting add_nums LOOP ==>
+HLS_PRINT: fit() --> Best fit param a: 0.996648
+HLS_PRINT: fit() --> Best fit param b: -1.288404
+HLS_PRINT: 	uncertainty on a:  0.079917
+HLS_PRINT: 	uncertainty on b:  0.000025
+HLS_PRINT: fit() --> f(a,b) = 1820122767081414002170122243967257935872.000000000
+HLS_PRINT: fit() --> goodness of fit = 0.995003847
+HLS_PRINT: main() --> Current index 677 
+HLS_PRINT: ============ EVENT 4 ============
+HLS_PRINT: <== Starting add_nums LOOP ==>
+HLS_PRINT: fit() --> Best fit param a: 12.933075
+HLS_PRINT: fit() --> Best fit param b: 10.981780
+HLS_PRINT: 	uncertainty on a:  10.512954
+HLS_PRINT: 	uncertainty on b:  0.003394
+HLS_PRINT: fit() --> f(a,b) = 132233660196991394621229234462184550957056.000000000
+HLS_PRINT: fit() --> goodness of fit = 0.949532678
+HLS_PRINT: main() --> Current index 919 
+HLS_PRINT: ============ EVENT 5 ============
+HLS_PRINT: <== Starting add_nums LOOP ==>
+HLS_PRINT: fit() --> Best fit param a: 6.695400
+HLS_PRINT: fit() --> Best fit param b: 7.025747
+HLS_PRINT: 	uncertainty on a:  0.140837
+HLS_PRINT: 	uncertainty on b:  0.000045
+HLS_PRINT: fit() --> f(a,b) = 54122951201197697003109789395077495259136.000000000
+HLS_PRINT: fit() --> goodness of fit = 26.927211145
+HLS_PRINT: main() --> Current index 1361 
+   Generating dot files
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.72 seconds. CPU system time: 0.38 seconds. Elapsed time: 1.74 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 3.55 seconds. Total CPU system time: 0.89 seconds. Total elapsed time: 5.17 seconds; peak allocated memory: 2.313 GB.

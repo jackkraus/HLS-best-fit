@@ -1,0 +1,7 @@
+digraph "CFG for 'void hls::print\<double\>' function" {
+	label="CFG for 'void hls::print\<double\>' function";
+
+	Node0x3ff4b50 [shape=record,filename="",linenumber="",label="{entry.predFake}"];
+	Node0x3ff4b50 -> Node0x3f81050[ callList="" memoryops="" filename="/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/include/hls_print.h" execusionnum="36"];
+	Node0x3f81050 [shape=record,filename="/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/include/hls_print.h",linenumber="47",label="{entry.succFake}"];
+}

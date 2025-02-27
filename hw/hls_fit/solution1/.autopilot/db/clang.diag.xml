@@ -1,0 +1,23 @@
+<dict>
+  <key>main-file</key>
+  <string>/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/.autopilot/db/main.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>main.cpp</string>
+      <key>line</key>
+      <integer>320</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>Only for/while/do loop or function body support the pipeline pragma</string>
+      <key>ID</key>
+      <integer>5564</integer>
+      <key>WarningOption</key>
+      <string>ignored-hls-attributes</string>
+    </dict>
+  </array>
+</dict>

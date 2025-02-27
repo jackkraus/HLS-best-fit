@@ -1,6 +1,7 @@
 //Header portion
 
 #include <hls_stream.h>
+#include <hls_print.h>
 
 extern "C"{
 	int main();

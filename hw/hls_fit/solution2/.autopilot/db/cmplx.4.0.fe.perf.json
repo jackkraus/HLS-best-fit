@@ -1,0 +1,14 @@
+{
+  "0": {
+    "basicblocks": 18,
+    "calls": "",
+    "file": "main.cpp",
+    "fileloc": 235,
+    "instructions": 234,
+    "loads": {
+      "T": 10
+    },
+    "name": "fit",
+    "total_instructions": 234
+  }
+}

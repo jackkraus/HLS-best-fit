@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "fit",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "fit"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/csynth.tcl",
+    "sourceLine": 15,
+    "success": true
+  }
+]

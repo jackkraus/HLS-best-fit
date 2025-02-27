@@ -1,0 +1,2274 @@
+
+
+================================================================
+== Vitis HLS Report for 'fit'
+================================================================
+* Date:           Thu Feb 27 15:25:27 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        hls_fit
+* Solution:       solution1 (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu11p-flga2577-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.535 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     5087|     8219|  50.870 us|  82.190 us|  5087|  8219|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------------------+-------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |                                          |                               |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+        |                 Instance                 |             Module            |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+        +------------------------------------------+-------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |grp_fit_Pipeline_VITIS_LOOP_28_1_fu_82    |fit_Pipeline_VITIS_LOOP_28_1   |       96|      444|   0.960 us|   4.440 us|    96|   444|       no|
+        |grp_fit_Pipeline_VITIS_LOOP_100_1_fu_96   |fit_Pipeline_VITIS_LOOP_100_1  |      304|     1348|   3.040 us|  13.480 us|   304|  1348|       no|
+        |grp_fit_Pipeline_VITIS_LOOP_204_1_fu_105  |fit_Pipeline_VITIS_LOOP_204_1  |     4106|     4106|  41.060 us|  41.060 us|  4106|  4106|       no|
+        |grp_fit_Pipeline_VITIS_LOOP_53_1_fu_116   |fit_Pipeline_VITIS_LOOP_53_1   |      308|     1352|   3.080 us|  13.520 us|   308|  1352|       no|
+        |grp_fit_Pipeline_VITIS_LOOP_148_1_fu_126  |fit_Pipeline_VITIS_LOOP_148_1  |      309|     1353|   3.090 us|  13.530 us|   309|  1353|       no|
+        +------------------------------------------+-------------------------------+---------+---------+-----------+-----------+------+------+---------+
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 61
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.36>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%size_read = read i9 @_ssdm_op_Read.ap_auto.i9, i9 %size"   --->   Operation 62 'read' 'size_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%term2_loc = alloca i64 1"   --->   Operation 63 'alloca' 'term2_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%Stt_loc = alloca i64 1"   --->   Operation 64 'alloca' 'Stt_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%Sx_1_loc = alloca i64 1"   --->   Operation 65 'alloca' 'Sx_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%S_loc = alloca i64 1"   --->   Operation 66 'alloca' 'S_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%f_loc = alloca i64 1"   --->   Operation 67 'alloca' 'f_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%p_loc6 = alloca i64 1"   --->   Operation 68 'alloca' 'p_loc6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%p_loc5 = alloca i64 1"   --->   Operation 69 'alloca' 'p_loc5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%p_loc4 = alloca i64 1"   --->   Operation 70 'alloca' 'p_loc4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%p_loc = alloca i64 1"   --->   Operation 71 'alloca' 'p_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [2/2] (1.36ns)   --->   "%call_ln0 = call void @fit_Pipeline_VITIS_LOOP_28_1, i9 %size_read, i7 %arrx, i12 %arry, i64 %p_loc, i64 %p_loc4, i64 %p_loc5, i64 %p_loc6"   --->   Operation 72 'call' 'call_ln0' <Predicate = true> <Delay = 1.36> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 73 [2/2] (1.36ns)   --->   "%call_ln0 = call void @fit_Pipeline_VITIS_LOOP_100_1, i9 %size_read, i6 %arrsigs, i64 %S_loc"   --->   Operation 73 'call' 'call_ln0' <Predicate = true> <Delay = 1.36> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 1.36>
+ST_2 : Operation 74 [1/2] (1.36ns)   --->   "%call_ln0 = call void @fit_Pipeline_VITIS_LOOP_28_1, i9 %size_read, i7 %arrx, i12 %arry, i64 %p_loc, i64 %p_loc4, i64 %p_loc5, i64 %p_loc6"   --->   Operation 74 'call' 'call_ln0' <Predicate = true> <Delay = 1.36> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 75 [1/2] (0.00ns)   --->   "%call_ln0 = call void @fit_Pipeline_VITIS_LOOP_100_1, i9 %size_read, i6 %arrsigs, i64 %S_loc"   --->   Operation 75 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 5.47>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%zext_ln28 = zext i9 %size_read" [main.cpp:28->main.cpp:250]   --->   Operation 76 'zext' 'zext_ln28' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 77 [1/1] (0.00ns)   --->   "%p_loc_load = load i64 %p_loc"   --->   Operation 77 'load' 'p_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%p_loc4_load = load i64 %p_loc4"   --->   Operation 78 'load' 'p_loc4_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%p_loc5_load = load i64 %p_loc5"   --->   Operation 79 'load' 'p_loc5_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%p_loc6_load = load i64 %p_loc6"   --->   Operation 80 'load' 'p_loc6_load' <Predicate = true> <Delay = 0.00>
+ST_3 : [1/1] (0.54ns)   --->   Input mux for Operation 81 '%sx2 = mul i64 %p_loc6_load, i64 %p_loc6_load'
+ST_3 : Operation 81 [1/1] (4.92ns)   --->   "%sx2 = mul i64 %p_loc6_load, i64 %p_loc6_load" [main.cpp:251]   --->   Operation 81 'mul' 'sx2' <Predicate = true> <Delay = 4.92> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : [1/1] (0.54ns)   --->   Input mux for Operation 82 '%mul_ln253 = mul i64 %p_loc_load, i64 %p_loc5_load'
+ST_3 : Operation 82 [1/1] (4.92ns)   --->   "%mul_ln253 = mul i64 %p_loc_load, i64 %p_loc5_load" [main.cpp:253]   --->   Operation 82 'mul' 'mul_ln253' <Predicate = true> <Delay = 4.92> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : [1/1] (0.54ns)   --->   Input mux for Operation 83 '%mul_ln253_1 = mul i64 %p_loc4_load, i64 %p_loc6_load'
+ST_3 : Operation 83 [1/1] (4.92ns)   --->   "%mul_ln253_1 = mul i64 %p_loc4_load, i64 %p_loc6_load" [main.cpp:253]   --->   Operation 83 'mul' 'mul_ln253_1' <Predicate = true> <Delay = 4.92> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : [1/1] (0.46ns)   --->   Input mux for Operation 84 '%mul_ln254 = mul i64 %p_loc_load, i64 %zext_ln28'
+ST_3 : Operation 84 [1/1] (5.01ns)   --->   "%mul_ln254 = mul i64 %p_loc_load, i64 %zext_ln28" [main.cpp:254]   --->   Operation 84 'mul' 'mul_ln254' <Predicate = true> <Delay = 5.01> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : [1/1] (0.46ns)   --->   Input mux for Operation 85 '%mul_ln258 = mul i64 %p_loc4_load, i64 %zext_ln28'
+ST_3 : Operation 85 [1/1] (5.01ns)   --->   "%mul_ln258 = mul i64 %p_loc4_load, i64 %zext_ln28" [main.cpp:258]   --->   Operation 85 'mul' 'mul_ln258' <Predicate = true> <Delay = 5.01> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : [1/1] (0.54ns)   --->   Input mux for Operation 86 '%mul_ln258_1 = mul i64 %p_loc5_load, i64 %p_loc6_load'
+ST_3 : Operation 86 [1/1] (4.92ns)   --->   "%mul_ln258_1 = mul i64 %p_loc5_load, i64 %p_loc6_load" [main.cpp:258]   --->   Operation 86 'mul' 'mul_ln258_1' <Predicate = true> <Delay = 4.92> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 7.01>
+ST_4 : Operation 87 [1/1] (1.36ns)   --->   "%a1 = sub i64 %mul_ln253, i64 %mul_ln253_1" [main.cpp:253]   --->   Operation 87 'sub' 'a1' <Predicate = true> <Delay = 1.36> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 88 [1/1] (1.36ns)   --->   "%a2 = sub i64 %mul_ln254, i64 %sx2" [main.cpp:254]   --->   Operation 88 'sub' 'a2' <Predicate = true> <Delay = 1.36> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : [1/1] (0.75ns)   --->   Input mux for Operation 89 '%conv5 = sitodp i64 %a1'
+ST_4 : Operation 89 [2/2] (4.89ns)   --->   "%conv5 = sitodp i64 %a1" [main.cpp:255]   --->   Operation 89 'sitodp' 'conv5' <Predicate = true> <Delay = 4.89> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 1> <II = 1> <Delay = 5.65> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+ST_4 : [1/1] (0.75ns)   --->   Input mux for Operation 90 '%conv6 = sitodp i64 %a2'
+ST_4 : Operation 90 [2/2] (4.89ns)   --->   "%conv6 = sitodp i64 %a2" [main.cpp:255]   --->   Operation 90 'sitodp' 'conv6' <Predicate = true> <Delay = 4.89> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 1> <II = 1> <Delay = 5.65> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 91 [1/1] (1.36ns)   --->   "%b1 = sub i64 %mul_ln258, i64 %mul_ln258_1" [main.cpp:258]   --->   Operation 91 'sub' 'b1' <Predicate = true> <Delay = 1.36> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : [1/1] (0.75ns)   --->   Input mux for Operation 92 '%conv = sitodp i64 %b1'
+ST_4 : Operation 92 [2/2] (4.89ns)   --->   "%conv = sitodp i64 %b1" [main.cpp:260]   --->   Operation 92 'sitodp' 'conv' <Predicate = true> <Delay = 4.89> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 1> <II = 1> <Delay = 5.65> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 5.65>
+ST_5 : Operation 93 [1/2] (5.65ns)   --->   "%conv5 = sitodp i64 %a1" [main.cpp:255]   --->   Operation 93 'sitodp' 'conv5' <Predicate = true> <Delay = 5.65> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 1> <II = 1> <Delay = 5.65> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 94 [1/2] (5.65ns)   --->   "%conv6 = sitodp i64 %a2" [main.cpp:255]   --->   Operation 94 'sitodp' 'conv6' <Predicate = true> <Delay = 5.65> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 1> <II = 1> <Delay = 5.65> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 95 [1/2] (5.65ns)   --->   "%conv = sitodp i64 %b1" [main.cpp:260]   --->   Operation 95 'sitodp' 'conv' <Predicate = true> <Delay = 5.65> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 1> <II = 1> <Delay = 5.65> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 7.53>
+ST_6 : [1/1] (0.75ns)   --->   Input mux for Operation 96 '%tmp = ddiv i64 %conv5, i64 %conv6'
+ST_6 : Operation 96 [13/13] (6.78ns)   --->   "%tmp = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 96 'ddiv' 'tmp' <Predicate = true> <Delay = 6.78> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_6 : [1/1] (0.75ns)   --->   Input mux for Operation 97 '%tmp_1 = ddiv i64 %conv, i64 %conv6'
+ST_6 : Operation 97 [13/13] (6.40ns)   --->   "%tmp_1 = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 97 'ddiv' 'tmp_1' <Predicate = true> <Delay = 6.40> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 7.15>
+ST_7 : Operation 98 [12/13] (7.15ns)   --->   "%tmp = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 98 'ddiv' 'tmp' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 99 [12/13] (7.15ns)   --->   "%tmp_1 = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 99 'ddiv' 'tmp_1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 7.15>
+ST_8 : Operation 100 [11/13] (7.15ns)   --->   "%tmp = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 100 'ddiv' 'tmp' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 101 [11/13] (7.15ns)   --->   "%tmp_1 = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 101 'ddiv' 'tmp_1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 7.15>
+ST_9 : Operation 102 [10/13] (7.15ns)   --->   "%tmp = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 102 'ddiv' 'tmp' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 103 [10/13] (7.15ns)   --->   "%tmp_1 = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 103 'ddiv' 'tmp_1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.15>
+ST_10 : Operation 104 [9/13] (7.15ns)   --->   "%tmp = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 104 'ddiv' 'tmp' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 105 [9/13] (7.15ns)   --->   "%tmp_1 = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 105 'ddiv' 'tmp_1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 7.15>
+ST_11 : Operation 106 [8/13] (7.15ns)   --->   "%tmp = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 106 'ddiv' 'tmp' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 107 [8/13] (7.15ns)   --->   "%tmp_1 = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 107 'ddiv' 'tmp_1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 7.15>
+ST_12 : Operation 108 [7/13] (7.15ns)   --->   "%tmp = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 108 'ddiv' 'tmp' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 109 [7/13] (7.15ns)   --->   "%tmp_1 = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 109 'ddiv' 'tmp_1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 7.15>
+ST_13 : Operation 110 [6/13] (7.15ns)   --->   "%tmp = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 110 'ddiv' 'tmp' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 111 [6/13] (7.15ns)   --->   "%tmp_1 = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 111 'ddiv' 'tmp_1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 7.15>
+ST_14 : Operation 112 [5/13] (7.15ns)   --->   "%tmp = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 112 'ddiv' 'tmp' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 113 [5/13] (7.15ns)   --->   "%tmp_1 = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 113 'ddiv' 'tmp_1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 7.15>
+ST_15 : Operation 114 [4/13] (7.15ns)   --->   "%tmp = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 114 'ddiv' 'tmp' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 115 [4/13] (7.15ns)   --->   "%tmp_1 = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 115 'ddiv' 'tmp_1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 7.15>
+ST_16 : Operation 116 [3/13] (7.15ns)   --->   "%tmp = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 116 'ddiv' 'tmp' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 117 [3/13] (7.15ns)   --->   "%tmp_1 = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 117 'ddiv' 'tmp_1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 7.15>
+ST_17 : Operation 118 [2/13] (7.15ns)   --->   "%tmp = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 118 'ddiv' 'tmp' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 119 [2/13] (7.15ns)   --->   "%tmp_1 = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 119 'ddiv' 'tmp_1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 7.15>
+ST_18 : Operation 120 [1/13] (7.15ns)   --->   "%tmp = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 120 'ddiv' 'tmp' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 121 [1/13] (7.15ns)   --->   "%tmp_1 = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 121 'ddiv' 'tmp_1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 122 [2/2] (0.00ns)   --->   "%call_ln255 = call void @fit_Pipeline_VITIS_LOOP_204_1, i7 %arrx, i12 %arry, i64 %tmp, i64 %tmp_1, i64 %f_loc" [main.cpp:255]   --->   Operation 122 'call' 'call_ln255' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 19 <SV = 18> <Delay = 1.00>
+ST_19 : Operation 123 [1/1] (0.00ns)   --->   "%bitcast_ln30 = bitcast i64 %tmp" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:263]   --->   Operation 123 'bitcast' 'bitcast_ln30' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 124 [1/1] (1.00ns)   --->   "%printdouble_ln30 = printdouble i32 13, i64 %bitcast_ln30" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:263]   --->   Operation 124 'printdouble' 'printdouble_ln30' <Predicate = true> <Delay = 1.00> <CoreInst = "hlsPrintDouble">   --->   Core 139 'hlsPrintDouble' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'printdouble'> <InPorts = 0> <OutPorts = 0>
+ST_19 : Operation 125 [1/1] (0.00ns)   --->   "%bitcast_ln30_1 = bitcast i64 %tmp_1" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:264]   --->   Operation 125 'bitcast' 'bitcast_ln30_1' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 126 [1/1] (1.00ns)   --->   "%printdouble_ln30 = printdouble i32 14, i64 %bitcast_ln30_1" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:264]   --->   Operation 126 'printdouble' 'printdouble_ln30' <Predicate = true> <Delay = 1.00> <CoreInst = "hlsPrintDouble">   --->   Core 139 'hlsPrintDouble' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'printdouble'> <InPorts = 0> <OutPorts = 0>
+ST_19 : Operation 127 [1/2] (0.00ns)   --->   "%call_ln255 = call void @fit_Pipeline_VITIS_LOOP_204_1, i7 %arrx, i12 %arry, i64 %tmp, i64 %tmp_1, i64 %f_loc" [main.cpp:255]   --->   Operation 127 'call' 'call_ln255' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 1.36>
+ST_20 : Operation 128 [2/2] (1.36ns)   --->   "%call_ln0 = call void @fit_Pipeline_VITIS_LOOP_53_1, i9 %size_read, i6 %arrsigs, i7 %arrx, i64 %Sx_1_loc"   --->   Operation 128 'call' 'call_ln0' <Predicate = true> <Delay = 1.36> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 21 <SV = 20> <Delay = 0.00>
+ST_21 : Operation 129 [1/2] (0.00ns)   --->   "%call_ln0 = call void @fit_Pipeline_VITIS_LOOP_53_1, i9 %size_read, i6 %arrsigs, i7 %arrx, i64 %Sx_1_loc"   --->   Operation 129 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 22 <SV = 21> <Delay = 7.53>
+ST_22 : Operation 130 [1/1] (0.00ns)   --->   "%size_cast14 = zext i9 %size_read"   --->   Operation 130 'zext' 'size_cast14' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 131 [1/1] (0.00ns)   --->   "%S_loc_load = load i64 %S_loc"   --->   Operation 131 'load' 'S_loc_load' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 132 [1/1] (0.00ns)   --->   "%Sx_1_loc_load = load i64 %Sx_1_loc"   --->   Operation 132 'load' 'Sx_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_22 : [1/1] (0.75ns)   --->   Input mux for Operation 133 '%SxoS = ddiv i64 %Sx_1_loc_load, i64 %S_loc_load'
+ST_22 : Operation 133 [13/13] (6.78ns)   --->   "%SxoS = ddiv i64 %Sx_1_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 133 'ddiv' 'SxoS' <Predicate = true> <Delay = 6.78> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 134 [1/1] (0.90ns)   --->   "%add_ln127 = add i10 %size_cast14, i10 1022" [main.cpp:127->main.cpp:272]   --->   Operation 134 'add' 'add_ln127' <Predicate = true> <Delay = 0.90> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.90> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 135 [1/1] (0.00ns)   --->   "%zext_ln127 = zext i10 %add_ln127" [main.cpp:127->main.cpp:272]   --->   Operation 135 'zext' 'zext_ln127' <Predicate = true> <Delay = 0.00>
+ST_22 : [1/1] (0.75ns)   --->   Input mux for Operation 136 '%sub_i1 = sitodp i32 %zext_ln127'
+ST_22 : Operation 136 [2/2] (4.89ns)   --->   "%sub_i1 = sitodp i32 %zext_ln127" [main.cpp:127->main.cpp:272]   --->   Operation 136 'sitodp' 'sub_i1' <Predicate = true> <Delay = 4.89> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 1> <II = 1> <Delay = 5.65> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 7.15>
+ST_23 : Operation 137 [12/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_1_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 137 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 138 [1/2] (5.65ns)   --->   "%sub_i1 = sitodp i32 %zext_ln127" [main.cpp:127->main.cpp:272]   --->   Operation 138 'sitodp' 'sub_i1' <Predicate = true> <Delay = 5.65> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 1> <II = 1> <Delay = 5.65> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 7.53>
+ST_24 : Operation 139 [11/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_1_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 139 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_24 : [1/1] (0.75ns)   --->   Input mux for Operation 140 '%term1 = ddiv i64 1, i64 %sub_i1'
+ST_24 : Operation 140 [13/13] (6.78ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 140 'ddiv' 'term1' <Predicate = true> <Delay = 6.78> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 7.15>
+ST_25 : Operation 141 [10/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_1_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 141 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 142 [12/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 142 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 7.15>
+ST_26 : Operation 143 [9/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_1_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 143 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 144 [11/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 144 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 7.15>
+ST_27 : Operation 145 [8/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_1_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 145 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 146 [10/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 146 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 7.15>
+ST_28 : Operation 147 [7/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_1_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 147 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 148 [9/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 148 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 7.15>
+ST_29 : Operation 149 [6/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_1_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 149 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 150 [8/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 150 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 7.15>
+ST_30 : Operation 151 [5/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_1_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 151 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 152 [7/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 152 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 7.15>
+ST_31 : Operation 153 [4/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_1_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 153 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 154 [6/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 154 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 7.15>
+ST_32 : Operation 155 [3/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_1_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 155 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 156 [5/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 156 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 7.15>
+ST_33 : Operation 157 [2/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_1_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 157 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 158 [4/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 158 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 7.15>
+ST_34 : Operation 159 [1/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_1_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 159 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 160 [3/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 160 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 7.15>
+ST_35 : Operation 161 [2/2] (1.36ns)   --->   "%call_ln143 = call void @fit_Pipeline_VITIS_LOOP_148_1, i9 %size_read, i7 %arrx, i12 %arry, i6 %arrsigs, i64 %SxoS, i64 %tmp, i64 %tmp_1, i64 %Stt_loc, i64 %term2_loc" [main.cpp:143->main.cpp:272]   --->   Operation 161 'call' 'call_ln143' <Predicate = true> <Delay = 1.36> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_35 : Operation 162 [2/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 162 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 7.15>
+ST_36 : Operation 163 [1/2] (0.00ns)   --->   "%call_ln143 = call void @fit_Pipeline_VITIS_LOOP_148_1, i9 %size_read, i7 %arrx, i12 %arry, i6 %arrsigs, i64 %SxoS, i64 %tmp, i64 %tmp_1, i64 %Stt_loc, i64 %term2_loc" [main.cpp:143->main.cpp:272]   --->   Operation 163 'call' 'call_ln143' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_36 : Operation 164 [1/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 164 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 7.53>
+ST_37 : Operation 165 [1/1] (0.00ns)   --->   "%Stt_loc_load = load i64 %Stt_loc"   --->   Operation 165 'load' 'Stt_loc_load' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 166 [1/1] (0.00ns)   --->   "%term2_loc_load = load i64 %term2_loc"   --->   Operation 166 'load' 'term2_loc_load' <Predicate = true> <Delay = 0.00>
+ST_37 : [1/1] (0.65ns)   --->   Input mux for Operation 167 '%Sx2 = dmul i64 %Sx_1_loc_load, i64 %Sx_1_loc_load'
+ST_37 : Operation 167 [4/4] (4.92ns)   --->   "%Sx2 = dmul i64 %Sx_1_loc_load, i64 %Sx_1_loc_load" [main.cpp:145->main.cpp:272]   --->   Operation 167 'dmul' 'Sx2' <Predicate = true> <Delay = 4.92> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_37 : [1/1] (0.65ns)   --->   Input mux for Operation 168 '%mul21_i = dmul i64 %S_loc_load, i64 %Stt_loc_load'
+ST_37 : Operation 168 [4/4] (4.92ns)   --->   "%mul21_i = dmul i64 %S_loc_load, i64 %Stt_loc_load" [main.cpp:173->main.cpp:272]   --->   Operation 168 'dmul' 'mul21_i' <Predicate = true> <Delay = 4.92> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_37 : [1/1] (0.75ns)   --->   Input mux for Operation 169 '%ob2 = ddiv i64 1, i64 %Stt_loc_load'
+ST_37 : Operation 169 [13/13] (6.78ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 169 'ddiv' 'ob2' <Predicate = true> <Delay = 6.78> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_37 : [1/1] (0.65ns)   --->   Input mux for Operation 170 '%gof = dmul i64 %term1, i64 %term2_loc_load'
+ST_37 : Operation 170 [4/4] (4.92ns)   --->   "%gof = dmul i64 %term1, i64 %term2_loc_load" [main.cpp:179->main.cpp:272]   --->   Operation 170 'dmul' 'gof' <Predicate = true> <Delay = 4.92> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 7.15>
+ST_38 : Operation 171 [3/4] (5.58ns)   --->   "%Sx2 = dmul i64 %Sx_1_loc_load, i64 %Sx_1_loc_load" [main.cpp:145->main.cpp:272]   --->   Operation 171 'dmul' 'Sx2' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 172 [3/4] (5.58ns)   --->   "%mul21_i = dmul i64 %S_loc_load, i64 %Stt_loc_load" [main.cpp:173->main.cpp:272]   --->   Operation 172 'dmul' 'mul21_i' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 173 [12/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 173 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 174 [3/4] (5.58ns)   --->   "%gof = dmul i64 %term1, i64 %term2_loc_load" [main.cpp:179->main.cpp:272]   --->   Operation 174 'dmul' 'gof' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 38> <Delay = 7.15>
+ST_39 : Operation 175 [2/4] (5.58ns)   --->   "%Sx2 = dmul i64 %Sx_1_loc_load, i64 %Sx_1_loc_load" [main.cpp:145->main.cpp:272]   --->   Operation 175 'dmul' 'Sx2' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 176 [2/4] (5.58ns)   --->   "%mul21_i = dmul i64 %S_loc_load, i64 %Stt_loc_load" [main.cpp:173->main.cpp:272]   --->   Operation 176 'dmul' 'mul21_i' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 177 [11/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 177 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 178 [2/4] (5.58ns)   --->   "%gof = dmul i64 %term1, i64 %term2_loc_load" [main.cpp:179->main.cpp:272]   --->   Operation 178 'dmul' 'gof' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 39> <Delay = 7.15>
+ST_40 : Operation 179 [1/4] (5.58ns)   --->   "%Sx2 = dmul i64 %Sx_1_loc_load, i64 %Sx_1_loc_load" [main.cpp:145->main.cpp:272]   --->   Operation 179 'dmul' 'Sx2' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 180 [1/4] (5.58ns)   --->   "%mul21_i = dmul i64 %S_loc_load, i64 %Stt_loc_load" [main.cpp:173->main.cpp:272]   --->   Operation 180 'dmul' 'mul21_i' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 181 [10/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 181 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 182 [1/4] (5.58ns)   --->   "%gof = dmul i64 %term1, i64 %term2_loc_load" [main.cpp:179->main.cpp:272]   --->   Operation 182 'dmul' 'gof' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 183 [1/1] (0.00ns)   --->   "%bitcast_ln30_5 = bitcast i64 %gof" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:276]   --->   Operation 183 'bitcast' 'bitcast_ln30_5' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 184 [1/1] (1.00ns)   --->   "%printdouble_ln30 = printdouble i32 18, i64 %bitcast_ln30_5" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:276]   --->   Operation 184 'printdouble' 'printdouble_ln30' <Predicate = true> <Delay = 1.00> <CoreInst = "hlsPrintDouble">   --->   Core 139 'hlsPrintDouble' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'printdouble'> <InPorts = 0> <OutPorts = 0>
+
+State 41 <SV = 40> <Delay = 7.53>
+ST_41 : [1/1] (0.75ns)   --->   Input mux for Operation 185 '%div22_i = ddiv i64 %Sx2, i64 %mul21_i'
+ST_41 : Operation 185 [13/13] (6.78ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 185 'ddiv' 'div22_i' <Predicate = true> <Delay = 6.78> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 186 [9/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 186 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 41> <Delay = 7.15>
+ST_42 : Operation 187 [12/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 187 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 188 [8/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 188 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 42> <Delay = 7.15>
+ST_43 : Operation 189 [11/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 189 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 190 [7/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 190 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 43> <Delay = 7.15>
+ST_44 : Operation 191 [10/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 191 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 192 [6/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 192 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 44> <Delay = 7.53>
+ST_45 : [1/1] (0.75ns)   --->   Input mux for Operation 193 '%oneOverS = ddiv i64 1, i64 %S_loc_load'
+ST_45 : Operation 193 [13/13] (6.78ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 193 'ddiv' 'oneOverS' <Predicate = true> <Delay = 6.78> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 194 [9/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 194 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 195 [5/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 195 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 46 <SV = 45> <Delay = 7.15>
+ST_46 : Operation 196 [12/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 196 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 197 [8/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 197 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 198 [4/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 198 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 47 <SV = 46> <Delay = 7.15>
+ST_47 : Operation 199 [11/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 199 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 200 [7/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 200 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 201 [3/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 201 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 48 <SV = 47> <Delay = 7.15>
+ST_48 : Operation 202 [10/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 202 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 203 [6/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 203 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 204 [2/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 204 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 48> <Delay = 7.15>
+ST_49 : Operation 205 [9/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 205 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 206 [5/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 206 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 207 [1/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 207 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 49> <Delay = 7.15>
+ST_50 : Operation 208 [8/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 208 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_50 : Operation 209 [4/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 209 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_50 : Operation 210 [1/1] (0.00ns)   --->   "%bitcast_ln30_3 = bitcast i64 %ob2" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:177->main.cpp:272]   --->   Operation 210 'bitcast' 'bitcast_ln30_3' <Predicate = true> <Delay = 0.00>
+ST_50 : Operation 211 [1/1] (1.00ns)   --->   "%printdouble_ln30 = printdouble i32 16, i64 %bitcast_ln30_3" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:177->main.cpp:272]   --->   Operation 211 'printdouble' 'printdouble_ln30' <Predicate = true> <Delay = 1.00> <CoreInst = "hlsPrintDouble">   --->   Core 139 'hlsPrintDouble' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'printdouble'> <InPorts = 0> <OutPorts = 0>
+
+State 51 <SV = 50> <Delay = 7.15>
+ST_51 : Operation 212 [7/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 212 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 213 [3/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 213 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 51> <Delay = 7.15>
+ST_52 : Operation 214 [6/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 214 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_52 : Operation 215 [2/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 215 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 53 <SV = 52> <Delay = 7.15>
+ST_53 : Operation 216 [5/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 216 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 217 [1/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 217 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 54 <SV = 53> <Delay = 7.15>
+ST_54 : Operation 218 [4/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 218 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_54 : [1/1] (0.62ns)   --->   Input mux for Operation 219 '%add23_i = dadd i64 %div22_i, i64 1'
+ST_54 : Operation 219 [4/4] (4.52ns)   --->   "%add23_i = dadd i64 %div22_i, i64 1" [main.cpp:173->main.cpp:272]   --->   Operation 219 'dadd' 'add23_i' <Predicate = true> <Delay = 4.52> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.15> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 55 <SV = 54> <Delay = 7.15>
+ST_55 : Operation 220 [3/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 220 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 221 [3/4] (5.15ns)   --->   "%add23_i = dadd i64 %div22_i, i64 1" [main.cpp:173->main.cpp:272]   --->   Operation 221 'dadd' 'add23_i' <Predicate = true> <Delay = 5.15> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.15> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 56 <SV = 55> <Delay = 7.15>
+ST_56 : Operation 222 [2/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 222 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 223 [2/4] (5.15ns)   --->   "%add23_i = dadd i64 %div22_i, i64 1" [main.cpp:173->main.cpp:272]   --->   Operation 223 'dadd' 'add23_i' <Predicate = true> <Delay = 5.15> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.15> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 57 <SV = 56> <Delay = 7.15>
+ST_57 : Operation 224 [1/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 224 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 225 [1/4] (5.15ns)   --->   "%add23_i = dadd i64 %div22_i, i64 1" [main.cpp:173->main.cpp:272]   --->   Operation 225 'dadd' 'add23_i' <Predicate = true> <Delay = 5.15> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.15> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 58 <SV = 57> <Delay = 5.58>
+ST_58 : [1/1] (0.65ns)   --->   Input mux for Operation 226 '%oa2 = dmul i64 %oneOverS, i64 %add23_i'
+ST_58 : Operation 226 [4/4] (4.92ns)   --->   "%oa2 = dmul i64 %oneOverS, i64 %add23_i" [main.cpp:173->main.cpp:272]   --->   Operation 226 'dmul' 'oa2' <Predicate = true> <Delay = 4.92> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 59 <SV = 58> <Delay = 5.58>
+ST_59 : Operation 227 [3/4] (5.58ns)   --->   "%oa2 = dmul i64 %oneOverS, i64 %add23_i" [main.cpp:173->main.cpp:272]   --->   Operation 227 'dmul' 'oa2' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 60 <SV = 59> <Delay = 5.58>
+ST_60 : Operation 228 [2/4] (5.58ns)   --->   "%oa2 = dmul i64 %oneOverS, i64 %add23_i" [main.cpp:173->main.cpp:272]   --->   Operation 228 'dmul' 'oa2' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 61 <SV = 60> <Delay = 6.58>
+ST_61 : Operation 229 [1/1] (1.00ns)   --->   "%printnone_ln19 = printnone i32 0" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:19->main.cpp:27->main.cpp:250]   --->   Operation 229 'printnone' 'printnone_ln19' <Predicate = true> <Delay = 1.00> <CoreInst = "hlsPrintNone">   --->   Core 137 'hlsPrintNone' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'printnone'> <InPorts = 0> <OutPorts = 0>
+ST_61 : Operation 230 [1/1] (0.00ns)   --->   "%f_loc_load = load i64 %f_loc"   --->   Operation 230 'load' 'f_loc_load' <Predicate = true> <Delay = 0.00>
+ST_61 : Operation 231 [1/4] (5.58ns)   --->   "%oa2 = dmul i64 %oneOverS, i64 %add23_i" [main.cpp:173->main.cpp:272]   --->   Operation 231 'dmul' 'oa2' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_61 : Operation 232 [1/1] (0.00ns)   --->   "%bitcast_ln30_2 = bitcast i64 %oa2" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:176->main.cpp:272]   --->   Operation 232 'bitcast' 'bitcast_ln30_2' <Predicate = true> <Delay = 0.00>
+ST_61 : Operation 233 [1/1] (1.00ns)   --->   "%printdouble_ln30 = printdouble i32 15, i64 %bitcast_ln30_2" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:176->main.cpp:272]   --->   Operation 233 'printdouble' 'printdouble_ln30' <Predicate = true> <Delay = 1.00> <CoreInst = "hlsPrintDouble">   --->   Core 139 'hlsPrintDouble' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'printdouble'> <InPorts = 0> <OutPorts = 0>
+ST_61 : Operation 234 [1/1] (0.00ns)   --->   "%bitcast_ln30_4 = bitcast i64 %f_loc_load" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:275]   --->   Operation 234 'bitcast' 'bitcast_ln30_4' <Predicate = true> <Delay = 0.00>
+ST_61 : Operation 235 [1/1] (1.00ns)   --->   "%printdouble_ln30 = printdouble i32 17, i64 %bitcast_ln30_4" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:275]   --->   Operation 235 'printdouble' 'printdouble_ln30' <Predicate = true> <Delay = 1.00> <CoreInst = "hlsPrintDouble">   --->   Core 139 'hlsPrintDouble' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'printdouble'> <InPorts = 0> <OutPorts = 0>
+ST_61 : Operation 236 [1/1] (0.00ns)   --->   "%ret_ln277 = ret" [main.cpp:277]   --->   Operation 236 'ret' 'ret_ln277' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ arrx]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ arry]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ arrsigs]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ size]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+size_read        (read       ) [ 00111111111111111111111111111111111110000000000000000000000000]
+term2_loc        (alloca     ) [ 00111111111111111111111111111111111111000000000000000000000000]
+Stt_loc          (alloca     ) [ 00111111111111111111111111111111111111000000000000000000000000]
+Sx_1_loc         (alloca     ) [ 00111111111111111111111000000000000000000000000000000000000000]
+S_loc            (alloca     ) [ 01111111111111111111111000000000000000000000000000000000000000]
+f_loc            (alloca     ) [ 00111111111111111111111111111111111111111111111111111111111111]
+p_loc6           (alloca     ) [ 01110000000000000000000000000000000000000000000000000000000000]
+p_loc5           (alloca     ) [ 01110000000000000000000000000000000000000000000000000000000000]
+p_loc4           (alloca     ) [ 01110000000000000000000000000000000000000000000000000000000000]
+p_loc            (alloca     ) [ 01110000000000000000000000000000000000000000000000000000000000]
+call_ln0         (call       ) [ 00000000000000000000000000000000000000000000000000000000000000]
+call_ln0         (call       ) [ 00000000000000000000000000000000000000000000000000000000000000]
+zext_ln28        (zext       ) [ 00000000000000000000000000000000000000000000000000000000000000]
+p_loc_load       (load       ) [ 00000000000000000000000000000000000000000000000000000000000000]
+p_loc4_load      (load       ) [ 00000000000000000000000000000000000000000000000000000000000000]
+p_loc5_load      (load       ) [ 00000000000000000000000000000000000000000000000000000000000000]
+p_loc6_load      (load       ) [ 00000000000000000000000000000000000000000000000000000000000000]
+sx2              (mul        ) [ 00001000000000000000000000000000000000000000000000000000000000]
+mul_ln253        (mul        ) [ 00001000000000000000000000000000000000000000000000000000000000]
+mul_ln253_1      (mul        ) [ 00001000000000000000000000000000000000000000000000000000000000]
+mul_ln254        (mul        ) [ 00001000000000000000000000000000000000000000000000000000000000]
+mul_ln258        (mul        ) [ 00001000000000000000000000000000000000000000000000000000000000]
+mul_ln258_1      (mul        ) [ 00001000000000000000000000000000000000000000000000000000000000]
+a1               (sub        ) [ 00000100000000000000000000000000000000000000000000000000000000]
+a2               (sub        ) [ 00000100000000000000000000000000000000000000000000000000000000]
+b1               (sub        ) [ 00000100000000000000000000000000000000000000000000000000000000]
+conv5            (sitodp     ) [ 00000011111111111110000000000000000000000000000000000000000000]
+conv6            (sitodp     ) [ 00000011111111111110000000000000000000000000000000000000000000]
+conv             (sitodp     ) [ 00000011111111111110000000000000000000000000000000000000000000]
+tmp              (ddiv       ) [ 00000000000000000001111111111111111110000000000000000000000000]
+tmp_1            (ddiv       ) [ 00000000000000000001111111111111111110000000000000000000000000]
+bitcast_ln30     (bitcast    ) [ 00000000000000000000000000000000000000000000000000000000000000]
+printdouble_ln30 (printdouble) [ 00000000000000000000000000000000000000000000000000000000000000]
+bitcast_ln30_1   (bitcast    ) [ 00000000000000000000000000000000000000000000000000000000000000]
+printdouble_ln30 (printdouble) [ 00000000000000000000000000000000000000000000000000000000000000]
+call_ln255       (call       ) [ 00000000000000000000000000000000000000000000000000000000000000]
+call_ln0         (call       ) [ 00000000000000000000000000000000000000000000000000000000000000]
+size_cast14      (zext       ) [ 00000000000000000000000000000000000000000000000000000000000000]
+S_loc_load       (load       ) [ 00000000000000000000000111111111111111111111111111111111110000]
+Sx_1_loc_load    (load       ) [ 00000000000000000000000111111111111111111000000000000000000000]
+add_ln127        (add        ) [ 00000000000000000000000000000000000000000000000000000000000000]
+zext_ln127       (zext       ) [ 00000000000000000000000100000000000000000000000000000000000000]
+sub_i1           (sitodp     ) [ 00000000000000000000000011111111111110000000000000000000000000]
+SxoS             (ddiv       ) [ 00000000000000000000000000000000000110000000000000000000000000]
+call_ln143       (call       ) [ 00000000000000000000000000000000000000000000000000000000000000]
+term1            (ddiv       ) [ 00000000000000000000000000000000000001111000000000000000000000]
+Stt_loc_load     (load       ) [ 00000000000000000000000000000000000000111111111111000000000000]
+term2_loc_load   (load       ) [ 00000000000000000000000000000000000000111000000000000000000000]
+Sx2              (dmul       ) [ 00000000000000000000000000000000000000000111111111111100000000]
+mul21_i          (dmul       ) [ 00000000000000000000000000000000000000000111111111111100000000]
+gof              (dmul       ) [ 00000000000000000000000000000000000000000000000000000000000000]
+bitcast_ln30_5   (bitcast    ) [ 00000000000000000000000000000000000000000000000000000000000000]
+printdouble_ln30 (printdouble) [ 00000000000000000000000000000000000000000000000000000000000000]
+ob2              (ddiv       ) [ 00000000000000000000000000000000000000000000000000100000000000]
+bitcast_ln30_3   (bitcast    ) [ 00000000000000000000000000000000000000000000000000000000000000]
+printdouble_ln30 (printdouble) [ 00000000000000000000000000000000000000000000000000000000000000]
+div22_i          (ddiv       ) [ 00000000000000000000000000000000000000000000000000000011110000]
+oneOverS         (ddiv       ) [ 00000000000000000000000000000000000000000000000000000000001111]
+add23_i          (dadd       ) [ 00000000000000000000000000000000000000000000000000000000001111]
+printnone_ln19   (printnone  ) [ 00000000000000000000000000000000000000000000000000000000000000]
+f_loc_load       (load       ) [ 00000000000000000000000000000000000000000000000000000000000000]
+oa2              (dmul       ) [ 00000000000000000000000000000000000000000000000000000000000000]
+bitcast_ln30_2   (bitcast    ) [ 00000000000000000000000000000000000000000000000000000000000000]
+printdouble_ln30 (printdouble) [ 00000000000000000000000000000000000000000000000000000000000000]
+bitcast_ln30_4   (bitcast    ) [ 00000000000000000000000000000000000000000000000000000000000000]
+printdouble_ln30 (printdouble) [ 00000000000000000000000000000000000000000000000000000000000000]
+ret_ln277        (ret        ) [ 00000000000000000000000000000000000000000000000000000000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="arrx">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="arrx"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="arry">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="arry"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="arrsigs">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="arrsigs"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="size">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="size"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i9"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="fit_Pipeline_VITIS_LOOP_28_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="fit_Pipeline_VITIS_LOOP_100_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="fit_Pipeline_VITIS_LOOP_204_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="fit_Pipeline_VITIS_LOOP_53_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="fit_Pipeline_VITIS_LOOP_148_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1004" name="term2_loc_fu_40">
+<pin_list>
+<pin id="41" dir="0" index="0" bw="1" slack="0"/>
+<pin id="42" dir="1" index="1" bw="64" slack="34"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="term2_loc/1 "/>
+</bind>
+</comp>
+
+<comp id="44" class="1004" name="Stt_loc_fu_44">
+<pin_list>
+<pin id="45" dir="0" index="0" bw="1" slack="0"/>
+<pin id="46" dir="1" index="1" bw="64" slack="34"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="Stt_loc/1 "/>
+</bind>
+</comp>
+
+<comp id="48" class="1004" name="Sx_1_loc_fu_48">
+<pin_list>
+<pin id="49" dir="0" index="0" bw="1" slack="0"/>
+<pin id="50" dir="1" index="1" bw="64" slack="19"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="Sx_1_loc/1 "/>
+</bind>
+</comp>
+
+<comp id="52" class="1004" name="S_loc_fu_52">
+<pin_list>
+<pin id="53" dir="0" index="0" bw="1" slack="0"/>
+<pin id="54" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="S_loc/1 "/>
+</bind>
+</comp>
+
+<comp id="56" class="1004" name="f_loc_fu_56">
+<pin_list>
+<pin id="57" dir="0" index="0" bw="1" slack="0"/>
+<pin id="58" dir="1" index="1" bw="64" slack="17"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="f_loc/1 "/>
+</bind>
+</comp>
+
+<comp id="60" class="1004" name="p_loc6_fu_60">
+<pin_list>
+<pin id="61" dir="0" index="0" bw="1" slack="0"/>
+<pin id="62" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="p_loc6/1 "/>
+</bind>
+</comp>
+
+<comp id="64" class="1004" name="p_loc5_fu_64">
+<pin_list>
+<pin id="65" dir="0" index="0" bw="1" slack="0"/>
+<pin id="66" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="p_loc5/1 "/>
+</bind>
+</comp>
+
+<comp id="68" class="1004" name="p_loc4_fu_68">
+<pin_list>
+<pin id="69" dir="0" index="0" bw="1" slack="0"/>
+<pin id="70" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="p_loc4/1 "/>
+</bind>
+</comp>
+
+<comp id="72" class="1004" name="p_loc_fu_72">
+<pin_list>
+<pin id="73" dir="0" index="0" bw="1" slack="0"/>
+<pin id="74" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="p_loc/1 "/>
+</bind>
+</comp>
+
+<comp id="76" class="1004" name="size_read_read_fu_76">
+<pin_list>
+<pin id="77" dir="0" index="0" bw="9" slack="0"/>
+<pin id="78" dir="0" index="1" bw="9" slack="0"/>
+<pin id="79" dir="1" index="2" bw="9" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="size_read/1 "/>
+</bind>
+</comp>
+
+<comp id="82" class="1004" name="grp_fit_Pipeline_VITIS_LOOP_28_1_fu_82">
+<pin_list>
+<pin id="83" dir="0" index="0" bw="0" slack="0"/>
+<pin id="84" dir="0" index="1" bw="9" slack="0"/>
+<pin id="85" dir="0" index="2" bw="7" slack="0"/>
+<pin id="86" dir="0" index="3" bw="12" slack="0"/>
+<pin id="87" dir="0" index="4" bw="64" slack="0"/>
+<pin id="88" dir="0" index="5" bw="64" slack="0"/>
+<pin id="89" dir="0" index="6" bw="64" slack="0"/>
+<pin id="90" dir="0" index="7" bw="64" slack="0"/>
+<pin id="91" dir="1" index="8" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="96" class="1004" name="grp_fit_Pipeline_VITIS_LOOP_100_1_fu_96">
+<pin_list>
+<pin id="97" dir="0" index="0" bw="0" slack="0"/>
+<pin id="98" dir="0" index="1" bw="9" slack="0"/>
+<pin id="99" dir="0" index="2" bw="6" slack="0"/>
+<pin id="100" dir="0" index="3" bw="64" slack="0"/>
+<pin id="101" dir="1" index="4" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="105" class="1004" name="grp_fit_Pipeline_VITIS_LOOP_204_1_fu_105">
+<pin_list>
+<pin id="106" dir="0" index="0" bw="0" slack="0"/>
+<pin id="107" dir="0" index="1" bw="7" slack="0"/>
+<pin id="108" dir="0" index="2" bw="12" slack="0"/>
+<pin id="109" dir="0" index="3" bw="64" slack="0"/>
+<pin id="110" dir="0" index="4" bw="64" slack="0"/>
+<pin id="111" dir="0" index="5" bw="64" slack="17"/>
+<pin id="112" dir="1" index="6" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln255/18 "/>
+</bind>
+</comp>
+
+<comp id="116" class="1004" name="grp_fit_Pipeline_VITIS_LOOP_53_1_fu_116">
+<pin_list>
+<pin id="117" dir="0" index="0" bw="0" slack="0"/>
+<pin id="118" dir="0" index="1" bw="9" slack="19"/>
+<pin id="119" dir="0" index="2" bw="6" slack="0"/>
+<pin id="120" dir="0" index="3" bw="7" slack="0"/>
+<pin id="121" dir="0" index="4" bw="64" slack="19"/>
+<pin id="122" dir="1" index="5" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/20 "/>
+</bind>
+</comp>
+
+<comp id="126" class="1004" name="grp_fit_Pipeline_VITIS_LOOP_148_1_fu_126">
+<pin_list>
+<pin id="127" dir="0" index="0" bw="0" slack="0"/>
+<pin id="128" dir="0" index="1" bw="9" slack="34"/>
+<pin id="129" dir="0" index="2" bw="7" slack="0"/>
+<pin id="130" dir="0" index="3" bw="12" slack="0"/>
+<pin id="131" dir="0" index="4" bw="6" slack="0"/>
+<pin id="132" dir="0" index="5" bw="64" slack="1"/>
+<pin id="133" dir="0" index="6" bw="64" slack="17"/>
+<pin id="134" dir="0" index="7" bw="64" slack="17"/>
+<pin id="135" dir="0" index="8" bw="64" slack="34"/>
+<pin id="136" dir="0" index="9" bw="64" slack="34"/>
+<pin id="137" dir="1" index="10" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln143/35 "/>
+</bind>
+</comp>
+
+<comp id="142" class="1004" name="grp_fu_142">
+<pin_list>
+<pin id="143" dir="0" index="0" bw="64" slack="1"/>
+<pin id="144" dir="0" index="1" bw="64" slack="0"/>
+<pin id="145" dir="1" index="2" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opcode="dadd(508) " fcode="dadd"/>
+<opset="add23_i/54 "/>
+</bind>
+</comp>
+
+<comp id="147" class="1004" name="grp_fu_147">
+<pin_list>
+<pin id="148" dir="0" index="0" bw="64" slack="1"/>
+<pin id="149" dir="0" index="1" bw="64" slack="1"/>
+<pin id="150" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="dmul(510) " fcode="dmul"/>
+<opset="Sx2/37 oa2/58 "/>
+</bind>
+</comp>
+
+<comp id="151" class="1004" name="grp_fu_151">
+<pin_list>
+<pin id="152" dir="0" index="0" bw="64" slack="2147483647"/>
+<pin id="153" dir="0" index="1" bw="64" slack="0"/>
+<pin id="154" dir="1" index="2" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opcode="dmul(510) " fcode="dmul"/>
+<opset="mul21_i/37 "/>
+</bind>
+</comp>
+
+<comp id="155" class="1004" name="grp_fu_155">
+<pin_list>
+<pin id="156" dir="0" index="0" bw="64" slack="1"/>
+<pin id="157" dir="0" index="1" bw="64" slack="0"/>
+<pin id="158" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="dmul(510) " fcode="dmul"/>
+<opset="gof/37 "/>
+</bind>
+</comp>
+
+<comp id="159" class="1004" name="grp_fu_159">
+<pin_list>
+<pin id="160" dir="0" index="0" bw="64" slack="0"/>
+<pin id="161" dir="0" index="1" bw="64" slack="0"/>
+<pin id="162" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="ddiv(511) " fcode="ddiv"/>
+<opset="tmp/6 SxoS/22 term1/24 ob2/37 div22_i/41 oneOverS/45 "/>
+</bind>
+</comp>
+
+<comp id="164" class="1004" name="grp_fu_164">
+<pin_list>
+<pin id="165" dir="0" index="0" bw="64" slack="1"/>
+<pin id="166" dir="0" index="1" bw="64" slack="1"/>
+<pin id="167" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="ddiv(511) " fcode="ddiv"/>
+<opset="tmp_1/6 "/>
+</bind>
+</comp>
+
+<comp id="170" class="1004" name="grp_fu_170">
+<pin_list>
+<pin id="171" dir="0" index="0" bw="64" slack="0"/>
+<pin id="172" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opcode="sitodp(517) " fcode="sitodp"/>
+<opset="conv5/4 sub_i1/22 "/>
+</bind>
+</comp>
+
+<comp id="173" class="1004" name="grp_fu_173">
+<pin_list>
+<pin id="174" dir="0" index="0" bw="64" slack="0"/>
+<pin id="175" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opcode="sitodp(517) " fcode="sitodp"/>
+<opset="conv6/4 "/>
+</bind>
+</comp>
+
+<comp id="176" class="1004" name="grp_fu_176">
+<pin_list>
+<pin id="177" dir="0" index="0" bw="64" slack="0"/>
+<pin id="178" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opcode="sitodp(517) " fcode="sitodp"/>
+<opset="conv/4 "/>
+</bind>
+</comp>
+
+<comp id="179" class="1004" name="mul_ln254_fu_179">
+<pin_list>
+<pin id="180" dir="0" index="0" bw="64" slack="0"/>
+<pin id="181" dir="0" index="1" bw="9" slack="0"/>
+<pin id="182" dir="1" index="2" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opcode="mul(12) " fcode="mul"/>
+<opset="mul_ln254/3 "/>
+</bind>
+</comp>
+
+<comp id="183" class="1004" name="mul_ln258_fu_183">
+<pin_list>
+<pin id="184" dir="0" index="0" bw="64" slack="0"/>
+<pin id="185" dir="0" index="1" bw="9" slack="0"/>
+<pin id="186" dir="1" index="2" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opcode="mul(12) " fcode="mul"/>
+<opset="mul_ln258/3 "/>
+</bind>
+</comp>
+
+<comp id="187" class="1004" name="sx2_fu_187">
+<pin_list>
+<pin id="188" dir="0" index="0" bw="64" slack="0"/>
+<pin id="189" dir="0" index="1" bw="64" slack="0"/>
+<pin id="190" dir="1" index="2" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opcode="mul(12) " fcode="mul"/>
+<opset="sx2/3 "/>
+</bind>
+</comp>
+
+<comp id="191" class="1004" name="mul_ln253_fu_191">
+<pin_list>
+<pin id="192" dir="0" index="0" bw="64" slack="0"/>
+<pin id="193" dir="0" index="1" bw="64" slack="0"/>
+<pin id="194" dir="1" index="2" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opcode="mul(12) " fcode="mul"/>
+<opset="mul_ln253/3 "/>
+</bind>
+</comp>
+
+<comp id="195" class="1004" name="mul_ln253_1_fu_195">
+<pin_list>
+<pin id="196" dir="0" index="0" bw="64" slack="0"/>
+<pin id="197" dir="0" index="1" bw="64" slack="0"/>
+<pin id="198" dir="1" index="2" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opcode="mul(12) " fcode="mul"/>
+<opset="mul_ln253_1/3 "/>
+</bind>
+</comp>
+
+<comp id="199" class="1004" name="mul_ln258_1_fu_199">
+<pin_list>
+<pin id="200" dir="0" index="0" bw="64" slack="0"/>
+<pin id="201" dir="0" index="1" bw="64" slack="0"/>
+<pin id="202" dir="1" index="2" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opcode="mul(12) " fcode="mul"/>
+<opset="mul_ln258_1/3 "/>
+</bind>
+</comp>
+
+<comp id="203" class="1005" name="reg_203">
+<pin_list>
+<pin id="204" dir="0" index="0" bw="64" slack="1"/>
+<pin id="205" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="conv5 sub_i1 "/>
+</bind>
+</comp>
+
+<comp id="209" class="1005" name="reg_209">
+<pin_list>
+<pin id="210" dir="0" index="0" bw="64" slack="1"/>
+<pin id="211" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="tmp term1 ob2 div22_i oneOverS "/>
+</bind>
+</comp>
+
+<comp id="218" class="1004" name="zext_ln28_fu_218">
+<pin_list>
+<pin id="219" dir="0" index="0" bw="9" slack="2"/>
+<pin id="220" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln28/3 "/>
+</bind>
+</comp>
+
+<comp id="223" class="1004" name="p_loc_load_load_fu_223">
+<pin_list>
+<pin id="224" dir="0" index="0" bw="64" slack="2"/>
+<pin id="225" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="p_loc_load/3 "/>
+</bind>
+</comp>
+
+<comp id="228" class="1004" name="p_loc4_load_load_fu_228">
+<pin_list>
+<pin id="229" dir="0" index="0" bw="64" slack="2"/>
+<pin id="230" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="p_loc4_load/3 "/>
+</bind>
+</comp>
+
+<comp id="233" class="1004" name="p_loc5_load_load_fu_233">
+<pin_list>
+<pin id="234" dir="0" index="0" bw="64" slack="2"/>
+<pin id="235" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="p_loc5_load/3 "/>
+</bind>
+</comp>
+
+<comp id="238" class="1004" name="p_loc6_load_load_fu_238">
+<pin_list>
+<pin id="239" dir="0" index="0" bw="64" slack="2"/>
+<pin id="240" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="p_loc6_load/3 "/>
+</bind>
+</comp>
+
+<comp id="245" class="1004" name="a1_fu_245">
+<pin_list>
+<pin id="246" dir="0" index="0" bw="64" slack="1"/>
+<pin id="247" dir="0" index="1" bw="64" slack="1"/>
+<pin id="248" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sub(10) " fcode="sub"/>
+<opset="a1/4 "/>
+</bind>
+</comp>
+
+<comp id="250" class="1004" name="a2_fu_250">
+<pin_list>
+<pin id="251" dir="0" index="0" bw="64" slack="1"/>
+<pin id="252" dir="0" index="1" bw="64" slack="1"/>
+<pin id="253" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sub(10) " fcode="sub"/>
+<opset="a2/4 "/>
+</bind>
+</comp>
+
+<comp id="255" class="1004" name="b1_fu_255">
+<pin_list>
+<pin id="256" dir="0" index="0" bw="64" slack="1"/>
+<pin id="257" dir="0" index="1" bw="64" slack="1"/>
+<pin id="258" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sub(10) " fcode="sub"/>
+<opset="b1/4 "/>
+</bind>
+</comp>
+
+<comp id="260" class="1004" name="bitcast_ln30_fu_260">
+<pin_list>
+<pin id="261" dir="0" index="0" bw="64" slack="1"/>
+<pin id="262" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitcast(44) " fcode="bitcast"/>
+<opset="bitcast_ln30/19 "/>
+</bind>
+</comp>
+
+<comp id="264" class="1004" name="printdouble_ln30_fu_264">
+<pin_list>
+<pin id="265" dir="0" index="0" bw="5" slack="0"/>
+<pin id="266" dir="0" index="1" bw="64" slack="0"/>
+<pin id="267" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="printdouble(1164) " fcode="printdouble"/>
+<opset="printdouble_ln30/19 "/>
+</bind>
+</comp>
+
+<comp id="270" class="1004" name="bitcast_ln30_1_fu_270">
+<pin_list>
+<pin id="271" dir="0" index="0" bw="64" slack="1"/>
+<pin id="272" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitcast(44) " fcode="bitcast"/>
+<opset="bitcast_ln30_1/19 "/>
+</bind>
+</comp>
+
+<comp id="273" class="1004" name="printdouble_ln30_fu_273">
+<pin_list>
+<pin id="274" dir="0" index="0" bw="5" slack="0"/>
+<pin id="275" dir="0" index="1" bw="64" slack="0"/>
+<pin id="276" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="printdouble(1164) " fcode="printdouble"/>
+<opset="printdouble_ln30/19 "/>
+</bind>
+</comp>
+
+<comp id="279" class="1004" name="size_cast14_fu_279">
+<pin_list>
+<pin id="280" dir="0" index="0" bw="9" slack="21"/>
+<pin id="281" dir="1" index="1" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="size_cast14/22 "/>
+</bind>
+</comp>
+
+<comp id="282" class="1004" name="S_loc_load_load_fu_282">
+<pin_list>
+<pin id="283" dir="0" index="0" bw="64" slack="21"/>
+<pin id="284" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="S_loc_load/22 "/>
+</bind>
+</comp>
+
+<comp id="286" class="1004" name="Sx_1_loc_load_load_fu_286">
+<pin_list>
+<pin id="287" dir="0" index="0" bw="64" slack="21"/>
+<pin id="288" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="Sx_1_loc_load/22 "/>
+</bind>
+</comp>
+
+<comp id="290" class="1004" name="add_ln127_fu_290">
+<pin_list>
+<pin id="291" dir="0" index="0" bw="9" slack="0"/>
+<pin id="292" dir="0" index="1" bw="2" slack="0"/>
+<pin id="293" dir="1" index="2" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln127/22 "/>
+</bind>
+</comp>
+
+<comp id="296" class="1004" name="zext_ln127_fu_296">
+<pin_list>
+<pin id="297" dir="0" index="0" bw="10" slack="0"/>
+<pin id="298" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln127/22 "/>
+</bind>
+</comp>
+
+<comp id="301" class="1004" name="Stt_loc_load_load_fu_301">
+<pin_list>
+<pin id="302" dir="0" index="0" bw="64" slack="36"/>
+<pin id="303" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="Stt_loc_load/37 "/>
+</bind>
+</comp>
+
+<comp id="306" class="1004" name="term2_loc_load_load_fu_306">
+<pin_list>
+<pin id="307" dir="0" index="0" bw="64" slack="36"/>
+<pin id="308" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="term2_loc_load/37 "/>
+</bind>
+</comp>
+
+<comp id="310" class="1004" name="bitcast_ln30_5_fu_310">
+<pin_list>
+<pin id="311" dir="0" index="0" bw="64" slack="0"/>
+<pin id="312" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitcast(44) " fcode="bitcast"/>
+<opset="bitcast_ln30_5/40 "/>
+</bind>
+</comp>
+
+<comp id="314" class="1004" name="printdouble_ln30_fu_314">
+<pin_list>
+<pin id="315" dir="0" index="0" bw="6" slack="0"/>
+<pin id="316" dir="0" index="1" bw="64" slack="0"/>
+<pin id="317" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="printdouble(1164) " fcode="printdouble"/>
+<opset="printdouble_ln30/40 "/>
+</bind>
+</comp>
+
+<comp id="320" class="1004" name="bitcast_ln30_3_fu_320">
+<pin_list>
+<pin id="321" dir="0" index="0" bw="64" slack="1"/>
+<pin id="322" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitcast(44) " fcode="bitcast"/>
+<opset="bitcast_ln30_3/50 "/>
+</bind>
+</comp>
+
+<comp id="324" class="1004" name="printdouble_ln30_fu_324">
+<pin_list>
+<pin id="325" dir="0" index="0" bw="6" slack="0"/>
+<pin id="326" dir="0" index="1" bw="64" slack="0"/>
+<pin id="327" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="printdouble(1164) " fcode="printdouble"/>
+<opset="printdouble_ln30/50 "/>
+</bind>
+</comp>
+
+<comp id="330" class="1004" name="printnone_ln19_fu_330">
+<pin_list>
+<pin id="331" dir="0" index="0" bw="1" slack="0"/>
+<pin id="332" dir="1" index="1" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="printnone(1162) " fcode="printnone"/>
+<opset="printnone_ln19/61 "/>
+</bind>
+</comp>
+
+<comp id="334" class="1004" name="f_loc_load_load_fu_334">
+<pin_list>
+<pin id="335" dir="0" index="0" bw="64" slack="60"/>
+<pin id="336" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="f_loc_load/61 "/>
+</bind>
+</comp>
+
+<comp id="337" class="1004" name="bitcast_ln30_2_fu_337">
+<pin_list>
+<pin id="338" dir="0" index="0" bw="64" slack="0"/>
+<pin id="339" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitcast(44) " fcode="bitcast"/>
+<opset="bitcast_ln30_2/61 "/>
+</bind>
+</comp>
+
+<comp id="341" class="1004" name="printdouble_ln30_fu_341">
+<pin_list>
+<pin id="342" dir="0" index="0" bw="5" slack="0"/>
+<pin id="343" dir="0" index="1" bw="64" slack="0"/>
+<pin id="344" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="printdouble(1164) " fcode="printdouble"/>
+<opset="printdouble_ln30/61 "/>
+</bind>
+</comp>
+
+<comp id="347" class="1004" name="bitcast_ln30_4_fu_347">
+<pin_list>
+<pin id="348" dir="0" index="0" bw="64" slack="0"/>
+<pin id="349" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitcast(44) " fcode="bitcast"/>
+<opset="bitcast_ln30_4/61 "/>
+</bind>
+</comp>
+
+<comp id="351" class="1004" name="printdouble_ln30_fu_351">
+<pin_list>
+<pin id="352" dir="0" index="0" bw="6" slack="0"/>
+<pin id="353" dir="0" index="1" bw="64" slack="0"/>
+<pin id="354" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="printdouble(1164) " fcode="printdouble"/>
+<opset="printdouble_ln30/61 "/>
+</bind>
+</comp>
+
+<comp id="357" class="1005" name="size_read_reg_357">
+<pin_list>
+<pin id="358" dir="0" index="0" bw="9" slack="1"/>
+<pin id="359" dir="1" index="1" bw="9" slack="1"/>
+</pin_list>
+<bind>
+<opset="size_read "/>
+</bind>
+</comp>
+
+<comp id="367" class="1005" name="term2_loc_reg_367">
+<pin_list>
+<pin id="368" dir="0" index="0" bw="64" slack="34"/>
+<pin id="369" dir="1" index="1" bw="64" slack="34"/>
+</pin_list>
+<bind>
+<opset="term2_loc "/>
+</bind>
+</comp>
+
+<comp id="373" class="1005" name="Stt_loc_reg_373">
+<pin_list>
+<pin id="374" dir="0" index="0" bw="64" slack="34"/>
+<pin id="375" dir="1" index="1" bw="64" slack="34"/>
+</pin_list>
+<bind>
+<opset="Stt_loc "/>
+</bind>
+</comp>
+
+<comp id="379" class="1005" name="Sx_1_loc_reg_379">
+<pin_list>
+<pin id="380" dir="0" index="0" bw="64" slack="19"/>
+<pin id="381" dir="1" index="1" bw="64" slack="19"/>
+</pin_list>
+<bind>
+<opset="Sx_1_loc "/>
+</bind>
+</comp>
+
+<comp id="385" class="1005" name="S_loc_reg_385">
+<pin_list>
+<pin id="386" dir="0" index="0" bw="64" slack="0"/>
+<pin id="387" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opset="S_loc "/>
+</bind>
+</comp>
+
+<comp id="391" class="1005" name="f_loc_reg_391">
+<pin_list>
+<pin id="392" dir="0" index="0" bw="64" slack="17"/>
+<pin id="393" dir="1" index="1" bw="64" slack="17"/>
+</pin_list>
+<bind>
+<opset="f_loc "/>
+</bind>
+</comp>
+
+<comp id="397" class="1005" name="p_loc6_reg_397">
+<pin_list>
+<pin id="398" dir="0" index="0" bw="64" slack="0"/>
+<pin id="399" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opset="p_loc6 "/>
+</bind>
+</comp>
+
+<comp id="403" class="1005" name="p_loc5_reg_403">
+<pin_list>
+<pin id="404" dir="0" index="0" bw="64" slack="0"/>
+<pin id="405" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opset="p_loc5 "/>
+</bind>
+</comp>
+
+<comp id="409" class="1005" name="p_loc4_reg_409">
+<pin_list>
+<pin id="410" dir="0" index="0" bw="64" slack="0"/>
+<pin id="411" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opset="p_loc4 "/>
+</bind>
+</comp>
+
+<comp id="415" class="1005" name="p_loc_reg_415">
+<pin_list>
+<pin id="416" dir="0" index="0" bw="64" slack="0"/>
+<pin id="417" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opset="p_loc "/>
+</bind>
+</comp>
+
+<comp id="421" class="1005" name="sx2_reg_421">
+<pin_list>
+<pin id="422" dir="0" index="0" bw="64" slack="1"/>
+<pin id="423" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="sx2 "/>
+</bind>
+</comp>
+
+<comp id="426" class="1005" name="mul_ln253_reg_426">
+<pin_list>
+<pin id="427" dir="0" index="0" bw="64" slack="1"/>
+<pin id="428" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="mul_ln253 "/>
+</bind>
+</comp>
+
+<comp id="431" class="1005" name="mul_ln253_1_reg_431">
+<pin_list>
+<pin id="432" dir="0" index="0" bw="64" slack="1"/>
+<pin id="433" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="mul_ln253_1 "/>
+</bind>
+</comp>
+
+<comp id="436" class="1005" name="mul_ln254_reg_436">
+<pin_list>
+<pin id="437" dir="0" index="0" bw="64" slack="1"/>
+<pin id="438" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="mul_ln254 "/>
+</bind>
+</comp>
+
+<comp id="441" class="1005" name="mul_ln258_reg_441">
+<pin_list>
+<pin id="442" dir="0" index="0" bw="64" slack="1"/>
+<pin id="443" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="mul_ln258 "/>
+</bind>
+</comp>
+
+<comp id="446" class="1005" name="mul_ln258_1_reg_446">
+<pin_list>
+<pin id="447" dir="0" index="0" bw="64" slack="1"/>
+<pin id="448" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="mul_ln258_1 "/>
+</bind>
+</comp>
+
+<comp id="451" class="1005" name="a1_reg_451">
+<pin_list>
+<pin id="452" dir="0" index="0" bw="64" slack="1"/>
+<pin id="453" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="a1 "/>
+</bind>
+</comp>
+
+<comp id="456" class="1005" name="a2_reg_456">
+<pin_list>
+<pin id="457" dir="0" index="0" bw="64" slack="1"/>
+<pin id="458" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="a2 "/>
+</bind>
+</comp>
+
+<comp id="461" class="1005" name="b1_reg_461">
+<pin_list>
+<pin id="462" dir="0" index="0" bw="64" slack="1"/>
+<pin id="463" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="b1 "/>
+</bind>
+</comp>
+
+<comp id="466" class="1005" name="conv6_reg_466">
+<pin_list>
+<pin id="467" dir="0" index="0" bw="64" slack="1"/>
+<pin id="468" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="conv6 "/>
+</bind>
+</comp>
+
+<comp id="472" class="1005" name="conv_reg_472">
+<pin_list>
+<pin id="473" dir="0" index="0" bw="64" slack="1"/>
+<pin id="474" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="conv "/>
+</bind>
+</comp>
+
+<comp id="477" class="1005" name="tmp_1_reg_477">
+<pin_list>
+<pin id="478" dir="0" index="0" bw="64" slack="1"/>
+<pin id="479" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="tmp_1 "/>
+</bind>
+</comp>
+
+<comp id="490" class="1005" name="zext_ln127_reg_490">
+<pin_list>
+<pin id="491" dir="0" index="0" bw="32" slack="1"/>
+<pin id="492" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="zext_ln127 "/>
+</bind>
+</comp>
+
+<comp id="495" class="1005" name="SxoS_reg_495">
+<pin_list>
+<pin id="496" dir="0" index="0" bw="64" slack="1"/>
+<pin id="497" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="SxoS "/>
+</bind>
+</comp>
+
+<comp id="506" class="1005" name="Sx2_reg_506">
+<pin_list>
+<pin id="507" dir="0" index="0" bw="64" slack="1"/>
+<pin id="508" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="Sx2 "/>
+</bind>
+</comp>
+
+<comp id="511" class="1005" name="mul21_i_reg_511">
+<pin_list>
+<pin id="512" dir="0" index="0" bw="64" slack="1"/>
+<pin id="513" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="mul21_i "/>
+</bind>
+</comp>
+
+<comp id="516" class="1005" name="add23_i_reg_516">
+<pin_list>
+<pin id="517" dir="0" index="0" bw="64" slack="1"/>
+<pin id="518" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="add23_i "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="43"><net_src comp="10" pin="0"/><net_sink comp="40" pin=0"/></net>
+
+<net id="47"><net_src comp="10" pin="0"/><net_sink comp="44" pin=0"/></net>
+
+<net id="51"><net_src comp="10" pin="0"/><net_sink comp="48" pin=0"/></net>
+
+<net id="55"><net_src comp="10" pin="0"/><net_sink comp="52" pin=0"/></net>
+
+<net id="59"><net_src comp="10" pin="0"/><net_sink comp="56" pin=0"/></net>
+
+<net id="63"><net_src comp="10" pin="0"/><net_sink comp="60" pin=0"/></net>
+
+<net id="67"><net_src comp="10" pin="0"/><net_sink comp="64" pin=0"/></net>
+
+<net id="71"><net_src comp="10" pin="0"/><net_sink comp="68" pin=0"/></net>
+
+<net id="75"><net_src comp="10" pin="0"/><net_sink comp="72" pin=0"/></net>
+
+<net id="80"><net_src comp="8" pin="0"/><net_sink comp="76" pin=0"/></net>
+
+<net id="81"><net_src comp="6" pin="0"/><net_sink comp="76" pin=1"/></net>
+
+<net id="92"><net_src comp="12" pin="0"/><net_sink comp="82" pin=0"/></net>
+
+<net id="93"><net_src comp="76" pin="2"/><net_sink comp="82" pin=1"/></net>
+
+<net id="94"><net_src comp="0" pin="0"/><net_sink comp="82" pin=2"/></net>
+
+<net id="95"><net_src comp="2" pin="0"/><net_sink comp="82" pin=3"/></net>
+
+<net id="102"><net_src comp="14" pin="0"/><net_sink comp="96" pin=0"/></net>
+
+<net id="103"><net_src comp="76" pin="2"/><net_sink comp="96" pin=1"/></net>
+
+<net id="104"><net_src comp="4" pin="0"/><net_sink comp="96" pin=2"/></net>
+
+<net id="113"><net_src comp="16" pin="0"/><net_sink comp="105" pin=0"/></net>
+
+<net id="114"><net_src comp="0" pin="0"/><net_sink comp="105" pin=1"/></net>
+
+<net id="115"><net_src comp="2" pin="0"/><net_sink comp="105" pin=2"/></net>
+
+<net id="123"><net_src comp="22" pin="0"/><net_sink comp="116" pin=0"/></net>
+
+<net id="124"><net_src comp="4" pin="0"/><net_sink comp="116" pin=2"/></net>
+
+<net id="125"><net_src comp="0" pin="0"/><net_sink comp="116" pin=3"/></net>
+
+<net id="138"><net_src comp="28" pin="0"/><net_sink comp="126" pin=0"/></net>
+
+<net id="139"><net_src comp="0" pin="0"/><net_sink comp="126" pin=2"/></net>
+
+<net id="140"><net_src comp="2" pin="0"/><net_sink comp="126" pin=3"/></net>
+
+<net id="141"><net_src comp="4" pin="0"/><net_sink comp="126" pin=4"/></net>
+
+<net id="146"><net_src comp="26" pin="0"/><net_sink comp="142" pin=1"/></net>
+
+<net id="163"><net_src comp="159" pin="2"/><net_sink comp="105" pin=3"/></net>
+
+<net id="168"><net_src comp="164" pin="2"/><net_sink comp="105" pin=4"/></net>
+
+<net id="169"><net_src comp="26" pin="0"/><net_sink comp="159" pin=0"/></net>
+
+<net id="206"><net_src comp="170" pin="1"/><net_sink comp="203" pin=0"/></net>
+
+<net id="207"><net_src comp="203" pin="1"/><net_sink comp="159" pin=0"/></net>
+
+<net id="208"><net_src comp="203" pin="1"/><net_sink comp="159" pin=1"/></net>
+
+<net id="212"><net_src comp="159" pin="2"/><net_sink comp="209" pin=0"/></net>
+
+<net id="213"><net_src comp="209" pin="1"/><net_sink comp="105" pin=3"/></net>
+
+<net id="214"><net_src comp="209" pin="1"/><net_sink comp="126" pin=6"/></net>
+
+<net id="215"><net_src comp="209" pin="1"/><net_sink comp="155" pin=0"/></net>
+
+<net id="216"><net_src comp="209" pin="1"/><net_sink comp="142" pin=0"/></net>
+
+<net id="217"><net_src comp="209" pin="1"/><net_sink comp="147" pin=0"/></net>
+
+<net id="221"><net_src comp="218" pin="1"/><net_sink comp="179" pin=1"/></net>
+
+<net id="222"><net_src comp="218" pin="1"/><net_sink comp="183" pin=1"/></net>
+
+<net id="226"><net_src comp="223" pin="1"/><net_sink comp="191" pin=0"/></net>
+
+<net id="227"><net_src comp="223" pin="1"/><net_sink comp="179" pin=0"/></net>
+
+<net id="231"><net_src comp="228" pin="1"/><net_sink comp="195" pin=0"/></net>
+
+<net id="232"><net_src comp="228" pin="1"/><net_sink comp="183" pin=0"/></net>
+
+<net id="236"><net_src comp="233" pin="1"/><net_sink comp="191" pin=1"/></net>
+
+<net id="237"><net_src comp="233" pin="1"/><net_sink comp="199" pin=0"/></net>
+
+<net id="241"><net_src comp="238" pin="1"/><net_sink comp="187" pin=0"/></net>
+
+<net id="242"><net_src comp="238" pin="1"/><net_sink comp="187" pin=1"/></net>
+
+<net id="243"><net_src comp="238" pin="1"/><net_sink comp="195" pin=1"/></net>
+
+<net id="244"><net_src comp="238" pin="1"/><net_sink comp="199" pin=1"/></net>
+
+<net id="249"><net_src comp="245" pin="2"/><net_sink comp="170" pin=0"/></net>
+
+<net id="254"><net_src comp="250" pin="2"/><net_sink comp="173" pin=0"/></net>
+
+<net id="259"><net_src comp="255" pin="2"/><net_sink comp="176" pin=0"/></net>
+
+<net id="263"><net_src comp="209" pin="1"/><net_sink comp="260" pin=0"/></net>
+
+<net id="268"><net_src comp="18" pin="0"/><net_sink comp="264" pin=0"/></net>
+
+<net id="269"><net_src comp="260" pin="1"/><net_sink comp="264" pin=1"/></net>
+
+<net id="277"><net_src comp="20" pin="0"/><net_sink comp="273" pin=0"/></net>
+
+<net id="278"><net_src comp="270" pin="1"/><net_sink comp="273" pin=1"/></net>
+
+<net id="285"><net_src comp="282" pin="1"/><net_sink comp="159" pin=1"/></net>
+
+<net id="289"><net_src comp="286" pin="1"/><net_sink comp="159" pin=0"/></net>
+
+<net id="294"><net_src comp="279" pin="1"/><net_sink comp="290" pin=0"/></net>
+
+<net id="295"><net_src comp="24" pin="0"/><net_sink comp="290" pin=1"/></net>
+
+<net id="299"><net_src comp="290" pin="2"/><net_sink comp="296" pin=0"/></net>
+
+<net id="300"><net_src comp="296" pin="1"/><net_sink comp="170" pin=0"/></net>
+
+<net id="304"><net_src comp="301" pin="1"/><net_sink comp="151" pin=1"/></net>
+
+<net id="305"><net_src comp="301" pin="1"/><net_sink comp="159" pin=1"/></net>
+
+<net id="309"><net_src comp="306" pin="1"/><net_sink comp="155" pin=1"/></net>
+
+<net id="313"><net_src comp="155" pin="2"/><net_sink comp="310" pin=0"/></net>
+
+<net id="318"><net_src comp="30" pin="0"/><net_sink comp="314" pin=0"/></net>
+
+<net id="319"><net_src comp="310" pin="1"/><net_sink comp="314" pin=1"/></net>
+
+<net id="323"><net_src comp="209" pin="1"/><net_sink comp="320" pin=0"/></net>
+
+<net id="328"><net_src comp="32" pin="0"/><net_sink comp="324" pin=0"/></net>
+
+<net id="329"><net_src comp="320" pin="1"/><net_sink comp="324" pin=1"/></net>
+
+<net id="333"><net_src comp="34" pin="0"/><net_sink comp="330" pin=0"/></net>
+
+<net id="340"><net_src comp="147" pin="2"/><net_sink comp="337" pin=0"/></net>
+
+<net id="345"><net_src comp="36" pin="0"/><net_sink comp="341" pin=0"/></net>
+
+<net id="346"><net_src comp="337" pin="1"/><net_sink comp="341" pin=1"/></net>
+
+<net id="350"><net_src comp="334" pin="1"/><net_sink comp="347" pin=0"/></net>
+
+<net id="355"><net_src comp="38" pin="0"/><net_sink comp="351" pin=0"/></net>
+
+<net id="356"><net_src comp="347" pin="1"/><net_sink comp="351" pin=1"/></net>
+
+<net id="360"><net_src comp="76" pin="2"/><net_sink comp="357" pin=0"/></net>
+
+<net id="361"><net_src comp="357" pin="1"/><net_sink comp="82" pin=1"/></net>
+
+<net id="362"><net_src comp="357" pin="1"/><net_sink comp="96" pin=1"/></net>
+
+<net id="363"><net_src comp="357" pin="1"/><net_sink comp="218" pin=0"/></net>
+
+<net id="364"><net_src comp="357" pin="1"/><net_sink comp="116" pin=1"/></net>
+
+<net id="365"><net_src comp="357" pin="1"/><net_sink comp="279" pin=0"/></net>
+
+<net id="366"><net_src comp="357" pin="1"/><net_sink comp="126" pin=1"/></net>
+
+<net id="370"><net_src comp="40" pin="1"/><net_sink comp="367" pin=0"/></net>
+
+<net id="371"><net_src comp="367" pin="1"/><net_sink comp="126" pin=9"/></net>
+
+<net id="372"><net_src comp="367" pin="1"/><net_sink comp="306" pin=0"/></net>
+
+<net id="376"><net_src comp="44" pin="1"/><net_sink comp="373" pin=0"/></net>
+
+<net id="377"><net_src comp="373" pin="1"/><net_sink comp="126" pin=8"/></net>
+
+<net id="378"><net_src comp="373" pin="1"/><net_sink comp="301" pin=0"/></net>
+
+<net id="382"><net_src comp="48" pin="1"/><net_sink comp="379" pin=0"/></net>
+
+<net id="383"><net_src comp="379" pin="1"/><net_sink comp="116" pin=4"/></net>
+
+<net id="384"><net_src comp="379" pin="1"/><net_sink comp="286" pin=0"/></net>
+
+<net id="388"><net_src comp="52" pin="1"/><net_sink comp="385" pin=0"/></net>
+
+<net id="389"><net_src comp="385" pin="1"/><net_sink comp="96" pin=3"/></net>
+
+<net id="390"><net_src comp="385" pin="1"/><net_sink comp="282" pin=0"/></net>
+
+<net id="394"><net_src comp="56" pin="1"/><net_sink comp="391" pin=0"/></net>
+
+<net id="395"><net_src comp="391" pin="1"/><net_sink comp="105" pin=5"/></net>
+
+<net id="396"><net_src comp="391" pin="1"/><net_sink comp="334" pin=0"/></net>
+
+<net id="400"><net_src comp="60" pin="1"/><net_sink comp="397" pin=0"/></net>
+
+<net id="401"><net_src comp="397" pin="1"/><net_sink comp="82" pin=7"/></net>
+
+<net id="402"><net_src comp="397" pin="1"/><net_sink comp="238" pin=0"/></net>
+
+<net id="406"><net_src comp="64" pin="1"/><net_sink comp="403" pin=0"/></net>
+
+<net id="407"><net_src comp="403" pin="1"/><net_sink comp="82" pin=6"/></net>
+
+<net id="408"><net_src comp="403" pin="1"/><net_sink comp="233" pin=0"/></net>
+
+<net id="412"><net_src comp="68" pin="1"/><net_sink comp="409" pin=0"/></net>
+
+<net id="413"><net_src comp="409" pin="1"/><net_sink comp="82" pin=5"/></net>
+
+<net id="414"><net_src comp="409" pin="1"/><net_sink comp="228" pin=0"/></net>
+
+<net id="418"><net_src comp="72" pin="1"/><net_sink comp="415" pin=0"/></net>
+
+<net id="419"><net_src comp="415" pin="1"/><net_sink comp="82" pin=4"/></net>
+
+<net id="420"><net_src comp="415" pin="1"/><net_sink comp="223" pin=0"/></net>
+
+<net id="424"><net_src comp="187" pin="2"/><net_sink comp="421" pin=0"/></net>
+
+<net id="425"><net_src comp="421" pin="1"/><net_sink comp="250" pin=1"/></net>
+
+<net id="429"><net_src comp="191" pin="2"/><net_sink comp="426" pin=0"/></net>
+
+<net id="430"><net_src comp="426" pin="1"/><net_sink comp="245" pin=0"/></net>
+
+<net id="434"><net_src comp="195" pin="2"/><net_sink comp="431" pin=0"/></net>
+
+<net id="435"><net_src comp="431" pin="1"/><net_sink comp="245" pin=1"/></net>
+
+<net id="439"><net_src comp="179" pin="2"/><net_sink comp="436" pin=0"/></net>
+
+<net id="440"><net_src comp="436" pin="1"/><net_sink comp="250" pin=0"/></net>
+
+<net id="444"><net_src comp="183" pin="2"/><net_sink comp="441" pin=0"/></net>
+
+<net id="445"><net_src comp="441" pin="1"/><net_sink comp="255" pin=0"/></net>
+
+<net id="449"><net_src comp="199" pin="2"/><net_sink comp="446" pin=0"/></net>
+
+<net id="450"><net_src comp="446" pin="1"/><net_sink comp="255" pin=1"/></net>
+
+<net id="454"><net_src comp="245" pin="2"/><net_sink comp="451" pin=0"/></net>
+
+<net id="455"><net_src comp="451" pin="1"/><net_sink comp="170" pin=0"/></net>
+
+<net id="459"><net_src comp="250" pin="2"/><net_sink comp="456" pin=0"/></net>
+
+<net id="460"><net_src comp="456" pin="1"/><net_sink comp="173" pin=0"/></net>
+
+<net id="464"><net_src comp="255" pin="2"/><net_sink comp="461" pin=0"/></net>
+
+<net id="465"><net_src comp="461" pin="1"/><net_sink comp="176" pin=0"/></net>
+
+<net id="469"><net_src comp="173" pin="1"/><net_sink comp="466" pin=0"/></net>
+
+<net id="470"><net_src comp="466" pin="1"/><net_sink comp="159" pin=1"/></net>
+
+<net id="471"><net_src comp="466" pin="1"/><net_sink comp="164" pin=1"/></net>
+
+<net id="475"><net_src comp="176" pin="1"/><net_sink comp="472" pin=0"/></net>
+
+<net id="476"><net_src comp="472" pin="1"/><net_sink comp="164" pin=0"/></net>
+
+<net id="480"><net_src comp="164" pin="2"/><net_sink comp="477" pin=0"/></net>
+
+<net id="481"><net_src comp="477" pin="1"/><net_sink comp="270" pin=0"/></net>
+
+<net id="482"><net_src comp="477" pin="1"/><net_sink comp="105" pin=4"/></net>
+
+<net id="483"><net_src comp="477" pin="1"/><net_sink comp="126" pin=7"/></net>
+
+<net id="493"><net_src comp="296" pin="1"/><net_sink comp="490" pin=0"/></net>
+
+<net id="494"><net_src comp="490" pin="1"/><net_sink comp="170" pin=0"/></net>
+
+<net id="498"><net_src comp="159" pin="2"/><net_sink comp="495" pin=0"/></net>
+
+<net id="499"><net_src comp="495" pin="1"/><net_sink comp="126" pin=5"/></net>
+
+<net id="509"><net_src comp="147" pin="2"/><net_sink comp="506" pin=0"/></net>
+
+<net id="510"><net_src comp="506" pin="1"/><net_sink comp="159" pin=0"/></net>
+
+<net id="514"><net_src comp="151" pin="2"/><net_sink comp="511" pin=0"/></net>
+
+<net id="515"><net_src comp="511" pin="1"/><net_sink comp="159" pin=1"/></net>
+
+<net id="519"><net_src comp="142" pin="2"/><net_sink comp="516" pin=0"/></net>
+
+<net id="520"><net_src comp="516" pin="1"/><net_sink comp="147" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+	Port: fit : arrx | {1 2 18 19 20 21 35 36 }
+	Port: fit : arry | {1 2 18 19 35 36 }
+	Port: fit : arrsigs | {1 2 20 21 35 36 }
+	Port: fit : size | {1 }
+  - Chain level:
+	State 1
+		call_ln0 : 1
+		call_ln0 : 1
+	State 2
+	State 3
+		sx2 : 1
+		mul_ln253 : 1
+		mul_ln253_1 : 1
+		mul_ln254 : 1
+		mul_ln258 : 1
+		mul_ln258_1 : 1
+	State 4
+		conv5 : 1
+		conv6 : 1
+		conv : 1
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+		call_ln255 : 1
+	State 19
+		printdouble_ln30 : 1
+		printdouble_ln30 : 1
+	State 20
+	State 21
+	State 22
+		SxoS : 1
+		add_ln127 : 1
+		zext_ln127 : 2
+		sub_i1 : 3
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+		mul21_i : 1
+		ob2 : 1
+		gof : 1
+	State 38
+	State 39
+	State 40
+		bitcast_ln30_5 : 1
+		printdouble_ln30 : 2
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+		printdouble_ln30 : 1
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+		bitcast_ln30_2 : 1
+		printdouble_ln30 : 2
+		bitcast_ln30_4 : 1
+		printdouble_ln30 : 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|------------------------------------------|---------|---------|---------|---------|
+| Operation|              Functional Unit             |   DSP   |  Delay  |    FF   |   LUT   |
+|----------|------------------------------------------|---------|---------|---------|---------|
+|          |  grp_fit_Pipeline_VITIS_LOOP_28_1_fu_82  |    1    |   0.92  |   285   |   371   |
+|          |  grp_fit_Pipeline_VITIS_LOOP_100_1_fu_96 |    11   |   1.38  |   1109  |   876   |
+|   call   | grp_fit_Pipeline_VITIS_LOOP_204_1_fu_105 |    11   | 3.43071 |   1485  |   943   |
+|          |  grp_fit_Pipeline_VITIS_LOOP_53_1_fu_116 |    11   | 2.38429 |   1382  |   905   |
+|          | grp_fit_Pipeline_VITIS_LOOP_148_1_fu_126 |    22   | 5.94143 |   2845  |   1827  |
+|----------|------------------------------------------|---------|---------|---------|---------|
+|          |                grp_fu_147                |    8    |    0    |   275   |   107   |
+|   dmul   |                grp_fu_151                |    8    |    0    |   275   |   107   |
+|          |                grp_fu_155                |    8    |    0    |   275   |   107   |
+|----------|------------------------------------------|---------|---------|---------|---------|
+|   dadd   |                grp_fu_142                |    3    |    0    |   430   |   710   |
+|----------|------------------------------------------|---------|---------|---------|---------|
+|          |             mul_ln254_fu_179             |    4    |    0    |    0    |    45   |
+|          |             mul_ln258_fu_183             |    4    |    0    |    0    |    45   |
+|    mul   |                sx2_fu_187                |    10   |    0    |    0    |    45   |
+|          |             mul_ln253_fu_191             |    10   |    0    |    0    |    45   |
+|          |            mul_ln253_1_fu_195            |    10   |    0    |    0    |    45   |
+|          |            mul_ln258_1_fu_199            |    10   |    0    |    0    |    45   |
+|----------|------------------------------------------|---------|---------|---------|---------|
+|          |                 a1_fu_245                |    0    |    0    |    0    |    71   |
+|    sub   |                 a2_fu_250                |    0    |    0    |    0    |    71   |
+|          |                 b1_fu_255                |    0    |    0    |    0    |    71   |
+|----------|------------------------------------------|---------|---------|---------|---------|
+|    add   |             add_ln127_fu_290             |    0    |    0    |    0    |    16   |
+|----------|------------------------------------------|---------|---------|---------|---------|
+|   read   |           size_read_read_fu_76           |    0    |    0    |    0    |    0    |
+|----------|------------------------------------------|---------|---------|---------|---------|
+|   ddiv   |                grp_fu_159                |    0    |    0    |    0    |    0    |
+|          |                grp_fu_164                |    0    |    0    |    0    |    0    |
+|----------|------------------------------------------|---------|---------|---------|---------|
+|          |                grp_fu_170                |    0    |    0    |    0    |    0    |
+|  sitodp  |                grp_fu_173                |    0    |    0    |    0    |    0    |
+|          |                grp_fu_176                |    0    |    0    |    0    |    0    |
+|----------|------------------------------------------|---------|---------|---------|---------|
+|          |             zext_ln28_fu_218             |    0    |    0    |    0    |    0    |
+|   zext   |            size_cast14_fu_279            |    0    |    0    |    0    |    0    |
+|          |             zext_ln127_fu_296            |    0    |    0    |    0    |    0    |
+|----------|------------------------------------------|---------|---------|---------|---------|
+|          |          printdouble_ln30_fu_264         |    0    |    0    |    0    |    0    |
+|          |          printdouble_ln30_fu_273         |    0    |    0    |    0    |    0    |
+|printdouble|          printdouble_ln30_fu_314         |    0    |    0    |    0    |    0    |
+|          |          printdouble_ln30_fu_324         |    0    |    0    |    0    |    0    |
+|          |          printdouble_ln30_fu_341         |    0    |    0    |    0    |    0    |
+|          |          printdouble_ln30_fu_351         |    0    |    0    |    0    |    0    |
+|----------|------------------------------------------|---------|---------|---------|---------|
+| printnone|           printnone_ln19_fu_330          |    0    |    0    |    0    |    0    |
+|----------|------------------------------------------|---------|---------|---------|---------|
+|   Total  |                                          |   131   | 14.0564 |   8361  |   6452  |
+|----------|------------------------------------------|---------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++-------------------+--------+
+|                   |   FF   |
++-------------------+--------+
+|   S_loc_reg_385   |   64   |
+|  Stt_loc_reg_373  |   64   |
+|    Sx2_reg_506    |   64   |
+|  Sx_1_loc_reg_379 |   64   |
+|    SxoS_reg_495   |   64   |
+|     a1_reg_451    |   64   |
+|     a2_reg_456    |   64   |
+|  add23_i_reg_516  |   64   |
+|     b1_reg_461    |   64   |
+|   conv6_reg_466   |   64   |
+|    conv_reg_472   |   64   |
+|   f_loc_reg_391   |   64   |
+|  mul21_i_reg_511  |   64   |
+|mul_ln253_1_reg_431|   64   |
+| mul_ln253_reg_426 |   64   |
+| mul_ln254_reg_436 |   64   |
+|mul_ln258_1_reg_446|   64   |
+| mul_ln258_reg_441 |   64   |
+|   p_loc4_reg_409  |   64   |
+|   p_loc5_reg_403  |   64   |
+|   p_loc6_reg_397  |   64   |
+|   p_loc_reg_415   |   64   |
+|      reg_203      |   64   |
+|      reg_209      |   64   |
+| size_read_reg_357 |    9   |
+|    sx2_reg_421    |   64   |
+| term2_loc_reg_367 |   64   |
+|   tmp_1_reg_477   |   64   |
+| zext_ln127_reg_490|   32   |
++-------------------+--------+
+|       Total       |  1769  |
++-------------------+--------+
+
+* Multiplexer (MUX) list: 
+|------------------------------------------|------|------|------|--------||---------||---------|
+|                   Comp                   |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|------------------------------------------|------|------|------|--------||---------||---------|
+|  grp_fit_Pipeline_VITIS_LOOP_28_1_fu_82  |  p1  |   2  |   9  |   18   ||    9    |
+|  grp_fit_Pipeline_VITIS_LOOP_100_1_fu_96 |  p1  |   2  |   9  |   18   ||    9    |
+| grp_fit_Pipeline_VITIS_LOOP_204_1_fu_105 |  p3  |   2  |  64  |   128  ||    9    |
+| grp_fit_Pipeline_VITIS_LOOP_204_1_fu_105 |  p4  |   2  |  64  |   128  ||    9    |
+|                grp_fu_159                |  p0  |   4  |  64  |   256  ||    20   |
+|                grp_fu_159                |  p1  |   5  |  64  |   320  ||    26   |
+|                grp_fu_170                |  p0  |   4  |  64  |   256  ||    20   |
+|                grp_fu_173                |  p0  |   2  |  64  |   128  ||    9    |
+|                grp_fu_176                |  p0  |   2  |  64  |   128  ||    9    |
+|------------------------------------------|------|------|------|--------||---------||---------|
+|                   Total                  |      |      |      |  1380  ||  4.435  ||   120   |
+|------------------------------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           |   DSP  |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |   131  |   14   |  8361  |  6452  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    4   |    -   |   120  |
+|  Register |    -   |    -   |  1769  |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |   131  |   18   |  10130 |  6572  |
++-----------+--------+--------+--------+--------+

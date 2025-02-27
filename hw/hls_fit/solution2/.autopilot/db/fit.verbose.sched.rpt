@@ -1,0 +1,842 @@
+
+
+================================================================
+== Vitis HLS Report for 'fit'
+================================================================
+* Date:           Thu Feb 27 15:44:23 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        hls_fit
+* Solution:       solution2 (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu11p-flga2577-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 64
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.36>
+ST_1 : Operation 65 [1/1] (1.00ns)   --->   "%size_read = read i32 @_ssdm_op_Read.ap_none.i32, i32 %size"   --->   Operation 65 'read' 'size_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 66 [1/1] (1.00ns)   --->   "%arry_read = read i64 @_ssdm_op_Read.ap_none.i64, i64 %arry"   --->   Operation 66 'read' 'arry_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 67 [1/1] (1.00ns)   --->   "%arrx_read = read i64 @_ssdm_op_Read.ap_none.i64, i64 %arrx"   --->   Operation 67 'read' 'arrx_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%term2_loc = alloca i64 1"   --->   Operation 68 'alloca' 'term2_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%Stt_loc = alloca i64 1"   --->   Operation 69 'alloca' 'Stt_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%Sx_loc = alloca i64 1"   --->   Operation 70 'alloca' 'Sx_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%S_loc = alloca i64 1"   --->   Operation 71 'alloca' 'S_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%f_1_loc = alloca i64 1"   --->   Operation 72 'alloca' 'f_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%sx_loc = alloca i64 1"   --->   Operation 73 'alloca' 'sx_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%sy_loc = alloca i64 1"   --->   Operation 74 'alloca' 'sy_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%sxy_loc = alloca i64 1"   --->   Operation 75 'alloca' 'sxy_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%sxx_loc = alloca i64 1"   --->   Operation 76 'alloca' 'sxx_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%trunc_ln29 = trunc i64 %arrx_read" [main.cpp:29->main.cpp:250]   --->   Operation 77 'trunc' 'trunc_ln29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%trunc_ln30 = trunc i64 %arry_read" [main.cpp:30->main.cpp:250]   --->   Operation 78 'trunc' 'trunc_ln30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [2/2] (1.36ns)   --->   "%call_ln29 = call void @fit_Pipeline_VITIS_LOOP_28_1, i128 %gmem, i32 %size_read, i64 %arrx_read, i4 %trunc_ln29, i64 %arry_read, i4 %trunc_ln30, i64 %sxx_loc, i64 %sxy_loc, i64 %sy_loc, i64 %sx_loc" [main.cpp:29->main.cpp:250]   --->   Operation 79 'call' 'call_ln29' <Predicate = true> <Delay = 1.36> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%trunc_ln2 = partselect i60 @_ssdm_op_PartSelect.i60.i64.i32.i32, i64 %arrx_read, i32 4, i32 63" [main.cpp:204->main.cpp:268]   --->   Operation 80 'partselect' 'trunc_ln2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%trunc_ln204_1 = partselect i60 @_ssdm_op_PartSelect.i60.i64.i32.i32, i64 %arry_read, i32 4, i32 63" [main.cpp:204->main.cpp:268]   --->   Operation 81 'partselect' 'trunc_ln204_1' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 82 [1/2] (0.00ns)   --->   "%call_ln29 = call void @fit_Pipeline_VITIS_LOOP_28_1, i128 %gmem, i32 %size_read, i64 %arrx_read, i4 %trunc_ln29, i64 %arry_read, i4 %trunc_ln30, i64 %sxx_loc, i64 %sxy_loc, i64 %sy_loc, i64 %sx_loc" [main.cpp:29->main.cpp:250]   --->   Operation 82 'call' 'call_ln29' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 5.47>
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "%sext_ln28 = sext i32 %size_read" [main.cpp:28->main.cpp:250]   --->   Operation 83 'sext' 'sext_ln28' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "%sxx_loc_load = load i64 %sxx_loc"   --->   Operation 84 'load' 'sxx_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "%sxy_loc_load = load i64 %sxy_loc"   --->   Operation 85 'load' 'sxy_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "%sy_loc_load = load i64 %sy_loc"   --->   Operation 86 'load' 'sy_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 87 [1/1] (0.00ns)   --->   "%sx_loc_load = load i64 %sx_loc"   --->   Operation 87 'load' 'sx_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : [1/1] (0.62ns)   --->   Input mux for Operation 88 '%sx2 = mul i64 %sx_loc_load, i64 %sx_loc_load'
+ST_3 : Operation 88 [1/1] (4.84ns)   --->   "%sx2 = mul i64 %sx_loc_load, i64 %sx_loc_load" [main.cpp:251]   --->   Operation 88 'mul' 'sx2' <Predicate = true> <Delay = 4.84> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : [1/1] (0.62ns)   --->   Input mux for Operation 89 '%mul_ln253 = mul i64 %sxx_loc_load, i64 %sy_loc_load'
+ST_3 : Operation 89 [1/1] (4.84ns)   --->   "%mul_ln253 = mul i64 %sxx_loc_load, i64 %sy_loc_load" [main.cpp:253]   --->   Operation 89 'mul' 'mul_ln253' <Predicate = true> <Delay = 4.84> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : [1/1] (0.62ns)   --->   Input mux for Operation 90 '%mul_ln253_1 = mul i64 %sxy_loc_load, i64 %sx_loc_load'
+ST_3 : Operation 90 [1/1] (4.84ns)   --->   "%mul_ln253_1 = mul i64 %sxy_loc_load, i64 %sx_loc_load" [main.cpp:253]   --->   Operation 90 'mul' 'mul_ln253_1' <Predicate = true> <Delay = 4.84> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : [1/1] (0.46ns)   --->   Input mux for Operation 91 '%mul_ln254 = mul i64 %sxx_loc_load, i64 %sext_ln28'
+ST_3 : Operation 91 [1/1] (5.01ns)   --->   "%mul_ln254 = mul i64 %sxx_loc_load, i64 %sext_ln28" [main.cpp:254]   --->   Operation 91 'mul' 'mul_ln254' <Predicate = true> <Delay = 5.01> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : [1/1] (0.46ns)   --->   Input mux for Operation 92 '%mul_ln258 = mul i64 %sxy_loc_load, i64 %sext_ln28'
+ST_3 : Operation 92 [1/1] (5.01ns)   --->   "%mul_ln258 = mul i64 %sxy_loc_load, i64 %sext_ln28" [main.cpp:258]   --->   Operation 92 'mul' 'mul_ln258' <Predicate = true> <Delay = 5.01> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : [1/1] (0.62ns)   --->   Input mux for Operation 93 '%mul_ln258_1 = mul i64 %sy_loc_load, i64 %sx_loc_load'
+ST_3 : Operation 93 [1/1] (4.84ns)   --->   "%mul_ln258_1 = mul i64 %sy_loc_load, i64 %sx_loc_load" [main.cpp:258]   --->   Operation 93 'mul' 'mul_ln258_1' <Predicate = true> <Delay = 4.84> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 7.01>
+ST_4 : Operation 94 [1/1] (1.36ns)   --->   "%a1 = sub i64 %mul_ln253, i64 %mul_ln253_1" [main.cpp:253]   --->   Operation 94 'sub' 'a1' <Predicate = true> <Delay = 1.36> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 95 [1/1] (1.36ns)   --->   "%a2 = sub i64 %mul_ln254, i64 %sx2" [main.cpp:254]   --->   Operation 95 'sub' 'a2' <Predicate = true> <Delay = 1.36> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : [1/1] (0.75ns)   --->   Input mux for Operation 96 '%conv5 = sitodp i64 %a1'
+ST_4 : Operation 96 [2/2] (4.89ns)   --->   "%conv5 = sitodp i64 %a1" [main.cpp:255]   --->   Operation 96 'sitodp' 'conv5' <Predicate = true> <Delay = 4.89> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 1> <II = 1> <Delay = 5.65> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+ST_4 : [1/1] (0.75ns)   --->   Input mux for Operation 97 '%conv6 = sitodp i64 %a2'
+ST_4 : Operation 97 [2/2] (4.89ns)   --->   "%conv6 = sitodp i64 %a2" [main.cpp:255]   --->   Operation 97 'sitodp' 'conv6' <Predicate = true> <Delay = 4.89> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 1> <II = 1> <Delay = 5.65> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 98 [1/1] (1.36ns)   --->   "%b1 = sub i64 %mul_ln258, i64 %mul_ln258_1" [main.cpp:258]   --->   Operation 98 'sub' 'b1' <Predicate = true> <Delay = 1.36> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : [1/1] (0.75ns)   --->   Input mux for Operation 99 '%conv = sitodp i64 %b1'
+ST_4 : Operation 99 [2/2] (4.89ns)   --->   "%conv = sitodp i64 %b1" [main.cpp:260]   --->   Operation 99 'sitodp' 'conv' <Predicate = true> <Delay = 4.89> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 1> <II = 1> <Delay = 5.65> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 5.65>
+ST_5 : Operation 100 [1/2] (5.65ns)   --->   "%conv5 = sitodp i64 %a1" [main.cpp:255]   --->   Operation 100 'sitodp' 'conv5' <Predicate = true> <Delay = 5.65> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 1> <II = 1> <Delay = 5.65> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 101 [1/2] (5.65ns)   --->   "%conv6 = sitodp i64 %a2" [main.cpp:255]   --->   Operation 101 'sitodp' 'conv6' <Predicate = true> <Delay = 5.65> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 1> <II = 1> <Delay = 5.65> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 102 [1/2] (5.65ns)   --->   "%conv = sitodp i64 %b1" [main.cpp:260]   --->   Operation 102 'sitodp' 'conv' <Predicate = true> <Delay = 5.65> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 1> <II = 1> <Delay = 5.65> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 7.15>
+ST_6 : [1/1] (0.75ns)   --->   Input mux for Operation 103 '%a = ddiv i64 %conv5, i64 %conv6'
+ST_6 : Operation 103 [13/13] (6.40ns)   --->   "%a = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 103 'ddiv' 'a' <Predicate = true> <Delay = 6.40> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_6 : [1/1] (0.75ns)   --->   Input mux for Operation 104 '%b = ddiv i64 %conv, i64 %conv6'
+ST_6 : Operation 104 [13/13] (6.40ns)   --->   "%b = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 104 'ddiv' 'b' <Predicate = true> <Delay = 6.40> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 7.15>
+ST_7 : Operation 105 [12/13] (7.15ns)   --->   "%a = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 105 'ddiv' 'a' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 106 [12/13] (7.15ns)   --->   "%b = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 106 'ddiv' 'b' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 7.15>
+ST_8 : Operation 107 [11/13] (7.15ns)   --->   "%a = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 107 'ddiv' 'a' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 108 [11/13] (7.15ns)   --->   "%b = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 108 'ddiv' 'b' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 7.15>
+ST_9 : Operation 109 [10/13] (7.15ns)   --->   "%a = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 109 'ddiv' 'a' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 110 [10/13] (7.15ns)   --->   "%b = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 110 'ddiv' 'b' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.15>
+ST_10 : Operation 111 [9/13] (7.15ns)   --->   "%a = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 111 'ddiv' 'a' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 112 [9/13] (7.15ns)   --->   "%b = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 112 'ddiv' 'b' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 7.15>
+ST_11 : Operation 113 [8/13] (7.15ns)   --->   "%a = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 113 'ddiv' 'a' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 114 [8/13] (7.15ns)   --->   "%b = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 114 'ddiv' 'b' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 7.15>
+ST_12 : Operation 115 [7/13] (7.15ns)   --->   "%a = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 115 'ddiv' 'a' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 116 [7/13] (7.15ns)   --->   "%b = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 116 'ddiv' 'b' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 7.15>
+ST_13 : Operation 117 [6/13] (7.15ns)   --->   "%a = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 117 'ddiv' 'a' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 118 [6/13] (7.15ns)   --->   "%b = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 118 'ddiv' 'b' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 7.15>
+ST_14 : Operation 119 [5/13] (7.15ns)   --->   "%a = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 119 'ddiv' 'a' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 120 [5/13] (7.15ns)   --->   "%b = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 120 'ddiv' 'b' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 7.15>
+ST_15 : Operation 121 [4/13] (7.15ns)   --->   "%a = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 121 'ddiv' 'a' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 122 [4/13] (7.15ns)   --->   "%b = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 122 'ddiv' 'b' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 7.15>
+ST_16 : Operation 123 [3/13] (7.15ns)   --->   "%a = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 123 'ddiv' 'a' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 124 [3/13] (7.15ns)   --->   "%b = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 124 'ddiv' 'b' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 7.15>
+ST_17 : Operation 125 [2/13] (7.15ns)   --->   "%a = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 125 'ddiv' 'a' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 126 [2/13] (7.15ns)   --->   "%b = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 126 'ddiv' 'b' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 7.15>
+ST_18 : Operation 127 [1/13] (7.15ns)   --->   "%a = ddiv i64 %conv5, i64 %conv6" [main.cpp:255]   --->   Operation 127 'ddiv' 'a' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 128 [1/13] (7.15ns)   --->   "%b = ddiv i64 %conv, i64 %conv6" [main.cpp:260]   --->   Operation 128 'ddiv' 'b' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 1.34>
+ST_19 : Operation 129 [1/1] (0.00ns)   --->   "%bitcast_ln30 = bitcast i64 %a" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:263]   --->   Operation 129 'bitcast' 'bitcast_ln30' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 130 [1/1] (1.00ns)   --->   "%printdouble_ln30 = printdouble i32 1, i64 %bitcast_ln30" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:263]   --->   Operation 130 'printdouble' 'printdouble_ln30' <Predicate = true> <Delay = 1.00> <CoreInst = "hlsPrintDouble">   --->   Core 139 'hlsPrintDouble' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'printdouble'> <InPorts = 0> <OutPorts = 0>
+ST_19 : Operation 131 [1/1] (0.00ns)   --->   "%bitcast_ln30_1 = bitcast i64 %b" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:264]   --->   Operation 131 'bitcast' 'bitcast_ln30_1' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 132 [1/1] (1.00ns)   --->   "%printdouble_ln30 = printdouble i32 2, i64 %bitcast_ln30_1" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:264]   --->   Operation 132 'printdouble' 'printdouble_ln30' <Predicate = true> <Delay = 1.00> <CoreInst = "hlsPrintDouble">   --->   Core 139 'hlsPrintDouble' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'printdouble'> <InPorts = 0> <OutPorts = 0>
+ST_19 : Operation 133 [2/2] (1.34ns)   --->   "%call_ln255 = call void @fit_Pipeline_VITIS_LOOP_204_1, i128 %gmem, i64 %a, i64 %b, i60 %trunc_ln2, i60 %trunc_ln204_1, i64 %f_1_loc" [main.cpp:255]   --->   Operation 133 'call' 'call_ln255' <Predicate = true> <Delay = 1.34> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 0.00>
+ST_20 : Operation 134 [1/2] (0.00ns)   --->   "%call_ln255 = call void @fit_Pipeline_VITIS_LOOP_204_1, i128 %gmem, i64 %a, i64 %b, i60 %trunc_ln2, i60 %trunc_ln204_1, i64 %f_1_loc" [main.cpp:255]   --->   Operation 134 'call' 'call_ln255' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 21 <SV = 20> <Delay = 5.65>
+ST_21 : Operation 135 [1/1] (1.00ns)   --->   "%arrsigs_read = read i64 @_ssdm_op_Read.ap_none.i64, i64 %arrsigs"   --->   Operation 135 'read' 'arrsigs_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_21 : Operation 136 [2/2] (5.65ns)   --->   "%conv_i1 = sitodp i32 %size_read" [main.cpp:127->main.cpp:272]   --->   Operation 136 'sitodp' 'conv_i1' <Predicate = true> <Delay = 5.65> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 1> <II = 1> <Delay = 5.65> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+ST_21 : Operation 137 [1/1] (0.00ns)   --->   "%trunc_ln101 = trunc i64 %arrsigs_read" [main.cpp:101->main.cpp:133->main.cpp:272]   --->   Operation 137 'trunc' 'trunc_ln101' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 138 [2/2] (1.36ns)   --->   "%call_ln101 = call void @fit_Pipeline_VITIS_LOOP_100_1, i128 %gmem, i32 %size_read, i64 %arrsigs_read, i4 %trunc_ln101, i64 %S_loc" [main.cpp:101->main.cpp:133->main.cpp:272]   --->   Operation 138 'call' 'call_ln101' <Predicate = true> <Delay = 1.36> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 22 <SV = 21> <Delay = 5.65>
+ST_22 : Operation 139 [1/2] (5.65ns)   --->   "%conv_i1 = sitodp i32 %size_read" [main.cpp:127->main.cpp:272]   --->   Operation 139 'sitodp' 'conv_i1' <Predicate = true> <Delay = 5.65> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 1> <II = 1> <Delay = 5.65> <FuncUnit> <Opcode : 'sitodp' 'uitodp'> <InPorts = 1> <OutPorts = 1>
+ST_22 : Operation 140 [1/2] (0.00ns)   --->   "%call_ln101 = call void @fit_Pipeline_VITIS_LOOP_100_1, i128 %gmem, i32 %size_read, i64 %arrsigs_read, i4 %trunc_ln101, i64 %S_loc" [main.cpp:101->main.cpp:133->main.cpp:272]   --->   Operation 140 'call' 'call_ln101' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 23 <SV = 22> <Delay = 5.15>
+ST_23 : [1/1] (0.67ns)   --->   Input mux for Operation 141 '%sub_i1 = dadd i64 %conv_i1, i64 -2'
+ST_23 : Operation 141 [4/4] (4.48ns)   --->   "%sub_i1 = dadd i64 %conv_i1, i64 -2" [main.cpp:127->main.cpp:272]   --->   Operation 141 'dadd' 'sub_i1' <Predicate = true> <Delay = 4.48> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.15> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 142 [2/2] (1.36ns)   --->   "%call_ln101 = call void @fit_Pipeline_VITIS_LOOP_53_1, i128 %gmem, i32 %size_read, i64 %arrsigs_read, i4 %trunc_ln101, i64 %arrx_read, i4 %trunc_ln29, i64 %Sx_loc" [main.cpp:101->main.cpp:133->main.cpp:272]   --->   Operation 142 'call' 'call_ln101' <Predicate = true> <Delay = 1.36> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 24 <SV = 23> <Delay = 5.15>
+ST_24 : Operation 143 [3/4] (5.15ns)   --->   "%sub_i1 = dadd i64 %conv_i1, i64 -2" [main.cpp:127->main.cpp:272]   --->   Operation 143 'dadd' 'sub_i1' <Predicate = true> <Delay = 5.15> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.15> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 144 [1/2] (0.00ns)   --->   "%call_ln101 = call void @fit_Pipeline_VITIS_LOOP_53_1, i128 %gmem, i32 %size_read, i64 %arrsigs_read, i4 %trunc_ln101, i64 %arrx_read, i4 %trunc_ln29, i64 %Sx_loc" [main.cpp:101->main.cpp:133->main.cpp:272]   --->   Operation 144 'call' 'call_ln101' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 25 <SV = 24> <Delay = 7.15>
+ST_25 : Operation 145 [2/4] (5.15ns)   --->   "%sub_i1 = dadd i64 %conv_i1, i64 -2" [main.cpp:127->main.cpp:272]   --->   Operation 145 'dadd' 'sub_i1' <Predicate = true> <Delay = 5.15> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.15> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 146 [1/1] (0.00ns)   --->   "%S_loc_load = load i64 %S_loc"   --->   Operation 146 'load' 'S_loc_load' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 147 [1/1] (0.00ns)   --->   "%Sx_loc_load = load i64 %Sx_loc"   --->   Operation 147 'load' 'Sx_loc_load' <Predicate = true> <Delay = 0.00>
+ST_25 : [1/1] (0.75ns)   --->   Input mux for Operation 148 '%SxoS = ddiv i64 %Sx_loc_load, i64 %S_loc_load'
+ST_25 : Operation 148 [13/13] (6.40ns)   --->   "%SxoS = ddiv i64 %Sx_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 148 'ddiv' 'SxoS' <Predicate = true> <Delay = 6.40> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 7.15>
+ST_26 : Operation 149 [1/4] (5.15ns)   --->   "%sub_i1 = dadd i64 %conv_i1, i64 -2" [main.cpp:127->main.cpp:272]   --->   Operation 149 'dadd' 'sub_i1' <Predicate = true> <Delay = 5.15> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.15> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 150 [12/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 150 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 7.15>
+ST_27 : [1/1] (0.75ns)   --->   Input mux for Operation 151 '%term1 = ddiv i64 1, i64 %sub_i1'
+ST_27 : Operation 151 [13/13] (6.40ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 151 'ddiv' 'term1' <Predicate = true> <Delay = 6.40> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 152 [11/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 152 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 7.15>
+ST_28 : Operation 153 [12/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 153 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 154 [10/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 154 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 7.15>
+ST_29 : Operation 155 [11/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 155 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 156 [9/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 156 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 7.15>
+ST_30 : Operation 157 [10/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 157 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 158 [8/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 158 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 7.15>
+ST_31 : Operation 159 [9/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 159 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 160 [7/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 160 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 7.15>
+ST_32 : Operation 161 [8/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 161 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 162 [6/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 162 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 7.15>
+ST_33 : Operation 163 [7/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 163 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 164 [5/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 164 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 7.15>
+ST_34 : Operation 165 [6/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 165 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 166 [4/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 166 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 7.15>
+ST_35 : Operation 167 [5/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 167 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 168 [3/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 168 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 7.15>
+ST_36 : Operation 169 [4/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 169 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 170 [2/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 170 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 7.15>
+ST_37 : Operation 171 [3/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 171 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 172 [1/13] (7.15ns)   --->   "%SxoS = ddiv i64 %Sx_loc_load, i64 %S_loc_load" [main.cpp:143->main.cpp:272]   --->   Operation 172 'ddiv' 'SxoS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 7.15>
+ST_38 : Operation 173 [2/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 173 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 174 [2/2] (1.36ns)   --->   "%call_ln29 = call void @fit_Pipeline_VITIS_LOOP_148_1, i128 %gmem, i32 %size_read, i64 %arrx_read, i4 %trunc_ln29, i64 %arry_read, i4 %trunc_ln30, i64 %arrsigs_read, i4 %trunc_ln101, i64 %SxoS, i64 %a, i64 %b, i64 %Stt_loc, i64 %term2_loc" [main.cpp:29->main.cpp:250]   --->   Operation 174 'call' 'call_ln29' <Predicate = true> <Delay = 1.36> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 39 <SV = 38> <Delay = 7.15>
+ST_39 : Operation 175 [1/13] (7.15ns)   --->   "%term1 = ddiv i64 1, i64 %sub_i1" [main.cpp:127->main.cpp:272]   --->   Operation 175 'ddiv' 'term1' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 176 [1/2] (0.00ns)   --->   "%call_ln29 = call void @fit_Pipeline_VITIS_LOOP_148_1, i128 %gmem, i32 %size_read, i64 %arrx_read, i4 %trunc_ln29, i64 %arry_read, i4 %trunc_ln30, i64 %arrsigs_read, i4 %trunc_ln101, i64 %SxoS, i64 %a, i64 %b, i64 %Stt_loc, i64 %term2_loc" [main.cpp:29->main.cpp:250]   --->   Operation 176 'call' 'call_ln29' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 40 <SV = 39> <Delay = 7.15>
+ST_40 : [1/1] (0.65ns)   --->   Input mux for Operation 177 '%Sx2 = dmul i64 %Sx_loc_load, i64 %Sx_loc_load'
+ST_40 : Operation 177 [4/4] (4.92ns)   --->   "%Sx2 = dmul i64 %Sx_loc_load, i64 %Sx_loc_load" [main.cpp:145->main.cpp:272]   --->   Operation 177 'dmul' 'Sx2' <Predicate = true> <Delay = 4.92> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 178 [1/1] (0.00ns)   --->   "%Stt_loc_load = load i64 %Stt_loc"   --->   Operation 178 'load' 'Stt_loc_load' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 179 [1/1] (0.00ns)   --->   "%term2_loc_load = load i64 %term2_loc"   --->   Operation 179 'load' 'term2_loc_load' <Predicate = true> <Delay = 0.00>
+ST_40 : [1/1] (0.65ns)   --->   Input mux for Operation 180 '%mul21_i = dmul i64 %S_loc_load, i64 %Stt_loc_load'
+ST_40 : Operation 180 [4/4] (4.92ns)   --->   "%mul21_i = dmul i64 %S_loc_load, i64 %Stt_loc_load" [main.cpp:173->main.cpp:272]   --->   Operation 180 'dmul' 'mul21_i' <Predicate = true> <Delay = 4.92> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_40 : [1/1] (0.75ns)   --->   Input mux for Operation 181 '%ob2 = ddiv i64 1, i64 %Stt_loc_load'
+ST_40 : Operation 181 [13/13] (6.40ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 181 'ddiv' 'ob2' <Predicate = true> <Delay = 6.40> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_40 : [1/1] (0.65ns)   --->   Input mux for Operation 182 '%gof = dmul i64 %term1, i64 %term2_loc_load'
+ST_40 : Operation 182 [4/4] (4.92ns)   --->   "%gof = dmul i64 %term1, i64 %term2_loc_load" [main.cpp:179->main.cpp:272]   --->   Operation 182 'dmul' 'gof' <Predicate = true> <Delay = 4.92> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 40> <Delay = 7.15>
+ST_41 : Operation 183 [3/4] (5.58ns)   --->   "%Sx2 = dmul i64 %Sx_loc_load, i64 %Sx_loc_load" [main.cpp:145->main.cpp:272]   --->   Operation 183 'dmul' 'Sx2' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 184 [3/4] (5.58ns)   --->   "%mul21_i = dmul i64 %S_loc_load, i64 %Stt_loc_load" [main.cpp:173->main.cpp:272]   --->   Operation 184 'dmul' 'mul21_i' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 185 [12/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 185 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 186 [3/4] (5.58ns)   --->   "%gof = dmul i64 %term1, i64 %term2_loc_load" [main.cpp:179->main.cpp:272]   --->   Operation 186 'dmul' 'gof' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 41> <Delay = 7.15>
+ST_42 : Operation 187 [2/4] (5.58ns)   --->   "%Sx2 = dmul i64 %Sx_loc_load, i64 %Sx_loc_load" [main.cpp:145->main.cpp:272]   --->   Operation 187 'dmul' 'Sx2' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 188 [2/4] (5.58ns)   --->   "%mul21_i = dmul i64 %S_loc_load, i64 %Stt_loc_load" [main.cpp:173->main.cpp:272]   --->   Operation 188 'dmul' 'mul21_i' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 189 [11/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 189 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 190 [2/4] (5.58ns)   --->   "%gof = dmul i64 %term1, i64 %term2_loc_load" [main.cpp:179->main.cpp:272]   --->   Operation 190 'dmul' 'gof' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 42> <Delay = 7.15>
+ST_43 : Operation 191 [1/4] (5.58ns)   --->   "%Sx2 = dmul i64 %Sx_loc_load, i64 %Sx_loc_load" [main.cpp:145->main.cpp:272]   --->   Operation 191 'dmul' 'Sx2' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 192 [1/4] (5.58ns)   --->   "%mul21_i = dmul i64 %S_loc_load, i64 %Stt_loc_load" [main.cpp:173->main.cpp:272]   --->   Operation 192 'dmul' 'mul21_i' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 193 [10/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 193 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 194 [1/4] (5.58ns)   --->   "%gof = dmul i64 %term1, i64 %term2_loc_load" [main.cpp:179->main.cpp:272]   --->   Operation 194 'dmul' 'gof' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 195 [1/1] (0.00ns)   --->   "%bitcast_ln30_5 = bitcast i64 %gof" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:276]   --->   Operation 195 'bitcast' 'bitcast_ln30_5' <Predicate = true> <Delay = 0.00>
+ST_43 : Operation 196 [1/1] (1.00ns)   --->   "%printdouble_ln30 = printdouble i32 6, i64 %bitcast_ln30_5" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:276]   --->   Operation 196 'printdouble' 'printdouble_ln30' <Predicate = true> <Delay = 1.00> <CoreInst = "hlsPrintDouble">   --->   Core 139 'hlsPrintDouble' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'printdouble'> <InPorts = 0> <OutPorts = 0>
+
+State 44 <SV = 43> <Delay = 7.15>
+ST_44 : [1/1] (0.75ns)   --->   Input mux for Operation 197 '%div22_i = ddiv i64 %Sx2, i64 %mul21_i'
+ST_44 : Operation 197 [13/13] (6.40ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 197 'ddiv' 'div22_i' <Predicate = true> <Delay = 6.40> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 198 [9/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 198 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 44> <Delay = 7.15>
+ST_45 : Operation 199 [12/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 199 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 200 [8/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 200 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 46 <SV = 45> <Delay = 7.15>
+ST_46 : Operation 201 [11/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 201 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 202 [7/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 202 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 47 <SV = 46> <Delay = 7.15>
+ST_47 : Operation 203 [10/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 203 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 204 [6/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 204 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 48 <SV = 47> <Delay = 7.15>
+ST_48 : [1/1] (0.75ns)   --->   Input mux for Operation 205 '%oneOverS = ddiv i64 1, i64 %S_loc_load'
+ST_48 : Operation 205 [13/13] (6.40ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 205 'ddiv' 'oneOverS' <Predicate = true> <Delay = 6.40> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 206 [9/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 206 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 207 [5/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 207 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 48> <Delay = 7.15>
+ST_49 : Operation 208 [12/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 208 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 209 [8/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 209 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 210 [4/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 210 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 49> <Delay = 7.15>
+ST_50 : Operation 211 [11/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 211 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_50 : Operation 212 [7/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 212 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_50 : Operation 213 [3/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 213 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 51 <SV = 50> <Delay = 7.15>
+ST_51 : Operation 214 [10/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 214 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 215 [6/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 215 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 216 [2/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 216 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 51> <Delay = 7.15>
+ST_52 : Operation 217 [9/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 217 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_52 : Operation 218 [5/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 218 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_52 : Operation 219 [1/13] (7.15ns)   --->   "%ob2 = ddiv i64 1, i64 %Stt_loc_load" [main.cpp:174->main.cpp:272]   --->   Operation 219 'ddiv' 'ob2' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 53 <SV = 52> <Delay = 7.15>
+ST_53 : Operation 220 [8/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 220 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 221 [4/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 221 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 222 [1/1] (0.00ns)   --->   "%bitcast_ln30_3 = bitcast i64 %ob2" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:177->main.cpp:272]   --->   Operation 222 'bitcast' 'bitcast_ln30_3' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 223 [1/1] (1.00ns)   --->   "%printdouble_ln30 = printdouble i32 4, i64 %bitcast_ln30_3" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:177->main.cpp:272]   --->   Operation 223 'printdouble' 'printdouble_ln30' <Predicate = true> <Delay = 1.00> <CoreInst = "hlsPrintDouble">   --->   Core 139 'hlsPrintDouble' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'printdouble'> <InPorts = 0> <OutPorts = 0>
+
+State 54 <SV = 53> <Delay = 7.15>
+ST_54 : Operation 224 [7/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 224 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_54 : Operation 225 [3/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 225 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 55 <SV = 54> <Delay = 7.15>
+ST_55 : Operation 226 [6/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 226 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 227 [2/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 227 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 56 <SV = 55> <Delay = 7.15>
+ST_56 : Operation 228 [5/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 228 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 229 [1/13] (7.15ns)   --->   "%div22_i = ddiv i64 %Sx2, i64 %mul21_i" [main.cpp:173->main.cpp:272]   --->   Operation 229 'ddiv' 'div22_i' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 57 <SV = 56> <Delay = 7.15>
+ST_57 : Operation 230 [4/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 230 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_57 : [1/1] (0.67ns)   --->   Input mux for Operation 231 '%add23_i = dadd i64 %div22_i, i64 1'
+ST_57 : Operation 231 [4/4] (4.48ns)   --->   "%add23_i = dadd i64 %div22_i, i64 1" [main.cpp:173->main.cpp:272]   --->   Operation 231 'dadd' 'add23_i' <Predicate = true> <Delay = 4.48> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.15> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 58 <SV = 57> <Delay = 7.15>
+ST_58 : Operation 232 [3/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 232 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_58 : Operation 233 [3/4] (5.15ns)   --->   "%add23_i = dadd i64 %div22_i, i64 1" [main.cpp:173->main.cpp:272]   --->   Operation 233 'dadd' 'add23_i' <Predicate = true> <Delay = 5.15> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.15> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 59 <SV = 58> <Delay = 7.15>
+ST_59 : Operation 234 [2/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 234 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_59 : Operation 235 [2/4] (5.15ns)   --->   "%add23_i = dadd i64 %div22_i, i64 1" [main.cpp:173->main.cpp:272]   --->   Operation 235 'dadd' 'add23_i' <Predicate = true> <Delay = 5.15> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.15> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 60 <SV = 59> <Delay = 7.15>
+ST_60 : Operation 236 [1/13] (7.15ns)   --->   "%oneOverS = ddiv i64 1, i64 %S_loc_load" [main.cpp:135->main.cpp:272]   --->   Operation 236 'ddiv' 'oneOverS' <Predicate = true> <Delay = 7.15> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 12> <II = 1> <Delay = 7.15> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_60 : Operation 237 [1/4] (5.15ns)   --->   "%add23_i = dadd i64 %div22_i, i64 1" [main.cpp:173->main.cpp:272]   --->   Operation 237 'dadd' 'add23_i' <Predicate = true> <Delay = 5.15> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 5.15> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 61 <SV = 60> <Delay = 5.58>
+ST_61 : [1/1] (0.65ns)   --->   Input mux for Operation 238 '%oa2 = dmul i64 %oneOverS, i64 %add23_i'
+ST_61 : Operation 238 [4/4] (4.92ns)   --->   "%oa2 = dmul i64 %oneOverS, i64 %add23_i" [main.cpp:173->main.cpp:272]   --->   Operation 238 'dmul' 'oa2' <Predicate = true> <Delay = 4.92> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 62 <SV = 61> <Delay = 5.58>
+ST_62 : Operation 239 [3/4] (5.58ns)   --->   "%oa2 = dmul i64 %oneOverS, i64 %add23_i" [main.cpp:173->main.cpp:272]   --->   Operation 239 'dmul' 'oa2' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 63 <SV = 62> <Delay = 5.58>
+ST_63 : Operation 240 [2/4] (5.58ns)   --->   "%oa2 = dmul i64 %oneOverS, i64 %add23_i" [main.cpp:173->main.cpp:272]   --->   Operation 240 'dmul' 'oa2' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 64 <SV = 63> <Delay = 6.58>
+ST_64 : Operation 241 [1/1] (0.00ns)   --->   "%spectopmodule_ln235 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_6" [main.cpp:235]   --->   Operation 241 'spectopmodule' 'spectopmodule_ln235' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 242 [1/1] (0.00ns)   --->   "%specinterface_ln235 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_17, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0" [main.cpp:235]   --->   Operation 242 'specinterface' 'specinterface_ln235' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 243 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %gmem, void @empty_14, i32 0, i32 0, void @empty_10, i32 64, i32 0, void @empty, void @empty_1, void @empty_10, i32 16, i32 16, i32 16, i32 16, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 243 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 244 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i128 %gmem"   --->   Operation 244 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 245 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %arrx, void @empty_9, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_2, void @empty_5, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_4, i32 4294967295, i32 0"   --->   Operation 245 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 246 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %arrx, void @empty_3, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_4, i32 4294967295, i32 0"   --->   Operation 246 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 247 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %arry, void @empty_9, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_2, void @empty_0, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_4, i32 4294967295, i32 0"   --->   Operation 247 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 248 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %arry, void @empty_3, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_4, i32 4294967295, i32 0"   --->   Operation 248 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 249 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %arrsigs, void @empty_9, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_2, void @empty_8, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_4, i32 4294967295, i32 0"   --->   Operation 249 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 250 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %arrsigs, void @empty_3, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_4, i32 4294967295, i32 0"   --->   Operation 250 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 251 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %size"   --->   Operation 251 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 252 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %size, void @empty_9, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_2, void @empty_7, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 252 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 253 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %size, void @empty_3, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 253 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 254 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_9, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_2, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 254 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 255 [1/1] (1.00ns)   --->   "%printnone_ln19 = printnone i32 0" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:19->main.cpp:27->main.cpp:250]   --->   Operation 255 'printnone' 'printnone_ln19' <Predicate = true> <Delay = 1.00> <CoreInst = "hlsPrintNone">   --->   Core 137 'hlsPrintNone' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'printnone'> <InPorts = 0> <OutPorts = 0>
+ST_64 : Operation 256 [1/1] (0.00ns)   --->   "%f_1_loc_load = load i64 %f_1_loc"   --->   Operation 256 'load' 'f_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 257 [1/4] (5.58ns)   --->   "%oa2 = dmul i64 %oneOverS, i64 %add23_i" [main.cpp:173->main.cpp:272]   --->   Operation 257 'dmul' 'oa2' <Predicate = true> <Delay = 5.58> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.58> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_64 : Operation 258 [1/1] (0.00ns)   --->   "%bitcast_ln30_2 = bitcast i64 %oa2" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:176->main.cpp:272]   --->   Operation 258 'bitcast' 'bitcast_ln30_2' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 259 [1/1] (1.00ns)   --->   "%printdouble_ln30 = printdouble i32 3, i64 %bitcast_ln30_2" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:176->main.cpp:272]   --->   Operation 259 'printdouble' 'printdouble_ln30' <Predicate = true> <Delay = 1.00> <CoreInst = "hlsPrintDouble">   --->   Core 139 'hlsPrintDouble' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'printdouble'> <InPorts = 0> <OutPorts = 0>
+ST_64 : Operation 260 [1/1] (0.00ns)   --->   "%bitcast_ln30_4 = bitcast i64 %f_1_loc_load" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:275]   --->   Operation 260 'bitcast' 'bitcast_ln30_4' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 261 [1/1] (1.00ns)   --->   "%printdouble_ln30 = printdouble i32 5, i64 %bitcast_ln30_4" [/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:275]   --->   Operation 261 'printdouble' 'printdouble_ln30' <Predicate = true> <Delay = 1.00> <CoreInst = "hlsPrintDouble">   --->   Core 139 'hlsPrintDouble' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'printdouble'> <InPorts = 0> <OutPorts = 0>
+ST_64 : Operation 262 [1/1] (0.00ns)   --->   "%ret_ln277 = ret" [main.cpp:277]   --->   Operation 262 'ret' 'ret_ln277' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 2.362ns
+The critical path consists of the following:
+	wire read operation ('size') on port 'size' [6]  (1.000 ns)
+	'call' operation ('call_ln29', main.cpp:29->main.cpp:250) to 'fit_Pipeline_VITIS_LOOP_28_1' [37]  (1.362 ns)
+
+ <State 2>: 0.000ns
+The critical path consists of the following:
+
+ <State 3>: 5.470ns
+The critical path consists of the following:
+	'load' operation ('sx_loc_load') on local variable 'sx_loc' [41]  (0.000 ns)
+	multiplexor before operation 'mul' with delay (0.629 ns)
+'mul' operation ('sx2', main.cpp:251) [42]  (4.841 ns)
+
+ <State 4>: 7.014ns
+The critical path consists of the following:
+	'sub' operation ('a1', main.cpp:253) [45]  (1.362 ns)
+	multiplexor before operation 'sitodp' with delay (0.755 ns)
+'sitodp' operation ('conv5', main.cpp:255) [48]  (4.897 ns)
+
+ <State 5>: 5.652ns
+The critical path consists of the following:
+	'sitodp' operation ('conv5', main.cpp:255) [48]  (5.652 ns)
+
+ <State 6>: 7.158ns
+The critical path consists of the following:
+	multiplexor before operation 'ddiv' with delay (0.755 ns)
+'ddiv' operation ('a', main.cpp:255) [50]  (6.403 ns)
+
+ <State 7>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('a', main.cpp:255) [50]  (7.158 ns)
+
+ <State 8>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('a', main.cpp:255) [50]  (7.158 ns)
+
+ <State 9>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('a', main.cpp:255) [50]  (7.158 ns)
+
+ <State 10>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('a', main.cpp:255) [50]  (7.158 ns)
+
+ <State 11>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('a', main.cpp:255) [50]  (7.158 ns)
+
+ <State 12>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('a', main.cpp:255) [50]  (7.158 ns)
+
+ <State 13>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('a', main.cpp:255) [50]  (7.158 ns)
+
+ <State 14>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('a', main.cpp:255) [50]  (7.158 ns)
+
+ <State 15>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('a', main.cpp:255) [50]  (7.158 ns)
+
+ <State 16>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('a', main.cpp:255) [50]  (7.158 ns)
+
+ <State 17>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('a', main.cpp:255) [50]  (7.158 ns)
+
+ <State 18>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('a', main.cpp:255) [50]  (7.158 ns)
+
+ <State 19>: 1.347ns
+The critical path consists of the following:
+	'call' operation ('call_ln255', main.cpp:255) to 'fit_Pipeline_VITIS_LOOP_204_1' [62]  (1.347 ns)
+
+ <State 20>: 0.000ns
+The critical path consists of the following:
+
+ <State 21>: 5.652ns
+The critical path consists of the following:
+	'sitodp' operation ('conv_i1', main.cpp:127->main.cpp:272) [64]  (5.652 ns)
+
+ <State 22>: 5.652ns
+The critical path consists of the following:
+	'sitodp' operation ('conv_i1', main.cpp:127->main.cpp:272) [64]  (5.652 ns)
+
+ <State 23>: 5.158ns
+The critical path consists of the following:
+	multiplexor before operation 'dadd' with delay (0.671 ns)
+'dadd' operation ('sub_i1', main.cpp:127->main.cpp:272) [65]  (4.487 ns)
+
+ <State 24>: 5.158ns
+The critical path consists of the following:
+	'dadd' operation ('sub_i1', main.cpp:127->main.cpp:272) [65]  (5.158 ns)
+
+ <State 25>: 7.158ns
+The critical path consists of the following:
+	'load' operation ('S_loc_load') on local variable 'S_loc' [69]  (0.000 ns)
+	multiplexor before operation 'ddiv' with delay (0.755 ns)
+'ddiv' operation ('SxoS', main.cpp:143->main.cpp:272) [73]  (6.403 ns)
+
+ <State 26>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('SxoS', main.cpp:143->main.cpp:272) [73]  (7.158 ns)
+
+ <State 27>: 7.158ns
+The critical path consists of the following:
+	multiplexor before operation 'ddiv' with delay (0.755 ns)
+'ddiv' operation ('term1', main.cpp:127->main.cpp:272) [66]  (6.403 ns)
+
+ <State 28>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('term1', main.cpp:127->main.cpp:272) [66]  (7.158 ns)
+
+ <State 29>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('term1', main.cpp:127->main.cpp:272) [66]  (7.158 ns)
+
+ <State 30>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('term1', main.cpp:127->main.cpp:272) [66]  (7.158 ns)
+
+ <State 31>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('term1', main.cpp:127->main.cpp:272) [66]  (7.158 ns)
+
+ <State 32>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('term1', main.cpp:127->main.cpp:272) [66]  (7.158 ns)
+
+ <State 33>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('term1', main.cpp:127->main.cpp:272) [66]  (7.158 ns)
+
+ <State 34>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('term1', main.cpp:127->main.cpp:272) [66]  (7.158 ns)
+
+ <State 35>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('term1', main.cpp:127->main.cpp:272) [66]  (7.158 ns)
+
+ <State 36>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('term1', main.cpp:127->main.cpp:272) [66]  (7.158 ns)
+
+ <State 37>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('term1', main.cpp:127->main.cpp:272) [66]  (7.158 ns)
+
+ <State 38>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('term1', main.cpp:127->main.cpp:272) [66]  (7.158 ns)
+
+ <State 39>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('term1', main.cpp:127->main.cpp:272) [66]  (7.158 ns)
+
+ <State 40>: 7.158ns
+The critical path consists of the following:
+	'load' operation ('Stt_loc_load') on local variable 'Stt_loc' [76]  (0.000 ns)
+	multiplexor before operation 'ddiv' with delay (0.755 ns)
+'ddiv' operation ('ob2', main.cpp:174->main.cpp:272) [82]  (6.403 ns)
+
+ <State 41>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('ob2', main.cpp:174->main.cpp:272) [82]  (7.158 ns)
+
+ <State 42>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('ob2', main.cpp:174->main.cpp:272) [82]  (7.158 ns)
+
+ <State 43>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('ob2', main.cpp:174->main.cpp:272) [82]  (7.158 ns)
+
+ <State 44>: 7.158ns
+The critical path consists of the following:
+	multiplexor before operation 'ddiv' with delay (0.755 ns)
+'ddiv' operation ('div22_i', main.cpp:173->main.cpp:272) [79]  (6.403 ns)
+
+ <State 45>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('div22_i', main.cpp:173->main.cpp:272) [79]  (7.158 ns)
+
+ <State 46>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('div22_i', main.cpp:173->main.cpp:272) [79]  (7.158 ns)
+
+ <State 47>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('div22_i', main.cpp:173->main.cpp:272) [79]  (7.158 ns)
+
+ <State 48>: 7.158ns
+The critical path consists of the following:
+	multiplexor before operation 'ddiv' with delay (0.755 ns)
+'ddiv' operation ('oneOverS', main.cpp:135->main.cpp:272) [70]  (6.403 ns)
+
+ <State 49>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('oneOverS', main.cpp:135->main.cpp:272) [70]  (7.158 ns)
+
+ <State 50>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('oneOverS', main.cpp:135->main.cpp:272) [70]  (7.158 ns)
+
+ <State 51>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('oneOverS', main.cpp:135->main.cpp:272) [70]  (7.158 ns)
+
+ <State 52>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('oneOverS', main.cpp:135->main.cpp:272) [70]  (7.158 ns)
+
+ <State 53>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('oneOverS', main.cpp:135->main.cpp:272) [70]  (7.158 ns)
+
+ <State 54>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('oneOverS', main.cpp:135->main.cpp:272) [70]  (7.158 ns)
+
+ <State 55>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('oneOverS', main.cpp:135->main.cpp:272) [70]  (7.158 ns)
+
+ <State 56>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('oneOverS', main.cpp:135->main.cpp:272) [70]  (7.158 ns)
+
+ <State 57>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('oneOverS', main.cpp:135->main.cpp:272) [70]  (7.158 ns)
+
+ <State 58>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('oneOverS', main.cpp:135->main.cpp:272) [70]  (7.158 ns)
+
+ <State 59>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('oneOverS', main.cpp:135->main.cpp:272) [70]  (7.158 ns)
+
+ <State 60>: 7.158ns
+The critical path consists of the following:
+	'ddiv' operation ('oneOverS', main.cpp:135->main.cpp:272) [70]  (7.158 ns)
+
+ <State 61>: 5.580ns
+The critical path consists of the following:
+	multiplexor before operation 'dmul' with delay (0.657 ns)
+'dmul' operation ('oa2', main.cpp:173->main.cpp:272) [81]  (4.923 ns)
+
+ <State 62>: 5.580ns
+The critical path consists of the following:
+	'dmul' operation ('oa2', main.cpp:173->main.cpp:272) [81]  (5.580 ns)
+
+ <State 63>: 5.580ns
+The critical path consists of the following:
+	'dmul' operation ('oa2', main.cpp:173->main.cpp:272) [81]  (5.580 ns)
+
+ <State 64>: 6.580ns
+The critical path consists of the following:
+	'dmul' operation ('oa2', main.cpp:173->main.cpp:272) [81]  (5.580 ns)
+	'printdouble' operation ('printdouble_ln30', /opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_print.h:30->main.cpp:176->main.cpp:272) [84]  (1.000 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
