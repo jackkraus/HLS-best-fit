@@ -1,0 +1,44 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "main",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "main"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "main",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "main"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/csynth.tcl",
+    "sourceLine": 16,
+    "success": true
+  }
+]

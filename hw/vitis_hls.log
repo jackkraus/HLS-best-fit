@@ -1,0 +1,79 @@
+INFO: [HLS 200-10] Running '/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'akraus' on host 'vm01.head.cm.local' (Linux_x86_64 version 4.18.0-372.9.1.el8.x86_64) on Thu Feb 27 14:15:26 CST 2025
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux release 8.6 (Ootpa)"
+INFO: [HLS 200-10] In directory '/nfs/ihfs/home_metis/akraus/HW3-dir/hw'
+Sourcing Tcl script '/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: source /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/csynth.tcl
+INFO: [HLS 200-1510] Running: open_project hls_fit 
+INFO: [HLS 200-10] Opening project '/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit'.
+INFO: [HLS 200-1510] Running: set_top main 
+INFO: [HLS 200-1510] Running: add_files main.cpp 
+INFO: [HLS 200-10] Adding design file 'main.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vitis 
+INFO: [HLS 200-10] Opening solution '/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.08 seconds. CPU system time: 0.34 seconds. Elapsed time: 1.48 seconds; current allocated memory: 2.292 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 200-1995] There were 298 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 298 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 14 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd' into 'calc_chi_squared' (main.cpp:122:0)
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd_x' into 'calc_chi_squared' (main.cpp:122:0)
+INFO: [HLS 214-178] Inlining function 'add_nums' into 'fit' (main.cpp:233:0)
+INFO: [HLS 214-178] Inlining function 'calc_distance' into 'fit' (main.cpp:233:0)
+INFO: [HLS 214-178] Inlining function 'calc_chi_squared' into 'fit' (main.cpp:233:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.63 seconds. CPU system time: 0.29 seconds. Elapsed time: 6.8 seconds; current allocated memory: 2.294 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 2.294 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 2.294 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 2.295 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.316 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 2.316 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'main' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.06 seconds; current allocated memory: 2.316 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.316 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on function 'main' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'main'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.316 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 2.316 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.22 seconds; current allocated memory: 2.321 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for main.
+INFO: [VLOG 209-307] Generating Verilog RTL for main.
+INFO: [HLS 200-789] **** Estimated Fmax: 0.00 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3.21 seconds. CPU system time: 0.7 seconds. Elapsed time: 8.95 seconds; current allocated memory: 31.152 MB.
+INFO: [HLS 200-112] Total CPU user time: 5.99 seconds. Total CPU system time: 1.14 seconds. Total elapsed time: 12.09 seconds; peak allocated memory: 2.321 GB.

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1740687337662">
+  <ports id="10" name="ap_return" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <edges source_obj="//@blocks.0/@node_objs.0" sink_obj="//@ports.0"/>
+  <blocks id="6" name="main" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="_ln340" lineNumber="340" fileName="main.cpp" fileDirectory="../." coreId="1667592275" contextFuncName="main" opcode="ret" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="340" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="main"/>
+      <dataOutputObjs>ap_return</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <fileValidLineNumbers fileName="main.cpp">
+      <validLinenumbers>340</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ioPorts name="ap_return">
+    <contents name="ret">
+      <nodeIds>5</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="1" stage="1" latency="1"/>
+      <operations id="2" stage="1" latency="1"/>
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="main" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>6</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

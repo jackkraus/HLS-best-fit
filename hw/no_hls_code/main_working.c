@@ -1,17 +1,11 @@
 #include "main.h"
-//#include <ap_int.h>
-//#include <ap_fixed.h> // Using fixed-point arithmetic for resource optimization
-//#include <hls_stream.h>
 #include <stdio.h>  // For debug prints, originally iostream
 #include <stdlib.h>
 #include <string.h>
-//#include "hls_math.h"
-//#include <fstream>
-//#include <iomanip>
-//#include <cstring>
-//#include "fit.h"
 
-//using namespace std;
+//#include <ap_int.h>
+//#include <ap_fixed.h> // Using fixed-point arithmetic for resource optimization
+//#include <hls_stream.h>
 
 /* func: add_nums()
  *
@@ -19,81 +13,134 @@
  * 	start adding them together. 
  */
 int add_nums(const long arr_x[], const long arr_y[], int size, long* sx, long* sy, long* sxy, long* sxx){
-		
 	*sx = 0;
        	*sy = 0;
        	*sxy = 0;
 	*sxx = 0;
 	
-	//printf("add_nums() --> Before LOOP: sx=%d, sy=%d, sxy=%d, sxx%d\n", *sx, *sy, *sxy, *sxx);
-	
 	//printf("<== Starting add_nums LOOP ==>\n");
 	for(int i = 0; i < size; i++){
 		*sx += arr_x[i];
 		*sy += arr_y[i];
-	//	printf("addnums() --> i = %d, arr_y[i] = %d, sy == %d\n", i,arr_y[i], *sy); 
 		*sxy += arr_x[i]*arr_y[i];
 		*sxx += arr_x[i]*arr_x[i];
 	}
-	
-	//printf("fit() --> Sum of x's: %d\n", *sx);
-	//printf("fit() --> Sum of y's: %d\n", *sy);
-	//printf("fit() --> Sum of yx's: %d\n", *sxy);
-	//printf("fit() --> Sum of xx's: %d\n", *sxx);
+}
 
+/* func: calc_ovr_sig_sqrd_x()
+ *
+ * This function adds up all of the inverse squared sigmas in the event array
+ * 	and multiplies it by the x's
+ */
+double calc_ovr_sig_sqrd_x(long arr_sig[], int size, long arr_x[]) {
+	double Sx = 0;
+	double sig, overSig;
 
+	for(int i = 0; i < size; i++) {
+		sig = (double)arr_sig[i];
+		overSig = 1/sig; 
+		Sx += (double)arr_x[i]*overSig*overSig;	
+	}
+	return Sx; 
+}
+
+/* func: calc_ovr_sig_sqrd_y()
+ *
+ * This function adds up all of the inverse squared sigmas in the event array
+ * 	and multiplies it by the y's
+ */
+double calc_ovr_sig_sqrd_y(long arr_sig[], int size, long arr_y[]) {
+	double Sy = 0;
+	double sig, overSig;
+
+	for(int i = 0; i < size; i++) {
+		sig = (double)arr_sig[i];
+		overSig = 1/sig; 
+		Sy += (double)arr_y[i]*overSig*overSig;	
+	}
+	return Sy; 
+}
+
+/* func: calc_ovr_sig_sqrd()
+ *
+ * This function adds up all of the inverse squared sigmas in the event array
+ */
+double calc_ovr_sig_sqrd(long arr_sig[], int size) {
+	double S = 0;
+	double sig, overSig;
+
+	for(int i = 0; i < size; i++) {
+		sig = (double)arr_sig[i];
+		overSig = 1/sig; 
+		//printf("calc_ovr_sig_sqrd() --> sig = %.6f\n", sig);
+		//printf("calc_ovr_sig_sqrd() --> overSig = %.6f\n", overSig);
+		S += overSig*overSig;	
+	}
+	return S; 
 }
 
 /* func: calc_chi_squared()
  *
  * This function calculates the goodness of fit from each of the parameters: 
  */
-double calc_chi_squared(const double a, const double b, const long arr_x[], const long arr_y[], const long arr_sig[], int size) {
+double calc_chi_squared(double a, double b, long arr_x[], long arr_y[], long arr_sig[], int size) {
 	double temp = 0;
 	double tempOverSig = 0;
 	double tempOverSigSquared = 0;
 	double gof = 0; // our goodness-of-fit
 	double term1 = 1/((double) size - 2); // invoked after loop
 	double term2 = 0; // adding tempOverSigSquared
-	
-	double x, y, sig;
+	double x, y, sig, overSig;
 
+	//for uncertainty calcs
+	double t, S, Sx, SxoS, Sx2, Sy, Stt, oa2, ob2;
+	S = calc_ovr_sig_sqrd(arr_sig, size);
+	// printf("calc_chi_squared() --> S = %.6f\n", S);
+	double oneOverS = 1/S;
+	
+	// Sx
+	Sx = calc_ovr_sig_sqrd_x(arr_sig, size, arr_x);
+	// printf("calc_chi_squared() --> Sx = %.6f\n", Sx);
+	// Sy (not sure if i need this yet)
+	// Sy = calc_ovr_sig_sqrd_y(arr_sig, size, arr_y);
+	
+	SxoS = Sx/S; // Sx over S
+	Stt = 0; 
+	Sx2 = Sx*Sx; // Sx^2
 
 	//printf("<== Starting calc_chi_squared LOOP ==>\n");
 	for(int i = 0; i < size; i++) {
-		x = (double)arr_x[i];
-		y = (double)arr_y[i];
-		sig = (double)arr_sig[i];
+		x = (double)arr_x[i]; // x_i
+		y = (double)arr_y[i]; // y_i
+		sig = (double)arr_sig[i]; // sig_i 
+		overSig = 1/sig; // I need this here for t, but it's calculated again in calc_over_sig_sqrd
+
+
+		// Calculate t_i
+		t  = overSig * (x-SxoS); 
+		
+		Stt += t*t;
 
 		temp = y - a - b*x;
-		tempOverSig = temp/sig;
+		tempOverSig = temp*overSig;
 		tempOverSigSquared = tempOverSig*tempOverSig; 
 		
 	        term2 += tempOverSigSquared;
-		// printf("calc_chi_squared() --> i = %d ; x=%.2f\n",i,x);
-		// printf("calc_chi_squared() --> i = %d ; y=%.2f\n",i,y);
-		// printf("calc_chi_squared() --> i = %d ; sig=%.2f\n",i,sig);
-		// printf("calc_chi_squared() --> i = %d ; temp=%.6f\n",i,temp);
-		// printf("calc_chi_squared() --> i = %d ; tempOverSig=%.6f\n",i,tempOverSig);
-		// printf("calc_chi_squared() --> i = %d ; tempOverSigSquared=%.6f\n",i,tempOverSigSquared);
-		// printf("calc_chi_squared() --> i = %d ; term2 = %.9f\n",i,term2);
-		 // For debugging precision of variables 
-		 // if(i<3) {
-		 // 	printf("calc_chi_squared() --> i = %d ; tempOverSigSquared=%.6f\n",i,tempOverSigSquared);
-		 // 	printf("calc_chi_squared() --> i = %d ; term2=%.6f\n",i,term2);
-		 // }
-		
-		// Clear out temp values, jic	
+				// Clear out temp values, jic	
 		temp = 0;
 		tempOverSig = 0; 
 		tempOverSigSquared = 0;		
 	}
-		
-	//printf("calc_chi_squared() -->  term1 = %.9f\n",term1);
-	//printf("calc_chi_squared() -->  term2 = %.9f\n",term2);
+	
+	//uncertainty calcs
+	oa2 = oneOverS*(1 + Sx2/(S*Stt));
+        ob2 = 1/Stt;	
+
+	printf("	uncertainty on a:  %.6f\n", oa2);
+	printf("	uncertainty on b:  %.6f\n", ob2);
+	
 	gof = term1*term2; 
 	
-	// printf("calc_chi_squared() --> gof = %.9f\n",gof);
 	return gof; 
 }
 
@@ -117,20 +164,12 @@ double calc_distance(const double a, const double b, const long arr_x[], const l
 		tempSquared = temp*temp;
 
 		f += tempSquared;
-
-		// For debugging precision of variables 
-		//if(i<3) {
-		 	//printf("calc_distance() --> i=%d ; temp=%.6f\n",i,temp);
-		 	//printf("calc_distance() --> i=%d ; tempSquared=%.6f\n",i,tempSquared);
-		 	//printf("calc_distance() --> i=%d ; f=%.6f\n",i,f);
-		//}	
 		
 		// Clear out temp values, jic	
 		temp = 0;
 		tempSquared = 0;
 	}
 
-	//printf("calc_distance() -->  f(a,b) = %.9f\n",f);
 	return f;
 }
 
@@ -154,27 +193,16 @@ void fit(long arr_x[], long arr_y[], long arr_sig[], int size) {
 	b2 = 0; 
 
 	//<-- Call 'add_nums()' function -->
-	//printf("fit() --> After INIT: sy=%d\n",sy);
 	add_nums(arr_x, arr_y, size, &sx, &sy, &sxy, &sxx); 
 	sx2 = sx*sx; 		
-	//printf("fit() --> After add_nums: sx2=%d\n",sx2);	
-	//printf("fit() --> Sum of x's: %d\n", sx);
-	//printf("fit() --> Sum of y's: %d\n", sy);
-	//printf("fit() --> Sum of yx's: %d\n", sxy);
-	//printf("fit() --> Sum of xx's: %d\n", sxx);
-
 	// <-- Parameter 'a' calc --> 	
 	a1 = sy*sxx - sxy*sx;
 	a2 = size*sxx - sx2; 	
-	//printf("fit() --> a1: %d\n", a1);
-	//printf("fit() --> a2: %d\n", a2);
 	a = (double) a1/a2;
 
 	// <-- Parameter 'b' calc --> 	
 	b1 = size*sxy - sx*sy;
 	b2 = size*sxx - sx2; 	
-	//printf("fit() --> b1: %d\n", b1);	
-	//printf("fit() --> b2: %d\n", b2);	
 	b = (double) b1/b2;
 
 	printf("fit() --> Best fit param a: %0.6f\n", a);	
@@ -195,15 +223,11 @@ void fit(long arr_x[], long arr_y[], long arr_sig[], int size) {
 
 }
 
+
 int main() {
-	
-	//Eventually we'll have multiple events, instances where there's a set of x's and y's
-	//	- The way to distinguish an event from another is by the 'last' value. 
-	//		If the last value == 1, then that's the last x,y, and sigma for that event
-	//			So implement a check
-	//	- I have to create new arrays that take in the temp arguments and create new arrays 
-	//		by which it can then send in for the fit function
-	
+
+
+
 	long *arr_x = NULL;
 	long *arr_y = NULL;
 	long *arr_sig = NULL;
@@ -223,29 +247,16 @@ int main() {
 		arr_y[j] = (long)tempys[i];
 		arr_sig[j] = (long)tempsigmas[i];
 		j++;
-		//printf("main() --> arr_y[i] = %d\n",arr_y[i]); 	
 
 		if(templasts[i] == 1) {
 			printf("============ EVENT %d ============\n", event_count);
-
 			// since arr_q changes over the course of the loop, 
 			// 	we cant use iterator to obtain the size  
 			arr_size = i - previous_i; // i will go up to tempN but the size will stay low 
 			previous_i = i;
-			
-			// printf("main() --> i == %d\n", i); 
-			//printf("main() --> arr_size == %d\n", arr_size); 
-			// printf("main() --> arr_x[i-2] == %d\n", arr_x[i-2]);
-			// printf("main() --> arr_y[i-2] == %d\n", arr_y[i-2]); // these have data in them
-			
+		
 			fit(arr_x, arr_y, arr_sig, arr_size);
-		//	printf("main() --> fit for EVT %d complete\n", event_count);
 
-			// This is to check whether arr_y has actually been reset	
-			// for(int k = 0;  k < arr_size; k++) {
-			// 	printf("main() --> reset arr_y[j] = %d\n",arr_y[j]); 	
-			// }
-			
 			// this will set all data in the arrays to 0	
 			memset(arr_x, 0, arr_size * sizeof(long));
 			memset(arr_y, 0, arr_size * sizeof(long));
@@ -263,7 +274,5 @@ int main() {
 	free(arr_y);
 	free(arr_sig);
 
-	//fit(tempxs, tempys, tempsigmas, templasts, tempN);
-	
 	return 0;
 }

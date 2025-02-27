@@ -1,0 +1,23 @@
+{
+  "0": {
+    "basicblocks": 5,
+    "calls": "1",
+    "file": "main.cpp",
+    "fileloc": 287,
+    "instructions": 15,
+    "loads": {
+      "G": 1
+    },
+    "name": "main",
+    "total_instructions": 16
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "main.cpp",
+    "fileloc": 233,
+    "instructions": 1,
+    "name": "fit",
+    "total_instructions": 1
+  }
+}

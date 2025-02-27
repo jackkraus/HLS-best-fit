@@ -1,0 +1,24 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/csynth.tcl:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="main" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=main" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="main" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=main" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="main.cpp:122:0" msg_body="Inlining function 'calc_ovr_sig_sqrd' into 'calc_chi_squared'">
+        <args Callee="calc_ovr_sig_sqrd" Callee-DebugLoc="File main.cpp Line 96 Column 0" Caller="calc_chi_squared" Caller-DebugLoc="File main.cpp Line 122 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="main.cpp:122:0" msg_body="Inlining function 'calc_ovr_sig_sqrd_x' into 'calc_chi_squared'">
+        <args Callee="calc_ovr_sig_sqrd_x" Callee-DebugLoc="File main.cpp Line 49 Column 0" Caller="calc_chi_squared" Caller-DebugLoc="File main.cpp Line 122 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="main.cpp:233:0" msg_body="Inlining function 'add_nums' into 'fit'">
+        <args Callee="add_nums" Callee-DebugLoc="File main.cpp Line 21 Column 0" Caller="fit" Caller-DebugLoc="File main.cpp Line 233 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="main.cpp:233:0" msg_body="Inlining function 'calc_distance' into 'fit'">
+        <args Callee="calc_distance" Callee-DebugLoc="File main.cpp Line 195 Column 0" Caller="fit" Caller-DebugLoc="File main.cpp Line 233 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="main.cpp:233:0" msg_body="Inlining function 'calc_chi_squared' into 'fit'">
+        <args Callee="calc_chi_squared" Callee-DebugLoc="File main.cpp Line 122 Column 0" Caller="fit" Caller-DebugLoc="File main.cpp Line 233 Column 0"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

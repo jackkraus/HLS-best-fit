@@ -1,0 +1,702 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 2.313 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.c' ... 
+WARNING: [HLS 207-4840] control reaches end of non-void function (main.c:34:1)
+ERROR: [HLS 207-4840] control reaches end of non-void function (main.c:34:1)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.29 seconds. CPU system time: 0.28 seconds. Elapsed time: 0.62 seconds; current allocated memory: 0.516 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Cannot find source file main.c; skipping it.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 2.288 GB.
+WARNING: [HLS 200-1986] Could not apply TOP directive, invalid function, label, or variable (/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/directives.tcl:7)
+WARNING: [HLS 200-1986] Could not apply TOP directive, invalid function, label, or variable (/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/csynth.tcl:16)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.288 GB.
+ERROR: [HLS 200-70] Cannot find any design unit to elaborate.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 0.000 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 2.288 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.25 seconds. CPU system time: 0.23 seconds. Elapsed time: 0.52 seconds; current allocated memory: 2.289 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 200-1995] There were 294 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 316 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd(long*, int)' into 'calc_chi_squared(double, double, long*, long*, long*, int)' (main.cpp:85:0)
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd_x(long*, int, long*)' into 'calc_chi_squared(double, double, long*, long*, long*, int)' (main.cpp:85:0)
+INFO: [HLS 214-178] Inlining function 'add_nums(long const*, long const*, int, long*, long*, long*, long*)' into 'fit(long*, long*, long*, int)' (main.cpp:180:0)
+INFO: [HLS 214-178] Inlining function 'calc_distance(double, double, long const*, long const*)' into 'fit(long*, long*, long*, int)' (main.cpp:180:0)
+INFO: [HLS 214-178] Inlining function 'calc_chi_squared(double, double, long*, long*, long*, int)' into 'fit(long*, long*, long*, int)' (main.cpp:180:0)
+ERROR: [HLS 214-194] in function 'main': Undefined function malloc (main.cpp:241:19)
+ERROR: [HLS 214-194] in function 'main': Undefined function malloc (main.cpp:242:19)
+ERROR: [HLS 214-194] in function 'main': Undefined function malloc (main.cpp:243:21)
+ERROR: [HLS 214-194] in function 'main': Undefined function free (main.cpp:274:3)
+ERROR: [HLS 214-194] in function 'main': Undefined function free (main.cpp:275:3)
+ERROR: [HLS 214-194] in function 'main': Undefined function free (main.cpp:276:3)
+ERROR: [HLS 214-135] Syn check fail!
+ERROR: [HLS 200-1715] Encountered problem during source synthesis
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1.8 seconds. CPU system time: 0.46 seconds. Elapsed time: 7.24 seconds; current allocated memory: 2.305 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:234:17)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:235:17)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:236:19)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:249:9)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:250:9)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:251:11)
+ERROR: [HLS 207-3339] no matching function for call to 'fit' (main.cpp:261:5)
+INFO: [HLS 207-4378] candidate function not viable: no known conversion from 'long' to 'long *' for 1st argument; take the address of the argument with & (main.cpp:182:6)
+ERROR: [HLS 207-3339] no matching function for call to 'memset' (main.cpp:264:5)
+INFO: [HLS 207-4378] candidate function not viable: no known conversion from 'long' to 'void *' for 1st argument; take the address of the argument with & (/usr/include/string.h:61:14)
+ERROR: [HLS 207-3339] no matching function for call to 'memset' (main.cpp:265:5)
+ERROR: [HLS 207-3339] no matching function for call to 'memset' (main.cpp:266:5)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.16 seconds. CPU system time: 0.13 seconds. Elapsed time: 0.31 seconds; current allocated memory: 0.113 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+ERROR: [HLS 207-3592] templates must have C++ linkage (/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_stream_39.h:52:1)
+INFO: [HLS 207-4217] extern "C" language linkage specification begins here (main.cpp:2:1)
+ERROR: [HLS 207-1233] explicit specialization of non-template class 'stream' (/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_stream_39.h:56:7)
+ERROR: [HLS 207-3592] templates must have C++ linkage (/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_stream_39.h:55:1)
+ERROR: [HLS 207-3592] templates must have C++ linkage (/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_stream_39.h:163:1)
+ERROR: [HLS 207-1402] unknown template name 'stream' (/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/common/technology/autopilot/hls_stream_39.h:164:23)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:236:17)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:237:17)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:238:19)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:251:9)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:252:9)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:253:11)
+ERROR: [HLS 207-3339] no matching function for call to 'fit' (main.cpp:263:5)
+INFO: [HLS 207-4378] candidate function not viable: no known conversion from 'long' to 'long *' for 1st argument; take the address of the argument with & (main.cpp:186:6)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:267:11)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:268:11)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:269:13)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.16 seconds. CPU system time: 0.13 seconds. Elapsed time: 0.33 seconds; current allocated memory: 0.488 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+ERROR: [HLS 207-2538] declaration of 'add_nums' has a different language linkage (main.cpp:20:6)
+INFO: [HLS 207-70] previous declaration is here (./main.h:15:6)
+ERROR: [HLS 207-2538] declaration of 'calc_ovr_sig_sqrd_x' has a different language linkage (main.cpp:40:8)
+INFO: [HLS 207-70] previous declaration is here (./main.h:19:8)
+ERROR: [HLS 207-2538] declaration of 'calc_ovr_sig_sqrd_y' has a different language linkage (main.cpp:57:8)
+INFO: [HLS 207-70] previous declaration is here (./main.h:21:8)
+ERROR: [HLS 207-2538] declaration of 'calc_ovr_sig_sqrd' has a different language linkage (main.cpp:73:8)
+INFO: [HLS 207-70] previous declaration is here (./main.h:17:8)
+ERROR: [HLS 207-2538] declaration of 'calc_chi_squared' has a different language linkage (main.cpp:91:8)
+INFO: [HLS 207-70] previous declaration is here (./main.h:13:8)
+ERROR: [HLS 207-2538] declaration of 'calc_distance' has a different language linkage (main.cpp:156:8)
+INFO: [HLS 207-70] previous declaration is here (./main.h:11:8)
+ERROR: [HLS 207-2538] declaration of 'fit' has a different language linkage (main.cpp:186:6)
+INFO: [HLS 207-70] previous declaration is here (./main.h:9:6)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:236:17)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:237:17)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:238:19)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:251:9)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:252:9)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:253:11)
+ERROR: [HLS 207-3339] no matching function for call to 'fit' (main.cpp:263:5)
+INFO: [HLS 207-4378] candidate function not viable: no known conversion from 'long' to 'long *' for 1st argument; take the address of the argument with & (./main.h:9:6)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:267:11)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:268:11)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:269:13)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.18 seconds. CPU system time: 0.1 seconds. Elapsed time: 0.32 seconds; current allocated memory: 0.535 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 2.313 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+ERROR: [HLS 207-2538] declaration of 'add_nums' has a different language linkage (main.cpp:19:6)
+INFO: [HLS 207-70] previous declaration is here (./main.h:15:6)
+ERROR: [HLS 207-2538] declaration of 'calc_ovr_sig_sqrd_x' has a different language linkage (main.cpp:47:8)
+INFO: [HLS 207-70] previous declaration is here (./main.h:19:8)
+ERROR: [HLS 207-2538] declaration of 'calc_ovr_sig_sqrd_y' has a different language linkage (main.cpp:70:8)
+INFO: [HLS 207-70] previous declaration is here (./main.h:21:8)
+ERROR: [HLS 207-2538] declaration of 'calc_ovr_sig_sqrd' has a different language linkage (main.cpp:94:8)
+INFO: [HLS 207-70] previous declaration is here (./main.h:17:8)
+ERROR: [HLS 207-2538] declaration of 'calc_chi_squared' has a different language linkage (main.cpp:120:8)
+INFO: [HLS 207-70] previous declaration is here (./main.h:13:8)
+ERROR: [HLS 207-1237] extraneous closing brace ('}') (main.cpp:216:1)
+ERROR: [HLS 207-1237] extraneous closing brace ('}') (main.cpp:270:1)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:277:17)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:278:17)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:279:19)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:292:9)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:293:9)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:294:11)
+ERROR: [HLS 207-3339] no matching function for call to 'fit' (main.cpp:304:5)
+INFO: [HLS 207-4378] candidate function not viable: no known conversion from 'long' to 'long *' for 1st argument; take the address of the argument with & (main.cpp:224:6)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:308:11)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:309:11)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:310:13)
+ERROR: [HLS 207-1237] extraneous closing brace ('}') (main.cpp:329:1)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.16 seconds. CPU system time: 0.12 seconds. Elapsed time: 0.33 seconds; current allocated memory: 0.535 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+ERROR: [HLS 207-3776] use of undeclared identifier 'tempN' (main.cpp:201:21)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:289:16)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:290:16)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:291:18)
+ERROR: [HLS 207-3777] use of undeclared identifier 'tempN'; did you mean 'tempn'? (main.cpp:303:21)
+INFO: [HLS 207-4436] 'tempn' declared here (./main.h:16:11)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:304:8)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:305:8)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:306:10)
+ERROR: [HLS 207-3339] no matching function for call to 'fit' (main.cpp:316:4)
+INFO: [HLS 207-4378] candidate function not viable: no known conversion from 'long' to 'long *' for 1st argument; take the address of the argument with & (main.cpp:231:6)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:320:10)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:321:10)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:322:12)
+ERROR: [HLS 207-3777] use of undeclared identifier 'tempN'; did you mean 'tempn'? (main.cpp:326:52)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.16 seconds. CPU system time: 0.12 seconds. Elapsed time: 0.32 seconds; current allocated memory: 0.473 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+ERROR: [HLS 207-3777] use of undeclared identifier 'arr_sig'; did you mean 'arr_sigs'? (main.cpp:268:44)
+INFO: [HLS 207-4436] 'arr_sigs' declared here (main.cpp:231:42)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:289:16)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:290:16)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:291:18)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:304:8)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:305:8)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:306:10)
+ERROR: [HLS 207-3339] no matching function for call to 'fit' (main.cpp:316:4)
+INFO: [HLS 207-4378] candidate function not viable: no known conversion from 'long' to 'long *' for 1st argument; take the address of the argument with & (main.cpp:231:6)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:320:10)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:321:10)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:322:12)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.15 seconds. CPU system time: 0.11 seconds. Elapsed time: 0.32 seconds; current allocated memory: 0.457 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 2.313 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:289:15)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:290:15)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:291:17)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:304:7)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:305:7)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:306:9)
+ERROR: [HLS 207-3339] no matching function for call to 'fit' (main.cpp:316:4)
+INFO: [HLS 207-4378] candidate function not viable: no known conversion from 'long' to 'long *' for 1st argument; take the address of the argument with & (main.cpp:231:6)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:320:9)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:321:9)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:322:11)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.14 seconds. CPU system time: 0.14 seconds. Elapsed time: 0.31 seconds; current allocated memory: 0.414 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 2.288 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:289:15)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:290:15)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:291:17)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:304:7)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:305:7)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:306:9)
+ERROR: [HLS 207-3339] no matching function for call to 'fit' (main.cpp:316:4)
+INFO: [HLS 207-4378] candidate function not viable: no known conversion from 'long' to 'long *' for 1st argument; take the address of the argument with & (main.cpp:231:6)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:320:9)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:321:9)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:322:11)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.17 seconds. CPU system time: 0.13 seconds. Elapsed time: 0.34 seconds; current allocated memory: 0.410 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 2.288 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:289:15)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:290:15)
+ERROR: [HLS 207-1175] expected variable name or 'this' in lambda capture list (main.cpp:291:17)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:304:7)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:305:7)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:306:9)
+ERROR: [HLS 207-3339] no matching function for call to 'fit' (main.cpp:316:4)
+INFO: [HLS 207-4378] candidate function not viable: no known conversion from 'long' to 'long *' for 1st argument; take the address of the argument with & (main.cpp:231:6)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:320:9)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:321:9)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:322:11)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.15 seconds. CPU system time: 0.11 seconds. Elapsed time: 0.29 seconds; current allocated memory: 0.410 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 2.288 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+ERROR: [HLS 207-2323] 'tempN' cannot be captured because it does not have automatic storage duration (main.cpp:289:15)
+INFO: [HLS 207-4436] 'tempN' declared here (./main.h:16:11)
+ERROR: [HLS 207-1193] expected body of lambda expression (main.cpp:289:21)
+ERROR: [HLS 207-2323] 'tempN' cannot be captured because it does not have automatic storage duration (main.cpp:290:15)
+ERROR: [HLS 207-1193] expected body of lambda expression (main.cpp:290:21)
+ERROR: [HLS 207-2323] 'tempN' cannot be captured because it does not have automatic storage duration (main.cpp:291:17)
+ERROR: [HLS 207-1193] expected body of lambda expression (main.cpp:291:23)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:304:7)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:305:7)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:306:9)
+ERROR: [HLS 207-3339] no matching function for call to 'fit' (main.cpp:316:4)
+INFO: [HLS 207-4378] candidate function not viable: no known conversion from 'long' to 'long *' for 1st argument; take the address of the argument with & (main.cpp:231:6)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:320:9)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:321:9)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:322:11)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.15 seconds. CPU system time: 0.14 seconds. Elapsed time: 0.32 seconds; current allocated memory: 0.473 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+ERROR: [HLS 207-1193] expected body of lambda expression (main.cpp:287:24)
+ERROR: [HLS 207-1193] expected body of lambda expression (main.cpp:288:24)
+ERROR: [HLS 207-1193] expected body of lambda expression (main.cpp:289:26)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:302:7)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:303:7)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:304:9)
+ERROR: [HLS 207-3339] no matching function for call to 'fit' (main.cpp:314:4)
+INFO: [HLS 207-4378] candidate function not viable: no known conversion from 'long' to 'long *' for 1st argument; take the address of the argument with & (main.cpp:229:6)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:318:9)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:319:9)
+ERROR: [HLS 207-3746] subscripted value is not an array, pointer, or vector (main.cpp:320:11)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.15 seconds. CPU system time: 0.13 seconds. Elapsed time: 0.31 seconds; current allocated memory: 0.445 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 2.288 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.25 seconds. CPU system time: 0.3 seconds. Elapsed time: 0.57 seconds; current allocated memory: 2.289 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 200-1995] There were 296 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 296 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 14 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd' into 'calc_chi_squared' (main.cpp:118:0)
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd_x' into 'calc_chi_squared' (main.cpp:118:0)
+INFO: [HLS 214-178] Inlining function 'add_nums' into 'fit' (main.cpp:229:0)
+INFO: [HLS 214-178] Inlining function 'calc_distance' into 'fit' (main.cpp:229:0)
+INFO: [HLS 214-178] Inlining function 'calc_chi_squared' into 'fit' (main.cpp:229:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.52 seconds. CPU system time: 0.31 seconds. Elapsed time: 6.74 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 2.310 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 2.310 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'main' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.08 seconds; current allocated memory: 2.310 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 2.310 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on function 'main' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'main'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.310 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 2.310 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.22 seconds; current allocated memory: 2.315 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for main.
+INFO: [VLOG 209-307] Generating Verilog RTL for main.
+INFO: [HLS 200-789] **** Estimated Fmax: 0.00 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2.21 seconds. CPU system time: 0.68 seconds. Elapsed time: 7.97 seconds; current allocated memory: 28.188 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 2.288 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+ERROR: [HLS 207-1239] extraneous ')' before ';' (main.cpp:27:50)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.25 seconds. CPU system time: 0.14 seconds. Elapsed time: 0.42 seconds; current allocated memory: 0.301 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name main main 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 2.291 GB.
+INFO: [HLS 200-10] Analyzing design file 'main.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.08 seconds. CPU system time: 0.34 seconds. Elapsed time: 1.48 seconds; current allocated memory: 2.292 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 200-1995] There were 298 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 298 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 14 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd' into 'calc_chi_squared' (main.cpp:122:0)
+INFO: [HLS 214-178] Inlining function 'calc_ovr_sig_sqrd_x' into 'calc_chi_squared' (main.cpp:122:0)
+INFO: [HLS 214-178] Inlining function 'add_nums' into 'fit' (main.cpp:233:0)
+INFO: [HLS 214-178] Inlining function 'calc_distance' into 'fit' (main.cpp:233:0)
+INFO: [HLS 214-178] Inlining function 'calc_chi_squared' into 'fit' (main.cpp:233:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.63 seconds. CPU system time: 0.29 seconds. Elapsed time: 6.8 seconds; current allocated memory: 2.294 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 2.294 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 2.294 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 2.295 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.316 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 2.316 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'main' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.06 seconds; current allocated memory: 2.316 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.316 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on function 'main' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'main'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 2.316 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 2.316 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.22 seconds; current allocated memory: 2.321 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for main.
+INFO: [VLOG 209-307] Generating Verilog RTL for main.
+INFO: [HLS 200-789] **** Estimated Fmax: 0.00 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3.21 seconds. CPU system time: 0.7 seconds. Elapsed time: 8.95 seconds; current allocated memory: 31.152 MB.

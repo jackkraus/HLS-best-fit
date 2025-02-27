@@ -267,4 +267,60 @@ fit() --> goodness of fit = 26.927211145
 main() --> Current index 1361 of 1362 
 ```
 
-I now have to clean up the code a little bit and include the uncertainty on the parameters.  
+I now have to clean up the code a little bit and include the uncertainty on the parameters.
+
+  
+> Wed Feb 26 15:02:53 CST 2025
+
+Okay here's the results for the data in the header file: 
+
+```
+============ EVENT 0 ============
+fit() --> Best fit param a: 42.458060
+fit() --> Best fit param b: -0.562644
+        uncertainty on a:  0.195520
+        uncertainty on b:  0.000052
+fit() --> f(a,b) = 2279297.070794334
+fit() --> goodness of fit = 2.160768368
+main() --> Current index 99 of 1362
+============ EVENT 1 ============
+fit() --> Best fit param a: 122.423997
+fit() --> Best fit param b: -3.395082
+        uncertainty on a:  0.237399
+        uncertainty on b:  0.000077
+fit() --> f(a,b) = 19016158.248631567
+fit() --> goodness of fit = 22.238202857
+main() --> Current index 193 of 1362
+============ EVENT 2 ============
+fit() --> Best fit param a: 60.546292
+fit() --> Best fit param b: 1.105061
+        uncertainty on a:  0.399651
+        uncertainty on b:  0.000107
+fit() --> f(a,b) = 4133235.541930413
+fit() --> goodness of fit = 1.022818726
+main() --> Current index 435 of 1362
+============ EVENT 3 ============
+fit() --> Best fit param a: 0.996648
+fit() --> Best fit param b: -1.288404
+        uncertainty on a:  0.079917
+        uncertainty on b:  0.000025
+fit() --> f(a,b) = 2742.970751940
+fit() --> goodness of fit = 0.995003847
+main() --> Current index 677 of 1362
+============ EVENT 4 ============
+fit() --> Best fit param a: 12.933075
+fit() --> Best fit param b: 10.981780
+        uncertainty on a:  10.512954
+        uncertainty on b:  0.003394
+fit() --> f(a,b) = 419600.369175848
+fit() --> goodness of fit = 0.949532678
+main() --> Current index 919 of 1362
+============ EVENT 5 ============
+fit() --> Best fit param a: 6.695400
+fit() --> Best fit param b: 7.025747
+        uncertainty on a:  0.140837
+        uncertainty on b:  0.000045
+fit() --> f(a,b) = 325831.159720024
+fit() --> goodness of fit = 26.927211145
+main() --> Current index 1361 of 1362
+```

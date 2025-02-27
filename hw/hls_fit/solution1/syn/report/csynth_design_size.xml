@@ -1,0 +1,36 @@
+<design_size title="Design Size Report">
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="6" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Performance/Pipeline" col5="Optimizations"/>
+            <rows>
+                <row id="0" col0="main" col1="main.cpp:287" col2="298" col3="298" col4="16" col5="14">
+                    <row id="2" col0="fit" col1="main.cpp:233" col2="223" col3="226" col4="1" col5="">
+                        <row id="4" col0="add_nums" col1="main.cpp:21" col2="48" col3="51" col4="" col5=""/>
+                        <row id="6" col0="calc_distance" col1="main.cpp:195" col2="24" col3="23" col4="" col5=""/>
+                        <row id="3" col0="calc_chi_squared" col1="main.cpp:122" col2="92" col3="109" col4="" col5="">
+                            <row id="1" col0="calc_ovr_sig_sqrd" col1="main.cpp:96" col2="18" col3="23" col4="" col5=""/>
+                            <row id="5" col0="calc_ovr_sig_sqrd_x" col1="main.cpp:49" col2="23" col3="28" col4="" col5=""/>
+                        </row>
+                    </row>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Description of Compilation Phases">
+        <table>
+            <keys size="2">Compilation Phase, Description</keys>
+            <column name="Compile/Link">All functions are compiled and linked into a single design</column>
+            <column name="Unroll/Inline">After user unroll and inline pragmas are applied</column>
+            <column name="Performance/Pipeline">After performance and pipeline pragmas are applied</column>
+            <column name="Optimizations">After high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

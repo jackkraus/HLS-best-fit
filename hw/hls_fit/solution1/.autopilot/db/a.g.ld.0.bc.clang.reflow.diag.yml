@@ -1,0 +1,70 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: main.cpp, Line: 122, Column: 0 }
+Function:        calc_chi_squared
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          calc_ovr_sig_sqrd
+    DebugLoc:        { File: main.cpp, Line: 96, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          calc_chi_squared
+    DebugLoc:        { File: main.cpp, Line: 122, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: main.cpp, Line: 122, Column: 0 }
+Function:        calc_chi_squared
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          calc_ovr_sig_sqrd_x
+    DebugLoc:        { File: main.cpp, Line: 49, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          calc_chi_squared
+    DebugLoc:        { File: main.cpp, Line: 122, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: main.cpp, Line: 233, Column: 0 }
+Function:        fit
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          add_nums
+    DebugLoc:        { File: main.cpp, Line: 21, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          fit
+    DebugLoc:        { File: main.cpp, Line: 233, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: main.cpp, Line: 233, Column: 0 }
+Function:        fit
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          calc_distance
+    DebugLoc:        { File: main.cpp, Line: 195, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          fit
+    DebugLoc:        { File: main.cpp, Line: 233, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: main.cpp, Line: 233, Column: 0 }
+Function:        fit
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          calc_chi_squared
+    DebugLoc:        { File: main.cpp, Line: 122, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          fit
+    DebugLoc:        { File: main.cpp, Line: 233, Column: 0 }
+  - String:          ''''
+...
