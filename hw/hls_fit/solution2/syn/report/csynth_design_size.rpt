@@ -6,14 +6,13 @@
 +-------------------------+----------------+---------------+---------------+----------------------+---------------+
 | Function                | Location       | Compile/Link  | Unroll/Inline | Performance/Pipeline | Optimizations |
 +-------------------------+----------------+---------------+---------------+----------------------+---------------+
-| + fit                   | main.cpp:235   | 290           | 245           | 191                  | 234           |
-|  + add_nums             | main.cpp:20    |  49           |  52           |                      |               |
-|     print               | hls_print.h:17 |   2           |   2           |                      |               |
+| + fit                   | main.cpp:246   | 287           | 248           | 205                  | 221           |
+|    add_nums             | main.cpp:20    |  46           |  49           |  34                  |  40           |
 |    print                | hls_print.h:26 |  44 (4 calls) |  12 (4 calls) |                      |               |
-|    calc_distance        | main.cpp:196   |  24           |  23           |                      |               |
-|  + calc_chi_squared     | main.cpp:122   | 114           | 115           |                      |               |
-|     calc_ovr_sig_sqrd   | main.cpp:96    |  18           |  23           |                      |               |
-|     calc_ovr_sig_sqrd_x | main.cpp:49    |  23           |  28           |                      |               |
+|    calc_distance        | main.cpp:200   |  24           |  29           |  25                  |  27           |
+|  + calc_chi_squared     | main.cpp:125   | 114           | 115           |  98                  | 105           |
+|     calc_ovr_sig_sqrd   | main.cpp:99    |  18           |  23           |  19                  |  22           |
+|     calc_ovr_sig_sqrd_x | main.cpp:50    |  23           |  28           |  24                  |  26           |
 |     print               | hls_print.h:26 |  22 (2 calls) |   6 (2 calls) |                      |               |
 +-------------------------+----------------+---------------+---------------+----------------------+---------------+
 

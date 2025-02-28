@@ -1,0 +1,1134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1740715712447">
+  <ports id="1" name="gmem" type="PortType" coreId="0" bitwidth="64" iftype="IfTypeFifo">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="2" name="arrsig" type="PortType" originalName="arrsig" coreId="123" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="size" type="PortType" originalName="size" coreId="0" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="13" name="ap_return" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <edges id="47" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="50" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="51" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="52" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="57" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="62" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="63" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="64" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="65" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="66" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="69" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="72" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="73" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="75" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="78" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="79" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="80" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="81" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="82" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="83" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="84" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="87" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="88" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="89" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="90" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="93" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="94" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="97" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="98" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="99" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="100" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="101" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="102" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="103" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="104" source_obj="//@blocks.2/@node_objs.5" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="105" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="106" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="107" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="108" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="147" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="148" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="149" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3"/>
+  <edges id="150" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="151" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="152" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="153" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="154" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="155" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="156" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="157" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="158" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges source_obj="//@blocks.3/@node_objs.1" sink_obj="//@ports.3"/>
+  <blocks id="21" name="entry" type="BlockType">
+    <controlOutputObjs>for.inc</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="S" originalName="S" coreId="18" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="i" originalName="i" coreId="0" bitwidth="31" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="size_read" originalName="size" coreId="3834512688" bitwidth="32" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataInputObjs>size</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="arrsig_read" originalName="arrsig" coreId="13" bitwidth="64" opcode="read" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <dataInputObjs>arrsig</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="empty" rtlName="empty_fu_105_p1" coreId="0" bitwidth="31" opcode="trunc" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="icmp_ln103" lineNumber="103" fileName="main.cpp" fileDirectory="../." rtlName="icmp_ln103_fu_109_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="calc_ovr_sig_sqrd" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.14" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="103" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="trunc_ln" lineNumber="103" fileName="main.cpp" fileDirectory="../." rtlName="trunc_ln_fu_133_p4" coreId="0" contextFuncName="calc_ovr_sig_sqrd" bitwidth="61" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="103" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="sext_ln103" lineNumber="103" fileName="main.cpp" fileDirectory="../." rtlName="sext_ln103_fu_143_p1" coreId="0" contextFuncName="calc_ovr_sig_sqrd" bitwidth="64" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="103" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="gmem_addr" lineNumber="103" fileName="main.cpp" fileDirectory="../." coreId="0" contextFuncName="calc_ovr_sig_sqrd" bitwidth="64" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="103" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>gmem</dataInputObjs>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>readreq</dataOutputObjs>
+      <dataOutputObjs>read</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="empty_23" lineNumber="103" fileName="main.cpp" fileDirectory="../." rtlName="empty_23_fu_115_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="calc_ovr_sig_sqrd" bitwidth="31" opcode="select" m_display="0" m_delay="0.31" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="103" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="zext_ln103" lineNumber="103" fileName="main.cpp" fileDirectory="../." rtlName="m_axi_gmem_ARLEN" coreId="2237230816" contextFuncName="calc_ovr_sig_sqrd" bitwidth="32" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="103" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>readreq</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="empty_24" lineNumber="103" fileName="main.cpp" fileDirectory="../." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="calc_ovr_sig_sqrd" bitwidth="1" opcode="readreq" nodeLabel="1.0" nodeLatency="70" m_display="0" m_delay="7.3" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="103" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="i_write_ln103" lineNumber="103" fileName="main.cpp" fileDirectory="../." coreId="0" contextFuncName="calc_ovr_sig_sqrd" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="103" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="S_write_ln103" lineNumber="103" fileName="main.cpp" fileDirectory="../." coreId="2085694040" contextFuncName="calc_ovr_sig_sqrd" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="103" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="br_ln103" lineNumber="103" fileName="main.cpp" fileDirectory="../." coreId="0" contextFuncName="calc_ovr_sig_sqrd" opcode="br" nodeLabel="71.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="103" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <controlInputObjs>for.inc</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="main.cpp">
+      <validLinenumbers>103</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="27" name="for.inc" type="BlockType">
+    <controlInputObjs>entry</controlInputObjs>
+    <controlInputObjs>for.inc.split</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>for.inc.split</controlOutputObjs>
+    <controlOutputObjs>for.end.loopexit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="i_2" lineNumber="103" originalName="i" fileName="main.cpp" fileDirectory="../." coreId="0" contextFuncName="calc_ovr_sig_sqrd" bitwidth="31" opcode="load" nodeLabel="72.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="103" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="zext_ln103_1" lineNumber="103" fileName="main.cpp" fileDirectory="../." rtlName="zext_ln103_1_fu_161_p1" coreId="0" contextFuncName="calc_ovr_sig_sqrd" bitwidth="32" opcode="zext" nodeLabel="72.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="103" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="icmp_ln103_1" lineNumber="103" fileName="main.cpp" fileDirectory="../." rtlName="icmp_ln103_1_fu_165_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="calc_ovr_sig_sqrd" bitwidth="1" opcode="icmp" nodeLabel="72.0" m_display="0" m_delay="1.14" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="103" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="add_ln103" lineNumber="103" fileName="main.cpp" fileDirectory="../." rtlName="add_ln103_fu_170_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="calc_ovr_sig_sqrd" bitwidth="31" opcode="add" nodeLabel="72.0" m_display="0" m_delay="1.14" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="103" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="br_ln103" lineNumber="103" fileName="main.cpp" fileDirectory="../." coreId="0" contextFuncName="calc_ovr_sig_sqrd" opcode="br" nodeLabel="72.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="103" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>for.end.loopexit</controlInputObjs>
+      <controlInputObjs>for.inc.split</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="main.cpp">
+      <validLinenumbers>103</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="38" name="for.inc.split" type="BlockType">
+    <controlInputObjs>for.inc</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>for.inc</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="S_load" lineNumber="108" fileName="main.cpp" fileDirectory="../." coreId="2237243088" contextFuncName="calc_ovr_sig_sqrd" bitwidth="64" opcode="load" nodeLabel="93.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="108" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>dadd</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="gmem_addr_read" lineNumber="104" fileName="main.cpp" fileDirectory="../." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="calc_ovr_sig_sqrd" bitwidth="64" opcode="read" nodeLabel="73.0" m_display="0" m_delay="7.3" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="104" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>sitodp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="sig" lineNumber="104" originalName="sig" fileName="main.cpp" fileDirectory="../." coreName="Int2Double" implIndex="auto" control="no" opType="sitodp" coreId="66" contextFuncName="calc_ovr_sig_sqrd" bitwidth="64" opcode="sitodp" nodeLabel="74.0" nodeLatency="1" m_display="0" m_delay="5.65" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="104" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>ddiv</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="overSig" lineNumber="105" originalName="overSig" fileName="main.cpp" fileDirectory="../." coreName="DDiv" implIndex="fabric" control="no" opType="ddiv" coreId="39" contextFuncName="calc_ovr_sig_sqrd" bitwidth="64" opcode="ddiv" nodeLabel="76.0" nodeLatency="12" m_display="0" m_delay="7.15" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="105" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>sitodp</dataInputObjs>
+      <dataOutputObjs>dmul</dataOutputObjs>
+      <dataOutputObjs>dmul</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="mul" lineNumber="108" fileName="main.cpp" fileDirectory="../." coreName="DMul_maxdsp" implIndex="maxdsp" control="no" opType="dmul" coreId="49" contextFuncName="calc_ovr_sig_sqrd" bitwidth="64" opcode="dmul" nodeLabel="89.0" nodeLatency="3" m_display="0" m_delay="5.58" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="108" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>ddiv</dataInputObjs>
+      <dataInputObjs>ddiv</dataInputObjs>
+      <dataOutputObjs>dadd</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="S_1" lineNumber="108" originalName="S" fileName="main.cpp" fileDirectory="../." coreName="DAddSub_fulldsp" implIndex="fulldsp" control="no" opType="dadd" coreId="37" contextFuncName="calc_ovr_sig_sqrd" bitwidth="64" opcode="dadd" nodeLabel="93.0" nodeLatency="3" m_display="0" m_delay="5.15" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="108" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>dmul</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="i_write_ln103" lineNumber="103" fileName="main.cpp" fileDirectory="../." coreId="2237248832" contextFuncName="calc_ovr_sig_sqrd" opcode="store" nodeLabel="72.0" m_display="0" m_delay="0.46" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="103" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="S_write_ln103" lineNumber="103" fileName="main.cpp" fileDirectory="../." coreId="176" contextFuncName="calc_ovr_sig_sqrd" opcode="store" nodeLabel="96.0" m_display="0" m_delay="0.46" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="103" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>dadd</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="br_ln103" lineNumber="103" fileName="main.cpp" fileDirectory="../." coreId="2237242896" contextFuncName="calc_ovr_sig_sqrd" opcode="br" nodeLabel="96.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="103" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <controlInputObjs>for.inc</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="main.cpp">
+      <validLinenumbers>108</validLinenumbers>
+      <validLinenumbers>104</validLinenumbers>
+      <validLinenumbers>105</validLinenumbers>
+      <validLinenumbers>103</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="41" name="for.end.loopexit" type="BlockType">
+    <controlInputObjs>for.inc</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="S_load_1" lineNumber="110" fileName="main.cpp" fileDirectory="../." coreId="0" contextFuncName="calc_ovr_sig_sqrd" bitwidth="64" opcode="load" nodeLabel="72.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="110" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="_ln110" lineNumber="110" fileName="main.cpp" fileDirectory="../." coreId="0" contextFuncName="calc_ovr_sig_sqrd" opcode="ret" nodeLabel="72.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.cpp" linenumber="110" fileDirectory="/nfs/ihfs/home_metis/akraus/HW3-dir/hw" functionName="calc_ovr_sig_sqrd"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>ap_return</dataOutputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="main.cpp">
+      <validLinenumbers>110</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <ScheduleInfo time="16"/>
+  <ScheduleInfo time="17"/>
+  <ScheduleInfo time="18"/>
+  <ScheduleInfo time="19"/>
+  <ScheduleInfo time="20"/>
+  <ScheduleInfo time="21"/>
+  <ScheduleInfo time="22"/>
+  <ScheduleInfo time="23"/>
+  <ScheduleInfo time="24"/>
+  <ScheduleInfo time="25"/>
+  <ScheduleInfo time="26"/>
+  <ScheduleInfo time="27"/>
+  <ScheduleInfo time="28"/>
+  <ScheduleInfo time="29"/>
+  <ScheduleInfo time="30"/>
+  <ScheduleInfo time="31"/>
+  <ScheduleInfo time="32"/>
+  <ScheduleInfo time="33"/>
+  <ScheduleInfo time="34"/>
+  <ScheduleInfo time="35"/>
+  <ScheduleInfo time="36"/>
+  <ScheduleInfo time="37"/>
+  <ScheduleInfo time="38"/>
+  <ScheduleInfo time="39"/>
+  <ScheduleInfo time="40"/>
+  <ScheduleInfo time="41"/>
+  <ScheduleInfo time="42"/>
+  <ScheduleInfo time="43"/>
+  <ScheduleInfo time="44"/>
+  <ScheduleInfo time="45"/>
+  <ScheduleInfo time="46"/>
+  <ScheduleInfo time="47"/>
+  <ScheduleInfo time="48"/>
+  <ScheduleInfo time="49"/>
+  <ScheduleInfo time="50"/>
+  <ScheduleInfo time="51"/>
+  <ScheduleInfo time="52"/>
+  <ScheduleInfo time="53"/>
+  <ScheduleInfo time="54"/>
+  <ScheduleInfo time="55"/>
+  <ScheduleInfo time="56"/>
+  <ScheduleInfo time="57"/>
+  <ScheduleInfo time="58"/>
+  <ScheduleInfo time="59"/>
+  <ScheduleInfo time="60"/>
+  <ScheduleInfo time="61"/>
+  <ScheduleInfo time="62"/>
+  <ScheduleInfo time="63"/>
+  <ScheduleInfo time="64"/>
+  <ScheduleInfo time="65"/>
+  <ScheduleInfo time="66"/>
+  <ScheduleInfo time="67"/>
+  <ScheduleInfo time="68"/>
+  <ScheduleInfo time="69"/>
+  <ScheduleInfo time="70"/>
+  <ScheduleInfo time="71"/>
+  <ScheduleInfo time="72"/>
+  <ScheduleInfo time="73"/>
+  <ScheduleInfo time="74"/>
+  <ScheduleInfo time="75"/>
+  <ScheduleInfo time="76"/>
+  <ScheduleInfo time="77"/>
+  <ScheduleInfo time="78"/>
+  <ScheduleInfo time="79"/>
+  <ScheduleInfo time="80"/>
+  <ScheduleInfo time="81"/>
+  <ScheduleInfo time="82"/>
+  <ScheduleInfo time="83"/>
+  <ScheduleInfo time="84"/>
+  <ScheduleInfo time="85"/>
+  <ScheduleInfo time="86"/>
+  <ScheduleInfo time="87"/>
+  <ScheduleInfo time="88"/>
+  <ScheduleInfo time="89"/>
+  <ScheduleInfo time="90"/>
+  <ScheduleInfo time="91"/>
+  <ScheduleInfo time="92"/>
+  <ScheduleInfo time="93"/>
+  <ScheduleInfo time="94"/>
+  <ScheduleInfo time="95"/>
+  <ScheduleInfo time="96"/>
+  <regnodes realName="gmem_addr_reg_210">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <regnodes realName="S_load_reg_245">
+    <nodeIds>28</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_193">
+    <nodeIds>5</nodeIds>
+  </regnodes>
+  <regnodes realName="size_read_reg_200">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln103_reg_216">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="empty_23_reg_205">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="overSig_reg_234">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="sig_reg_229">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="S_reg_186">
+    <nodeIds>4</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem_addr_read_reg_224">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_reg_240">
+    <nodeIds>33</nodeIds>
+  </regnodes>
+  <expressionNodes realName="icmp_ln103_fu_109">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_58">
+    <nodeIds>5</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln103_1_fu_165">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="S_fu_54">
+    <nodeIds>4</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="gmem_addr_fu_147">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln103_fu_170">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln103_fu_143">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_fu_105">
+    <nodeIds>8</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln103_fu_154">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_23_fu_115">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln103_1_fu_161">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln_fu_133">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_93">
+    <nodeIds>32</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_85">
+    <nodeIds>34</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_98">
+    <nodeIds>31</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_89">
+    <nodeIds>33</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="store_ln103_store_fu_128">
+    <nodeIds>19</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln103_store_fu_181">
+    <nodeIds>36</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arrsig_read_read_fu_68">
+    <nodeIds>7</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i_2_load_fu_158">
+    <nodeIds>22</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln103_store_fu_176">
+    <nodeIds>35</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln103_store_fu_123">
+    <nodeIds>18</nodeIds>
+  </ioNodes>
+  <ioNodes realName="size_read_read_fu_62">
+    <nodeIds>6</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_load_fu_101">
+    <nodeIds>39</nodeIds>
+    <nodeIds>28</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_readreq_fu_74">
+    <nodeIds>17</nodeIds>
+  </ioNodes>
+  <ioNodes realName="gmem_addr_read_read_fu_80">
+    <nodeIds>30</nodeIds>
+  </ioNodes>
+  <ioPorts name="arrsig">
+    <contents name="read">
+      <nodeIds>7</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="gmem">
+    <contents name="read">
+      <nodeIds>30</nodeIds>
+    </contents>
+    <contents name="readreq">
+      <nodeIds>17</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="size">
+    <contents name="read">
+      <nodeIds>6</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return">
+    <contents name="ret">
+      <nodeIds>40</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="71" latency="71"/>
+    </states>
+    <states id="3">
+      <operations id="17" stage="70" latency="71"/>
+    </states>
+    <states id="4">
+      <operations id="17" stage="69" latency="71"/>
+    </states>
+    <states id="5">
+      <operations id="17" stage="68" latency="71"/>
+    </states>
+    <states id="6">
+      <operations id="17" stage="67" latency="71"/>
+    </states>
+    <states id="7">
+      <operations id="17" stage="66" latency="71"/>
+    </states>
+    <states id="8">
+      <operations id="17" stage="65" latency="71"/>
+    </states>
+    <states id="9">
+      <operations id="17" stage="64" latency="71"/>
+    </states>
+    <states id="10">
+      <operations id="17" stage="63" latency="71"/>
+    </states>
+    <states id="11">
+      <operations id="17" stage="62" latency="71"/>
+    </states>
+    <states id="12">
+      <operations id="17" stage="61" latency="71"/>
+    </states>
+    <states id="13">
+      <operations id="17" stage="60" latency="71"/>
+    </states>
+    <states id="14">
+      <operations id="17" stage="59" latency="71"/>
+    </states>
+    <states id="15">
+      <operations id="17" stage="58" latency="71"/>
+    </states>
+    <states id="16">
+      <operations id="17" stage="57" latency="71"/>
+    </states>
+    <states id="17">
+      <operations id="17" stage="56" latency="71"/>
+    </states>
+    <states id="18">
+      <operations id="17" stage="55" latency="71"/>
+    </states>
+    <states id="19">
+      <operations id="17" stage="54" latency="71"/>
+    </states>
+    <states id="20">
+      <operations id="17" stage="53" latency="71"/>
+    </states>
+    <states id="21">
+      <operations id="17" stage="52" latency="71"/>
+    </states>
+    <states id="22">
+      <operations id="17" stage="51" latency="71"/>
+    </states>
+    <states id="23">
+      <operations id="17" stage="50" latency="71"/>
+    </states>
+    <states id="24">
+      <operations id="17" stage="49" latency="71"/>
+    </states>
+    <states id="25">
+      <operations id="17" stage="48" latency="71"/>
+    </states>
+    <states id="26">
+      <operations id="17" stage="47" latency="71"/>
+    </states>
+    <states id="27">
+      <operations id="17" stage="46" latency="71"/>
+    </states>
+    <states id="28">
+      <operations id="17" stage="45" latency="71"/>
+    </states>
+    <states id="29">
+      <operations id="17" stage="44" latency="71"/>
+    </states>
+    <states id="30">
+      <operations id="17" stage="43" latency="71"/>
+    </states>
+    <states id="31">
+      <operations id="17" stage="42" latency="71"/>
+    </states>
+    <states id="32">
+      <operations id="17" stage="41" latency="71"/>
+    </states>
+    <states id="33">
+      <operations id="17" stage="40" latency="71"/>
+    </states>
+    <states id="34">
+      <operations id="17" stage="39" latency="71"/>
+    </states>
+    <states id="35">
+      <operations id="17" stage="38" latency="71"/>
+    </states>
+    <states id="36">
+      <operations id="17" stage="37" latency="71"/>
+    </states>
+    <states id="37">
+      <operations id="17" stage="36" latency="71"/>
+    </states>
+    <states id="38">
+      <operations id="17" stage="35" latency="71"/>
+    </states>
+    <states id="39">
+      <operations id="17" stage="34" latency="71"/>
+    </states>
+    <states id="40">
+      <operations id="17" stage="33" latency="71"/>
+    </states>
+    <states id="41">
+      <operations id="17" stage="32" latency="71"/>
+    </states>
+    <states id="42">
+      <operations id="17" stage="31" latency="71"/>
+    </states>
+    <states id="43">
+      <operations id="17" stage="30" latency="71"/>
+    </states>
+    <states id="44">
+      <operations id="17" stage="29" latency="71"/>
+    </states>
+    <states id="45">
+      <operations id="17" stage="28" latency="71"/>
+    </states>
+    <states id="46">
+      <operations id="17" stage="27" latency="71"/>
+    </states>
+    <states id="47">
+      <operations id="17" stage="26" latency="71"/>
+    </states>
+    <states id="48">
+      <operations id="17" stage="25" latency="71"/>
+    </states>
+    <states id="49">
+      <operations id="17" stage="24" latency="71"/>
+    </states>
+    <states id="50">
+      <operations id="17" stage="23" latency="71"/>
+    </states>
+    <states id="51">
+      <operations id="17" stage="22" latency="71"/>
+    </states>
+    <states id="52">
+      <operations id="17" stage="21" latency="71"/>
+    </states>
+    <states id="53">
+      <operations id="17" stage="20" latency="71"/>
+    </states>
+    <states id="54">
+      <operations id="17" stage="19" latency="71"/>
+    </states>
+    <states id="55">
+      <operations id="17" stage="18" latency="71"/>
+    </states>
+    <states id="56">
+      <operations id="17" stage="17" latency="71"/>
+    </states>
+    <states id="57">
+      <operations id="17" stage="16" latency="71"/>
+    </states>
+    <states id="58">
+      <operations id="17" stage="15" latency="71"/>
+    </states>
+    <states id="59">
+      <operations id="17" stage="14" latency="71"/>
+    </states>
+    <states id="60">
+      <operations id="17" stage="13" latency="71"/>
+    </states>
+    <states id="61">
+      <operations id="17" stage="12" latency="71"/>
+    </states>
+    <states id="62">
+      <operations id="17" stage="11" latency="71"/>
+    </states>
+    <states id="63">
+      <operations id="17" stage="10" latency="71"/>
+    </states>
+    <states id="64">
+      <operations id="17" stage="9" latency="71"/>
+    </states>
+    <states id="65">
+      <operations id="17" stage="8" latency="71"/>
+    </states>
+    <states id="66">
+      <operations id="17" stage="7" latency="71"/>
+    </states>
+    <states id="67">
+      <operations id="17" stage="6" latency="71"/>
+    </states>
+    <states id="68">
+      <operations id="17" stage="5" latency="71"/>
+    </states>
+    <states id="69">
+      <operations id="17" stage="4" latency="71"/>
+    </states>
+    <states id="70">
+      <operations id="17" stage="3" latency="71"/>
+    </states>
+    <states id="71">
+      <operations id="17" stage="2" latency="71"/>
+    </states>
+    <states id="72">
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="71"/>
+      <operations id="20" stage="1" latency="1"/>
+    </states>
+    <states id="73">
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+    </states>
+    <states id="74">
+      <operations id="30" stage="1" latency="1"/>
+    </states>
+    <states id="75">
+      <operations id="31" stage="2" latency="2"/>
+    </states>
+    <states id="76">
+      <operations id="31" stage="1" latency="2"/>
+    </states>
+    <states id="77">
+      <operations id="32" stage="13" latency="13"/>
+    </states>
+    <states id="78">
+      <operations id="32" stage="12" latency="13"/>
+    </states>
+    <states id="79">
+      <operations id="32" stage="11" latency="13"/>
+    </states>
+    <states id="80">
+      <operations id="32" stage="10" latency="13"/>
+    </states>
+    <states id="81">
+      <operations id="32" stage="9" latency="13"/>
+    </states>
+    <states id="82">
+      <operations id="32" stage="8" latency="13"/>
+    </states>
+    <states id="83">
+      <operations id="32" stage="7" latency="13"/>
+    </states>
+    <states id="84">
+      <operations id="32" stage="6" latency="13"/>
+    </states>
+    <states id="85">
+      <operations id="32" stage="5" latency="13"/>
+    </states>
+    <states id="86">
+      <operations id="32" stage="4" latency="13"/>
+    </states>
+    <states id="87">
+      <operations id="32" stage="3" latency="13"/>
+    </states>
+    <states id="88">
+      <operations id="32" stage="2" latency="13"/>
+    </states>
+    <states id="89">
+      <operations id="32" stage="1" latency="13"/>
+    </states>
+    <states id="90">
+      <operations id="33" stage="4" latency="4"/>
+    </states>
+    <states id="91">
+      <operations id="33" stage="3" latency="4"/>
+    </states>
+    <states id="92">
+      <operations id="33" stage="2" latency="4"/>
+    </states>
+    <states id="93">
+      <operations id="33" stage="1" latency="4"/>
+    </states>
+    <states id="94">
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="34" stage="4" latency="4"/>
+    </states>
+    <states id="95">
+      <operations id="34" stage="3" latency="4"/>
+    </states>
+    <states id="96">
+      <operations id="34" stage="2" latency="4"/>
+    </states>
+    <states id="97">
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="4"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="16" outState="17">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="17" outState="18">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="18" outState="19">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="19" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="20" outState="21">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="21" outState="22">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="22" outState="23">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="23" outState="24">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="24" outState="25">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="25" outState="26">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="26" outState="27">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="27" outState="28">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="28" outState="29">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="29" outState="30">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="30" outState="31">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="31" outState="32">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="32" outState="33">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="33" outState="34">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="34" outState="35">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="35" outState="36">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="36" outState="37">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="37" outState="38">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="38" outState="39">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="39" outState="40">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="40" outState="41">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="41" outState="42">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="42" outState="43">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="43" outState="44">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="44" outState="45">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="45" outState="46">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="46" outState="47">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="47" outState="48">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="48" outState="49">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="49" outState="50">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="50" outState="51">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="51" outState="52">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="52" outState="53">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="53" outState="54">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="54" outState="55">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="55" outState="56">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="56" outState="57">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="57" outState="58">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="58" outState="59">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="59" outState="60">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="60" outState="61">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="61" outState="62">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="62" outState="63">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="63" outState="64">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="64" outState="65">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="65" outState="66">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="66" outState="67">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="67" outState="68">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="68" outState="69">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="69" outState="70">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="70" outState="71">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="71" outState="72">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="72" outState="73">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="73" outState="74">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="74" outState="75">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="75" outState="76">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="76" outState="77">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="77" outState="78">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="78" outState="79">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="79" outState="80">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="80" outState="81">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="81" outState="82">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="82" outState="83">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="83" outState="84">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="84" outState="85">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="85" outState="86">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="86" outState="87">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="87" outState="88">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="88" outState="89">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="89" outState="90">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="90" outState="91">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="91" outState="92">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="92" outState="93">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="93" outState="94">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="94" outState="95">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="95" outState="96">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="96" outState="97">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="97" outState="73">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="calc_ovr_sig_sqrd_1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="71" mMaxLatency="71">
+      <basicBlocks>21</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_103_1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
+      <basicBlocks>27</basicBlocks>
+      <basicBlocks>38</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>41</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

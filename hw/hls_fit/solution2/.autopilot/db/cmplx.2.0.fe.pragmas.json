@@ -1,21 +1,21 @@
 {
   "0": {
     "basicblocks": 1,
-    "calls": "2 4 4 7 1 4 4",
+    "calls": "6 5 5 3 1 5 5",
     "file": "main.cpp",
-    "fileloc": 235,
+    "fileloc": 246,
     "instructions": 43,
     "loads": {
       "L": 11
     },
     "name": "fit",
-    "total_instructions": 245
+    "total_instructions": 248
   },
   "1": {
     "basicblocks": 7,
-    "calls": "3 6 4 4",
+    "calls": "2 4 5 5",
     "file": "main.cpp",
-    "fileloc": 122,
+    "fileloc": 125,
     "instructions": 58,
     "loads": {
       "L": 3
@@ -25,24 +25,9 @@
   },
   "2": {
     "basicblocks": 7,
-    "calls": "5",
-    "file": "main.cpp",
-    "fileloc": 20,
-    "instructions": 50,
-    "loads": {
-      "L": 10
-    },
-    "name": "add_nums",
-    "stores": {
-      "L": 8
-    },
-    "total_instructions": 52
-  },
-  "3": {
-    "basicblocks": 7,
     "calls": "",
     "file": "main.cpp",
-    "fileloc": 96,
+    "fileloc": 99,
     "instructions": 23,
     "loads": {
       "L": 1
@@ -50,7 +35,31 @@
     "name": "calc_ovr_sig_sqrd",
     "total_instructions": 23
   },
+  "3": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "main.cpp",
+    "fileloc": 200,
+    "instructions": 29,
+    "loads": {
+      "L": 2
+    },
+    "name": "calc_distance",
+    "total_instructions": 29
+  },
   "4": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "main.cpp",
+    "fileloc": 50,
+    "instructions": 28,
+    "loads": {
+      "L": 2
+    },
+    "name": "calc_ovr_sig_sqrd_x",
+    "total_instructions": 28
+  },
+  "5": {
     "basicblocks": 1,
     "calls": "",
     "file": "hls_print.h",
@@ -59,37 +68,19 @@
     "name": "print",
     "total_instructions": 3
   },
-  "5": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls_print.h",
-    "fileloc": 17,
-    "instructions": 2,
-    "name": "print",
-    "total_instructions": 2
-  },
   "6": {
     "basicblocks": 7,
     "calls": "",
     "file": "main.cpp",
-    "fileloc": 49,
-    "instructions": 28,
+    "fileloc": 20,
+    "instructions": 49,
     "loads": {
-      "L": 2
+      "L": 10
     },
-    "name": "calc_ovr_sig_sqrd_x",
-    "total_instructions": 28
-  },
-  "7": {
-    "basicblocks": 5,
-    "calls": "",
-    "file": "main.cpp",
-    "fileloc": 196,
-    "instructions": 23,
-    "loads": {
-      "L": 2
+    "name": "add_nums",
+    "stores": {
+      "L": 8
     },
-    "name": "calc_distance",
-    "total_instructions": 23
+    "total_instructions": 49
   }
 }

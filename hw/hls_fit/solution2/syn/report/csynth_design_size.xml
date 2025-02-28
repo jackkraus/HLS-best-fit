@@ -3,16 +3,14 @@
         <hiertable>
             <header size="6" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Performance/Pipeline" col5="Optimizations"/>
             <rows>
-                <row id="0" col0="fit" col1="main.cpp:235" col2="290" col3="245" col4="191" col5="234">
-                    <row id="2" col0="add_nums" col1="main.cpp:20" col2="49" col3="52" col4="" col5="">
-                        <row id="5" col0="print" col1="hls_print.h:17" col2="2" col3="2" col4="" col5=""/>
-                    </row>
-                    <row id="4" col0="print" col1="hls_print.h:26" col2="44" col2_disp=" 44 (4 calls)" col3="12" col3_disp=" 12 (4 calls)" col4="" col5=""/>
-                    <row id="7" col0="calc_distance" col1="main.cpp:196" col2="24" col3="23" col4="" col5=""/>
-                    <row id="1" col0="calc_chi_squared" col1="main.cpp:122" col2="114" col3="115" col4="" col5="">
-                        <row id="3" col0="calc_ovr_sig_sqrd" col1="main.cpp:96" col2="18" col3="23" col4="" col5=""/>
-                        <row id="6" col0="calc_ovr_sig_sqrd_x" col1="main.cpp:49" col2="23" col3="28" col4="" col5=""/>
-                        <row id="4" col0="print" col1="hls_print.h:26" col2="22" col2_disp=" 22 (2 calls)" col3="6" col3_disp="  6 (2 calls)" col4="" col5=""/>
+                <row id="0" col0="fit" col1="main.cpp:246" col2="287" col3="248" col4="205" col5="221">
+                    <row id="6" col0="add_nums" col1="main.cpp:20" col2="46" col3="49" col4="34" col5="40"/>
+                    <row id="5" col0="print" col1="hls_print.h:26" col2="44" col2_disp=" 44 (4 calls)" col3="12" col3_disp=" 12 (4 calls)" col4="" col5=""/>
+                    <row id="3" col0="calc_distance" col1="main.cpp:200" col2="24" col3="29" col4="25" col5="27"/>
+                    <row id="1" col0="calc_chi_squared" col1="main.cpp:125" col2="114" col3="115" col4="98" col5="105">
+                        <row id="2" col0="calc_ovr_sig_sqrd" col1="main.cpp:99" col2="18" col3="23" col4="19" col5="22"/>
+                        <row id="4" col0="calc_ovr_sig_sqrd_x" col1="main.cpp:50" col2="23" col3="28" col4="24" col5="26"/>
+                        <row id="5" col0="print" col1="hls_print.h:26" col2="22" col2_disp=" 22 (2 calls)" col3="6" col3_disp="  6 (2 calls)" col4="" col5=""/>
                     </row>
                 </row>
             </rows>

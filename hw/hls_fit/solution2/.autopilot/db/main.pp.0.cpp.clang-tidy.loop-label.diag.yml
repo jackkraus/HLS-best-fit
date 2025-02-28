@@ -7,70 +7,70 @@ Diagnostics:
     FilePath:        main.cpp
     Replacements:    
       - FilePath:        /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp
-        Offset:          94124
+        Offset:          94111
         Length:          0
         ReplacementText: 'VITIS_LOOP_28_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_53_1:  '
-    FileOffset:      53
+    Message:         'Added loop label VITIS_LOOP_55_1:  '
+    FileOffset:      55
     FilePath:        main.cpp
     Replacements:    
       - FilePath:        /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp
-        Offset:          94391
+        Offset:          94426
         Length:          0
-        ReplacementText: 'VITIS_LOOP_53_1: '
+        ReplacementText: 'VITIS_LOOP_55_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_76_1:  '
-    FileOffset:      76
+    Message:         'Added loop label VITIS_LOOP_79_1:  '
+    FileOffset:      79
     FilePath:        main.cpp
     Replacements:    
       - FilePath:        /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp
-        Offset:          94667
+        Offset:          94754
         Length:          0
-        ReplacementText: 'VITIS_LOOP_76_1: '
+        ReplacementText: 'VITIS_LOOP_79_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_100_1:  '
-    FileOffset:      100
+    Message:         'Added loop label VITIS_LOOP_103_1:  '
+    FileOffset:      103
     FilePath:        main.cpp
     Replacements:    
       - FilePath:        /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp
-        Offset:          94927
+        Offset:          95039
         Length:          0
-        ReplacementText: 'VITIS_LOOP_100_1: '
+        ReplacementText: 'VITIS_LOOP_103_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_148_1:  '
-    FileOffset:      148
+    Message:         'Added loop label VITIS_LOOP_152_1:  '
+    FileOffset:      152
     FilePath:        main.cpp
     Replacements:    
       - FilePath:        /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp
-        Offset:          95564
+        Offset:          95697
         Length:          0
-        ReplacementText: 'VITIS_LOOP_148_1: '
+        ReplacementText: 'VITIS_LOOP_152_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_204_1:  '
-    FileOffset:      204
+    Message:         'Added loop label VITIS_LOOP_210_1:  '
+    FileOffset:      210
     FilePath:        main.cpp
     Replacements:    
       - FilePath:        /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp
-        Offset:          96335
+        Offset:          96522
         Length:          0
-        ReplacementText: 'VITIS_LOOP_204_1: '
+        ReplacementText: 'VITIS_LOOP_210_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_306_1:  '
-    FileOffset:      306
+    Message:         'Added loop label VITIS_LOOP_312_1:  '
+    FileOffset:      312
     FilePath:        main.cpp
     Replacements:    
       - FilePath:        /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp
-        Offset:          97682
+        Offset:          98025
         Length:          0
-        ReplacementText: 'VITIS_LOOP_306_1: '
+        ReplacementText: 'VITIS_LOOP_312_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_320_2:  '
-    FileOffset:      320
+    Message:         'Added loop label VITIS_LOOP_326_2:  '
+    FileOffset:      326
     FilePath:        main.cpp
     Replacements:    
       - FilePath:        /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/main.pp.0.cpp
-        Offset:          98001
+        Offset:          98344
         Length:          0
-        ReplacementText: 'VITIS_LOOP_320_2: '
+        ReplacementText: 'VITIS_LOOP_326_2: '
 ...

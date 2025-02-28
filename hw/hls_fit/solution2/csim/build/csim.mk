@@ -17,8 +17,6 @@ __SIM_FIR__ = 1
 
 __SIM_DDS__ = 1
 
-__USE_CLANG__ = 1
-
 ObjDir = obj
 
 HLS_SOURCES = ../../../../main.cpp
@@ -36,7 +34,7 @@ ifndef AP_GCC_PATH
   AP_GCC_PATH := /opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0/bin
 endif
 AUTOPILOT_TOOL := ${AUTOPILOT_ROOT}/${AUTOPILOT_MACH}/tools
-AP_CLANG_PATH := ${AUTOPILOT_TOOL}/clang-3.9-csynth/bin
+AP_CLANG_PATH := ${AUTOPILOT_TOOL}/clang-3.9/bin
 AUTOPILOT_TECH := ${AUTOPILOT_ROOT}/common/technology
 
 
@@ -66,16 +64,6 @@ DFLAG += -D__xilinx_ip_top= -DAESL_TB
 CCFLAG += -Werror=return-type
 CCFLAG += -Wno-abi
 TOOLCHAIN += 
-CCFLAG += -gcc-toolchain /opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0
-LFLAG += -gcc-toolchain /opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0
-CCFLAG += -fno-exceptions
-LFLAG += -fno-exceptions
-CCFLAG += -fprofile-instr-generate="code-%m.profraw"
-LFLAG += -fprofile-instr-generate="code-%m.profraw"
-CCFLAG += -Wno-c++11-narrowing
-CCFLAG += -Werror=uninitialized
-CCFLAG += -std=c++11
-LFLAG += -std=c++11
 
 
 
@@ -87,25 +75,6 @@ all: $(TARGET)
 
 $(ObjDir)/main.o: ../../../../main.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../main.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CXX) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/main.d
-pObjDir=pobj
-POBJECTS := $(basename $(notdir $(HLS_SOURCES)))
-POBJECTS := $(POBJECTS:%=$(pObjDir)/%.bc)
-
-$(pObjDir)/main.bc: ../../../../main.cpp $(pObjDir)/.dir
-	$(Echo) $(CXX)  -gcc-toolchain /opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0 -fno-exceptions -fprofile-instr-use=code.profdata -emit-llvm -c -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ;
-	$(Verb) $(CXX)  -gcc-toolchain /opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0 -fno-exceptions -fprofile-instr-use=code.profdata -emit-llvm -c -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ;
-
-profile_data: *.profraw
-	${AP_CLANG_PATH}/llvm-profdata merge -output=code.profdata *.profraw
-
-profile_all: profile_data $(POBJECTS)
-	${AP_CLANG_PATH}/llvm-link -o LinkFile.bc ${POBJECTS} -f; \
-	${MKDIR} /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/dot ; \
-	${CP} -r ${pObjDir} /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/dot ; \
-	${CP} LinkFile.bc /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/dot ; \
-	${CD} /nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/.autopilot/db/dot ; \
-	${AP_CLANG_PATH}/opt -dot-callgraph-hls -cfg-hier-userfilelist "/nfs/ihfs/home_metis/akraus/HW3-dir/hw/main.cpp /nfs/ihfs/home_metis/akraus/HW3-dir/hw/main.cpp" -csim-top-function-name=fit LinkFile.bc -o LinkFile_fid.bc ; \
-	${AP_CLANG_PATH}/opt -dot-cfg-hier-only -cfg-hier-userfilelist "/nfs/ihfs/home_metis/akraus/HW3-dir/hw/main.cpp /nfs/ihfs/home_metis/akraus/HW3-dir/hw/main.cpp" -cfg-hier-type csim LinkFile_fid.bc -o LinkFile_pp.bc ; 

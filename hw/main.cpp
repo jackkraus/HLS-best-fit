@@ -23,9 +23,10 @@ void add_nums(const long arrx[], const long arry[], int size, long* sx, long* sy
     	*sxy = 0;
 	*sxx = 0;
 	
-	//cout << "<== Starting add_nums LOOP ==>" << '\n';
-	hls::print("<== Starting add_nums LOOP ==>\n");	
+	//hls::print("<== Starting add_nums LOOP ==>\n");	
+	#pragma HLS PIPELINE II=1
 	for(int i = 0; i < size; i++){
+		#pragma HLS UNROLL factor=4
 		*sx += arrx[i];
 		*sy += arry[i];
 		*sxy += arrx[i]*arry[i];
@@ -49,8 +50,10 @@ extern "C" {
 double calc_ovr_sig_sqrd_x(long arrsig[], int size, long arrx[]) {
 	double Sx = 0;
 	double sig, overSig;
-
+	
+	#pragma HLS PIPELINE
 	for(int i = 0; i < size; i++) {
+		#pragma HLS UNROLL factor=2
 		sig = (double)arrsig[i];
 		overSig = 1/sig; 
 		Sx += (double)arrx[i]*overSig*overSig;	
@@ -72,7 +75,7 @@ extern "C" {
 double calc_ovr_sig_sqrd_y(long arrsig[], int size, long arry[]) {
 	double Sy = 0;
 	double sig, overSig;
-
+	#pragma HLS PIPELINE II=1
 	for(int i = 0; i < size; i++) {
 		sig = (double)arrsig[i];
 		overSig = 1/sig; 
@@ -96,7 +99,7 @@ extern "C" {
 double calc_ovr_sig_sqrd(long arrsig[], int size) {
 	double S = 0;
 	double sig, overSig;
-
+	#pragma HLS PIPELINE II=1
 	for(int i = 0; i < size; i++) {
 		sig = (double)arrsig[i];
 		overSig = 1/sig; 
@@ -145,8 +148,9 @@ double calc_chi_squared(double a, double b, long arrx[], long arry[], long arrsi
 	Sx2 = Sx*Sx; // Sx^2
 
 	//printf("<== Starting calc_chi_squared LOOP ==>\n");
+	#pragma HLS PIPELINE
 	for(int i = 0; i < size; i++) {
- 	//	#pragma HLS UNROLL factor=2 
+		#pragma HLS UNROLL
 		x = (double)arrx[i]; // x_i
 		y = (double)arry[i]; // y_i
 		sig = (double)arrsig[i]; // sig_i 
@@ -193,7 +197,7 @@ double calc_chi_squared(double a, double b, long arrx[], long arry[], long arrsi
 #ifdef __cplusplus   
 extern "C" {
 #endif
-double calc_distance(const double a, const double b, const long arrx[], const long arry[]) {
+double calc_distance(const double a, const double b, const long arrx[], const long arry[], int size) {
 	double f = 0; 	
 	double temp = 0;
 	double tempSquared = 0;
@@ -201,14 +205,20 @@ double calc_distance(const double a, const double b, const long arrx[], const lo
 	double x, y, sig;
 
 	//printf("<== Starting calc_distance LOOP ==>\n");
-	for(int i = 0; i < tempN; i++) {
-		//#pragma HLS PIPELINE
+	
+	#pragma HLS PIPELINE II=1
+	for(int i = 0; i < size; i++) {
+		#pragma HLS UNROLL
 		x = (double) arrx[i];
 		y = (double) arry[i];
 
 		temp = y - a - b*x;
 		tempSquared = temp*temp;
 
+		//hls::print("calc_distance() --> x = %.9f\n",x);	
+		//hls::print("calc_distance() --> y = %.9f\n",y);	
+		//hls::print("calc_distance() --> temp = %.9f\n",temp);	
+		//hls::print("calc_distance() --> tempSquared = %.9f\n",tempSquared);	
 		f += tempSquared;
 		
 		// Clear out temp values, jic	
@@ -216,7 +226,7 @@ double calc_distance(const double a, const double b, const long arrx[], const lo
 		tempSquared = 0;
 	}
 
-	hls::print("calc_distance() --> f(a,b) = %.9f\n",f);	
+	//hls::print("calc_distance() --> f(a,b) = %.9f\n",f);	
 	return f;
 }
 
@@ -266,7 +276,7 @@ void fit(long *arrx, long *arry, long *arrsigs, int size) {
 
 	// <-- Call `calc_distance()` function --> 	
 	double f = 0; // our distance
-	f = calc_distance(a,b, arrx, arry);
+	f = calc_distance(a,b, arrx, arry, size);
 	
 	// <-- Call `calc_chi_squared()` function --> 	
 	double gof = 0; // our goodness of fit
@@ -299,11 +309,6 @@ int main() {
 
 	int j = 0;
 
-	//arrx = (long *)malloc(tempN * sizeof(long));
-	//arry = (long *)malloc(tempN * sizeof(long));
-	//arrsig = (long *)malloc(tempN * sizeof(long));
-
-
 	for(int i = 0; i < tempN; i++) {
 		arrx[j] = (long)tempxs[i];
 		arry[j] = (long)tempys[i];
@@ -319,7 +324,7 @@ int main() {
 
 			// this will set all data in the arrays to 0	
 			for (int k = 0; k < arrsize; k++) {
-				#pragma HLS unroll
+				#pragma HLS UNROLL
 				arrx[k] = 0;
 				arry[k] = 0;
 				arrsig[k] = 0;

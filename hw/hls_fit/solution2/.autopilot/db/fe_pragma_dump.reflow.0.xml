@@ -1,2 +1,11 @@
 <pragmas>
+<pragma file="main.cpp" line="27" pragmaType="pipeline" parentfunction="add_nums" off="0" ii="1" style=""/>
+<pragma file="main.cpp" line="29" pragmaType="unroll" parentfunction="add_nums" factor="4" skip_exit_check="0"/>
+<pragma file="main.cpp" line="54" pragmaType="pipeline" parentfunction="calc_ovr_sig_sqrd_x" off="0" ii="-1" style=""/>
+<pragma file="main.cpp" line="56" pragmaType="unroll" parentfunction="calc_ovr_sig_sqrd_x" factor="2" skip_exit_check="0"/>
+<pragma file="main.cpp" line="102" pragmaType="pipeline" parentfunction="calc_ovr_sig_sqrd" off="0" ii="1" style=""/>
+<pragma file="main.cpp" line="151" pragmaType="pipeline" parentfunction="calc_chi_squared" off="0" ii="-1" style=""/>
+<pragma file="main.cpp" line="153" pragmaType="unroll" parentfunction="calc_chi_squared" factor="-1" skip_exit_check="0"/>
+<pragma file="main.cpp" line="209" pragmaType="pipeline" parentfunction="calc_distance" off="0" ii="1" style=""/>
+<pragma file="main.cpp" line="211" pragmaType="unroll" parentfunction="calc_distance" factor="-1" skip_exit_check="0"/>
 </pragmas>

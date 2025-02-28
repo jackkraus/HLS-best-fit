@@ -6,7 +6,7 @@
 extern "C"{
 	int main();
 	void fit(long *arrx, long *arry, long *arrsig, int size);
-	double calc_distance(const double a, const double b, const long *arrx, const long *arry);
+	double calc_distance(const double a, const double b, const long *arrx, const long *arry, int size);
 	double calc_chi_squared(double a, double b, long *arrx, long *arry, long *arrsig, int size);
 	void add_nums(const long *arrx, const long *arry, int tempn, long* sx, long* sy, long* sxy, long* sxx);
 	double calc_ovr_sig_sqrd(long *arrsig, int size);

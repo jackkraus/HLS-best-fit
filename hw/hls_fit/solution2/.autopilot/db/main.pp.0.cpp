@@ -336,7 +336,7 @@ void print(const char* fmt, float v) {
 extern "C"{
  int main();
  __attribute__((sdx_kernel("fit", 0))) void fit(long *arrx, long *arry, long *arrsig, int size);
- double calc_distance(const double a, const double b, const long *arrx, const long *arry);
+ double calc_distance(const double a, const double b, const long *arrx, const long *arry, int size);
  double calc_chi_squared(double a, double b, long *arrx, long *arry, long *arrsig, int size);
  void add_nums(const long *arrx, const long *arry, int tempn, long* sx, long* sy, long* sxy, long* sxx);
  double calc_ovr_sig_sqrd(long *arrsig, int size);
@@ -3171,9 +3171,10 @@ void add_nums(const long arrx[], const long arry[], int size, long* sx, long* sy
  *sxx = 0;
 
 
- hls::print("<== Starting add_nums LOOP ==>\n");
+#pragma HLS PIPELINE II=1
  VITIS_LOOP_28_1: for(int i = 0; i < size; i++){
-  *sx += arrx[i];
+#pragma HLS UNROLL factor=4
+ *sx += arrx[i];
   *sy += arry[i];
   *sxy += arrx[i]*arry[i];
   *sxx += arrx[i]*arrx[i];
@@ -3181,7 +3182,7 @@ void add_nums(const long arrx[], const long arry[], int size, long* sx, long* sy
 }
 
 }
-# 46 "main.cpp"
+# 47 "main.cpp"
 extern "C" {
 
 
@@ -3189,8 +3190,10 @@ double calc_ovr_sig_sqrd_x(long arrsig[], int size, long arrx[]) {
  double Sx = 0;
  double sig, overSig;
 
- VITIS_LOOP_53_1: for(int i = 0; i < size; i++) {
-  sig = (double)arrsig[i];
+#pragma HLS PIPELINE
+ VITIS_LOOP_55_1: for(int i = 0; i < size; i++) {
+#pragma HLS UNROLL factor=2
+ sig = (double)arrsig[i];
   overSig = 1/sig;
   Sx += (double)arrx[i]*overSig*overSig;
  }
@@ -3198,14 +3201,14 @@ double calc_ovr_sig_sqrd_x(long arrsig[], int size, long arrx[]) {
 }
 
 }
-# 70 "main.cpp"
+# 73 "main.cpp"
 extern "C" {
 
 double calc_ovr_sig_sqrd_y(long arrsig[], int size, long arry[]) {
  double Sy = 0;
  double sig, overSig;
-
- VITIS_LOOP_76_1: for(int i = 0; i < size; i++) {
+#pragma HLS PIPELINE II=1
+ VITIS_LOOP_79_1: for(int i = 0; i < size; i++) {
   sig = (double)arrsig[i];
   overSig = 1/sig;
   Sy += (double)arry[i]*overSig*overSig;
@@ -3214,14 +3217,14 @@ double calc_ovr_sig_sqrd_y(long arrsig[], int size, long arry[]) {
 }
 
 }
-# 94 "main.cpp"
+# 97 "main.cpp"
 extern "C" {
 
 double calc_ovr_sig_sqrd(long arrsig[], int size) {
  double S = 0;
  double sig, overSig;
-
- VITIS_LOOP_100_1: for(int i = 0; i < size; i++) {
+#pragma HLS PIPELINE II=1
+ VITIS_LOOP_103_1: for(int i = 0; i < size; i++) {
   sig = (double)arrsig[i];
   overSig = 1/sig;
 
@@ -3233,7 +3236,7 @@ double calc_ovr_sig_sqrd(long arrsig[], int size) {
 
 
 }
-# 120 "main.cpp"
+# 123 "main.cpp"
 extern "C" {
 
 double calc_chi_squared(double a, double b, long arrx[], long arry[], long arrsig[], int size) {
@@ -3262,9 +3265,10 @@ double calc_chi_squared(double a, double b, long arrx[], long arry[], long arrsi
  Sx2 = Sx*Sx;
 
 
- VITIS_LOOP_148_1: for(int i = 0; i < size; i++) {
-
-  x = (double)arrx[i];
+#pragma HLS PIPELINE
+ VITIS_LOOP_152_1: for(int i = 0; i < size; i++) {
+#pragma HLS UNROLL
+ x = (double)arrx[i];
   y = (double)arry[i];
   sig = (double)arrsig[i];
   overSig = 1/sig;
@@ -3300,10 +3304,10 @@ double calc_chi_squared(double a, double b, long arrx[], long arry[], long arrsi
 
 
 }
-# 194 "main.cpp"
+# 198 "main.cpp"
 extern "C" {
 
-double calc_distance(const double a, const double b, const long arrx[], const long arry[]) {
+double calc_distance(const double a, const double b, const long arrx[], const long arry[], int size) {
  double f = 0;
  double temp = 0;
  double tempSquared = 0;
@@ -3311,13 +3315,19 @@ double calc_distance(const double a, const double b, const long arrx[], const lo
  double x, y, sig;
 
 
- VITIS_LOOP_204_1: for(int i = 0; i < tempN; i++) {
 
-  x = (double) arrx[i];
+#pragma HLS PIPELINE II=1
+ VITIS_LOOP_210_1: for(int i = 0; i < size; i++) {
+#pragma HLS UNROLL
+ x = (double) arrx[i];
   y = (double) arry[i];
 
   temp = y - a - b*x;
   tempSquared = temp*temp;
+
+
+
+
 
   f += tempSquared;
 
@@ -3326,19 +3336,24 @@ double calc_distance(const double a, const double b, const long arrx[], const lo
   tempSquared = 0;
  }
 
+
  return f;
 }
 
 
 }
-# 232 "main.cpp"
+# 243 "main.cpp"
 extern "C" {
 
 
 __attribute__((sdx_kernel("fit", 0))) void fit(long *arrx, long *arry, long *arrsigs, int size) {
-#line 15 "/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/csynth.tcl"
+#line 17 "/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=fit
-# 235 "main.cpp"
+# 246 "main.cpp"
+
+#line 7 "/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/directives.tcl"
+#pragma HLSDIRECTIVE TOP name=fit
+# 246 "main.cpp"
 
 
 
@@ -3372,7 +3387,7 @@ __attribute__((sdx_kernel("fit", 0))) void fit(long *arrx, long *arry, long *arr
 
 
  double f = 0;
- f = calc_distance(a,b, arrx, arry);
+ f = calc_distance(a,b, arrx, arry, size);
 
 
  double gof = 0;
@@ -3405,12 +3420,7 @@ int main() {
 
  int j = 0;
 
-
-
-
-
-
- VITIS_LOOP_306_1: for(int i = 0; i < tempN; i++) {
+ VITIS_LOOP_312_1: for(int i = 0; i < tempN; i++) {
   arrx[j] = (long)tempxs[i];
   arry[j] = (long)tempys[i];
   arrsig[j] = (long)tempsigmas[i];
@@ -3424,8 +3434,8 @@ int main() {
    fit(arrx, arry, arrsig, arrsize);
 
 
-   VITIS_LOOP_320_2: for (int k = 0; k < arrsize; k++) {
-#pragma HLS unroll
+   VITIS_LOOP_326_2: for (int k = 0; k < arrsize; k++) {
+#pragma HLS UNROLL
  arrx[k] = 0;
     arry[k] = 0;
     arrsig[k] = 0;

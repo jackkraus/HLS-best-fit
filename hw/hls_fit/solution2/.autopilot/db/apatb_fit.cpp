@@ -1197,8 +1197,8 @@ void apatb_fit_hw(void* __xlx_apatb_param_arrx, void* __xlx_apatb_param_arry, vo
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port4 {
 #endif
-    .width = 128,
-    .asize = 16,
+    .width = 64,
+    .asize = 8,
     .hbm = false,
     .name = { "gmem" },
 #ifdef POST_CHECK
@@ -1211,9 +1211,9 @@ void apatb_fit_hw(void* __xlx_apatb_param_arrx, void* __xlx_apatb_param_arry, vo
 #endif
 #endif
   };
-  __xlx_offset_byte_param_arrx = 0*16;
-  __xlx_offset_byte_param_arry = 1*16;
-  __xlx_offset_byte_param_arrsigs = 2*16;
+  __xlx_offset_byte_param_arrx = 0*8;
+  __xlx_offset_byte_param_arry = 1*8;
+  __xlx_offset_byte_param_arrsigs = 2*8;
   port4.param = { __xlx_apatb_param_arrx, __xlx_apatb_param_arry, __xlx_apatb_param_arrsigs };
   port4.nbytes = { 0, 0, 0 };
   port4.offset = { 0, 1, 2 };

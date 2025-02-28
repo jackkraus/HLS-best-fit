@@ -1,59 +1,53 @@
 INFO: [SIM 2] *************** CSIM start ***************
-INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../../main.cpp in debug mode
    Generating csim.exe
 HLS_PRINT: ============ EVENT 0 ============
-HLS_PRINT: <== Starting add_nums LOOP ==>
 HLS_PRINT: fit() --> Best fit param a: 42.458060
 HLS_PRINT: fit() --> Best fit param b: -0.562644
 HLS_PRINT: 	uncertainty on a:  0.195520
 HLS_PRINT: 	uncertainty on b:  0.000052
-HLS_PRINT: fit() --> f(a,b) = 347106955756837552457169052270178861056.000000000
+HLS_PRINT: fit() --> f(a,b) = 4251.664237980
 HLS_PRINT: fit() --> goodness of fit = 2.160768368
 HLS_PRINT: main() --> Current index 99 
 HLS_PRINT: ============ EVENT 1 ============
-HLS_PRINT: <== Starting add_nums LOOP ==>
 HLS_PRINT: fit() --> Best fit param a: 122.423997
 HLS_PRINT: fit() --> Best fit param b: -3.395082
 HLS_PRINT: 	uncertainty on a:  0.237399
 HLS_PRINT: 	uncertainty on b:  0.000077
-HLS_PRINT: fit() --> f(a,b) = 12638546483566442711110148338571599151104.000000000
+HLS_PRINT: fit() --> f(a,b) = 12564.154501385
 HLS_PRINT: fit() --> goodness of fit = 22.238202857
 HLS_PRINT: main() --> Current index 193 
 HLS_PRINT: ============ EVENT 2 ============
-HLS_PRINT: <== Starting add_nums LOOP ==>
 HLS_PRINT: fit() --> Best fit param a: 60.546292
 HLS_PRINT: fit() --> Best fit param b: 1.105061
 HLS_PRINT: 	uncertainty on a:  0.399651
 HLS_PRINT: 	uncertainty on b:  0.000107
-HLS_PRINT: fit() --> f(a,b) = 1338964231936102969343284593521986633728.000000000
+HLS_PRINT: fit() --> f(a,b) = 27479.613093595
 HLS_PRINT: fit() --> goodness of fit = 1.022818726
 HLS_PRINT: main() --> Current index 435 
 HLS_PRINT: ============ EVENT 3 ============
-HLS_PRINT: <== Starting add_nums LOOP ==>
 HLS_PRINT: fit() --> Best fit param a: 0.996648
 HLS_PRINT: fit() --> Best fit param b: -1.288404
 HLS_PRINT: 	uncertainty on a:  0.079917
 HLS_PRINT: 	uncertainty on b:  0.000025
-HLS_PRINT: fit() --> f(a,b) = 1820122767081414002170122243967257935872.000000000
+HLS_PRINT: fit() --> f(a,b) = 1630.467367770
 HLS_PRINT: fit() --> goodness of fit = 0.995003847
 HLS_PRINT: main() --> Current index 677 
 HLS_PRINT: ============ EVENT 4 ============
-HLS_PRINT: <== Starting add_nums LOOP ==>
 HLS_PRINT: fit() --> Best fit param a: 12.933075
 HLS_PRINT: fit() --> Best fit param b: 10.981780
 HLS_PRINT: 	uncertainty on a:  10.512954
 HLS_PRINT: 	uncertainty on b:  0.003394
-HLS_PRINT: fit() --> f(a,b) = 132233660196991394621229234462184550957056.000000000
+HLS_PRINT: fit() --> f(a,b) = 232264.209104891
 HLS_PRINT: fit() --> goodness of fit = 0.949532678
 HLS_PRINT: main() --> Current index 919 
 HLS_PRINT: ============ EVENT 5 ============
-HLS_PRINT: <== Starting add_nums LOOP ==>
 HLS_PRINT: fit() --> Best fit param a: 6.695400
 HLS_PRINT: fit() --> Best fit param b: 7.025747
 HLS_PRINT: 	uncertainty on a:  0.140837
 HLS_PRINT: 	uncertainty on b:  0.000045
-HLS_PRINT: fit() --> f(a,b) = 54122951201197697003109789395077495259136.000000000
+HLS_PRINT: fit() --> f(a,b) = 284589.050477618
 HLS_PRINT: fit() --> goodness of fit = 26.927211145
 HLS_PRINT: main() --> Current index 1361 
 INFO: [SIM 1] CSim done with 0 errors.

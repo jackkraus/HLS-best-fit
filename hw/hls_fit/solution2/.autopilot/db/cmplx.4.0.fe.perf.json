@@ -1,14 +1,74 @@
 {
   "0": {
-    "basicblocks": 18,
-    "calls": "",
+    "basicblocks": 1,
+    "calls": "3 1 4",
     "file": "main.cpp",
-    "fileloc": 235,
-    "instructions": 234,
+    "fileloc": 246,
+    "instructions": 49,
     "loads": {
-      "T": 10
+      "L": 4
     },
     "name": "fit",
-    "total_instructions": 234
+    "total_instructions": 221
+  },
+  "1": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "main.cpp",
+    "fileloc": 200,
+    "instructions": 27,
+    "loads": {
+      "L": 2
+    },
+    "name": "calc_distance",
+    "total_instructions": 27
+  },
+  "2": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "main.cpp",
+    "fileloc": 99,
+    "instructions": 22,
+    "name": "calc_ovr_sig_sqrd",
+    "total_instructions": 22
+  },
+  "3": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "main.cpp",
+    "fileloc": 20,
+    "instructions": 40,
+    "loads": {
+      "L": 2
+    },
+    "name": "add_nums",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 40
+  },
+  "4": {
+    "basicblocks": 4,
+    "calls": "2 5",
+    "file": "main.cpp",
+    "fileloc": 125,
+    "instructions": 57,
+    "loads": {
+      "L": 3
+    },
+    "name": "calc_chi_squared",
+    "total_instructions": 105
+  },
+  "5": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "main.cpp",
+    "fileloc": 50,
+    "instructions": 26,
+    "loads": {
+      "L": 2
+    },
+    "name": "calc_ovr_sig_sqrd_x",
+    "total_instructions": 26
   }
 }

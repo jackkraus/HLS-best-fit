@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'fit'" level="0">
-<item name = "Date">Thu Feb 27 15:44:23 2025
+<item name = "Date">Thu Feb 27 22:08:31 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">hls_fit</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.535 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -31,11 +31,9 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_fit_Pipeline_VITIS_LOOP_28_1_fu_148">fit_Pipeline_VITIS_LOOP_28_1, ?, ?, ?, ?, ?, ?, no</column>
-<column name="grp_fit_Pipeline_VITIS_LOOP_204_1_fu_166">fit_Pipeline_VITIS_LOOP_204_1, 4179, 4179, 41.790 us, 41.790 us, 4179, 4179, no</column>
-<column name="grp_fit_Pipeline_VITIS_LOOP_100_1_fu_177">fit_Pipeline_VITIS_LOOP_100_1, ?, ?, ?, ?, ?, ?, no</column>
-<column name="grp_fit_Pipeline_VITIS_LOOP_53_1_fu_188">fit_Pipeline_VITIS_LOOP_53_1, ?, ?, ?, ?, ?, ?, no</column>
-<column name="grp_fit_Pipeline_VITIS_LOOP_148_1_fu_200">fit_Pipeline_VITIS_LOOP_148_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_add_nums_1_fu_92">add_nums_1, 1, ?, 10.000 ns, ?, 1, ?, no</column>
+<column name="grp_calc_distance_1_fu_104">calc_distance_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_calc_chi_squared_1_fu_115">calc_chi_squared_1, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

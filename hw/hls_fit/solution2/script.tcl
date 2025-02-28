@@ -14,7 +14,7 @@ create_clock -period 10 -name default
 config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512
 config_rtl -register_reset_num 3
 source "./hls_fit/solution2/directives.tcl"
-csim_design -profile
+csim_design
 csynth_design
 cosim_design
 export_design -format ip_catalog

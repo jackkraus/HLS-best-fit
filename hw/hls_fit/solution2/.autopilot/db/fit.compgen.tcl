@@ -1,14 +1,8 @@
 # This script segment is generated automatically by AutoPilot
 
-set name fit_dadd_64ns_64ns_64_4_full_dsp_1
+set name fit_ddiv_64ns_64ns_64_13_no_dsp_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {dadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
-}
-
-
-set name fit_dmul_64ns_64ns_64_4_max_dsp_1
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {dmul} IMPL {maxdsp} LATENCY 3 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {ddiv} IMPL {fabric} LATENCY 12 ALLOW_PRAGMA 1
 }
 
 
@@ -30,21 +24,15 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set name fit_printdouble
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
-}
-
-
-set name fit_printnone
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
-}
-
-
 set name fit_dadddsub_64ns_64ns_64_4_full_dsp_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {dsub} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name fit_dmul_64ns_64ns_64_4_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {dmul} IMPL {maxdsp} LATENCY 3 ALLOW_PRAGMA 1
 }
 
 
@@ -109,7 +97,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 92 \
+			id 74 \
 			corename fit_control_axilite \
 			name fit_control_s_axi \
 			ports {$port_control} \

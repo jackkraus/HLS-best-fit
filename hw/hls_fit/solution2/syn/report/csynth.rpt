@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'fit'
 ================================================================
 + General Information: 
-    * Date:           Thu Feb 27 15:44:26 2025
+    * Date:           Thu Feb 27 22:08:33 2025
     * Version:        2023.1 (Build 3854077 on May  4 2023)
     * Project:        hls_fit
     * Solution:       solution2 (Vitis Kernel Flow Target)
@@ -15,22 +15,22 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +----------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+----------+-------------+-------------+-----+
-    |              Modules             |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |          |          |             |             |     |
-    |              & Loops             |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |    DSP   |      FF     |     LUT     | URAM|
-    +----------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+----------+-------------+-------------+-----+
-    |+ fit                             |  Timing|  -0.24|        -|          -|         -|        -|     -|        no|  16 (~0%)|   94 (1%)|  16306 (~0%)|  11752 (~0%)|    -|
-    | + fit_Pipeline_VITIS_LOOP_28_1   |       -|   0.00|        -|          -|         -|        -|     -|        no|         -|  10 (~0%)|   1037 (~0%)|   1647 (~0%)|    -|
-    |  o VITIS_LOOP_28_1               |      II|   7.30|        -|          -|        76|        2|     -|       yes|         -|         -|            -|            -|    -|
-    | + fit_Pipeline_VITIS_LOOP_204_1  |       -|   0.00|     4179|  4.179e+04|         -|     4179|     -|        no|         -|         -|   7444 (~0%)|    810 (~0%)|    -|
-    |  o VITIS_LOOP_204_1              |      II|   7.30|     4177|  4.177e+04|        95|        3|  1362|       yes|         -|         -|            -|            -|    -|
-    | + fit_Pipeline_VITIS_LOOP_100_1  |       -|   0.00|        -|          -|         -|        -|     -|        no|         -|         -|    706 (~0%)|    756 (~0%)|    -|
-    |  o VITIS_LOOP_100_1              |      II|   7.30|        -|          -|        96|        3|     -|       yes|         -|         -|            -|            -|    -|
-    | + fit_Pipeline_VITIS_LOOP_53_1   |       -|   0.00|        -|          -|         -|        -|     -|        no|         -|         -|   1158 (~0%)|   1681 (~0%)|    -|
-    |  o VITIS_LOOP_53_1               |      II|   7.30|        -|          -|       100|        3|     -|       yes|         -|         -|            -|            -|    -|
-    | + fit_Pipeline_VITIS_LOOP_148_1  |       -|   0.00|        -|          -|         -|        -|     -|        no|         -|         -|   1896 (~0%)|   2336 (~0%)|    -|
-    |  o VITIS_LOOP_148_1              |      II|   7.30|        -|          -|       103|        3|     -|       yes|         -|         -|            -|            -|    -|
-    +----------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+----------+-------------+-------------+-----+
+    +---------------------------+------+------+---------+--------+----------+---------+------+----------+---------+----------+------------+------------+-----+
+    |          Modules          | Issue|      | Latency | Latency| Iteration|         | Trip |          |         |          |            |            |     |
+    |          & Loops          | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   |    DSP   |     FF     |     LUT    | URAM|
+    +---------------------------+------+------+---------+--------+----------+---------+------+----------+---------+----------+------------+------------+-----+
+    |+ fit                      |     -|  0.00|        -|       -|         -|        -|     -|        no|  8 (~0%)|  86 (~0%)|  8672 (~0%)|  9020 (~0%)|    -|
+    | + add_nums_1              |     -|  0.00|        -|       -|         -|        -|     -|        no|        -|  10 (~0%)|  1348 (~0%)|  1115 (~0%)|    -|
+    |  o VITIS_LOOP_28_1        |     -|  7.30|        -|       -|        76|        -|     -|        no|        -|         -|           -|           -|    -|
+    | + calc_distance_1         |     -|  0.00|        -|       -|         -|        -|     -|        no|        -|         -|   820 (~0%)|   823 (~0%)|    -|
+    |  o VITIS_LOOP_210_1       |     -|  7.30|        -|       -|        92|        -|     -|        no|        -|         -|           -|           -|    -|
+    | + calc_chi_squared_1      |     -|  0.00|        -|       -|         -|        -|     -|        no|        -|  11 (~0%)|  3900 (~0%)|  4013 (~0%)|    -|
+    |  + calc_ovr_sig_sqrd_1    |     -|  0.00|        -|       -|         -|        -|     -|        no|        -|         -|   479 (~0%)|   673 (~0%)|    -|
+    |   o VITIS_LOOP_103_1      |     -|  7.30|        -|       -|        25|        -|     -|        no|        -|         -|           -|           -|    -|
+    |  + calc_ovr_sig_sqrd_x_1  |     -|  0.00|        -|       -|         -|        -|     -|        no|        -|         -|   764 (~0%)|   801 (~0%)|    -|
+    |   o VITIS_LOOP_55_1       |     -|  7.30|        -|       -|       100|        -|     -|        no|        -|         -|           -|           -|    -|
+    |  o VITIS_LOOP_152_1       |     -|  7.30|        -|       -|       102|        -|     -|        no|        -|         -|           -|           -|    -|
+    +---------------------------+------+------+---------+--------+----------+---------+------+----------+---------+----------+------------+------------+-----+
 
 
 ================================================================
@@ -41,7 +41,7 @@
 | Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
 |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
 +------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
-| m_axi_gmem | 64 -> 128  | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          | BRAM=16           |
+| m_axi_gmem | 64 -> 64   | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          | BRAM=8            |
 +------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
 
 * S_AXILITE Interfaces
@@ -114,31 +114,39 @@
 ================================================================
  Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
 
+* Inferred Burst Summary
++--------------+-----------+----------+-------+------------------+-----------------+
+| HW Interface | Direction | Length   | Width | Loop             | Loop Location   |
++--------------+-----------+----------+-------+------------------+-----------------+
+| m_axi_gmem   | read      | variable | 64    | VITIS_LOOP_103_1 | main.cpp:103:20 |
++--------------+-----------+----------+-------+------------------+-----------------+
+
 * All M_AXI Variable Accesses
 +--------------+----------+-----------------+-----------+--------------+----------+------------------+-----------------+------------+----------------------------------------------------------------------------------------+
 | HW Interface | Variable | Access Location | Direction | Burst Status | Length   | Loop             | Loop Location   | Resolution | Problem                                                                                |
 +--------------+----------+-----------------+-----------+--------------+----------+------------------+-----------------+------------+----------------------------------------------------------------------------------------+
-| m_axi_gmem   | arrx     | main.cpp:29:10  | read      | Widen Fail   |          | VITIS_LOOP_28_1  | main.cpp:28:19  | 214-234    | Sequential access length is not divisible by 2                                         |
-| m_axi_gmem   | arrx     | main.cpp:29:10  | read      | Inferred     | variable | VITIS_LOOP_28_1  | main.cpp:28:19  |            |                                                                                        |
-| m_axi_gmem   | arry     | main.cpp:30:10  | read      | Widen Fail   |          | VITIS_LOOP_28_1  | main.cpp:28:19  | 214-234    | Sequential access length is not divisible by 2                                         |
-| m_axi_gmem   | arry     | main.cpp:30:10  | read      | Inferred     | variable | VITIS_LOOP_28_1  | main.cpp:28:19  |            |                                                                                        |
-| m_axi_gmem   | arrsigs  | main.cpp:54:17  | read      | Widen Fail   |          | VITIS_LOOP_53_1  | main.cpp:53:19  | 214-234    | Sequential access length is not divisible by 2                                         |
-| m_axi_gmem   | arrsigs  | main.cpp:54:17  | read      | Inferred     | variable | VITIS_LOOP_53_1  | main.cpp:53:19  |            |                                                                                        |
-| m_axi_gmem   | arrx     | main.cpp:56:17  | read      | Widen Fail   |          | VITIS_LOOP_53_1  | main.cpp:53:19  | 214-234    | Sequential access length is not divisible by 2                                         |
-| m_axi_gmem   | arrx     | main.cpp:56:17  | read      | Inferred     | variable | VITIS_LOOP_53_1  | main.cpp:53:19  |            |                                                                                        |
-| m_axi_gmem   | arrsigs  | main.cpp:101:17 | read      | Widen Fail   |          | VITIS_LOOP_100_1 | main.cpp:100:20 | 214-234    | Sequential access length is not divisible by 2                                         |
-| m_axi_gmem   | arrsigs  | main.cpp:101:17 | read      | Inferred     | variable | VITIS_LOOP_100_1 | main.cpp:100:20 |            |                                                                                        |
-| m_axi_gmem   | arrx     | main.cpp:150:15 | read      | Widen Fail   |          | VITIS_LOOP_148_1 | main.cpp:148:20 | 214-234    | Sequential access length is not divisible by 2                                         |
-| m_axi_gmem   | arrx     | main.cpp:150:15 | read      | Inferred     | variable | VITIS_LOOP_148_1 | main.cpp:148:20 |            |                                                                                        |
-| m_axi_gmem   | arry     | main.cpp:151:15 | read      | Widen Fail   |          | VITIS_LOOP_148_1 | main.cpp:148:20 | 214-234    | Sequential access length is not divisible by 2                                         |
-| m_axi_gmem   | arry     | main.cpp:151:15 | read      | Inferred     | variable | VITIS_LOOP_148_1 | main.cpp:148:20 |            |                                                                                        |
-| m_axi_gmem   | arrsigs  | main.cpp:152:17 | read      | Widen Fail   |          | VITIS_LOOP_148_1 | main.cpp:148:20 | 214-234    | Sequential access length is not divisible by 2                                         |
-| m_axi_gmem   | arrsigs  | main.cpp:152:17 | read      | Inferred     | variable | VITIS_LOOP_148_1 | main.cpp:148:20 |            |                                                                                        |
-| m_axi_gmem   |          | main.cpp:204:20 | read      | Fail         |          |                  |                 | 214-224    | Could not burst due to multiple potential reads to the same bundle in the same region. |
-| m_axi_gmem   | arrx     | main.cpp:206:16 | read      | Widened      | 681      | VITIS_LOOP_204_1 | main.cpp:204:20 |            |                                                                                        |
-| m_axi_gmem   | arrx     | main.cpp:206:16 | read      | Inferred     | 1362     | VITIS_LOOP_204_1 | main.cpp:204:20 |            |                                                                                        |
-| m_axi_gmem   | arry     | main.cpp:207:16 | read      | Widened      | 681      | VITIS_LOOP_204_1 | main.cpp:204:20 |            |                                                                                        |
-| m_axi_gmem   | arry     | main.cpp:207:16 | read      | Inferred     | 1362     | VITIS_LOOP_204_1 | main.cpp:204:20 |            |                                                                                        |
+| m_axi_gmem   |          | main.cpp:28:19  | read      | Fail         |          |                  |                 | 214-224    | Could not burst due to multiple potential reads to the same bundle in the same region. |
+| m_axi_gmem   | arrx     | main.cpp:30:9   | read      | Widen Fail   |          | VITIS_LOOP_210_1 | main.cpp:210:20 | 214-234    | Sequential access length is not divisible by 2                                         |
+| m_axi_gmem   | arrx     | main.cpp:30:9   | read      | Widen Fail   |          | VITIS_LOOP_152_1 | main.cpp:152:20 | 214-234    | Sequential access length is not divisible by 2                                         |
+| m_axi_gmem   | arrx     | main.cpp:30:9   | read      | Widen Fail   |          | VITIS_LOOP_55_1  | main.cpp:55:19  | 214-234    | Sequential access length is not divisible by 2                                         |
+| m_axi_gmem   | arrx     | main.cpp:30:9   | read      | Widen Fail   |          | VITIS_LOOP_28_1  | main.cpp:28:19  | 214-234    | Sequential access length is not divisible by 2                                         |
+| m_axi_gmem   | arrx     | main.cpp:30:9   | read      | Inferred     | variable | VITIS_LOOP_152_1 | main.cpp:152:20 |            |                                                                                        |
+| m_axi_gmem   | arrx     | main.cpp:30:9   | read      | Inferred     | variable | VITIS_LOOP_28_1  | main.cpp:28:19  |            |                                                                                        |
+| m_axi_gmem   | arry     | main.cpp:31:10  | read      | Widen Fail   |          | VITIS_LOOP_210_1 | main.cpp:210:20 | 214-234    | Sequential access length is not divisible by 2                                         |
+| m_axi_gmem   | arry     | main.cpp:31:10  | read      | Widen Fail   |          | VITIS_LOOP_152_1 | main.cpp:152:20 | 214-234    | Sequential access length is not divisible by 2                                         |
+| m_axi_gmem   | arry     | main.cpp:31:10  | read      | Widen Fail   |          | VITIS_LOOP_28_1  | main.cpp:28:19  | 214-234    | Sequential access length is not divisible by 2                                         |
+| m_axi_gmem   | arry     | main.cpp:31:10  | read      | Inferred     | variable | VITIS_LOOP_28_1  | main.cpp:28:19  |            |                                                                                        |
+| m_axi_gmem   | arrsig   | main.cpp:57:16  | read      | Widen Fail   |          | VITIS_LOOP_152_1 | main.cpp:152:20 | 214-234    | Sequential access length is not divisible by 2                                         |
+| m_axi_gmem   | arrsig   | main.cpp:57:16  | read      | Widen Fail   |          | VITIS_LOOP_103_1 | main.cpp:103:20 | 214-234    | Sequential access length is not divisible by 2                                         |
+| m_axi_gmem   | arrsig   | main.cpp:57:16  | read      | Widen Fail   |          | VITIS_LOOP_55_1  | main.cpp:55:19  | 214-234    | Sequential access length is not divisible by 2                                         |
+| m_axi_gmem   | arrx     | main.cpp:57:16  | read      | Inferred     | variable | VITIS_LOOP_210_1 | main.cpp:210:20 |            |                                                                                        |
+| m_axi_gmem   | arrsig   | main.cpp:57:16  | read      | Inferred     | variable | VITIS_LOOP_103_1 | main.cpp:103:20 |            |                                                                                        |
+| m_axi_gmem   | arrsig   | main.cpp:57:16  | read      | Inferred     | variable | VITIS_LOOP_55_1  | main.cpp:55:19  |            |                                                                                        |
+| m_axi_gmem   | arry     | main.cpp:59:17  | read      | Inferred     | variable | VITIS_LOOP_152_1 | main.cpp:152:20 |            |                                                                                        |
+| m_axi_gmem   | arrx     | main.cpp:59:17  | read      | Inferred     | variable | VITIS_LOOP_55_1  | main.cpp:55:19  |            |                                                                                        |
+| m_axi_gmem   |          | main.cpp:152:20 | read      | Fail         |          |                  |                 | 214-224    | Could not burst due to multiple potential reads to the same bundle in the same region. |
+| m_axi_gmem   | arrsig   | main.cpp:156:17 | read      | Inferred     | variable | VITIS_LOOP_152_1 | main.cpp:152:20 |            |                                                                                        |
+| m_axi_gmem   | arry     | main.cpp:213:16 | read      | Inferred     | variable | VITIS_LOOP_210_1 | main.cpp:210:20 |            |                                                                                        |
 +--------------+----------+-----------------+-----------+--------------+----------+------------------+-----------------+------------+----------------------------------------------------------------------------------------+
 
     * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
@@ -146,67 +154,53 @@
 ================================================================
 == Bind Op Report
 ================================================================
-+------------------------------------------+-----+--------+-------------+------+---------+---------+
-| Name                                     | DSP | Pragma | Variable    | Op   | Impl    | Latency |
-+------------------------------------------+-----+--------+-------------+------+---------+---------+
-| + fit                                    | 94  |        |             |      |         |         |
-|   mul_64s_64s_64_1_1_U72                 | 10  |        | sx2         | mul  | auto    | 0       |
-|   mul_64s_64s_64_1_1_U73                 | 10  |        | mul_ln253   | mul  | auto    | 0       |
-|   dadddsub_64ns_64ns_64_4_full_dsp_1_U83 | 10  |        | mul_ln253_1 | mul  | auto    | 0       |
-|   sitodp_64ns_64_2_no_dsp_1_U68          | -   |        | a1          | sub  | fabric  | 0       |
-|   mul_64s_32s_64_1_1_U70                 | 7   |        | mul_ln254   | mul  | auto    | 0       |
-|   a2_fu_361_p2                           | -   |        | a2          | sub  | fabric  | 0       |
-|   ddiv_64ns_64ns_64_13_no_dsp_1_U65      | -   |        | a           | ddiv | fabric  | 12      |
-|   mul_64s_32s_64_1_1_U71                 | 7   |        | mul_ln258   | mul  | auto    | 0       |
-|   mul_64s_64s_64_1_1_U75                 | 10  |        | mul_ln258_1 | mul  | auto    | 0       |
-|   grp_fu_251_p0                          | -   |        | b1          | sub  | fabric  | 0       |
-|   ddiv_64ns_64ns_64_13_no_dsp_1_U66      | -   |        | b           | ddiv | fabric  | 12      |
-|   dadddsub_64ns_64ns_64_4_full_dsp_1_U83 | 3   |        | sub_i1      | dadd | fulldsp | 3       |
-|   ddiv_64ns_64ns_64_13_no_dsp_1_U65      | -   |        | term1       | ddiv | fabric  | 12      |
-|   ddiv_64ns_64ns_64_13_no_dsp_1_U65      | -   |        | oneOverS    | ddiv | fabric  | 12      |
-|   ddiv_64ns_64ns_64_13_no_dsp_1_U65      | -   |        | SxoS        | ddiv | fabric  | 12      |
-|   dmul_64ns_64ns_64_4_max_dsp_1_U62      | 8   |        | Sx2         | dmul | maxdsp  | 3       |
-|   dmul_64ns_64ns_64_4_max_dsp_1_U63      | 8   |        | mul21_i     | dmul | maxdsp  | 3       |
-|   ddiv_64ns_64ns_64_13_no_dsp_1_U65      | -   |        | div22_i     | ddiv | fabric  | 12      |
-|   dadd_64ns_64ns_64_4_full_dsp_1_U61     | 3   |        | add23_i     | dadd | fulldsp | 3       |
-|   dmul_64ns_64ns_64_4_max_dsp_1_U62      | 8   |        | oa2         | dmul | maxdsp  | 3       |
-|   ddiv_64ns_64ns_64_13_no_dsp_1_U65      | -   |        | ob2         | ddiv | fabric  | 12      |
-|   dmul_64ns_64ns_64_4_max_dsp_1_U64      | 8   |        | gof         | dmul | maxdsp  | 3       |
-|  + fit_Pipeline_VITIS_LOOP_28_1          | 10  |        |             |      |         |         |
-|    add_ln28_fu_274_p2                    | -   |        | add_ln28    | add  | fabric  | 0       |
-|    add_ln29_fu_242_p2                    | -   |        | add_ln29    | add  | fabric  | 0       |
-|    add_ln29_2_fu_314_p2                  | -   |        | add_ln29_2  | add  | fabric  | 0       |
-|    add_ln29_1_fu_349_p2                  | -   |        | add_ln29_1  | add  | fabric  | 0       |
-|    add_ln30_fu_258_p2                    | -   |        | add_ln30    | add  | fabric  | 0       |
-|    add_ln30_2_fu_319_p2                  | -   |        | add_ln30_2  | add  | fabric  | 0       |
-|    add_ln30_1_fu_387_p2                  | -   |        | add_ln30_1  | add  | fabric  | 0       |
-|    mul_64s_64s_64_1_1_U1                 | 10  |        | mul_ln31    | mul  | auto    | 0       |
-|    add_ln31_fu_412_p2                    | -   |        | add_ln31    | add  | fabric  | 0       |
-|    mul_64s_64s_64_1_1_U1                 | 10  |        | mul_ln32    | mul  | auto    | 0       |
-|    add_ln32_fu_393_p2                    | -   |        | add_ln32    | add  | fabric  | 0       |
-|  + fit_Pipeline_VITIS_LOOP_204_1         | 0   |        |             |      |         |         |
-|    add_ln204_fu_211_p2                   | -   |        | add_ln204   | add  | fabric  | 0       |
-|    add_ln206_fu_235_p2                   | -   |        | add_ln206   | add  | fabric  | 0       |
-|    add_ln207_fu_241_p2                   | -   |        | add_ln207   | add  | fabric  | 0       |
-|  + fit_Pipeline_VITIS_LOOP_100_1         | 0   |        |             |      |         |         |
-|    add_ln100_fu_196_p2                   | -   |        | add_ln100   | add  | fabric  | 0       |
-|    add_ln101_fu_170_p2                   | -   |        | add_ln101   | add  | fabric  | 0       |
-|    add_ln101_1_fu_216_p2                 | -   |        | add_ln101_1 | add  | fabric  | 0       |
-|  + fit_Pipeline_VITIS_LOOP_53_1          | 0   |        |             |      |         |         |
-|    add_ln53_fu_240_p2                    | -   |        | add_ln53    | add  | fabric  | 0       |
-|    add_ln54_fu_198_p2                    | -   |        | add_ln54    | add  | fabric  | 0       |
-|    add_ln54_1_fu_270_p2                  | -   |        | add_ln54_1  | add  | fabric  | 0       |
-|    add_ln56_fu_214_p2                    | -   |        | add_ln56    | add  | fabric  | 0       |
-|    add_ln56_1_fu_275_p2                  | -   |        | add_ln56_1  | add  | fabric  | 0       |
-|  + fit_Pipeline_VITIS_LOOP_148_1         | 0   |        |             |      |         |         |
-|    add_ln148_fu_332_p2                   | -   |        | add_ln148   | add  | fabric  | 0       |
-|    add_ln150_fu_278_p2                   | -   |        | add_ln150   | add  | fabric  | 0       |
-|    add_ln150_1_fu_372_p2                 | -   |        | add_ln150_1 | add  | fabric  | 0       |
-|    add_ln151_fu_304_p2                   | -   |        | add_ln151   | add  | fabric  | 0       |
-|    add_ln151_1_fu_398_p2                 | -   |        | add_ln151_1 | add  | fabric  | 0       |
-|    add_ln152_fu_318_p2                   | -   |        | add_ln152   | add  | fabric  | 0       |
-|    add_ln152_1_fu_402_p2                 | -   |        | add_ln152_1 | add  | fabric  | 0       |
-+------------------------------------------+-----+--------+-------------+------+---------+---------+
++---------------------------------------+-----+--------+--------------------+------+---------+---------+
+| Name                                  | DSP | Pragma | Variable           | Op   | Impl    | Latency |
++---------------------------------------+-----+--------+--------------------+------+---------+---------+
+| + fit                                 | 86  |        |                    |      |         |         |
+|   mul_64s_64s_64_1_1_U58              | 10  |        | sx2                | mul  | auto    | 0       |
+|   mul_64s_64s_64_1_1_U59              | 10  |        | mul_ln264          | mul  | auto    | 0       |
+|   mul_64s_64s_64_1_1_U60              | 10  |        | mul_ln264_1        | mul  | auto    | 0       |
+|   ddiv_64ns_64ns_64_13_no_dsp_1_U51   | -   |        | a1                 | sub  | fabric  | 0       |
+|   mul_64s_32s_64_1_1_U56              | 7   |        | mul_ln265          | mul  | auto    | 0       |
+|   grp_fu_140_p0                       | -   |        | a2                 | sub  | fabric  | 0       |
+|   sitodp_64ns_64_2_no_dsp_1_U53       | -   |        | a                  | ddiv | fabric  | 12      |
+|   mul_64s_32s_64_1_1_U57              | 7   |        | mul_ln269          | mul  | auto    | 0       |
+|   mul_64s_64s_64_1_1_U61              | 10  |        | mul_ln269_1        | mul  | auto    | 0       |
+|   sitodp_64ns_64_2_no_dsp_1_U53       | -   |        | b1                 | sub  | fabric  | 0       |
+|   dmul_64ns_64ns_64_4_max_dsp_1_U67   | -   |        | b                  | ddiv | fabric  | 12      |
+|  + add_nums_1                         | 10  |        |                    |      |         |         |
+|    add_ln28_fu_263_p2                 | -   |        | add_ln28           | add  | fabric  | 0       |
+|    add_ln30_fu_269_p2                 | -   |        | add_ln30           | add  | fabric  | 0       |
+|    add_ln30_1_fu_304_p2               | -   |        | add_ln30_1         | add  | fabric  | 0       |
+|    add_ln31_fu_274_p2                 | -   |        | add_ln31           | add  | fabric  | 0       |
+|    add_ln31_1_fu_313_p2               | -   |        | add_ln31_1         | add  | fabric  | 0       |
+|    mul_64s_64s_64_1_1_U1              | 10  |        | mul_ln32           | mul  | auto    | 0       |
+|    add_ln32_fu_332_p2                 | -   |        | add_ln32           | add  | fabric  | 0       |
+|    mul_64s_64s_64_1_1_U1              | 10  |        | mul_ln33           | mul  | auto    | 0       |
+|    add_ln33_fu_317_p2                 | -   |        | add_ln33           | add  | fabric  | 0       |
+|  + calc_distance_1                    | 0   |        |                    |      |         |         |
+|    add_ln210_fu_203_p2                | -   |        | add_ln210          | add  | fabric  | 0       |
+|    add_ln212_fu_209_p2                | -   |        | add_ln212          | add  | fabric  | 0       |
+|    add_ln213_fu_214_p2                | -   |        | add_ln213          | add  | fabric  | 0       |
+|  + calc_chi_squared_1                 | 11  |        |                    |      |         |         |
+|    ddiv_64ns_64ns_64_13_no_dsp_1_U37  | -   |        | SxoS               | ddiv | fabric  | 12      |
+|    add_ln152_fu_349_p2                | -   |        | add_ln152          | add  | fabric  | 0       |
+|    add_ln154_fu_355_p2                | -   |        | add_ln154          | add  | fabric  | 0       |
+|    add_ln155_fu_360_p2                | -   |        | add_ln155          | add  | fabric  | 0       |
+|    add_ln156_fu_365_p2                | -   |        | add_ln156          | add  | fabric  | 0       |
+|    dmul_64ns_64ns_64_4_max_dsp_1_U34  | 8   |        | tempOverSig        | dmul | maxdsp  | 3       |
+|    dmul_64ns_64ns_64_4_max_dsp_1_U34  | 8   |        | tempOverSigSquared | dmul | maxdsp  | 3       |
+|    dadd_64ns_64ns_64_4_full_dsp_1_U32 | 3   |        | term2_1            | dadd | fulldsp | 3       |
+|    dmul_64ns_64ns_64_4_max_dsp_1_U34  | 8   |        | gof                | dmul | maxdsp  | 3       |
+|   + calc_ovr_sig_sqrd_1               | 0   |        |                    |      |         |         |
+|     add_ln103_fu_170_p2               | -   |        | add_ln103          | add  | fabric  | 0       |
+|   + calc_ovr_sig_sqrd_x_1             | 0   |        |                    |      |         |         |
+|     add_ln55_fu_192_p2                | -   |        | add_ln55           | add  | fabric  | 0       |
+|     add_ln57_fu_198_p2                | -   |        | add_ln57           | add  | fabric  | 0       |
+|     ddiv_64ns_64ns_64_13_no_dsp_1_U25 | -   |        | overSig            | ddiv | fabric  | 12      |
+|     add_ln59_fu_203_p2                | -   |        | add_ln59           | add  | fabric  | 0       |
++---------------------------------------+-----+--------+--------------------+------+---------+---------+
 
 
 ================================================================
@@ -218,10 +212,20 @@
 == Pragma Report
 ================================================================
 * Valid Pragma Syntax
-+--------+---------+----------------------+
-| Type   | Options | Location             |
-+--------+---------+----------------------+
-| unroll |         | main.cpp:321 in main |
-+--------+---------+----------------------+
++----------+----------+------------------------------------+
+| Type     | Options  | Location                           |
++----------+----------+------------------------------------+
+| pipeline | II=1     | main.cpp:27 in add_nums            |
+| unroll   | factor=4 | main.cpp:29 in add_nums            |
+| pipeline |          | main.cpp:54 in calc_ovr_sig_sqrd_x |
+| unroll   | factor=2 | main.cpp:56 in calc_ovr_sig_sqrd_x |
+| pipeline | II=1     | main.cpp:78 in calc_ovr_sig_sqrd_y |
+| pipeline | II=1     | main.cpp:102 in calc_ovr_sig_sqrd  |
+| pipeline |          | main.cpp:151 in calc_chi_squared   |
+| unroll   |          | main.cpp:153 in calc_chi_squared   |
+| pipeline | II=1     | main.cpp:209 in calc_distance      |
+| unroll   |          | main.cpp:211 in calc_distance      |
+| unroll   |          | main.cpp:327 in main               |
++----------+----------+------------------------------------+
 
 

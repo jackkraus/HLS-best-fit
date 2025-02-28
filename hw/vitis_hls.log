@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running '/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'akraus' on host 'vm01.head.cm.local' (Linux_x86_64 version 4.18.0-372.9.1.el8.x86_64) on Thu Feb 27 15:46:24 CST 2025
+INFO: [HLS 200-10] For user 'akraus' on host 'vm01.head.cm.local' (Linux_x86_64 version 4.18.0-372.9.1.el8.x86_64) on Thu Feb 27 22:13:47 CST 2025
 INFO: [HLS 200-10] On os "Red Hat Enterprise Linux release 8.6 (Ootpa)"
 INFO: [HLS 200-10] In directory '/nfs/ihfs/home_metis/akraus/HW3-dir/hw'
 Sourcing Tcl script '/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2/csim.tcl'
@@ -9,7 +9,7 @@ INFO: [HLS 200-10] Opening project '/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_f
 INFO: [HLS 200-1510] Running: set_top fit 
 INFO: [HLS 200-1510] Running: add_files main.cpp 
 INFO: [HLS 200-10] Adding design file 'main.cpp' to the project
-INFO: [HLS 200-1510] Running: add_files -tb main.cpp 
+INFO: [HLS 200-1510] Running: add_files -tb main.cpp -cflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'main.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution2 -flow_target vitis 
 INFO: [HLS 200-10] Opening solution '/nfs/ihfs/home_metis/akraus/HW3-dir/hw/hls_fit/solution2'.
@@ -17,87 +17,72 @@ INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
 INFO: [HLS 200-1505] Using flow_target 'vitis'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
-INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
-INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
-INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
 INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
 INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
 INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
 INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
-INFO: [HLS 200-1510] Running: csim_design -profile -quiet 
+INFO: [HLS 200-1510] Running: source ./hls_fit/solution2/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name fit fit 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
 INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 INFO: [HLS 200-2036] Building debug C Simulation binaries
    Compiling ../../../../main.cpp in debug mode
    Generating csim.exe
-In file included from ../../../../main.cpp:1:
-In file included from ../../../../main.h:4:
-/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/include/hls_print.h:41:12: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
-    printf(fmt); 
-           ^~~
-/opt/metis/el8/contrib/amdtools/xilinx-2023.1/Vitis_HLS/2023.1/include/hls_print.h:41:12: note: treat the string as an argument to avoid this
-    printf(fmt); 
-           ^
-           "%s", 
-1 warning generated.
 HLS_PRINT: ============ EVENT 0 ============
-HLS_PRINT: <== Starting add_nums LOOP ==>
 HLS_PRINT: fit() --> Best fit param a: 42.458060
 HLS_PRINT: fit() --> Best fit param b: -0.562644
 HLS_PRINT: 	uncertainty on a:  0.195520
 HLS_PRINT: 	uncertainty on b:  0.000052
-HLS_PRINT: fit() --> f(a,b) = 347106955756837552457169052270178861056.000000000
+HLS_PRINT: fit() --> f(a,b) = 4251.664237980
 HLS_PRINT: fit() --> goodness of fit = 2.160768368
 HLS_PRINT: main() --> Current index 99 
 HLS_PRINT: ============ EVENT 1 ============
-HLS_PRINT: <== Starting add_nums LOOP ==>
 HLS_PRINT: fit() --> Best fit param a: 122.423997
 HLS_PRINT: fit() --> Best fit param b: -3.395082
 HLS_PRINT: 	uncertainty on a:  0.237399
 HLS_PRINT: 	uncertainty on b:  0.000077
-HLS_PRINT: fit() --> f(a,b) = 12638546483566442711110148338571599151104.000000000
+HLS_PRINT: fit() --> f(a,b) = 12564.154501385
 HLS_PRINT: fit() --> goodness of fit = 22.238202857
 HLS_PRINT: main() --> Current index 193 
 HLS_PRINT: ============ EVENT 2 ============
-HLS_PRINT: <== Starting add_nums LOOP ==>
 HLS_PRINT: fit() --> Best fit param a: 60.546292
 HLS_PRINT: fit() --> Best fit param b: 1.105061
 HLS_PRINT: 	uncertainty on a:  0.399651
 HLS_PRINT: 	uncertainty on b:  0.000107
-HLS_PRINT: fit() --> f(a,b) = 1338964231936102969343284593521986633728.000000000
+HLS_PRINT: fit() --> f(a,b) = 27479.613093595
 HLS_PRINT: fit() --> goodness of fit = 1.022818726
 HLS_PRINT: main() --> Current index 435 
 HLS_PRINT: ============ EVENT 3 ============
-HLS_PRINT: <== Starting add_nums LOOP ==>
 HLS_PRINT: fit() --> Best fit param a: 0.996648
 HLS_PRINT: fit() --> Best fit param b: -1.288404
 HLS_PRINT: 	uncertainty on a:  0.079917
 HLS_PRINT: 	uncertainty on b:  0.000025
-HLS_PRINT: fit() --> f(a,b) = 1820122767081414002170122243967257935872.000000000
+HLS_PRINT: fit() --> f(a,b) = 1630.467367770
 HLS_PRINT: fit() --> goodness of fit = 0.995003847
 HLS_PRINT: main() --> Current index 677 
 HLS_PRINT: ============ EVENT 4 ============
-HLS_PRINT: <== Starting add_nums LOOP ==>
 HLS_PRINT: fit() --> Best fit param a: 12.933075
 HLS_PRINT: fit() --> Best fit param b: 10.981780
 HLS_PRINT: 	uncertainty on a:  10.512954
 HLS_PRINT: 	uncertainty on b:  0.003394
-HLS_PRINT: fit() --> f(a,b) = 132233660196991394621229234462184550957056.000000000
+HLS_PRINT: fit() --> f(a,b) = 232264.209104891
 HLS_PRINT: fit() --> goodness of fit = 0.949532678
 HLS_PRINT: main() --> Current index 919 
 HLS_PRINT: ============ EVENT 5 ============
-HLS_PRINT: <== Starting add_nums LOOP ==>
 HLS_PRINT: fit() --> Best fit param a: 6.695400
 HLS_PRINT: fit() --> Best fit param b: 7.025747
 HLS_PRINT: 	uncertainty on a:  0.140837
 HLS_PRINT: 	uncertainty on b:  0.000045
-HLS_PRINT: fit() --> f(a,b) = 54122951201197697003109789395077495259136.000000000
+HLS_PRINT: fit() --> f(a,b) = 284589.050477618
 HLS_PRINT: fit() --> goodness of fit = 26.927211145
 HLS_PRINT: main() --> Current index 1361 
-   Generating dot files
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.72 seconds. CPU system time: 0.38 seconds. Elapsed time: 1.74 seconds; current allocated memory: 0.000 MB.
-INFO: [HLS 200-112] Total CPU user time: 3.55 seconds. Total CPU system time: 0.89 seconds. Total elapsed time: 5.17 seconds; peak allocated memory: 2.313 GB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.45 seconds. CPU system time: 0.3 seconds. Elapsed time: 0.78 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 3.24 seconds. Total CPU system time: 0.83 seconds. Total elapsed time: 4.16 seconds; peak allocated memory: 2.313 GB.
