@@ -1,5 +1,8 @@
 # PHYS 790 HW3 - Event hit fitting with HLS 
 
+> The `hw` directory is the project directory, from there `main.cpp` is the solution with top function `main()` that should run everything in Vitis correctly. 
+
+
 What the `C` code runs (before transfer over to `C++`): 
 ```
 ============ EVENT 0 ============
