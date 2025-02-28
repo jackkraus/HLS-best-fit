@@ -57,7 +57,7 @@ After the `C++`ification
 How it runs in HLS without pragmas: 
 ![[img/Pasted image 20250227152253.png]]
 
-When synthesizing `fit()`![[img/Pasted image 20250227164603.png]] 
+When synthesizing ![`fit()`](https://github.com/jackkraus/HLS-best-fit/blob/main/img/Pasted%20image%2020250227152253.png)
 
 And running the simulation: 
 
