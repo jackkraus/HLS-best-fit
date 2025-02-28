@@ -55,9 +55,10 @@ After the `C++`ification
 
 ### Script into HLS
 How it runs in HLS without pragmas: 
-![[img/Pasted image 20250227152253.png]]
 
-When synthesizing ![`fit()`](https://github.com/jackkraus/HLS-best-fit/blob/main/img/Pasted%20image%2020250227152253.png)
+![picture](https://github.com/jackkraus/HLS-best-fit/blob/main/img/Pasted%20image%2020250227152253.png)
+
+When synthesizing `fit()` ![picture](https://github.com/jackkraus/HLS-best-fit/blob/main/img/Pasted%20image%2020250227164603.png) 
 
 And running the simulation: 
 
@@ -123,10 +124,11 @@ INFO: [SIM 3] *************** CSIM finish ***************
 The results are the same without pragmas, because the way it's currently setup, none of the PIPELINE or UNROLL pragmas invoked are being used because of some errors with the subloops not being unrolled (?-- I think that's the problem?)
 
 Here are the performance stats with the current pragmas (`PIPELINE` and `UNROLL`)
-![[img/Pasted image 20250227225816.png]]
+![perf](https://github.com/jackkraus/HLS-best-fit/blob/main/img/Pasted%20image%2020250227225816.png)
 
 Here are the scheduler warnings, this is what's telling me that the subloops not being unrolled disallows the pipeline directive to be enabled.
-![[img/Pasted image 20250227225536.png]]
+![36](https://github.com/jackkraus/HLS-best-fit/blob/main/img/Pasted%20image%2020250227225536.png)
+
 An example function with the pragmas looks like the following, though the actual code is in `main.cpp`: 
 ```C++
 #pragma HLS PIPELINE II=1
