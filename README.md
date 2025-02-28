@@ -1,3 +1,5 @@
+# PHYS 790 HW3 - Event hit fitting with HLS 
+
 What the `C` code runs (before transfer over to `C++`): 
 ```
 ============ EVENT 0 ============
