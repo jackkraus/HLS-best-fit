@@ -216,6 +216,7 @@ double calc_distance(const double a, const double b, const long arrx[], const lo
 		tempSquared = 0;
 	}
 
+	hls::print("calc_distance() --> f(a,b) = %.9f\n",f);	
 	return f;
 }
 
